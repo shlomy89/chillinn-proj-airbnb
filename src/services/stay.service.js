@@ -21,19 +21,14 @@ const gStays = [
     {
         _id: 10006546,
         name: 'Ribeira Charming Duplex1',
-<<<<<<< HEAD
         propertyType: 'House',
         placeType: 'Entire place',
         bedrooms: 3,
-        imgUrls: ['https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'],
         price: 60,
-=======
-        type: 'House',
         imgUrls: [
             'https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
         ],
         price: 80.0,
->>>>>>> f4d351a1000345c5ac830147750e12c7b6f8ddf1
         summary:
             'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
         capacity: 8,
@@ -164,10 +159,6 @@ const STORAGE_KEY = 'stays'
 
 function query(filterBy) {
 
-<<<<<<< HEAD
-=======
-    
->>>>>>> f4d351a1000345c5ac830147750e12c7b6f8ddf1
     return storageService.query(STORAGE_KEY).then((stays) => {
         if (!stays || !stays.length) stays = gStays
 
@@ -196,7 +187,6 @@ function query(filterBy) {
                 stays = stays.filter((stay) => stay.price <= maxPrice)
             }
 
-<<<<<<< HEAD
             if (bedrooms) {
                 stays = stays.filter((stay) => stay.bedrooms === bedrooms)
             }
@@ -204,8 +194,6 @@ function query(filterBy) {
             if (amenities) {
                 stays = stays.filter((stay) => amenities.every(amenity => stay.amenities.includes(amenity)))
             }
-=======
->>>>>>> f4d351a1000345c5ac830147750e12c7b6f8ddf1
         }
         return stays
     })
