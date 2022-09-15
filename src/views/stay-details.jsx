@@ -6,7 +6,6 @@ import { reviewService } from "../services/review.service"
 import { Button } from '@mui/material'
 // import { utilService } from "../services/util.service"
 
-
 export const StayDetails = () => {
 
     const [stay, setStay] = useState(null)

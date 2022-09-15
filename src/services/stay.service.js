@@ -1,7 +1,7 @@
 // import { httpService } from './http.service'
 import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
-import { userService } from '../services/user.service.js'
+// import { userService } from '../services/user.service.js'
 
 
 export const stayService = {
@@ -23,8 +23,37 @@ const STORAGE_KEY = 'stays'
 
 
 function query(filterBy) {
-    return storageService.query(STORAGE_KEY)
+    return storageService.query(STORAGE_KEY).then((stays) => {
+
+        if (filterBy) {
+            let { name, minPrice, stock, labels } = filterBy
+            console.log("returnstorageService.query ~ filterBy", filterBy)
+
+            if (name) {
+                const regex = new RegExp(name, 'i')
+                stays = stays.filter((stay) => regex.test(stay.name))
+            }
+
+            if (minPrice) {
+                stays = stays.filter((stay) => stay.price >= minPrice)
+            }
+
+            if (stock) {
+                if (stock !== '') {
+                    stock = stock === 'true'
+                    stays = stays.filter((stay) => stay.inStock === stock)
+                }
+            }
+
+            // if (labels) {
+
+            // }
+        }
+        return stays
+
+    })
 }
+
 function getById(stayId) {
     return storageService.get(STORAGE_KEY, stayId)
     // return axios.get(`/api/stay/${stayId}`)
@@ -51,7 +80,7 @@ async function save(stay) {
         // stayChannel.postMessage(getActionUpdateStay(savedStay))
     } else {
         // Later, owner is set by the backend
-        // stay.owner = userService.getLoggedinUser()
+        stay.inStock = utilService.randomBoolean()
         savedStay = await storageService.post(STORAGE_KEY, stay)
         // stayChannel.postMessage(getActionAddStay(savedStay))
     }
