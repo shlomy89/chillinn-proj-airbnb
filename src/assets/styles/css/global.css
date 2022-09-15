@@ -1,19 +1,19 @@
 /* Basics */
-@import "basics/base.css";
-@import "basics/layout.css";
+@import '/src/assets/css/basics/base';
+@import 'basics/layout.css';
 
 /* Pages */
 /* @import "pages/stay-app.css"; */
-@import "pages/stay-details.css";
+@import 'pages/stay-details.css';
 /* @import "pages/stay-edit.css"; */
-@import "pages/about.css";
+@import 'pages/about.css';
 
 /* Components */
-@import "cmps/stay-list.css";
-@import "cmps/stay-preview.css";
-@import "cmps/stay-filter.css";
-@import "cmps/app-header.css";
-@import "cmps/nice-button.css";
+@import 'cmps/stay-list.css';
+@import 'cmps/stay-preview.css';
+@import 'cmps/stay-filter.css';
+@import 'cmps/app-header.css';
+@import 'cmps/nice-button.css';
 
 .counter,
 .timer {
@@ -36,6 +36,6 @@
     text-align: center;
 }
 
-.split-pane > div{
+.split-pane > div {
     transition: 0.5s;
 }

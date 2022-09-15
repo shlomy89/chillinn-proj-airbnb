@@ -4,12 +4,13 @@ import { Provider } from 'react-redux'
 import { HashRouter as Router } from 'react-router-dom'
 import App from './root-cmp'
 import { store } from './store/store'
+import './assets/styles/css/main.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
-  <Provider store={store}>
-    <Router>
-      <App />
-    </Router>
-  </Provider>
+    <Provider store={store}>
+        <Router>
+            <App />
+        </Router>
+    </Provider>
 )
