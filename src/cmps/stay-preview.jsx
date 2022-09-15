@@ -3,6 +3,7 @@ import { React, useState, useEffect } from 'react'
 
 export function StayPreview({ stay, onRemoveStay, onAddReview }) {
 
+
     // const [image, setImage] = useState("")
 
     // useEffect(() => {
@@ -14,16 +15,19 @@ export function StayPreview({ stay, onRemoveStay, onAddReview }) {
     return (
         <div className='stay-preview'>
             <Link to={`/stay/${stay._id}`} className='info'>
-                {/* <img src={image} alt="" /> */}
+                <div className="gallery-container">
+                <img src={stay.imgUrls[0]}/>
+                </div>
                 <h2>{stay.name}</h2>
-                <h2>{stay.price}&#8362;</h2>
-                <h4>{stay.inStock ? '' : 'Out of stock!'}</h4>
+                <h3>{stay.loc.city},&nbsp;{stay.loc.country}</h3>
+                <h4>{stay.capacity}&nbsp;guests</h4>
+                <h3>${stay.price} night</h3>
             </Link>
-            <button onClick={() => { onAddReview(stay._id) }}>Add review</button>
+            {/* <button onClick={() => { onAddReview(stay._id) }}>Add review</button>
             <section className='actions'>
                 <button onClick={() => onRemoveStay(stay._id)}>Delete</button>
                 <Link to={`/stay/edit/${stay._id}`} >Edit</Link>
-            </section>
+            </section> */}
         </div>
     )
 }

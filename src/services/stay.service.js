@@ -23,7 +23,7 @@ const gStays = [
         name: 'Ribeira Charming Duplex1',
         type: 'House',
         imgUrls: [
-            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+            'https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
         ],
         price: 80.0,
         summary:
@@ -53,7 +53,7 @@ const gStays = [
         name: 'Ribeira Charming Duplex2',
         type: 'House',
         imgUrls: [
-            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+            'https://a0.muscache.com/im/pictures/63befe3b-264a-4082-ab8d-7b0681b91955.jpg?im'
         ],
         price: 80.0,
         summary:
@@ -83,7 +83,7 @@ const gStays = [
         name: 'Ribeira Charming Duplex3',
         type: 'House',
         imgUrls: [
-            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+            'https://a0.muscache.com/im/pictures/miso/Hosting-3524556/original/24e9b114-7db5-4fab-8994-bc16f263ad1d.jpeg?im_w=720'
         ],
         price: 80.0,
         summary:
@@ -113,7 +113,7 @@ const gStays = [
         name: 'Ribeira Charming Duplex4',
         type: 'House',
         imgUrls: [
-            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+            'https://a0.muscache.com/im/pictures/miso/Hosting-610511843622686196/original/253bfa1e-8c53-4dc0-a3af-0a75728c0708.jpeg?im_w=720'
         ],
         price: 80.0,
         summary:
@@ -144,7 +144,10 @@ const STORAGE_KEY = 'stays'
 // const stayChannel = new BroadcastChannel('stayChannel')
 
 function query(filterBy) {
+
+    
     return storageService.query(STORAGE_KEY).then((stays) => {
+        if (!stays || !stays.length) stays = gStays
 
         if (filterBy) {
             let { name, minPrice, stock, labels } = filterBy
@@ -166,9 +169,6 @@ function query(filterBy) {
                 }
             }
 
-            // if (labels) {
-
-            // }
         }
         return stays
 
