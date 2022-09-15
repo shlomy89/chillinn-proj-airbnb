@@ -3,7 +3,6 @@ import { storageService } from './async-storage.service.js'
 import { utilService } from './util.service.js'
 import { userService } from '../services/user.service.js'
 
-
 export const stayService = {
     query,
     save,
@@ -18,9 +17,131 @@ export const stayService = {
     getStayLabels
 }
 
+const gStays = [
+    {
+        _id: 10006546,
+        name: 'Ribeira Charming Duplex1',
+        type: 'House',
+        imgUrls: [
+            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+        ],
+        price: 80.0,
+        summary:
+            'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
+        capacity: 8,
+
+        amenities: [
+            'TV',
+            'Wifi',
+            'Kitchen',
+            'Smoking allowed',
+            'Pets allowed',
+            'Cooking basics'
+        ],
+
+        loc: {
+            country: 'Portugal',
+            countryCode: 'PT',
+            city: 'Porto',
+            address: '17 Kombo st',
+            lat: -8.61308,
+            lng: 41.1413
+        }
+    },
+    {
+        _id: 10006547,
+        name: 'Ribeira Charming Duplex2',
+        type: 'House',
+        imgUrls: [
+            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+        ],
+        price: 80.0,
+        summary:
+            'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
+        capacity: 8,
+
+        amenities: [
+            'TV',
+            'Wifi',
+            'Kitchen',
+            'Smoking allowed',
+            'Pets allowed',
+            'Cooking basics'
+        ],
+
+        loc: {
+            country: 'Portugal',
+            countryCode: 'PT',
+            city: 'Porto',
+            address: '17 Kombo st',
+            lat: -8.61308,
+            lng: 41.1413
+        }
+    },
+    {
+        _id: 10006548,
+        name: 'Ribeira Charming Duplex3',
+        type: 'House',
+        imgUrls: [
+            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+        ],
+        price: 80.0,
+        summary:
+            'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
+        capacity: 8,
+
+        amenities: [
+            'TV',
+            'Wifi',
+            'Kitchen',
+            'Smoking allowed',
+            'Pets allowed',
+            'Cooking basics'
+        ],
+
+        loc: {
+            country: 'Portugal',
+            countryCode: 'PT',
+            city: 'Porto',
+            address: '17 Kombo st',
+            lat: -8.61308,
+            lng: 41.1413
+        }
+    },
+    {
+        _id: 10006549,
+        name: 'Ribeira Charming Duplex4',
+        type: 'House',
+        imgUrls: [
+            'https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large, otherImg.jpg'
+        ],
+        price: 80.0,
+        summary:
+            'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
+        capacity: 8,
+
+        amenities: [
+            'TV',
+            'Wifi',
+            'Kitchen',
+            'Smoking allowed',
+            'Pets allowed',
+            'Cooking basics'
+        ],
+
+        loc: {
+            country: 'Portugal',
+            countryCode: 'PT',
+            city: 'Porto',
+            address: '17 Kombo st',
+            lat: -8.61308,
+            lng: 41.1413
+        }
+    }
+]
+
 const STORAGE_KEY = 'stays'
 // const stayChannel = new BroadcastChannel('stayChannel')
-
 
 function query(filterBy) {
     return storageService.query(STORAGE_KEY)
