@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
-// import './assets/css/main'
+// import './assets/styles/'
 import { StayApp } from './views/stay-app.jsx'
 import { AppHeader } from './cmps/app-header'
 import { About } from './views/about.jsx'
 import { StayDetails } from './views/stay-details.jsx'
 import { StayEdit } from './views/stay-edit.jsx'
-import { StayDashboard } from './views/dashboard.jsx'
+import { StayDashboard } from './views/backoffice.jsx'
 import { Login } from './views/user-login.jsx'
 import { Signup } from './views/sign-up.jsx'
 

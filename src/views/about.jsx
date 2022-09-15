@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material'
-import { GoogleMaps } from '../cmps/google-map.jsx'
 
 export function About() {
     const navigate = useNavigate()
@@ -21,7 +20,6 @@ export function About() {
                 praesentium tempora molestias, accusantium repellendus, in
                 quasi. Iste labore maxime, vitae nulla odit sints.
             </p>
-            <GoogleMaps />
         </section>
     )
 }
