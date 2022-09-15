@@ -16,8 +16,12 @@
 @import 'views/home-page';
 @import 'views/stay-app';
 @import 'views/review-app';
+@import 'views/stay-details';
 
 // Components
 @import 'cmps/app-header';
 @import 'cmps/app-footer';
 @import 'cmps/user-msg';
+@import 'cmps/star-rating';
+@import 'cmps/action-button';
+@import 'cmps/apartment-info';

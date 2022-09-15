@@ -1,0 +1,10 @@
+.apartment-info {
+    display: flex;
+    flex-direction: column;
+
+    column-gap: 16px;
+    // flex-direction: column;
+    span {
+        color: #717171;
+    }
+}
