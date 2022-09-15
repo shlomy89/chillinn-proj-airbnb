@@ -14,7 +14,7 @@ export function About() {
             <Button className='btn-back' variant='outlined' onClick={onBack}>
                 Back
             </Button>
-            <h2>About Mister Stay</h2>
+            <h2>About chill Inn</h2>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
                 minus explicabo ipsum necessitatibus cupiditate facere corrupti,

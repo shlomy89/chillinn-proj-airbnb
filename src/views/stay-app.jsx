@@ -3,12 +3,16 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { StayFilter } from '../cmps/stay-filter'
 import { StayList } from '../cmps/stay-list'
-import { reviewService } from "../services/review.service"
-import { loadStays, removeStay, setFilterBy } from '../store/actions/stay.action'
+import { reviewService } from '../services/review.service'
+
+import {
+    loadStays,
+    removeStay,
+    setFilterBy
+} from '../store/actions/stay.action'
 
 export const StayApp = () => {
-
-    const { stays } = useSelector(state => state.stayModule)
+    const { stays } = useSelector((state) => state.stayModule)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -33,22 +37,24 @@ export const StayApp = () => {
         }
     }
 
-    if (!stays) return (
-        <section>
-            <Link to="/stay/edit">Add Stay</Link>
-            {/* <div>Loading...</div> */}
-        </section>
-    )
+    if (!stays)
+        return (
+            <section>
+                <Link to='/stay/edit'>Add Stay</Link>
+                {/* <div>Loading...</div> */}
+            </section>
+        )
 
     return (
         <div className='stay-app'>
-
             <StayFilter onChangeFilter={onChangeFilter} />
 
-            <Link to="/stay/edit">Add Stay</Link>
-            <StayList onAddReview={onAddReview}
+            <Link to='/stay/edit'>Add Stay</Link>
+            <StayList
+                onAddReview={onAddReview}
                 onRemoveStay={onRemoveStay}
-                stays={stays} />
+                stays={stays}
+            />
         </div>
     )
 }
