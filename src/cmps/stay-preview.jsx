@@ -17,7 +17,7 @@ export function StayPreview({ stay, onRemoveStay, onAddReview }) {
                 {/* <img src={image} alt="" /> */}
                 <h2>{stay.name}</h2>
                 <h2>{stay.price}&#8362;</h2>
-                <h4>{stay.inStock ? '' : 'Out of stock!'}</h4>
+
             </Link>
             <button onClick={() => { onAddReview(stay._id) }}>Add review</button>
             <section className='actions'>
