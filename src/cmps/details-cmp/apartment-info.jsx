@@ -4,8 +4,10 @@ export const ApartmentInfo = ({ text, Icon, textInfo }) => {
     return (
         <div className='apartment-info'>
             <Icon />
-            {text}
-            {textInfo}
+            <div className='apartment-text-info-container'>
+                <span className='apartment-text-header'> {text}</span>
+                <span className='apartment-text-info'>{textInfo}</span>
+            </div>
         </div>
     )
 }

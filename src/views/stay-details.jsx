@@ -89,26 +89,20 @@ export const StayDetails = () => {
                 <div className='apartment-info'>
                     <ApartmentInfo
                         text={'Self check-in'}
-                        textInfo={
-                            <span>'Check yourself in with the lockbox.'</span>
-                        }
+                        textInfo={'Check yourself in with the lockbox.'}
                         Icon={DoorIcon}
                     />
-                    <ApartmentInfo
+                    {/* <ApartmentInfo
                         text={'Veller Homes is a Superhost'}
                         textInfo={
-                            <span>
-                                'Superhosts are experienced, highly rated hosts
-                                who are committed to providing great stays for
-                                guests.'
-                            </span>
+                            'Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.'
                         }
                         Icon={SuperHostIcon}
                     />
                     <ApartmentInfo
                         text={'Free cancellation'}
                         Icon={FreeCancellationIcon}
-                    />
+                    /> */}
                 </div>
             </section>
             <section className='amenities-container'>

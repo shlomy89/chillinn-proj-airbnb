@@ -17,14 +17,13 @@ function App() {
                 <Routes>
                     <Route path='/stay' element={<StayDetails />} />
                     <Route path='*' element={<Navigate to='/stay' />} />
-                    {/* <Route path='stay/edit/:id' element={<StayEdit />} />
+                    <Route path='stay/edit/:id' element={<StayEdit />} />
                     <Route path='stay/edit' element={<StayEdit />} />
-                    :id removed
                     <Route path='dashboard' element={<StayDashboard />} />
                     <Route path='login' element={<Login />} />
                     <Route path='signup' element={<Signup />} />
                     <Route path='about' element={<About />} />
-                    <Route path='/' element={<StayApp />} /> */}
+                    <Route path='/' element={<StayApp />} />
                 </Routes>
             </main>
             <footer>
