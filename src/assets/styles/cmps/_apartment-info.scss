@@ -1,10 +1,17 @@
 .apartment-info {
     display: flex;
-    flex-direction: column;
-
     column-gap: 16px;
-    // flex-direction: column;
-    span {
-        color: #717171;
+
+    .apartment-text-info-container {
+        display: flex;
+        flex-direction: column;
+
+        .apartment-text-header {
+            color: #222222;
+        }
+
+        .apartment-text-info {
+            color: #717171;
+        }
     }
 }

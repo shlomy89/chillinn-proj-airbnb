@@ -18,9 +18,13 @@
 }
 
 .amenities-container {
+    columns: 2;
     .amenities-header {
         font-size: 26px;
         line-height: 26px;
+        display: flex;
+        margin-bottom: 25px;
+        margin-top: 25px;
     }
 
     .show-all-amenities {
