@@ -6,7 +6,6 @@ import { StayFilter } from '../cmps/stay-filter'
 import { StayList } from '../cmps/stay-list'
 import { reviewService } from '../services/review.service'
 
-
 import {
     loadStays,
     removeStay,
@@ -50,11 +49,11 @@ export const StayApp = () => {
     return (
         <div className='stay-app'>
             <StayFilter onChangeFilter={onChangeFilter} />
-            <StayList
+            {/* <StayList
                 onAddReview={onAddReview}
                 onRemoveStay={onRemoveStay}
                 stays={stays}
-            />
+            /> */}
         </div>
     )
 }

@@ -44,6 +44,7 @@ export const StayDetails = () => {
             //     setImage(imgData.default)
             // })
             // getNextStay(stay._id)
+            console.log(stay)
             setStay(stay)
         })
         reviewService.query({ stayId }).then((reviews) => setReviews(reviews))
@@ -72,12 +73,12 @@ export const StayDetails = () => {
     console.log('hello stay details')
     console.log(stay)
 
-    if (!stay) return <div>Loading...</div>
+    // if (!stay) return <div>Loading...</div>
     return (
         <div className='stay-details'>
-            <div className='title'>
+            {/* <div className='title'>
                 <h3>{stay.title}</h3>
-            </div>
+            </div> */}
             <div className='container'>
                 <StarRating rating={4.73} reviews={32} />
                 <div className='share-like'>

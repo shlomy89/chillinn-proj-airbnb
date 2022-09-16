@@ -16,10 +16,8 @@ function App() {
             <main className='container'>
                 <Routes>
                     <Route path='/stay' element={<StayDetails />} />
-                    <Route path='*' element={<Navigate to='/stay' />} />
                     <Route path='stay/edit/:id' element={<StayEdit />} />
                     <Route path='stay/edit' element={<StayEdit />} />
-                    {/* :id removed */}
                     <Route path='dashboard' element={<StayDashboard />} />
                     <Route path='login' element={<Login />} />
                     <Route path='signup' element={<Signup />} />
