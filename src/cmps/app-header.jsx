@@ -1,7 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { onLogout } from '../store/actions/user.action.js'
 import logo from '../assets/img/logo.png'
+import { StayFilter } from './stay-filter.jsx'
+
 import { Button } from '@mui/material'
 
 export function AppHeader() {
@@ -18,19 +20,23 @@ export function AppHeader() {
     }
 
     return (
-        <header className='app-header'>
-            <section className='container'>
+        <header className='app-header flex full align-center'>
                 <img src={logo} className='logo' onClick={onBack} />
-                {loggedInUser && (
+
+                <section>
+                <Link to='/stay/edit'><Button>Become a Host</Button></Link>&nbsp;
+                <NavLink to='/login'><Button>Login/Sign Up</Button></NavLink>
+                </section>
+
+                {/* {loggedInUser && (
                     <section className='user'>
                         <p>
                             Name: {loggedInUser.firstname}{' '}
                             {loggedInUser.lastname}
                         </p>
-                        <p>Balance: {loggedInUser.score}</p>
                     </section>
-                )}
-                <nav>
+                )} */}
+                {/* <nav>
                     <NavLink to=''>Home</NavLink>
                     <NavLink to='dashboard'>Dashboard</NavLink>
                     <NavLink to='about'>About</NavLink>
@@ -45,8 +51,7 @@ export function AppHeader() {
                             Logout
                         </Button>
                     )}
-                </nav>
-            </section>
+                </nav> */}
         </header>
     )
 }

@@ -49,7 +49,6 @@ export const useFormRegister = (initialState, callBack) => {
         return `${(valueTime.getHours() + '').padStart(2, '0')}:${(valueTime.getMinutes() + '').padStart(2, '0')}`
     }
 
-
     const register = (field, type = '', value) => { // value only used when type === 'radio'
         const inputProp = {
             onChange: handleChange,
@@ -68,7 +67,5 @@ export const useFormRegister = (initialState, callBack) => {
         }
         return inputProp
     }
-
     return [register, setFields, fields]
-
 }

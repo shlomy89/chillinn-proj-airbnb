@@ -21,7 +21,10 @@ const gStays = [
     {
         _id: 10006546,
         name: 'Ribeira Charming Duplex1',
-        type: 'House',
+        propertyType: 'House',
+        placeType: 'Entire place',
+        bedrooms: 3,
+        price: 60,
         imgUrls: [
             'https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
         ],
@@ -34,6 +37,11 @@ const gStays = [
             'TV',
             'Wifi',
             'Kitchen',
+            'Dryer',
+            'Washer',
+            'Air conditioning',
+            'Heating',
+            'Iron',
             'Smoking allowed',
             'Pets allowed',
             'Cooking basics'
@@ -51,11 +59,13 @@ const gStays = [
     {
         _id: 10006547,
         name: 'Ribeira Charming Duplex2',
-        type: 'House',
+        propertyType: 'Apartment',
+        placeType: 'Privet room',
+        bedrooms: 5,
         imgUrls: [
             'https://a0.muscache.com/im/pictures/63befe3b-264a-4082-ab8d-7b0681b91955.jpg?im'
         ],
-        price: 80.0,
+        price: 70,
         summary:
             'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
         capacity: 8,
@@ -81,11 +91,13 @@ const gStays = [
     {
         _id: 10006548,
         name: 'Ribeira Charming Duplex3',
-        type: 'House',
+        propertyType: 'Guesthouse',
+        placeType: 'Shared room',
+        bedrooms: 6,
         imgUrls: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-3524556/original/24e9b114-7db5-4fab-8994-bc16f263ad1d.jpeg?im_w=720'
         ],
-        price: 80.0,
+        price: 80,
         summary:
             'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
         capacity: 8,
@@ -111,11 +123,13 @@ const gStays = [
     {
         _id: 10006549,
         name: 'Ribeira Charming Duplex4',
-        type: 'House',
+        propertyType: 'Hotel',
+        placeType: 'Entire place',
+        bedrooms: 2,
         imgUrls: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-610511843622686196/original/253bfa1e-8c53-4dc0-a3af-0a75728c0708.jpeg?im_w=720'
         ],
-        price: 80.0,
+        price: 90,
         summary:
             'Fantastic duplex apartment with three bedrooms, located in the historic area of Porto, Ribeira (Cube)...',
         capacity: 8,
@@ -145,33 +159,43 @@ const STORAGE_KEY = 'stays'
 
 function query(filterBy) {
 
-    
     return storageService.query(STORAGE_KEY).then((stays) => {
         if (!stays || !stays.length) stays = gStays
 
+        if (!stays || !stays.length) stays = gStays
+        storageService.postMany(STORAGE_KEY, stays)
+
         if (filterBy) {
-            let { name, minPrice, stock, labels } = filterBy
+            let { minPrice, maxPrice, bedrooms, propertyType, placeType, amenities } = filterBy
             console.log("returnstorageService.query ~ filterBy", filterBy)
 
-            if (name) {
-                const regex = new RegExp(name, 'i')
-                stays = stays.filter((stay) => regex.test(stay.name))
+            if (propertyType) {
+                const regex = new RegExp(propertyType, 'i')
+                stays = stays.filter((stay) => regex.test(stay.propertyType))
+            }
+
+            if (placeType) {
+                const regex = new RegExp(placeType, 'i')
+                stays = stays.filter((stay) => regex.test(stay.placeType))
             }
 
             if (minPrice) {
                 stays = stays.filter((stay) => stay.price >= minPrice)
             }
 
-            if (stock) {
-                if (stock !== '') {
-                    stock = stock === 'true'
-                    stays = stays.filter((stay) => stay.inStock === stock)
-                }
+            if (maxPrice) {
+                stays = stays.filter((stay) => stay.price <= maxPrice)
             }
 
+            if (bedrooms) {
+                stays = stays.filter((stay) => stay.bedrooms === bedrooms)
+            }
+
+            if (amenities) {
+                stays = stays.filter((stay) => amenities.every(amenity => stay.amenities.includes(amenity)))
+            }
         }
         return stays
-
     })
 }
 

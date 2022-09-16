@@ -16,7 +16,7 @@ export function StayPreview({ stay, onRemoveStay, onAddReview }) {
         <div className='stay-preview'>
             <Link to={`/stay/${stay._id}`} className='info'>
                 <div className="gallery-container">
-                <img src={stay.imgUrls[0]}/>
+                    <img src={stay.imgUrls[0]} />
                 </div>
                 <h2>{stay.name}</h2>
                 <h3>{stay.loc.city},&nbsp;{stay.loc.country}</h3>
