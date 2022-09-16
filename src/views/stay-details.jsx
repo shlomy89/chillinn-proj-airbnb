@@ -25,6 +25,7 @@ import { ReactComponent as WasherIcon } from '../../src/assets/img/icons/washer-
 import { ReactComponent as AirConditioningIcon } from '../../src/assets/img/icons/air-conditioning-icon.svg'
 import { ReactComponent as HairDryerIcon } from '../../src/assets/img/icons/hair-dryer-icon.svg'
 import { ReactComponent as SmokeAlarmIcon } from '../../src/assets/img/icons/smoke-alarm-icon.svg'
+import { Review } from '../cmps/details-cmp/review'
 
 // import { utilService } from "../services/util.service"
 
@@ -128,6 +129,23 @@ export const StayDetails = () => {
                     Show all amenities{' '}
                 </button>
             </section>
+            <section className='review'>
+                <Review
+                    name={'Anthony'}
+                    date={'september 2022'}
+                    review={
+                        'Simple, clean, cool design, easy, spectacular location - terrific communication & very good value in Tel Aviv'
+                    }
+                />
+            </section>
+            {/* <section className='things-to-know'>
+            <div className='to-know-header'>What this place Offers</div>
+            <HouseRules text={'Check-in: 3:00 PM - 12:00 AM'} Icon={HairDryerIcon} />
+            <HouseRules text={'Checkout: 10:00 AM'} Icon={HairDryerIcon}/>
+            <HouseRules text={'No smoking'} Icon={HairDryerIcon}/>
+            <HouseRules text={'No parties or events'} Icon={HairDryerIcon}/>
+            <HouseRules text={'Pets are allowed'} Icon={HairDryerIcon}/>
+    </section> */}
         </div>
     )
 }
