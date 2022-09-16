@@ -14,14 +14,16 @@ export function StayPreview({ stay, onRemoveStay, onAddReview }) {
 
     return (
         <div className='stay-preview'>
-            <Link to={`/stay/${stay._id}`} className='info'>
+            <Link  to={`/stay/${stay._id}`} className='info'>
                 <div className="gallery-container">
                     <img src={stay.imgUrls[0]} />
                 </div>
+                <div className="preview-details">
                 <h2>{stay.name}</h2>
                 <h3>{stay.loc.city},&nbsp;{stay.loc.country}</h3>
                 <h4>{stay.capacity}&nbsp;guests</h4>
                 <h3>${stay.price} night</h3>
+                </div>
             </Link>
             {/* <button onClick={() => { onAddReview(stay._id) }}>Add review</button>
             <section className='actions'>
