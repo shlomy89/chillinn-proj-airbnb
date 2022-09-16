@@ -49,11 +49,11 @@ export const StayApp = () => {
     return (
         <div className='stay-app'>
             <StayFilter onChangeFilter={onChangeFilter} />
-            {/* <StayList
+            <StayList
                 onAddReview={onAddReview}
                 onRemoveStay={onRemoveStay}
                 stays={stays}
-            /> */}
+            />
         </div>
     )
 }

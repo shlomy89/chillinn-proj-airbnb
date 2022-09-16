@@ -1,0 +1,27 @@
+.stay-preview {
+   width: 260px;
+
+   .gallery-container {
+      width: 260px;
+      height: 247px;
+      position: relative;
+
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 15px;
+      }
+   }
+
+   .preview-details {
+
+      h2,
+      h3,
+      h4 {
+         text-decoration: none;
+         color: grey
+      }
+   }
+}
