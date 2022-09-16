@@ -1,5 +1,5 @@
 import { useFormRegister } from '../hooks/useFormRegister'
-import AirbnbSlider from './range-slider.jsx'
+import {AirbnbSlider} from './range-slider.jsx'
 
 export const StayFilter = (props) => {
 
@@ -11,6 +11,7 @@ export const StayFilter = (props) => {
         placeType: '',
         amenities: ''
     }, props.onChangeFilter)
+
 
     const classObj = { className: 'stay-filter' }
 
@@ -45,7 +46,7 @@ export const StayFilter = (props) => {
 
     return (
         <form {...classObj} >
-            <AirbnbSlider/>
+            <AirbnbSlider  />
             {/* <section>
                 <label htmlFor="minPrice">Min Price</label>
                 <input {...register('minPrice', 'range')} />
