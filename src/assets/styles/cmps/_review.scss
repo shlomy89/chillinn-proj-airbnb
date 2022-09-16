@@ -1,0 +1,24 @@
+.review-details {
+    .user-details {
+        display: flex;
+        column-gap: 12px;
+        img {
+            width: 40px;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 50px;
+        }
+        .user-name-details {
+            display: flex;
+            flex-direction: column;
+
+            .user-name {
+                color: #222222;
+                font-weight: 550;
+            }
+            .user-date {
+                color: #717171;
+            }
+        }
+    }
+}

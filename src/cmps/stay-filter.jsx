@@ -1,5 +1,5 @@
 import { useFormRegister } from '../hooks/useFormRegister'
-import AirbnbSlider from './range-slider.jsx'
+import RangeSlider from './range-slider.jsx'
 
 export const StayFilter = (props) => {
 
@@ -30,36 +30,29 @@ export const StayFilter = (props) => {
         'Cooking basics'
     ]
 
-    const resetFilters = (ev) => {
-        ev.preventDefault()
-        const filter = {
-            minPrice: 0,
-            maxPrice: 5000,
-            bedrooms: 0,
-            propertyType: '',
-            placeType: '',
-            amenities: ''
-        }
-        props.onChangeFilter(filter)
+    // const resetFilters = (ev) => {
+    //     ev.preventDefault()
+    //     const filter = {
+    //         minPrice: 0,
+    //         maxPrice: 5000,
+    //         bedrooms: 0,
+    //         propertyType: '',
+    //         placeType: '',
+    //         amenities: ''
+    //     }
+    //     props.onChangeFilter(filter)
+    // }
+
+    const handlePriceSlider = (min, max) => {
+        console.log('min, max:', min, max)
     }
 
     return (
         <form {...classObj} >
-            <AirbnbSlider/>
-            {/* <section>
-                <label htmlFor="minPrice">Min Price</label>
-                <input {...register('minPrice', 'range')} />
-            </section>
-            <section>
-                <label htmlFor="maxPrice">Min Price</label>
-                <input {...register('maxPrice', 'range')} />
-            </section> */}
+            <RangeSlider handlePriceSlider={handlePriceSlider} />
             <section>
                 <label htmlFor="bedrooms">Bedrooms</label>
-                <input
-                    min={0}
-                    max={8}
-                    step={1}
+                <input min={0} max={8} step={1}
                     {...register('bedrooms', 'range')} />
             </section>
             <section>
@@ -89,7 +82,6 @@ export const StayFilter = (props) => {
                 </select>
             </section>
             <section>
-                {/* <label htmlFor="propertyType">Property Type</label> */}
                 <select  {...register('propertyType', 'text')}>
                     <option
                         key={propertyTypes}
@@ -101,7 +93,7 @@ export const StayFilter = (props) => {
                         {propertyType}</option>)}
                 </select>
             </section>
-            <button onClick={(ev) => resetFilters(ev)}>Reset filter</button>
+            {/* <button onClick={(ev) => resetFilters(ev)}>Reset filter</button> */}
         </form>
     )
 }
