@@ -41,7 +41,6 @@ export function updateStay(stay) {
 
 export function addStay(stay) {
   return async (dispatch) => {
-
     return stayService.save(stay)
       .then((savedStay) => {
         dispatch({ type: 'ADD_STAY', stay: savedStay })

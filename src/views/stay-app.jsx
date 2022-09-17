@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { StayFilter } from '../cmps/stay-filter'
 import { StayList } from '../cmps/stay-list'
 import { reviewService } from '../services/review.service'
+import  TransitionsModal  from '../cmps/filter-modal.jsx'
 
 import {
     loadStays,
@@ -50,7 +51,7 @@ export const StayApp = () => {
 
     return (
         <div className='stay-app'>
-            <StayFilter onChangeFilter={onChangeFilter} />
+            <TransitionsModal onChangeFilter={onChangeFilter} />
             <StayList
                 onAddReview={onAddReview}
                 onRemoveStay={onRemoveStay}
