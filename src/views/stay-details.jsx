@@ -3,18 +3,13 @@ import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { stayService } from '../services/stay.service'
 import { reviewService } from '../services/review.service'
-import { Button } from '@mui/material'
-
-import { Star } from '@mui/icons-material'
 import { StarRating } from '../cmps/details-cmp/start-rating'
 import { ActionButton } from '../cmps/details-cmp/action-button'
-import { ReactComponent as HeartIcon } from '../../src/assets/img/icons/heart.svg'
-import { ReactComponent as ShareIcon } from '../../src/assets/img/icons/share.svg'
+import { ReactComponent as HeartIcon } from '../../src/assets/img/icons/heart-icon.svg'
+import { ReactComponent as ShareIcon } from '../../src/assets/img/icons/share-icon.svg'
 import { ApartmentInfo } from '../cmps/details-cmp/apartment-info'
 import { ReactComponent as DoorIcon } from '../../src/assets/img/icons/door-icon.svg'
-import { ReactComponent as SuperHostIcon } from '../../src/assets/img/icons/super-host.svg'
-import { ReactComponent as FreeCancellationIcon } from '../../src/assets/img/icons/free-cancellation.svg'
-import { MainFeatures } from '../cmps/details-cmp/main-features'
+import { IconText } from '../cmps/details-cmp/icon-text'
 import { ReactComponent as KitchenIcon } from '../../src/assets/img/icons/kitchen-icon.svg'
 import { ReactComponent as TvIcon } from '../../src/assets/img/icons/tv-icon.svg'
 import { ReactComponent as DryerIcon } from '../../src/assets/img/icons/dryer-icon.svg'
@@ -26,6 +21,17 @@ import { ReactComponent as AirConditioningIcon } from '../../src/assets/img/icon
 import { ReactComponent as HairDryerIcon } from '../../src/assets/img/icons/hair-dryer-icon.svg'
 import { ReactComponent as SmokeAlarmIcon } from '../../src/assets/img/icons/smoke-alarm-icon.svg'
 import { Review } from '../cmps/details-cmp/review'
+import { ReactComponent as CheckInOutIcon } from '../../src/assets/img/icons/check-in-out-icon.svg'
+import { ReactComponent as NoSmokingIcon } from '../../src/assets/img/icons/no-smoking-icon.svg'
+import { ReactComponent as NoPartiesIcon } from '../../src/assets/img/icons/no-parties-icon.svg'
+import { ReactComponent as PetsAreAllowedIcon } from '../../src/assets/img/icons/pets-are-allowed-icon.svg'
+import { ShowMoreButton } from '../cmps/details-cmp/show-more-button'
+
+import { ReactComponent as HealthCheckIcon } from '../../src/assets/img/icons/health-check-icon.svg'
+import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/smoking-alarm-icon.svg'
+import { CancellationPolicy } from '../cmps/details-cmp/cancellation-policy'
+import { ThingToKnow } from '../cmps/details-cmp/thing-to-know'
+import { ReservationCard } from '../cmps/details-cmp/reservation-card'
 
 // import { utilService } from "../services/util.service"
 
@@ -77,75 +83,177 @@ export const StayDetails = () => {
     // if (!stay) return <div>Loading...</div>
     return (
         <div className='stay-details'>
-            {/* <div className='title'>
-                <h3>{stay.title}</h3>
-            </div> */}
-            <div className='container'>
-                <StarRating rating={4.73} reviews={32} />
+            <div className='title'>
+                {/* <h3>{stay.title}</h3> */}
+                <h3>
+                    Loginn Contactless Stay: studio apartment & by the Dizengoff
+                    Square
+                </h3>
+            </div>
+            <div className='stay-apartment-location-header-container'>
+                <div className='apartment-location-rating'>
+                    <StarRating rating={4.73} reviews={32} />
+                    <span>·</span>{' '}
+                    <a className='apartment-location'>
+                        Tel Aviv-Yafo, Tel Aviv District, Israel
+                    </a>
+                </div>
                 <div className='share-like'>
-                    <ActionButton text={'share'} Icon={ShareIcon} />
-                    <ActionButton text={'save'} Icon={HeartIcon} />
+                    <ActionButton text={'Share'} Icon={ShareIcon} />
+                    <ActionButton text={'Save'} Icon={HeartIcon} />
                 </div>
             </div>
-            <section className='general-info'>
-                <div className='apartment-info'>
-                    <ApartmentInfo
-                        text={'Self check-in'}
-                        textInfo={'Check yourself in with the lockbox.'}
-                        Icon={DoorIcon}
+            <div className='apartment-images-container'>
+                <img
+                    className='main-apartment-image'
+                    src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
+                />
+                <div className='apartment-secondary-images'>
+                    <img src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720' />
+                    <img src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720' />
+                </div>
+                <div className='apartment-secondary-images'>
+                    <img
+                        className='border-top'
+                        src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
                     />
-                    {/* <ApartmentInfo
+                    <img
+                        className='border-bottom'
+                        src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
+                    />
+                </div>
+            </div>
+            <div className='stay-details-content-container'>
+                <div className='stay-details-content'>
+                    <section className='general-info'>
+                        <div className='apartment-secondary-info'>
+                            <div className='apartment-secondary-header-container'>
+                                <span className='secondary-header'>
+                                    Entire serviced apartment hosted by Veller
+                                    Homes
+                                </span>
+                                <img
+                                    className='apartment-owner-img'
+                                    src='https://a0.muscache.com/im/pictures/user/5c9836a5-c81e-4b14-ba79-978811fff5ee.jpg?im_w=240'
+                                />
+                            </div>
+                            <div className='apartment-content-container'>
+                                <span>4 guests</span>·<span>4 guests</span>·
+                                <span>4 guests</span>·<span>4 guests</span>·
+                            </div>
+                        </div>
+                        <div className='apartment-info'>
+                            <ApartmentInfo
+                                text={'Self check-in'}
+                                textInfo={'Check yourself in with the lockbox.'}
+                                Icon={DoorIcon}
+                            />
+                            {/* <ApartmentInfo
                         text={'Veller Homes is a Superhost'}
                         textInfo={
                             'Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.'
                         }
                         Icon={SuperHostIcon}
-                    />
-                    <ApartmentInfo
+                        />
+                        <ApartmentInfo
                         text={'Free cancellation'}
                         Icon={FreeCancellationIcon}
                     /> */}
+                        </div>
+                    </section>
+                    <section className='amenities-container'>
+                        <div className='amenities-header'>
+                            What this place Offers
+                        </div>
+                        <div className='amenities-list-container'>
+                            <div className='amenities-list'>
+                                <IconText text={'Kitchen'} Icon={KitchenIcon} />
+                                <IconText
+                                    text={'TV with standard cable'}
+                                    Icon={TvIcon}
+                                />
+                                <IconText text={'Dryer'} Icon={DryerIcon} />
+                                <IconText
+                                    text={'High chair'}
+                                    Icon={HighChairIcon}
+                                />
+                                <IconText
+                                    text={'Carbon monoxide alarm'}
+                                    Icon={CarbonMonoxideAlarmIcon}
+                                />
+                            </div>
+                            <div className='amenities-list'>
+                                <IconText text={'Wifi'} Icon={WifiIcon} />
+                                <IconText text={'Washer'} Icon={WasherIcon} />
+                                <IconText
+                                    text={'Air conditioning'}
+                                    Icon={AirConditioningIcon}
+                                />
+                                <IconText
+                                    text={'Hair dryer'}
+                                    Icon={HairDryerIcon}
+                                />
+                                <IconText
+                                    text={'Smoke alarm'}
+                                    Icon={SmokeAlarmIcon}
+                                />
+                            </div>
+                        </div>
+                        <button className='show-all-amenities'>
+                            Show all amenities{' '}
+                        </button>
+                    </section>
+                    <section className='review'>
+                        <Review
+                            name={'Anthony'}
+                            date={'september 2022'}
+                            review={
+                                'Simple, clean, cool design, easy, spectacular location - terrific communication & very good value in Tel Aviv'
+                            }
+                        />
+                    </section>
                 </div>
+                <ReservationCard />
+            </div>
+            <section className='things-to-know-container'>
+                {/* <div className='to-know-header'>Things to know</div> */}
+                <ThingToKnow header='House rules'>
+                    <IconText
+                        text={'Check-in: 3:00 PM - 12:00 AM'}
+                        Icon={CheckInOutIcon}
+                    />
+                    <IconText
+                        text={'Checkout: 10:00 AM'}
+                        Icon={CheckInOutIcon}
+                    />
+                    <IconText text={'No smoking'} Icon={NoSmokingIcon} />
+                    <IconText
+                        text={'No parties or events'}
+                        Icon={NoPartiesIcon}
+                    />
+                    <IconText
+                        text={'Pets are allowed'}
+                        Icon={PetsAreAllowedIcon}
+                    />
+                </ThingToKnow>
+
+                <ThingToKnow header='Health & safety'>
+                    <IconText
+                        text={"Airbnb's COVID-19 safety practices apply"}
+                        Icon={HealthCheckIcon}
+                    />
+                    <IconText
+                        text={'Carbon monoxide alarm'}
+                        Icon={HealthCheckIcon}
+                    />
+                    <IconText text={'Smoke alarm'} Icon={SmokingAlarmIcon} />
+                </ThingToKnow>
+                <ThingToKnow header='Cancellation policy'>
+                    This reservation is non-refundable.Review the Host's full
+                    cancellation policy which applies even if you cancel for
+                    illness or disruptions caused by COVID-19.
+                </ThingToKnow>
             </section>
-            <section className='amenities-container'>
-                <div className='amenities-header'>What this place Offers</div>
-                <MainFeatures text={'Kitchen'} Icon={KitchenIcon} />
-                <MainFeatures text={'TV with standard cable'} Icon={TvIcon} />
-                <MainFeatures text={'Dryer'} Icon={DryerIcon} />
-                <MainFeatures text={'High chair'} Icon={HighChairIcon} />
-                <MainFeatures
-                    text={'Carbon monoxide alarm'}
-                    Icon={CarbonMonoxideAlarmIcon}
-                />
-                <MainFeatures text={'Wifi'} Icon={WifiIcon} />
-                <MainFeatures text={'Washer'} Icon={WasherIcon} />
-                <MainFeatures
-                    text={'Air conditioning'}
-                    Icon={AirConditioningIcon}
-                />
-                <MainFeatures text={'Hair dryer'} Icon={HairDryerIcon} />
-                <MainFeatures text={'Smoke alarm'} Icon={SmokeAlarmIcon} />
-                <button className='show-all-amenities'>
-                    Show all amenities{' '}
-                </button>
-            </section>
-            <section className='review'>
-                <Review
-                    name={'Anthony'}
-                    date={'september 2022'}
-                    review={
-                        'Simple, clean, cool design, easy, spectacular location - terrific communication & very good value in Tel Aviv'
-                    }
-                />
-            </section>
-            {/* <section className='things-to-know'>
-            <div className='to-know-header'>What this place Offers</div>
-            <HouseRules text={'Check-in: 3:00 PM - 12:00 AM'} Icon={HairDryerIcon} />
-            <HouseRules text={'Checkout: 10:00 AM'} Icon={HairDryerIcon}/>
-            <HouseRules text={'No smoking'} Icon={HairDryerIcon}/>
-            <HouseRules text={'No parties or events'} Icon={HairDryerIcon}/>
-            <HouseRules text={'Pets are allowed'} Icon={HairDryerIcon}/>
-    </section> */}
         </div>
     )
 }
