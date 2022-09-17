@@ -10,15 +10,17 @@
 html {
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
         'Helvetica Neue', sans-serif;
-    line-height: 2;
+    // line-height: 2;
     background-color: $clr6;
 }
 
 body {
     font-size: rem(18px);
     margin: 0;
-    max-width: 1024px;
+    max-width: 1120px;
     margin: auto;
+    overflow: auto !important;
+    padding-right: 0 !important;
 }
 
 h1,
