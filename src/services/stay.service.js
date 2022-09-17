@@ -160,7 +160,7 @@ const STORAGE_KEY = 'stays'
 function query(filterBy) {
 
     return storageService.query(STORAGE_KEY).then((stays) => {
-        console.log("returnstorageService.query ~ stays", stays)
+
         if (!stays || !stays.length) stays = gStays
         storageService.postMany(STORAGE_KEY, stays)
 
