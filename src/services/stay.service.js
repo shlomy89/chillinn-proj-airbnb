@@ -20,11 +20,11 @@ export const stayService = {
 const gStays = [
     {
         _id: 10006546,
-        name: 'Ribeira Charming Duplex1',
+        name: 'Ribeira De la kasa Charming Duplex',
         propertyType: 'House',
         placeType: 'Entire place',
         bedrooms: 3,
-        price: 100,
+        price: 400,
         imgUrls: [
             'https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
         ],
@@ -60,7 +60,7 @@ const gStays = [
         propertyType: 'Apartment',
         placeType: 'Privet room',
         bedrooms: 5,
-        price: 200,
+        price: 500,
         imgUrls: [
             'https://a0.muscache.com/im/pictures/63befe3b-264a-4082-ab8d-7b0681b91955.jpg?im'
         ],
