@@ -29,6 +29,10 @@ export const StayApp = () => {
         dispatch(loadStays())
     }
 
+    const onSetLikeBtn = () => {
+        // dispatch(setLikeBtn())
+    }
+
     const onAddReview = async (stayId) => {
         const txt = prompt('Write the review here')
         try {
@@ -50,8 +54,7 @@ export const StayApp = () => {
         <div className='stay-app'>
             <TransitionsModal onChangeFilter={onChangeFilter} />
             <StayList
-                onAddReview={onAddReview}
-                onRemoveStay={onRemoveStay}
+                onSetLikeBtn={onSetLikeBtn}
                 stays={stays}
             />
         </div>

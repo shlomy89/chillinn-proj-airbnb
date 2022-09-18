@@ -56,3 +56,9 @@ export function setFilterBy(filterBy) {
     dispatch({ type: 'SET_FILTER_BY', filterBy })
   }
 }
+
+// export function setLikeBtn() {
+//   return (dispatch) => {
+//     dispatch({ type: 'SET_LIKE_BTN',  })
+//   }
+// }

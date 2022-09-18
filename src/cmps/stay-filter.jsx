@@ -13,7 +13,6 @@ import ButtonGroup from '@mui/material/ButtonGroup'
 import Button from '@mui/material/Button'
 import _ from 'lodash'
 
-
 function AirbnbThumbComponent(props) {
     const { children, ...other } = props
     return (
@@ -34,7 +33,7 @@ export const StayFilter = ({ onChangeFilter }) => {
 
     const getDefaultState = () => {
         return {
-            priceRange: [50, 1500],
+            priceRange: [20, 1900],
             bedrooms: 0,
             propertyType: '',
             placeType: '',
@@ -54,7 +53,7 @@ export const StayFilter = ({ onChangeFilter }) => {
         }
     }
 
-    const placeTypes = ["Entire place", "Private room", "Shared room"]
+    const placeTypes = ["Entire home/apt", "Private room", "Shared room"]
     const propertyTypes = ["House", "Apartment", "Guesthouse", "Hotel"]
     const [filter, setFilter] = React.useState(getDefaultState())
 

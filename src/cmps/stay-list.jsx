@@ -1,14 +1,14 @@
 import { StayPreview } from './stay-preview.jsx'
 
-export function StayList({ stays, onRemoveStay, onAddReview }) {
+export function StayList({ stays, onSetLikeBtn }) {
     return (
         stays && <section className='stay-list simple-cards-grid'>
-            {stays.map(stay => 
-            <StayPreview
-            onAddReview={onAddReview}
-            key={stay._id}
-            stay={stay}
-            onRemoveStay={onRemoveStay} />)}
+            {stays.map(stay =>
+                <StayPreview
+                    onSetLikeBtn={onSetLikeBtn}
+                    key={stay._id}
+                    stay={stay}
+                />)}
         </section>
     )
 }
