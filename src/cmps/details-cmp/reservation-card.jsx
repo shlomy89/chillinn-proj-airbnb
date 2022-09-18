@@ -50,16 +50,16 @@ export const ReservationCard = () => {
                             className='rdrDateInput rdrDateDisplayItem rdrDateDisplayItemActive'
                         >
                             <input
-                                readonly=''
+                                readOnly=''
                                 placeholder='Early'
-                                value={moment(startDate).format('MMM DD, YYYY')}
+                                defaultValue={moment(startDate).format('MMM DD, YYYY')}
                             />
                         </div>
                         <span className='rdrDateInput rdrDateDisplayItem'>
                             <input
-                                readonly=''
+                                readOnly=''
                                 placeholder='Continuous'
-                                value={moment(endDate).format('MMM DD, YYYY')}
+                                defaultValue={moment(endDate).format('MMM DD, YYYY')}
                             />
                         </span>
                     </div>

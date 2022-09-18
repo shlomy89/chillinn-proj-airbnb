@@ -6,7 +6,8 @@ export const utilService = {
     randomBoolean,
     randomDate,
     // getCreatedTime,
-    makeChartDate
+    makeChartDate,
+    numberWithCommas
 }
 
 function randomBoolean() {
@@ -86,3 +87,7 @@ function delay(ms = 1500) {
     })
 }
 
+//example: numberWithCommas(1234567) => return(1,234,456)
+function numberWithCommas(x){
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

@@ -12,14 +12,14 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 400,
+    width: 500,
     bgcolor: 'background.paper',
     borderRadius: '10px',
     boxShadow: 24,
     p: 4,
-};
+}
 
-export default function TransitionsModal(props) {
+export default function TransitionsModal({onChangeFilter}) {
     const [open, setOpen] = React.useState(false)
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
@@ -43,7 +43,7 @@ export default function TransitionsModal(props) {
                         <Typography id="transition-modal-title" variant="h6" component="h2">
                             Filter
                         </Typography>
-                            <StayFilter onChangeFilter={props.onChangeFilter}/>
+                            <StayFilter onChangeFilter={onChangeFilter}/>
                     </Box>
                 </Fade>
             </Modal>
