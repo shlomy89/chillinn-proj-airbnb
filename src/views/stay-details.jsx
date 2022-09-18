@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { stayService } from '../services/stay.service'
 import { reviewService } from '../services/review.service'
 import { StarRating } from '../cmps/details-cmp/start-rating'
@@ -25,32 +25,26 @@ import { ReactComponent as CheckInOutIcon } from '../../src/assets/img/icons/che
 import { ReactComponent as NoSmokingIcon } from '../../src/assets/img/icons/no-smoking-icon.svg'
 import { ReactComponent as NoPartiesIcon } from '../../src/assets/img/icons/no-parties-icon.svg'
 import { ReactComponent as PetsAreAllowedIcon } from '../../src/assets/img/icons/pets-are-allowed-icon.svg'
-import { ShowMoreButton } from '../cmps/details-cmp/show-more-button'
-
+// import { ShowMoreButton } from '../cmps/details-cmp/show-more-button'
 import { ReactComponent as HealthCheckIcon } from '../../src/assets/img/icons/health-check-icon.svg'
 import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/smoking-alarm-icon.svg'
-import { CancellationPolicy } from '../cmps/details-cmp/cancellation-policy'
 import { ThingToKnow } from '../cmps/details-cmp/thing-to-know'
 import { ReservationCard } from '../cmps/details-cmp/reservation-card'
-
-// import { utilService } from "../services/util.service"
+import { AirCover } from '../cmps/details-cmp/air-cover'
+import { BorderLine } from '../cmps/details-cmp/border-line'
 
 export const StayDetails = () => {
     const [stay, setStay] = useState(null)
-    // const [nextStayId, setNextStayId] = useState(null)
     const [reviews, setReviews] = useState(null)
-    // const [image, setImage] = useState("")
 
     const params = useParams()
     const navigate = useNavigate()
 
     useEffect(() => {
         const stayId = params.id
-        stayService.getById(stayId).then((stay) => {
-            // import(`../assets/img/${stay._id}.jpg`).then((imgData) => {
-            //     setImage(imgData.default)
-            // })
-            // getNextStay(stay._id)
+        stayService.getById(stayId)
+        .then((stay) => {
+
             console.log(stay)
             setStay(stay)
         })
@@ -60,11 +54,6 @@ export const StayDetails = () => {
     const onBack = () => {
         navigate('/')
     }
-
-    // const getNextStay = (stayId) => {
-    //     stayService.getNextId(stayId)
-    //         .then(nextStayId => setNextStayId(nextStayId))
-    // }
 
     const onRemoveReview = async (reviewId) => {
         try {
@@ -77,14 +66,11 @@ export const StayDetails = () => {
             console.log(err)
         }
     }
-    console.log('hello stay details')
-    console.log(stay)
 
     // if (!stay) return <div>Loading...</div>
     return (
         <div className='stay-details'>
             <div className='title'>
-                {/* <h3>{stay.title}</h3> */}
                 <h3>
                     Loginn Contactless Stay: studio apartment & by the Dizengoff
                     Square
@@ -131,17 +117,20 @@ export const StayDetails = () => {
                                 <span className='secondary-header'>
                                     Entire serviced apartment hosted by Veller
                                     Homes
+                                    <div className='apartment-content-container'>
+                                        <span>4 guests</span>·
+                                        <span>2 bedrooms</span>·
+                                        <span>2 beds</span>·<span>2 baths</span>
+                                    </div>
                                 </span>
                                 <img
                                     className='apartment-owner-img'
                                     src='https://a0.muscache.com/im/pictures/user/5c9836a5-c81e-4b14-ba79-978811fff5ee.jpg?im_w=240'
                                 />
                             </div>
-                            <div className='apartment-content-container'>
-                                <span>4 guests</span>·<span>4 guests</span>·
-                                <span>4 guests</span>·<span>4 guests</span>·
-                            </div>
                         </div>
+                        <BorderLine />
+
                         <div className='apartment-info'>
                             <ApartmentInfo
                                 text={'Self check-in'}
@@ -160,6 +149,14 @@ export const StayDetails = () => {
                         Icon={FreeCancellationIcon}
                     /> */}
                         </div>
+                    </section>
+                    <BorderLine />
+                    <section className='air-cover'>
+                        <AirCover
+                            text={
+                                'Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.'
+                            }
+                        />
                     </section>
                     <section className='amenities-container'>
                         <div className='amenities-header'>

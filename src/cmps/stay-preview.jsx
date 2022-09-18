@@ -1,36 +1,27 @@
+import * as React from 'react'
 import { Link } from 'react-router-dom'
-import { React} from 'react'
 import { RatingRates } from './rating-rates'
 import { utilService } from '../services/util.service.js'
 import { ReactComponent as LikeHeartEmptyIcon } from '../assets/img/icons/like-heart-empty.svg'
-// import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-heart-red.svg'
+import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-heart-red.svg'
 
 
-export function StayPreview({ stay, onRemoveStay, onAddReview }) {
-
-
-    // const [image, setImage] = useState("")
-
-    // useEffect(() => {
-    //     import(`../assets/img/${stay._id}.jpg`).then((imgData) => {
-    //         setImage(imgData.default)
-    //     })
-    // }, [])
-
-    function onToggleLike(value) {
-        console.log('🚀 ~ onToggleLike')
+export function StayPreview({ stay, onSetLikeBtn }) {
+    
+    const [likeClicked, setLikeClicked] = React.useState(false)
+    
+    function onToggleLike() {
         // TODO: add/remove from wishlist
-        // this.value = !value
-        // this.innerText = <LikeHeartRedIcon/>
+        setLikeClicked(!likeClicked)
+        // onSetLikeBtn
     }
-
 
     const { numberWithCommas } = utilService
 
     return (
         <div className='stay-preview'>
             <div className="like-icon"  onClick={() => { onToggleLike() }}>
-                <LikeHeartEmptyIcon />
+               {likeClicked ? < LikeHeartRedIcon/> : < LikeHeartEmptyIcon/>} 
             </div>
             <Link to={`/stay/${stay._id}`} className='info'>
                 <div className="gallery-container">
