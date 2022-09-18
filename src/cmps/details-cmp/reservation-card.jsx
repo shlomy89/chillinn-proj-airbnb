@@ -6,6 +6,8 @@ import '../../assets/styles/cmps/_reservation-card.scss'
 import { StarRating } from './start-rating'
 import moment from 'moment/moment'
 import { Dropdown } from './guests-dropdown'
+import { ReserveButton } from './reserve-button'
+import { SummaryPrice } from './summary-price'
 
 export const ReservationCard = () => {
     const [value, setValue] = useState(null)
@@ -30,8 +32,10 @@ export const ReservationCard = () => {
     return (
         <div className='reservation-card-container'>
             <div className='reservation-card-header'>
-                <div className='price-per-night'>$533</div>
-                <StarRating rating={5.0} reviews={7} />
+                <div className='price-per-night'>
+                    $533 <span className='per-night'>night</span>
+                </div>
+                <StarRating rating={4.9} reviews={7} />
             </div>
             {!showDatePicker && (
                 <div className='rdrDateDisplayWrapper'>
@@ -80,6 +84,15 @@ export const ReservationCard = () => {
                 </>
             )}
             <Dropdown />
+            <ReserveButton />
+            <p className='no-charge'>you won't be charged yet</p>
+            <section className='summary-price-container'>
+                <SummaryPrice text={'$320 x 5 nigths'} total={1600} />
+                <SummaryPrice text={'Cleaning fee'} total={144} />
+                <SummaryPrice text={'Service fee'} total={0} />
+            </section>
+            <div className='total-price'></div>
+            <SummaryPrice text={'Total'} total={1744} />
         </div>
     )
 }

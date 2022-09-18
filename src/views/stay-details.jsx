@@ -32,6 +32,8 @@ import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/s
 import { CancellationPolicy } from '../cmps/details-cmp/cancellation-policy'
 import { ThingToKnow } from '../cmps/details-cmp/thing-to-know'
 import { ReservationCard } from '../cmps/details-cmp/reservation-card'
+import { AirCover } from '../cmps/details-cmp/air-cover'
+import { BorderLine } from '../cmps/details-cmp/border-line'
 
 // import { utilService } from "../services/util.service"
 
@@ -131,17 +133,20 @@ export const StayDetails = () => {
                                 <span className='secondary-header'>
                                     Entire serviced apartment hosted by Veller
                                     Homes
+                                    <div className='apartment-content-container'>
+                                        <span>4 guests</span>·
+                                        <span>2 bedrooms</span>·
+                                        <span>2 beds</span>·<span>2 baths</span>
+                                    </div>
                                 </span>
                                 <img
                                     className='apartment-owner-img'
                                     src='https://a0.muscache.com/im/pictures/user/5c9836a5-c81e-4b14-ba79-978811fff5ee.jpg?im_w=240'
                                 />
                             </div>
-                            <div className='apartment-content-container'>
-                                <span>4 guests</span>·<span>4 guests</span>·
-                                <span>4 guests</span>·<span>4 guests</span>·
-                            </div>
                         </div>
+                        <BorderLine />
+
                         <div className='apartment-info'>
                             <ApartmentInfo
                                 text={'Self check-in'}
@@ -160,6 +165,14 @@ export const StayDetails = () => {
                         Icon={FreeCancellationIcon}
                     /> */}
                         </div>
+                    </section>
+                    <BorderLine />
+                    <section className='air-cover'>
+                        <AirCover
+                            text={
+                                'Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.'
+                            }
+                        />
                     </section>
                     <section className='amenities-container'>
                         <div className='amenities-header'>

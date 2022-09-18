@@ -1,0 +1,14 @@
+.air-cover-container {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 123px;
+        height: 26px;
+    }
+
+    .air-cover-text {
+        margin-top: 21px;
+    }
+}

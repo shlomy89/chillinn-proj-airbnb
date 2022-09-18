@@ -21,14 +21,19 @@ export function AppHeader() {
 
     return (
         <header className='app-header flex full align-center'>
-                <img src={logo} className='logo' onClick={onBack} />
+            <img src={logo} className='logo' onClick={onBack} />
 
-                <section>
-                <Link to='/stay/edit'><Button>Become a Host</Button></Link>&nbsp;
-                <NavLink to='/login'><Button>Login/Sign Up</Button></NavLink>
-                </section>
+            <section>
+                <Link to='/stay/edit'>
+                    <Button>Become a Host</Button>
+                </Link>
+                &nbsp;
+                <NavLink to='/login'>
+                    <Button>Login/Sign Up</Button>
+                </NavLink>
+            </section>
 
-                {/* {loggedInUser && (
+            {/* {loggedInUser && (
                     <section className='user'>
                         <p>
                             Name: {loggedInUser.firstname}{' '}
@@ -36,7 +41,7 @@ export function AppHeader() {
                         </p>
                     </section>
                 )} */}
-                {/* <nav>
+            {/* <nav>
                     <NavLink to=''>Home</NavLink>
                     <NavLink to='dashboard'>Dashboard</NavLink>
                     <NavLink to='about'>About</NavLink>

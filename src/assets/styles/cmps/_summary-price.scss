@@ -1,0 +1,19 @@
+.summary-price {
+    display: flex;
+    justify-content: space-between;
+    // flex-direction: column;
+    // row-gap: 30px;
+
+    .text-summary-price {
+        text-decoration: underline;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.total-price {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid lightgray;
+    font-weight: 600;
+}
