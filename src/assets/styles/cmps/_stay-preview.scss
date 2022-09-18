@@ -1,5 +1,14 @@
 .stay-preview {
    width: 260px;
+   
+   .like-icon{
+      display:inline-block;
+      position: relative;
+      float: right;
+      margin: 15px;
+      z-index: 10;
+      cursor: pointer;
+   }
 
    .gallery-container {
       width: 260px;
@@ -13,15 +22,45 @@
          object-fit: cover;
          border-radius: 15px;
       }
+
    }
 
    .preview-details {
-
-      h2,
-      h3,
-      h4 {
+      padding-top: 15px;
+      
+      .text {
+         font-size: 16px;
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
          text-decoration: none;
-         color: grey
+         color: grey;
+      }
+
+      .rate{
+         color: #222222;
+         display:inline-block;
+         position: relative;
+         float: right;
+      }
+      
+      
+      .name , .night-price{
+         color: #222222;
+         font-weight: bold;
+      }
+
+      .night{
+         color: #222222;
+      }
+      
+      .full-night-price{
+         font-weight: bold;
+         text-decoration: line-through;
+      }
+
+      .full-price{
+         text-decoration: underline;
       }
    }
 }
