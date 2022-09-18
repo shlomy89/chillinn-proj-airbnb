@@ -24,7 +24,7 @@ export function AppHeader() {
                 <img src={logo} className='logo' onClick={onBack} />
 
                 <section>
-                <Link to='/stay/edit'><Button>Become a Host</Button></Link>&nbsp;
+                <Link to='/stay/edit'><Button>Host your home</Button></Link>&nbsp;
                 <NavLink to='/login'><Button>Login/Sign Up</Button></NavLink>
                 </section>
 

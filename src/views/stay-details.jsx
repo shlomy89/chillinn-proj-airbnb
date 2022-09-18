@@ -41,37 +41,37 @@ export const StayDetails = () => {
     useEffect(() => {
         const stayId = params.id
         stayService.getById(stayId)
-        .then((stay) => {
-
-            console.log(stay)
-            setStay(stay)
-        })
+            .then((stay) => {
+                console.log('stay:', stay)
+                setStay(stay)
+            })
         reviewService.query({ stayId }).then((reviews) => setReviews(reviews))
     }, [params.id])
 
-    const onBack = () => {
-        navigate('/')
-    }
+    // const onBack = () => {
 
-    const onRemoveReview = async (reviewId) => {
-        try {
-            await reviewService.remove(reviewId)
-            const newReviews = reviews.filter(
-                (review) => review._id !== reviewId
-            )
-            setReviews(newReviews)
-        } catch (err) {
-            console.log(err)
-        }
-    }
+    //     navigate('/')
+    // }
 
-    // if (!stay) return <div>Loading...</div>
+    // const onRemoveReview = async (reviewId) => {
+    //     try {
+    //         await reviewService.remove(reviewId)
+    //         const newReviews = reviews.filter(
+    //             (review) => review._id !== reviewId
+    //         )
+    //         setReviews(newReviews)
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }
+
+    if (!stay) return <div>Loading...</div>
+
     return (
         <div className='stay-details'>
             <div className='title'>
                 <h3>
-                    Loginn Contactless Stay: studio apartment & by the Dizengoff
-                    Square
+                    {stay.name}
                 </h3>
             </div>
             <div className='stay-apartment-location-header-container'>
@@ -90,20 +90,20 @@ export const StayDetails = () => {
             <div className='apartment-images-container'>
                 <img
                     className='main-apartment-image'
-                    src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
+                    src={stay.imgUrls[0]}
                 />
                 <div className='apartment-secondary-images'>
-                    <img src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720' />
-                    <img src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720' />
+                    <img src={stay.imgUrls[1]} />
+                    <img src={stay.imgUrls[2]} />
                 </div>
                 <div className='apartment-secondary-images'>
                     <img
                         className='border-top'
-                        src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
+                        src={stay.imgUrls[3]}
                     />
                     <img
                         className='border-bottom'
-                        src='https://a0.muscache.com/im/pictures/prohost-api/Hosting-43161516/original/1acde0cf-3363-44d8-a707-59403ed74442.jpeg?im_w=720'
+                        src={stay.imgUrls[4]}
                     />
                 </div>
             </div>
@@ -122,8 +122,8 @@ export const StayDetails = () => {
                                 />
                             </div>
                             <div className='apartment-content-container'>
-                                <span>4 guests</span>·<span>4 guests</span>·
-                                <span>4 guests</span>·<span>4 guests</span>·
+                                <span>{stay.capacity} guests</span>
+                                {/* <span>4 guests</span>·<span>4 guests</span>· */}
                             </div>
                         </div>
                         <div className='apartment-info'>

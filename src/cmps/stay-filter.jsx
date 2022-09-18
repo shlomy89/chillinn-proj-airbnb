@@ -59,8 +59,9 @@ export const StayFilter = ({ onChangeFilter }) => {
 
     useEffect(() => {
         onChangeFilter(filter)
+        // console.log('filter:', filter)
     }, [filter])
-    
+
     const handleFilters = (ev) => {
         setFilter(prevFields => ({
             ...prevFields, [ev.target.name]: ev.target.value
@@ -97,7 +98,6 @@ export const StayFilter = ({ onChangeFilter }) => {
     const getFieldProps = (field, type, useDefaultValue, debounce) => {
         const valueField = useDefaultValue ? 'defaultValue' : 'value'
         const onChange = debounce ? debouncedChangeHandler : handleFilters
-
         return {
             onChange,
             name: field,
@@ -137,6 +137,20 @@ export const StayFilter = ({ onChangeFilter }) => {
         },
     }))
 
+    const RoomButton = styled(Button)(({ theme }) => ({
+        color: theme.palette.getContrastText('#ffffff'),
+        backgroundColor: '#ffffff00',
+        border: '000000',
+        '&:hover': {
+            backgroundColor: '#000000',
+            color: theme.palette.getContrastText('#000000'),
+        },
+        '&:active': {
+            backgroundColor: '#000000',
+            color: theme.palette.getContrastText('#000000'),
+        },
+      }));
+
     return (
         <section className='modal-container'>
             <form>
@@ -147,7 +161,6 @@ export const StayFilter = ({ onChangeFilter }) => {
                         </Typography>
                         <AirbnbSlider
                             components={{ Thumb: AirbnbThumbComponent }}
-                            getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
                             min={0}
                             max={2000}
                             step={10}
@@ -155,13 +168,13 @@ export const StayFilter = ({ onChangeFilter }) => {
                             valueLabelDisplay="auto" />
                     </Box>
                 </section>
-                <section className="rooms-slider-container">
+                <section className="rooms-btn-container">
                     <Box sx={{ width: 300 }}>
                         <Typography id="input-slider">
                             Rooms:
                         </Typography>
                         <ButtonGroup
-                            disableElevation
+                            // disableElevation
                             variant="contained"
                             name="bedrooms"
                             id="bedrooms"
@@ -170,9 +183,14 @@ export const StayFilter = ({ onChangeFilter }) => {
                         >
                             {_.range(0, 9).map(n => (
                                 // button[name='bedrooms'].active {}
-                                <Button className={filter.bedrooms === n ? 'active' : ''} name="bedrooms" value={n} key={`room_${n}`}>
-                                    {n === 0 ? 'Any' : n}
-                                </Button>
+                                    <RoomButton
+                                        className={filter.bedrooms === n ? 'active' : ''}
+                                        name="bedrooms"
+                                        value={n}
+                                        key={`room_${n}`}
+                                    >
+                                        {n === 0 ? 'Any' : n}
+                                    </RoomButton>
                             ))}
                         </ButtonGroup>
                     </Box>
