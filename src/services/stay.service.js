@@ -58,7 +58,7 @@ const gStays = [
         _id: 10006547,
         name: 'Ribeira Charming Duplex2',
         propertyType: 'Apartment',
-        placeType: 'Privet room',
+        placeType: 'Private room',
         bedrooms: 5,
         price: 200,
         imgUrls: [
@@ -157,36 +157,37 @@ function query(filterBy) {
 
         if (!stays || !stays.length) stays = gStays
         storageService.postMany(STORAGE_KEY, stays)
-
+        console.log('filterBy:', filterBy);
         if (filterBy) {
-            let { minPrice, maxPrice, bedrooms, propertyType, placeType, amenities } = filterBy
+            const { priceRange, bedrooms, propertyType, placeType, amenities } = filterBy
 
             if (propertyType) {
-                const regex = new RegExp(propertyType, 'i')
-                stays = stays.filter((stay) => regex.test(stay.propertyType))
+                stays = stays.filter(stay => stay.propertyType === propertyType)
             }
-
+            
             if (placeType) {
-                const regex = new RegExp(placeType, 'i')
-                stays = stays.filter((stay) => regex.test(stay.placeType))
+                stays = stays.filter(stay => stay.placeType === placeType)
             }
 
+            const [minPrice, maxPrice] = priceRange
             if (minPrice) {
-                stays = stays.filter((stay) => stay.price >= minPrice)
+                stays = stays.filter(stay => stay.price >= minPrice)
             }
 
             if (maxPrice) {
-                stays = stays.filter((stay) => stay.price <= maxPrice)
+                stays = stays.filter(stay => stay.price <= maxPrice)
             }
 
             if (bedrooms) {
-                stays = stays.filter((stay) => stay.bedrooms === bedrooms)
+                stays = stays.filter(stay => stay.bedrooms === bedrooms)
             }
 
-            if (amenities.length) {
-                stays = stays.filter((stay) => amenities.every(amenity => stay.amenities.includes(amenity)))
-            }
+            // amenities is an object mapping between amenity and bool (true/false)
+            const checkedAmenities = Object.keys(amenities).filter(a => amenities[a])
+            
+            stays = stays.filter((stay) => checkedAmenities.every(amenity => stay.amenities.includes(amenity)))
         }
+
         return stays
     })
 }

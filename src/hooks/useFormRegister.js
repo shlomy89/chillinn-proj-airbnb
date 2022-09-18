@@ -19,8 +19,7 @@ export const useFormRegister = (initialState, callBack) => {
                 value = +target.value || ''
                 break;
             case 'checkbox':
-                value = value
-                // value = target.checked
+                value = target.checked
                 break;
             case 'date':
                 value = new Date(value)

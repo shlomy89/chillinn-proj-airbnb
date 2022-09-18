@@ -1,8 +1,5 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-// import { Link } from 'react-router-dom'
-// import { AppHeader } from '../cmps/app-header'
-import { StayFilter } from '../cmps/stay-filter'
 import { StayList } from '../cmps/stay-list'
 import { reviewService } from '../services/review.service'
 import  TransitionsModal  from '../cmps/filter-modal.jsx'
