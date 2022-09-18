@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { onLogout } from '../store/actions/user.action.js'
-import logo from '../assets/img/logo.png'
+import logo from '../assets/img/logo2.png'
 import { StayFilter } from './stay-filter.jsx'
 
 import { Button } from '@mui/material'
