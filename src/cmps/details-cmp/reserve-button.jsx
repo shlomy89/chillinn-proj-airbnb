@@ -1,9 +1,9 @@
 import '../../assets/styles/cmps/_reserve-button.scss'
-import ReserveConfirmation from './reserve-confirmation'
+import { ReserveConfirmationModal } from './reserve-confirmation'
 
-export const ReserveButton = () => {
+export const ReserveButton = ({ handleClick }) => {
     return (
-        <div className='reserve-button' onClick={() => <ReserveConfirmation />}>
+        <div className='reserve-button' onClick={handleClick}>
             Reserve
         </div>
     )

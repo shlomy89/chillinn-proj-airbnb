@@ -37,14 +37,13 @@ const style = {
     p: 4
 }
 
-export default function ReserveConfirmationModal(props) {
-    const [open, setOpen] = React.useState(false)
-    const handleOpen = () => setOpen(true)
-    const handleClose = () => setOpen(false)
+export function ReserveConfirmationModal({ open, handleClose }) {
+    // const [open, setOpen] = React.useState(false)
+    // const handleOpen = () => setOpen(true)
+    // const handleClose = () => setOpen(false)
 
     return (
         <div>
-            <Button onClick={handleOpen}>Reserve</Button>
             <Modal
                 aria-labelledby='transition-modal-title'
                 aria-describedby='transition-modal-description'
@@ -63,7 +62,7 @@ export default function ReserveConfirmationModal(props) {
                             variant='h6'
                             component='h2'
                         >
-                            <h1>sdfsdfsdf</h1>
+                            <h1>Order Confirmed</h1>
                         </Typography>
                     </Box>
                 </Fade>

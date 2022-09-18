@@ -8,6 +8,8 @@ import moment from 'moment/moment'
 import { Dropdown } from './guests-dropdown'
 import { ReserveButton } from './reserve-button'
 import { SummaryPrice } from './summary-price'
+import { ReserveConfirmationModal } from './reserve-confirmation'
+import * as React from 'react'
 
 export const ReservationCard = () => {
     const [value, setValue] = useState(null)
@@ -28,7 +30,12 @@ export const ReservationCard = () => {
     }
 
     const [showDatePicker, setShowDatePicker] = useState(false)
-
+    const [open, setOpen] = React.useState(false)
+    const handleOpen = () => {
+        setOpen(true)
+        console.log('handleOpen')
+    }
+    const handleClose = () => setOpen(false)
     return (
         <div className='reservation-card-container'>
             <div className='reservation-card-header'>
@@ -52,14 +59,18 @@ export const ReservationCard = () => {
                             <input
                                 readOnly=''
                                 placeholder='Early'
-                                defaultValue={moment(startDate).format('MMM DD, YYYY')}
+                                defaultValue={moment(startDate).format(
+                                    'MMM DD, YYYY'
+                                )}
                             />
                         </div>
                         <span className='rdrDateInput rdrDateDisplayItem'>
                             <input
                                 readOnly=''
                                 placeholder='Continuous'
-                                defaultValue={moment(endDate).format('MMM DD, YYYY')}
+                                defaultValue={moment(endDate).format(
+                                    'MMM DD, YYYY'
+                                )}
                             />
                         </span>
                     </div>
@@ -84,7 +95,15 @@ export const ReservationCard = () => {
                 </>
             )}
             <Dropdown />
-            <ReserveButton />
+            <ReserveConfirmationModal />
+            {open && (
+                <ReserveConfirmationModal
+                    handleClose={handleClose}
+                    open={open}
+                />
+            )}
+            <ReserveButton handleClick={handleOpen} />
+
             <p className='no-charge'>you won't be charged yet</p>
             <section className='summary-price-container'>
                 <SummaryPrice text={'$320 x 5 nigths'} total={1600} />
