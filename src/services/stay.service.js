@@ -157,14 +157,14 @@ function query(filterBy) {
 
         if (!stays || !stays.length) stays = gStays
         storageService.postMany(STORAGE_KEY, stays)
-        console.log('filterBy:', filterBy);
+
         if (filterBy) {
             const { priceRange, bedrooms, propertyType, placeType, amenities } = filterBy
 
             if (propertyType) {
                 stays = stays.filter(stay => stay.propertyType === propertyType)
             }
-            
+
             if (placeType) {
                 stays = stays.filter(stay => stay.placeType === placeType)
             }
@@ -184,7 +184,7 @@ function query(filterBy) {
 
             // amenities is an object mapping between amenity and bool (true/false)
             const checkedAmenities = Object.keys(amenities).filter(a => amenities[a])
-            
+
             stays = stays.filter((stay) => checkedAmenities.every(amenity => stay.amenities.includes(amenity)))
         }
 

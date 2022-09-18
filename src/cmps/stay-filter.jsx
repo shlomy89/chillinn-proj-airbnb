@@ -5,38 +5,17 @@ import Checkbox from '@mui/material/Checkbox'
 import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Typography from '@mui/material/Typography'
-import { styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles'
 import { useEffect, useMemo } from "react"
-import PropTypes from 'prop-types';
-import debounce from 'lodash.debounce';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Button from '@mui/material/Button';
+import PropTypes from 'prop-types'
+import debounce from 'lodash.debounce'
+import ButtonGroup from '@mui/material/ButtonGroup'
+import Button from '@mui/material/Button'
 import _ from 'lodash'
 
-function getDefaultState() {
-    return {
-        priceRange: [50, 1500],
-        bedrooms: 0,
-        propertyType: '',
-        placeType: '',
-        amenities: {
-            'TV': false,
-            'Wifi': false,
-            'Kitchen': false,
-            'Dryer': false,
-            'Washer': false,
-            'Air conditioning': false,
-            'Heating': false,
-            'Iron': false,
-            'Smoking allowed': false,
-            'Pets allowed': false,
-            'Cooking basics': false
-        }
-    }
-}
 
 function AirbnbThumbComponent(props) {
-    const { children, ...other } = props;
+    const { children, ...other } = props
     return (
         <SliderThumb {...other}>
             {children}
@@ -44,26 +23,46 @@ function AirbnbThumbComponent(props) {
             <span className="airbnb-bar" />
             <span className="airbnb-bar" />
         </SliderThumb>
-    );
+    )
 }
 
 AirbnbThumbComponent.propTypes = {
     children: PropTypes.node,
-};
+}
 
 export const StayFilter = ({ onChangeFilter }) => {
+
+    const getDefaultState = () => {
+        return {
+            priceRange: [50, 1500],
+            bedrooms: 0,
+            propertyType: '',
+            placeType: '',
+            amenities: {
+                'TV': false,
+                'Wifi': false,
+                'Kitchen': false,
+                'Dryer': false,
+                'Washer': false,
+                'Air conditioning': false,
+                'Heating': false,
+                'Iron': false,
+                'Smoking allowed': false,
+                'Pets allowed': false,
+                'Cooking basics': false
+            }
+        }
+    }
 
     const placeTypes = ["Entire place", "Private room", "Shared room"]
     const propertyTypes = ["House", "Apartment", "Guesthouse", "Hotel"]
     const [filter, setFilter] = React.useState(getDefaultState())
 
     useEffect(() => {
-        console.log('filter:', filter)
         onChangeFilter(filter)
     }, [filter])
-
+    
     const handleFilters = (ev) => {
-        console.log('ev:', ev);
         setFilter(prevFields => ({
             ...prevFields, [ev.target.name]: ev.target.value
         }))
@@ -77,8 +76,8 @@ export const StayFilter = ({ onChangeFilter }) => {
     }
 
     const debouncedChangeHandler = useMemo(
-        () => debounce(handleFilters, 200)
-        , []);
+        () => debounce(handleFilters, 300)
+        , [])
 
     const handleCheckBox = (event) => {
         const amenitieType = event.target.id
@@ -94,6 +93,19 @@ export const StayFilter = ({ onChangeFilter }) => {
     const resetFilters = (ev) => {
         ev.preventDefault()
         setFilter(getDefaultState())
+    }
+
+    const getFieldProps = (field, type, useDefaultValue, debounce) => {
+        const valueField = useDefaultValue ? 'defaultValue' : 'value'
+        const onChange = debounce ? debouncedChangeHandler : handleFilters
+
+        return {
+            onChange,
+            name: field,
+            id: field,
+            [valueField]: filter[field],
+            type
+        }
     }
 
     const AirbnbSlider = styled(Slider)(({ theme }) => ({
@@ -126,22 +138,8 @@ export const StayFilter = ({ onChangeFilter }) => {
         },
     }))
 
-    const getFieldProps = (field, type, useDefaultValue, debounce) => {
-        const valueField = useDefaultValue ? 'defaultValue' : 'value'
-        const onChange = debounce ? debouncedChangeHandler : handleFilters
-
-        return {
-            onChange,
-            name: field,
-            id: field,
-            [valueField]: filter[field],
-            type
-        }
-    }
-
     return (
         <section className='modal-container'>
-            {console.log('filter:', filter)}
             <form>
                 <section className="price-slider-container">
                     <Box sx={{ width: 300 }}>
