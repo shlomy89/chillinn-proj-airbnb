@@ -15,13 +15,6 @@ export const StayApp = () => {
 
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        // console.log('loadStays:', loadStays())
-
-        // loadStays()
-        dispatch(loadStays())
-    }, [])
-
     const onRemoveStay = (stayId) => {
         dispatch(removeStay(stayId))
     }

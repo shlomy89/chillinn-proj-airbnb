@@ -45,6 +45,7 @@ export const StayDetails = () => {
         const stayId = params.id
         const getReviews = async () => {
             const stay = await stayService.getById(stayId)
+            console.log(stay)
             setStay(stay)
             const reviews = await reviewService.query({ stayId })
             setReviews(reviews)

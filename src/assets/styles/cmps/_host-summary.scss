@@ -1,0 +1,12 @@
+.hosting-summary-container {
+    border-radius: 16px;
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    .hosting-header {
+        font-weight: 00;
+    }
+    .secondary-header {
+        font-weight: 600;
+    }
+}
