@@ -1737,11 +1737,11 @@ const gStays = [
 
 const STORAGE_KEY = 'stays'
 
-function query(filterBy) {
-    let stays = storageService.query(STORAGE_KEY)
-
+async function query(filterBy) {
+    let stays = await storageService.query(STORAGE_KEY)
+    console.log({ stays })
     if (!stays || !stays.length) stays = gStays
-    storageService.postMany(STORAGE_KEY, stays)
+    await storageService.postMany(STORAGE_KEY, stays)
 
     if (filterBy) {
         const { priceRange, bedrooms, propertyTypes, placeTypes, amenities } =
