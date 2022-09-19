@@ -27,7 +27,7 @@ export default function TransitionsModal({ onChangeFilter }) {
     const handleClose = () => setOpen(false)
 
     return (
-        <div>
+        <div className="filter-modal">
             <Button
                 variant="outlined"
                 onClick={handleOpen}>

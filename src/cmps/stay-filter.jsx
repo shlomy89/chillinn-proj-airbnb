@@ -108,7 +108,7 @@ export const StayFilter = ({ onChangeFilter }) => {
     }
 
     // Used to convert from string to integer before assignment
-    const handleButtonGroup = (ev) => {
+    const handleBedsButton = (ev) => {
         const bedrooms = ev.target.name
         const val = ev.target.value
         setFilter(prevFields => ({
@@ -116,7 +116,7 @@ export const StayFilter = ({ onChangeFilter }) => {
         }))
     }
 
-    const handleButtonGroupPT = (ev) => {
+    const handlePtButton = (ev) => {
         ev.preventDefault()
         const type = ev.target.value
         setFilter(prevFields => ({
@@ -137,7 +137,7 @@ export const StayFilter = ({ onChangeFilter }) => {
         let placeType
         let amenitieType
         const field = name === 'placeType' ? placeType = id : amenitieType = id
-        const filterKey = name === 'placeType' ? 'placeTypes' : 'amenities'
+        const filterKey = name === 'placeTypes' ? 'placeTypes' : 'amenities'
         setFilter(prevFields => ({
             ...prevFields,
             [filterKey]: {
@@ -163,7 +163,7 @@ export const StayFilter = ({ onChangeFilter }) => {
             type
         }
     }
-/* ----------------------------- Mui cmps style ----------------------------- */
+    /* ----------------------------- Mui cmps style ----------------------------- */
     function AirbnbThumbComponent(props) {
         const { children, ...other } = props
         return (
@@ -218,7 +218,7 @@ export const StayFilter = ({ onChangeFilter }) => {
             color: theme.palette.getContrastText('#000000'),
         },
     }))
-/* ------------------------------------ / ----------------------------------- */
+    /* ------------------------------------ / ----------------------------------- */
 
     return (
         <form className='filter-container'>
@@ -242,12 +242,13 @@ export const StayFilter = ({ onChangeFilter }) => {
                 </Typography>
                 {Object.keys(filter.placeTypes).map(placeT =>
                     <FormControlLabel
-                        name='placeT'
                         className='placeT-checkBox'
-                        onChange={handleCheckBox}
                         key={placeT}
+                        label={placeT}
+                        name='placeTypes'
+                        onChange={handleCheckBox}
                         control={<Checkbox key={placeT} id={placeT} checked={filter.placeTypes[placeT]} />}
-                        label={placeT} />
+                    />
                 )}
                 <Divider className="divider" />
             </section>
@@ -260,12 +261,12 @@ export const StayFilter = ({ onChangeFilter }) => {
                     <RoomButton
                         sx={{ borderRadius: 5, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
                         className={filter.bedrooms === n ? 'active' : ''}
+                        value={n}
                         id="bedrooms"
                         type="number"
-                        onClick={handleButtonGroup}
                         name="bedrooms"
-                        value={n}
                         key={`room_${n}`}
+                        onClick={handleBedsButton}
                     >
                         {n === 0 ? 'Any' : n}
                     </RoomButton>
@@ -281,7 +282,7 @@ export const StayFilter = ({ onChangeFilter }) => {
                     <Button
                         sx={{ borderRadius: 2, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
                         className={filter.propertyTypes[propertyT] ? 'active' : ''}
-                        onClick={handleButtonGroupPT}
+                        onClick={handlePtButton}
                         name="propertyType"
                         value={propertyT}
                         key={`property_${propertyT}`}
@@ -296,14 +297,15 @@ export const StayFilter = ({ onChangeFilter }) => {
                 <Typography className="amenities-titel titel">
                     Amenities:
                 </Typography>
-                {Object.keys(filter.amenities).map(amenitie =>
+                {Object.keys(filter.amenities).map(a =>
                     <FormControlLabel
                         className='amenitie-checkBox'
-                        onChange={handleCheckBox}
-                        key={amenitie}
+                        key={a}
+                        label={a}
                         name='amenities'
-                        control={<Checkbox key={amenitie} id={amenitie} checked={filter.amenities[amenitie]} />}
-                        label={amenitie} />
+                        onChange={handleCheckBox}
+                        control={<Checkbox key={a} id={a} checked={filter.amenities[a]} />}
+                    />
                 )}
             </section>
 
