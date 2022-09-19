@@ -4,7 +4,7 @@ import { RatingRates } from './rating-rates'
 import { utilService } from '../services/util.service.js'
 import { ReactComponent as LikeHeartEmptyIcon } from '../assets/img/icons/like-heart-empty.svg'
 import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-heart-red.svg'
-import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
 export function StayPreview({ stay, onSetLikeBtn }) {
@@ -26,7 +26,7 @@ export function StayPreview({ stay, onSetLikeBtn }) {
         }
     }
 
-    const { numberWithCommas } = utilService
+    const { numberWithCommas, getRandomIntInclusive } = utilService
 
     return (
         <div className='stay-preview'>
@@ -49,7 +49,10 @@ export function StayPreview({ stay, onSetLikeBtn }) {
             <Link to={`/stay/${stay._id}`} className='info'>
                 <div className='preview-details'>
                     <div className='text rate'>
-                        <RatingRates rating={4.73} reviews={32} />
+                        <RatingRates
+                            rating={getRandomIntInclusive(1, 5)}
+                            reviews={32}
+                        />
                     </div>
                     <div className='text name'>{stay.name}</div>
                     <div className='text summary'>{stay.summary}</div>
@@ -63,6 +66,8 @@ export function StayPreview({ stay, onSetLikeBtn }) {
                             ${numberWithCommas(stay.price)}{' '}
                         </span>
                         <span className='night'>night</span>
+                        {/* <span className="dot"> · </span> */}
+                        {/* <span className="night">total</span> */}
                     </div>
                 </div>
             </Link>
