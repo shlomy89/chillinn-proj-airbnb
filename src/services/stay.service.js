@@ -1738,7 +1738,7 @@ const gStays = [
 const STORAGE_KEY = 'stays'
 
 function query(filterBy) {
-    const stays = storageService.query(STORAGE_KEY)
+    let stays = storageService.query(STORAGE_KEY)
 
     if (!stays || !stays.length) stays = gStays
     storageService.postMany(STORAGE_KEY, stays)
@@ -1792,6 +1792,7 @@ function query(filterBy) {
             )
         )
     }
+    return stays
 }
 
 function getById(stayId) {
