@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { StayList } from '../cmps/stay-list'
 import { reviewService } from '../services/review.service'
-import  TransitionsModal  from '../cmps/filter-modal.jsx'
+import TransitionsModal from '../cmps/filter-modal.jsx'
 
 import {
     loadStays,
@@ -11,12 +11,14 @@ import {
 } from '../store/actions/stay.action'
 
 export const StayApp = () => {
-
     const { stays } = useSelector((state) => state.stayModule)
 
     const dispatch = useDispatch()
 
     useEffect(() => {
+        // console.log('loadStays:', loadStays())
+
+        // loadStays()
         dispatch(loadStays())
     }, [])
 
@@ -53,10 +55,7 @@ export const StayApp = () => {
     return (
         <div className='stay-app'>
             <TransitionsModal onChangeFilter={onChangeFilter} />
-            <StayList
-                onSetLikeBtn={onSetLikeBtn}
-                stays={stays}
-            />
+            <StayList onSetLikeBtn={onSetLikeBtn} stays={stays} />
         </div>
     )
 }
