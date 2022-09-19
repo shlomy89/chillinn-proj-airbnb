@@ -4,12 +4,12 @@ import { RatingRates } from './rating-rates'
 import { utilService } from '../services/util.service.js'
 import { ReactComponent as LikeHeartEmptyIcon } from '../assets/img/icons/like-heart-empty.svg'
 import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-heart-red.svg'
-import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 import { Carousel } from 'react-responsive-carousel'
 
 export function StayPreview({ stay, onSetLikeBtn }) {
 
-    const [likeClicked, setLikeClicked] = React.useState(false)
+    const [likeClicked, setLikeClicked] = useState(false)
 
     function onToggleLike() {
         // TODO: add/remove from wishlist
@@ -28,7 +28,7 @@ export function StayPreview({ stay, onSetLikeBtn }) {
     }
 
 
-    const { numberWithCommas } = utilService
+    const { numberWithCommas, getRandomIntInclusive } = utilService
 
     return (
         <div className='stay-preview'>
@@ -36,7 +36,7 @@ export function StayPreview({ stay, onSetLikeBtn }) {
                 {likeClicked ? < LikeHeartRedIcon /> : < LikeHeartEmptyIcon />}
             </div>
             <div className="gallery-container">
-                <Carousel className='carousel' showThumbs={false}  infiniteLoop>
+                <Carousel className='carousel' showThumbs={false} infiniteLoop>
                     {stay.imgUrls.map((url, index) => (
                         <img key={index} src={url} />
                     ))}
@@ -46,7 +46,7 @@ export function StayPreview({ stay, onSetLikeBtn }) {
             <Link to={`/stay/${stay._id}`} className='info'>
 
                 <div className="preview-details">
-                    <div className="text rate"><RatingRates rating={4.73} reviews={32} /></div>
+                    <div className="text rate"><RatingRates rating={getRandomIntInclusive(1, 5)} reviews={32} /></div>
                     <div className='text name'>{stay.name}</div>
                     <div className='text summary'>{stay.summary}</div>
                     <div className='text capacity'>{getBedsNum()}</div>
@@ -54,6 +54,8 @@ export function StayPreview({ stay, onSetLikeBtn }) {
                         <span className="full-night-price">${numberWithCommas(stay.price * 1.3)}</span>&nbsp;
                         <span className="night-price">${numberWithCommas(stay.price)} </span>
                         <span className="night">night</span>
+                        {/* <span className="dot"> · </span> */}
+                        {/* <span className="night">total</span> */}
                     </div>
                 </div>
             </Link>
