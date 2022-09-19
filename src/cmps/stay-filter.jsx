@@ -287,7 +287,10 @@ export const StayFilter = ({ onChangeFilter }) => {
                         value={propertyT}
                         key={`property_${propertyT}`}
                     >
-                        {propertyT}
+                        <div>
+                        <img src={AptIcon} />
+                        <div>{propertyT}</div>
+                        </div>
                     </Button>
                 ))}
                 <Divider className="divider" />

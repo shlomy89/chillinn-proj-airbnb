@@ -1739,7 +1739,7 @@ const STORAGE_KEY = 'stays'
 
 function query(filterBy) {
     let stays = storageService.query(STORAGE_KEY)
-
+    
     if (!stays || !stays.length) stays = gStays
     storageService.postMany(STORAGE_KEY, stays)
 
