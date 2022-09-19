@@ -32,6 +32,7 @@ import { ThingToKnow } from '../cmps/details-cmp/thing-to-know'
 import { ReservationCard } from '../cmps/details-cmp/reservation-card'
 import { AirCover } from '../cmps/details-cmp/air-cover'
 import { BorderLine } from '../cmps/details-cmp/border-line'
+import { ReviewStats } from '../cmps/details-cmp/ReviewStats'
 
 export const StayDetails = () => {
     const [stay, setStay] = useState(null)
@@ -42,18 +43,26 @@ export const StayDetails = () => {
 
     useEffect(() => {
         const stayId = params.id
-        stayService.getById(stayId)
-            .then((stay) => {
-                console.log('stay:', stay)
-                setStay(stay)
-            })
+        stayService.getById(stayId).then((stay) => {
+            console.log(stay)
+            setStay(stay)
+        })
         reviewService.query({ stayId }).then((reviews) => setReviews(reviews))
     }, [params.id])
 
     // const onBack = () => {
 
-    //     navigate('/')
-    // }
+    const onRemoveReview = async (reviewId) => {
+        try {
+            await reviewService.remove(reviewId)
+            const newReviews = reviews.filter(
+                (review) => review._id !== reviewId
+            )
+            setReviews(newReviews)
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
     // const onRemoveReview = async (reviewId) => {
     //     try {
@@ -204,6 +213,7 @@ export const StayDetails = () => {
                         </button>
                     </section>
                     {/* {stay.reviews.map(review=> {
+                    <BorderLine />
                     <section className='review'>
                         <Review
                             name={review.by.fullname}
@@ -222,6 +232,50 @@ export const StayDetails = () => {
                 </div>
                 <ReservationCard />
             </div>
+            <ReviewStats
+                reviews={[
+                    {
+                        rate: {
+                            accuracy: 4,
+                            checkin: 3,
+                            cleanliness: 4.5,
+                            communication: 4.2,
+                            location: 3.7,
+                            value: 4.8
+                        }
+                    },
+                    {
+                        rate: {
+                            accuracy: 4,
+                            checkin: 3,
+                            cleanliness: 4.5,
+                            communication: 4.2,
+                            location: 3.7,
+                            value: 4.8
+                        }
+                    },
+                    {
+                        rate: {
+                            accuracy: 4,
+                            checkin: 3,
+                            cleanliness: 4.5,
+                            communication: 4.2,
+                            location: 3.7,
+                            value: 4.8
+                        }
+                    },
+                    {
+                        rate: {
+                            accuracy: 4,
+                            checkin: 3,
+                            cleanliness: 4.5,
+                            communication: 4.2,
+                            location: 3.7,
+                            value: 4.8
+                        }
+                    }
+                ]}
+            />
             <section className='things-to-know-container'>
                 {/* <div className='to-know-header'>Things to know</div> */}
                 <ThingToKnow header='House rules'>

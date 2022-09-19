@@ -14,7 +14,8 @@
     background-attachment: scroll;
     background-color: rgba(0, 0, 0, 0);
     background-image: radial-gradient(
-        circle at center center,
+        circle at calc((0 + var(--positionX, 0)) * 10%)
+            calc((0 + var(--positionY, 0)) * 5%),
         rgb(255, 56, 92) 0%,
         rgb(230, 30, 77) 27.5%,
         rgb(227, 28, 95) 40%,

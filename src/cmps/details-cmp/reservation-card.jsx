@@ -8,9 +8,8 @@ import moment from 'moment/moment'
 import { Dropdown } from './guests-dropdown'
 import { ReserveButton } from './reserve-button'
 import { SummaryPrice } from './summary-price'
-import { ReserveConfirmationModal } from './reserve-confirmation'
 import * as React from 'react'
-
+import Swal from 'sweetalert2'
 export const ReservationCard = () => {
     const [value, setValue] = useState(null)
     const [startDate, setStartDate] = useState(new Date())
@@ -95,15 +94,7 @@ export const ReservationCard = () => {
                 </>
             )}
             <Dropdown />
-            <ReserveConfirmationModal />
-            {open && (
-                <ReserveConfirmationModal
-                    handleClose={handleClose}
-                    open={open}
-                />
-            )}
-            <ReserveButton handleClick={handleOpen} />
-
+            <ReserveButton onClick={() => console.log('get')} />
             <p className='no-charge'>you won't be charged yet</p>
             <section className='summary-price-container'>
                 <SummaryPrice text={'$320 x 5 nigths'} total={1600} />
