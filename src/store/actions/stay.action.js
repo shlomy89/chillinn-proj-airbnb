@@ -1,64 +1,72 @@
-import { stayService } from "../../services/stay.service.js"
+import { stayService } from '../../services/stay.service.js'
 
 export function loadStays() {
-  
-  return (dispatch, getState) => {
-    const { filterBy } = getState().stayModule
-    stayService.query(filterBy)
-      .then(stays => {
-        dispatch({ type: 'SET_STAYS', stays })
-      })
-      .catch(err => {
-        console.log('err:', err)
-      })
+    return async (dispatch, getState) => {
+        try {
+            const { filterBy } = getState().stayModule
+            const stays = await stayService.query(filterBy)
+            console.log('stays:', stays)
 
-  }
+            dispatch({ type: 'SET_STAYS', stays })
+        } catch (error) {
+            console.log('load toys error in stay action:', error)
+        }
+    }
 }
 
+// async function post(entityType, newEntity) {
+//   try {
+//       newEntity._id = _makeId()
+//       const entities = await query(entityType)
+//       entities.push(newEntity)
+//       _save(entityType, entities)
+//       return newEntity
+//   } catch (error) {
+//       console.log(error, 'post function failed')
+//   }
+// }
+
 export function removeStay(stayId) {
-  return (dispatch, getState) => {
-    stayService.remove(stayId)
-      .then(() => {
-        dispatch({ type: 'REMOVE_STAY', stayId })
-      })
-      .catch(err => {
-        console.log('err:', err)
-      })
-  }
+    return async (dispatch, getState) => {
+        try {
+            await stayService.remove(stayId)
+            dispatch({ type: 'REMOVE_STAY', stayId })
+        } catch (error) {
+            console.log('remove stay error in stay action:', error)
+        }
+    }
 }
 
 export function updateStay(stay) {
-  return async (dispatch) => {
-    return stayService.save(stay)
-      .then((savedStay) => {
-        dispatch({ type: 'UPDATE_STAY', stay: savedStay })
-      })
-      .catch((err) => {
-        console.log('err:', err)
-      })
-  }
+    return async (dispatch) => {
+        try {
+            await stayService.save(stay)
+            dispatch({ type: 'UPDATE_STAY', stay })
+        } catch (error) {
+            console.log('updated stay error in stay action:', error)
+        }
+    }
 }
 
 export function addStay(stay) {
-  return async (dispatch) => {
-    return stayService.save(stay)
-      .then((savedStay) => {
-        dispatch({ type: 'ADD_STAY', stay: savedStay })
-      })
-      .catch((err) => {
-        console.log('err:', err)
-      })
-  }
+    return async (dispatch) => {
+        try {
+            await stayService.save(stay)
+            dispatch({ type: 'ADD_STAY', stay })
+        } catch (error) {
+            console.log('add stay error in stay action:', error)
+        }
+    }
 }
 
 export function setFilterBy(filterBy) {
-  return (dispatch) => {
-    dispatch({ type: 'SET_FILTER_BY', filterBy })
-  }
+    return async (dispatch) => {
+        dispatch({ type: 'SET_FILTER_BY', filterBy })
+    }
 }
 
 // export function setLikeBtn() {
-//   return (dispatch) => {
+//   return async (dispatch) => {
 //     dispatch({ type: 'SET_LIKE_BTN',  })
 //   }
 // }

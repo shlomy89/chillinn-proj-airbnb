@@ -43,11 +43,13 @@ export const StayDetails = () => {
 
     useEffect(() => {
         const stayId = params.id
-        stayService.getById(stayId).then((stay) => {
-            console.log(stay)
+        const getReviews = async () => {
+            const stay = await stayService.getById(stayId)
             setStay(stay)
-        })
-        reviewService.query({ stayId }).then((reviews) => setReviews(reviews))
+            const reviews = await reviewService.query({ stayId })
+            setReviews(reviews)
+        }
+        getReviews()
     }, [params.id])
 
     // const onBack = () => {
@@ -81,9 +83,7 @@ export const StayDetails = () => {
     return (
         <div className='stay-details'>
             <div className='title'>
-                <h3>
-                    {stay.name}
-                </h3>
+                <h3>{stay.name}</h3>
             </div>
             <div className='stay-apartment-location-header-container'>
                 <div className='apartment-location-rating'>
@@ -99,23 +99,14 @@ export const StayDetails = () => {
                 </div>
             </div>
             <div className='apartment-images-container'>
-                <img
-                    className='main-apartment-image'
-                    src={stay.imgUrls[0]}
-                />
+                <img className='main-apartment-image' src={stay.imgUrls[0]} />
                 <div className='apartment-secondary-images'>
                     <img src={stay.imgUrls[1]} />
                     <img src={stay.imgUrls[2]} />
                 </div>
                 <div className='apartment-secondary-images'>
-                    <img
-                        className='border-top'
-                        src={stay.imgUrls[3]}
-                    />
-                    <img
-                        className='border-bottom'
-                        src={stay.imgUrls[4]}
-                    />
+                    <img className='border-top' src={stay.imgUrls[3]} />
+                    <img className='border-bottom' src={stay.imgUrls[4]} />
                 </div>
             </div>
             <div className='stay-details-content-container'>
@@ -129,7 +120,8 @@ export const StayDetails = () => {
                                     <div className='apartment-content-container'>
                                         <span>{stay.capacity} guests</span>·
                                         <span>{stay.bedrooms} bedrooms</span>·
-                                        <span>2 beds</span>·<span>{stay.bathrooms} bathrooms</span>
+                                        <span>2 beds</span>·
+                                        <span>{stay.bathrooms} bathrooms</span>
                                     </div>
                                 </span>
                                 <img
