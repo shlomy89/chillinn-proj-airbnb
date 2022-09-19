@@ -1,33 +1,17 @@
 import * as React from 'react'
-import Box from '@mui/material/Box'
 import Slider, { SliderThumb } from '@mui/material/Slider'
 import Checkbox from '@mui/material/Checkbox'
-import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 import { useEffect, useMemo } from "react"
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
-import ButtonGroup from '@mui/material/ButtonGroup'
+import Link from '@mui/material/Link'
 import Button from '@mui/material/Button'
 import _ from 'lodash'
-
-function AirbnbThumbComponent(props) {
-    const { children, ...other } = props
-    return (
-        <SliderThumb {...other}>
-            {children}
-            <span className="airbnb-bar" />
-            <span className="airbnb-bar" />
-            <span className="airbnb-bar" />
-        </SliderThumb>
-    )
-}
-
-AirbnbThumbComponent.propTypes = {
-    children: PropTypes.node,
-}
+import Divider from '@mui/material/Divider'
+import AptIcon from '../assets/img/icons/apt-icon.jpg'
 
 export const StayFilter = ({ onChangeFilter }) => {
 
@@ -35,8 +19,17 @@ export const StayFilter = ({ onChangeFilter }) => {
         return {
             priceRange: [20, 1900],
             bedrooms: 0,
-            propertyType: '',
-            placeType: '',
+            propertyTypes: {
+                'House': false,
+                'Apartment': false,
+                'Guesthouse': false,
+                'Hotel': false
+            },
+            placeTypes: {
+                'Entire home/apt': false,
+                'Private room': false,
+                'Shared room': false
+            },
             amenities: {
                 'TV': false,
                 'Wifi': false,
@@ -48,18 +41,64 @@ export const StayFilter = ({ onChangeFilter }) => {
                 'Iron': false,
                 'Smoking allowed': false,
                 'Pets allowed': false,
-                'Cooking basics': false
+                // 'Cooking basics': false,
+                // 'Cable TV': false,
+                // 'Internet': false,
+                // 'Wheelchair accessible': false,
+                // 'Pool': false,
+                // 'Free parking on premises': false,
+                // 'Doorman': false,
+                // 'Gym': false,
+                // 'Elevator': false,
+                // 'Hot tub': false,
+                // 'Family/kid friendly': false,
+                // 'Suitable for events': false,
+                // 'Smoke detector': false,
+                // 'Carbon monoxide detector': false,
+                // 'First aid kit': false,
+                // 'Safety card': false,
+                // 'Fire extinguisher': false,
+                // 'Essentials': false,
+                // 'Shampoo': false,
+                // '24-hour check-in': false,
+                // 'Hangers': false,
+                // 'Hair dryer': false,
+                // 'Laptop friendly workspace': false,
+                // 'Self check-in': false,
+                // 'Building staff': false,
+                // 'Private entrance': false,
+                // 'Room-darkening shades': false,
+                // 'Hot water': false,
+                // 'Bed linens': false,
+                // 'Extra pillows and blankets': false,
+                // 'Ethernet connection': false,
+                // 'Luggage dropoff allowed': false,
+                // 'Long term stays allowed': false,
+                // 'Ground floor access': false,
+                // 'Wide hallway clearance': false,
+                // 'Step-free access': false,
+                // 'Wide doorway': false,
+                // 'Flat path to front door': false,
+                // 'Well-lit path to entrance': false,
+                // 'Disabled parking spot': false,
+                // 'Step-free access': false,
+                // 'Wide doorway': false,
+                // 'Wide clearance to bed': false,
+                // 'Step-free access': false,
+                // 'Wide doorway': false,
+                // 'Step-free access': false,
+                // 'Wide entryway': false,
+                // 'Waterfront': false,
+                // 'Beachfront': false
             }
         }
     }
 
-    const placeTypes = ["Entire home/apt", "Private room", "Shared room"]
-    const propertyTypes = ["House", "Apartment", "Guesthouse", "Hotel"]
     const [filter, setFilter] = React.useState(getDefaultState())
 
     useEffect(() => {
         onChangeFilter(filter)
-        // console.log('filter:', filter)
+        console.log('filter:', filter)
     }, [filter])
 
     const handleFilters = (ev) => {
@@ -70,8 +109,22 @@ export const StayFilter = ({ onChangeFilter }) => {
 
     // Used to convert from string to integer before assignment
     const handleButtonGroup = (ev) => {
+        const bedrooms = ev.target.name
+        const val = ev.target.value
         setFilter(prevFields => ({
-            ...prevFields, [ev.target.name]: +ev.target.value
+            ...prevFields, [bedrooms]: +val
+        }))
+    }
+
+    const handleButtonGroupPT = (ev) => {
+        ev.preventDefault()
+        const type = ev.target.value
+        setFilter(prevFields => ({
+            ...prevFields,
+            propertyTypes: {
+                ...prevFields.propertyTypes,
+                [type]: !prevFields.propertyTypes[type]
+            }
         }))
     }
 
@@ -79,13 +132,17 @@ export const StayFilter = ({ onChangeFilter }) => {
         () => debounce(handleFilters, 300)
         , [])
 
-    const handleCheckBox = (event) => {
-        const amenitieType = event.target.id
+    const handleCheckBox = ({ target }) => {
+        const { id, checked, name } = target
+        let placeType
+        let amenitieType
+        const field = name === 'placeType' ? placeType = id : amenitieType = id
+        const filterKey = name === 'placeType' ? 'placeTypes' : 'amenities'
         setFilter(prevFields => ({
             ...prevFields,
-            amenities: {
-                ...prevFields.amenities,
-                [amenitieType]: event.target.checked
+            [filterKey]: {
+                ...prevFields[filterKey],
+                [field]: checked
             }
         }))
     }
@@ -105,6 +162,22 @@ export const StayFilter = ({ onChangeFilter }) => {
             [valueField]: filter[field],
             type
         }
+    }
+/* ----------------------------- Mui cmps style ----------------------------- */
+    function AirbnbThumbComponent(props) {
+        const { children, ...other } = props
+        return (
+            <SliderThumb {...other}>
+                {children}
+                <span className="airbnb-bar" />
+                <span className="airbnb-bar" />
+                <span className="airbnb-bar" />
+            </SliderThumb>
+        )
+    }
+
+    AirbnbThumbComponent.propTypes = {
+        children: PropTypes.node,
     }
 
     const AirbnbSlider = styled(Slider)(({ theme }) => ({
@@ -140,96 +213,108 @@ export const StayFilter = ({ onChangeFilter }) => {
     const RoomButton = styled(Button)(({ theme }) => ({
         color: theme.palette.getContrastText('#ffffff'),
         backgroundColor: '#ffffff00',
-        border: '000000',
         '&:hover': {
             backgroundColor: '#000000',
             color: theme.palette.getContrastText('#000000'),
         },
-        '&:active': {
-            backgroundColor: '#000000',
-            color: theme.palette.getContrastText('#000000'),
-        },
-      }));
+    }))
+/* ------------------------------------ / ----------------------------------- */
 
     return (
-        <section className='modal-container'>
-            <form>
-                <section className="price-slider-container">
-                    <Box sx={{ width: 300 }}>
-                        <Typography id="input-slider">
-                            Price:
-                        </Typography>
-                        <AirbnbSlider
-                            components={{ Thumb: AirbnbThumbComponent }}
-                            min={0}
-                            max={2000}
-                            step={10}
-                            {...getFieldProps('priceRange', 'range', true, true)}
-                            valueLabelDisplay="auto" />
-                    </Box>
-                </section>
-                <section className="rooms-btn-container">
-                    <Box sx={{ width: 300 }}>
-                        <Typography id="input-slider">
-                            Rooms:
-                        </Typography>
-                        <ButtonGroup
-                            // disableElevation
-                            variant="contained"
-                            name="bedrooms"
-                            id="bedrooms"
-                            type="number"
-                            onClick={handleButtonGroup}
-                        >
-                            {_.range(0, 9).map(n => (
-                                // button[name='bedrooms'].active {}
-                                    <RoomButton
-                                        className={filter.bedrooms === n ? 'active' : ''}
-                                        name="bedrooms"
-                                        value={n}
-                                        key={`room_${n}`}
-                                    >
-                                        {n === 0 ? 'Any' : n}
-                                    </RoomButton>
-                            ))}
-                        </ButtonGroup>
-                    </Box>
-                </section>
-                <section className="place-type-container">
-                    <label htmlFor="placeType">Type of place</label>
-                    <select {...getFieldProps('placeType', 'text')}>
-                        <option key={placeTypes} value="">Any</option>
-                        {placeTypes.map(t => <option key={t} value={t}>{t}</option>)}
-                    </select>
-                </section>
-                <section className="property-type-container">
-                    <label htmlFor="propertyType">Property type</label>
-                    <select {...getFieldProps('propertyType', 'text')}>
-                        <option
-                            key={propertyTypes}
-                            value="">Any</option>
-                        {propertyTypes.map(propertyType => (
-                            <option
-                                key={propertyType}
-                                value={propertyType}>
-                                {propertyType}
-                            </option>
-                        ))}
-                    </select>
-                </section>
-                <section className="amenitie-container">
-                    <FormGroup>
-                        {Object.keys(filter.amenities).map(amenitie =>
-                            <FormControlLabel
-                                onChange={handleCheckBox}
-                                key={amenitie}
-                                control={<Checkbox key={amenitie} id={amenitie} checked={filter.amenities[amenitie]} />}
-                                label={amenitie} />
-                        )}
-                    </FormGroup>
-                </section>
-                <button onClick={(ev) => resetFilters(ev)}>Reset filter</button>
-            </form >
-        </section>
+        <form className='filter-container'>
+            <section className="price-slider">
+                <Typography className="price-titel titel" id="input-slider">
+                    Price:
+                </Typography>
+                <AirbnbSlider
+                    components={{ Thumb: AirbnbThumbComponent }}
+                    min={0}
+                    max={2000}
+                    step={10}
+                    {...getFieldProps('priceRange', 'range', true, true)}
+                    valueLabelDisplay="auto" />
+                <Divider className="divider" />
+            </section>
+
+            <section className="place-type">
+                <Typography className="place-type-titel titel">
+                    Type of place:
+                </Typography>
+                {Object.keys(filter.placeTypes).map(placeT =>
+                    <FormControlLabel
+                        name='placeT'
+                        className='placeT-checkBox'
+                        onChange={handleCheckBox}
+                        key={placeT}
+                        control={<Checkbox key={placeT} id={placeT} checked={filter.placeTypes[placeT]} />}
+                        label={placeT} />
+                )}
+                <Divider className="divider" />
+            </section>
+
+            <section className="rooms-btn">
+                <Typography className="bedrooms-titel titel">
+                    Bedrooms:
+                </Typography>
+                {_.range(0, 9).map(n => (
+                    <RoomButton
+                        sx={{ borderRadius: 5, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
+                        className={filter.bedrooms === n ? 'active' : ''}
+                        id="bedrooms"
+                        type="number"
+                        onClick={handleButtonGroup}
+                        name="bedrooms"
+                        value={n}
+                        key={`room_${n}`}
+                    >
+                        {n === 0 ? 'Any' : n}
+                    </RoomButton>
+                ))}
+                <Divider className="divider" />
+            </section>
+
+            <section className="property-type">
+                <Typography className="property-titel titel">
+                    Property type:
+                </Typography>
+                {Object.keys(filter.propertyTypes).map(propertyT => (
+                    <Button
+                        sx={{ borderRadius: 2, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
+                        className={filter.propertyTypes[propertyT] ? 'active' : ''}
+                        onClick={handleButtonGroupPT}
+                        name="propertyType"
+                        value={propertyT}
+                        key={`property_${propertyT}`}
+                    >
+                        {propertyT}
+                    </Button>
+                ))}
+                <Divider className="divider" />
+            </section>
+
+            <section className="amenities">
+                <Typography className="amenities-titel titel">
+                    Amenities:
+                </Typography>
+                {Object.keys(filter.amenities).map(amenitie =>
+                    <FormControlLabel
+                        className='amenitie-checkBox'
+                        onChange={handleCheckBox}
+                        key={amenitie}
+                        name='amenities'
+                        control={<Checkbox key={amenitie} id={amenitie} checked={filter.amenities[amenitie]} />}
+                        label={amenitie} />
+                )}
+            </section>
+
+            <Link
+                component="button"
+                variant="body1"
+                color="#000000"
+                fontWeight="bold"
+                onClick={(ev) => resetFilters(ev)}>
+                Clear all
+            </Link>
+        </form >
     )
 }

@@ -126,6 +126,22 @@
         .stay-details-content {
             display: flex;
             flex-direction: column;
+
+            .secondary-header {
+                font-size: 22px;
+
+                .apartment-content-container {
+                    margin-top: 7px;
+
+                    font-size: 16px;
+                    display: flex;
+                    column-gap: 5px;
+                }
+            }
+            .border-bottom {
+                border-bottom: 1px solid lightgray;
+                margin-top: 26px;
+            }
         }
     }
 }

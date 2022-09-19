@@ -6,17 +6,19 @@ import Fade from '@mui/material/Fade'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { StayFilter } from './stay-filter.jsx'
+import { ReactComponent as CloseIcon } from '../assets/img/icons/close-icon.svg'
+import Divider from '@mui/material/Divider'
 
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 500,
+    width: 700,
     bgcolor: 'background.paper',
     borderRadius: '10px',
     boxShadow: 24,
-    p: 4,
+    p: 2,
 }
 
 export default function TransitionsModal({ onChangeFilter }) {
@@ -44,13 +46,17 @@ export default function TransitionsModal({ onChangeFilter }) {
             >
                 <Fade in={open}>
                     <Box sx={style}>
-                        <Typography id="transition-modal-title" variant="h6" component="h2">
-                            Filter
+                        <Button onClick={handleClose}>
+                            <CloseIcon />
+                        </Button>
+                        <Typography id="transition-modal-title" variant="h5" component="div" textAlign='center'>
+                            Filters
                         </Typography>
+                        <Divider className="divider" />
                         <StayFilter onChangeFilter={onChangeFilter} />
                     </Box>
                 </Fade>
             </Modal>
-        </div>
+        </div >
     )
 }

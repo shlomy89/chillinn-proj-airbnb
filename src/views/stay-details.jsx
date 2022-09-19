@@ -30,6 +30,8 @@ import { ReactComponent as HealthCheckIcon } from '../../src/assets/img/icons/he
 import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/smoking-alarm-icon.svg'
 import { ThingToKnow } from '../cmps/details-cmp/thing-to-know'
 import { ReservationCard } from '../cmps/details-cmp/reservation-card'
+import { AirCover } from '../cmps/details-cmp/air-cover'
+import { BorderLine } from '../cmps/details-cmp/border-line'
 
 export const StayDetails = () => {
     const [stay, setStay] = useState(null)
@@ -115,6 +117,11 @@ export const StayDetails = () => {
                                 <span className='secondary-header'>
                                     Entire serviced apartment hosted by Veller
                                     Homes
+                                    <div className='apartment-content-container'>
+                                        <span>{stay.capacity} guests</span>·
+                                        <span>{stay.bedrooms} bedrooms</span>·
+                                        <span>2 beds</span>·<span>{stay.bathrooms} bathrooms</span>
+                                    </div>
                                 </span>
                                 <img
                                     className='apartment-owner-img'
@@ -123,9 +130,10 @@ export const StayDetails = () => {
                             </div>
                             <div className='apartment-content-container'>
                                 <span>{stay.capacity} guests</span>
-                                {/* <span>4 guests</span>·<span>4 guests</span>· */}
                             </div>
                         </div>
+                        <BorderLine />
+
                         <div className='apartment-info'>
                             <ApartmentInfo
                                 text={'Self check-in'}
@@ -144,6 +152,14 @@ export const StayDetails = () => {
                         Icon={FreeCancellationIcon}
                     /> */}
                         </div>
+                    </section>
+                    <BorderLine />
+                    <section className='air-cover'>
+                        <AirCover
+                            text={
+                                'Every booking includes free protection from Host cancellations, listing inaccuracies, and other issues like trouble checking in.'
+                            }
+                        />
                     </section>
                     <section className='amenities-container'>
                         <div className='amenities-header'>
@@ -187,13 +203,20 @@ export const StayDetails = () => {
                             Show all amenities{' '}
                         </button>
                     </section>
+                    {/* {stay.reviews.map(review=> {
                     <section className='review'>
                         <Review
-                            name={'Anthony'}
-                            date={'september 2022'}
-                            review={
-                                'Simple, clean, cool design, easy, spectacular location - terrific communication & very good value in Tel Aviv'
-                            }
+                            name={review.by.fullname}
+                            date={review.at}
+                            review={review.txt}
+                        />
+                    </section>
+                    })} */}
+                    <section className='review'>
+                        <Review
+                            name={stay.reviews[0].by.fullname}
+                            date={stay.reviews[0].at}
+                            review={stay.reviews[0].txt}
                         />
                     </section>
                 </div>
