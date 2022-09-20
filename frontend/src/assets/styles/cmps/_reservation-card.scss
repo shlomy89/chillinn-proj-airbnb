@@ -1,0 +1,36 @@
+.reservation-card-container {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 12px;
+    padding: 24px;
+    min-width: 372px;
+    max-height: 495px;
+    // box-shadow: rgb(0 0 0) 0px 6px 16px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 5px #00000015;
+    position: sticky;
+    top: 13%;
+    z-index: 1;
+    transition: 0.5s;
+    .reservation-card-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .per-night {
+        color: #111111d5;
+    }
+    .rdrDefinedRangesWrapper {
+        display: none;
+    }
+
+    .no-charge {
+        display: flex;
+        justify-content: center;
+        color: #717171;
+    }
+    .summary-price-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}

@@ -1,0 +1,17 @@
+.show-more-button {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration: underline;
+    &:hover {
+        cursor: pointer;
+    }
+
+    .icon-weight {
+        transform: translate(85, 100) rotate(180);
+        stroke: 'black' stroke-width= '100';
+    }
+}
