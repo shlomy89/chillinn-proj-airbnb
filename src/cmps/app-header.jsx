@@ -20,7 +20,7 @@ export function AppHeader() {
     }
 
     return (
-        <header className='app-header flex full align-center'>
+        <header className='app-header flex justify-space-between'>
             <img src={logo} className='logo' onClick={onBack} />
 
                 <section>
