@@ -20,14 +20,14 @@ const data = [
 
 export const HostPieDetails = () => {
     return (
-        <PieChart width={730} height={250}>
+        <PieChart width={350} height={350}>
             <Pie
                 data={data}
                 dataKey='value'
                 nameKey='name'
                 cx='50%'
                 cy='50%'
-                outerRadius={50}
+                outerRadius={100}
             >
                 {data.map((entry, index) => (
                     <Cell fill={entry.color} />

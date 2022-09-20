@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { loadStays } from './store/actions/stay.action.js'
 import { useEffect } from 'react'
 import { Host } from './views/host.jsx'
+import { AppFooter } from './cmps/details-cmp/app-footer.jsx'
 
 function App() {
     const dispatch = useDispatch()
@@ -41,9 +42,9 @@ function App() {
                     </Routes>
                 )}
             </main>
-            <footer>
+            <AppFooter>
                 <section className='container'>chill Inn 2022 &copy;</section>
-            </footer>
+            </AppFooter>
         </div>
     )
 }

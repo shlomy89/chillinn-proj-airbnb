@@ -10,6 +10,7 @@ import { ReserveButton } from './reserve-button'
 import { SummaryPrice } from './summary-price'
 import * as React from 'react'
 import Swal from 'sweetalert2'
+
 export const ReservationCard = () => {
     const [value, setValue] = useState(null)
     const [startDate, setStartDate] = useState(new Date())
