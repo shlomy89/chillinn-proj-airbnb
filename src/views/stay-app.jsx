@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { StayList } from '../cmps/stay-list'
 import { reviewService } from '../services/review.service'
@@ -36,14 +35,6 @@ export const StayApp = () => {
             console.error(err)
         }
     }
-
-    // if (!stays)
-    //     return (
-    //         <section>
-    //             <Link to='/stay/edit'>Add Stay</Link>
-    //             {/* <div>Loading...</div> */}
-    //         </section>
-    //     )
 
     return (
         <div className='stay-app'>

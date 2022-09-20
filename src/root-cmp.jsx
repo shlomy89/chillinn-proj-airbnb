@@ -1,5 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
-// import './assets/styles/'
+import { Route, Routes } from 'react-router-dom'
 import { StayApp } from './views/stay-app.jsx'
 import { AppHeader } from './cmps/app-header'
 import { About } from './views/about.jsx'
@@ -12,6 +11,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { loadStays } from './store/actions/stay.action.js'
 import { useEffect } from 'react'
 import { Host } from './views/host.jsx'
+import CircularProgress from '@mui/material/CircularProgress'
+import Box from '@mui/material/Box'
 
 function App() {
     const dispatch = useDispatch()
@@ -26,7 +27,9 @@ function App() {
             <AppHeader />
             <main className='container'>
                 {!stays ? (
-                    <div>Loading...</div>
+                    <Box sx={{ display: 'flex' }}>
+                        <CircularProgress />
+                    </Box>
                 ) : (
                     <Routes>
                         <Route path='stay/edit/:id' element={<StayEdit />} />

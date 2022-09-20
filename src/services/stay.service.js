@@ -1,6 +1,6 @@
-import { storageService } from './async-storage.service.js'
-import { utilService } from './util.service.js'
-// import { httpService } from './http.service'
+import { httpService } from './http.service'
+// import { storageService } from './async-storage.service.js'
+// import { utilService } from './util.service.js'
 // import { userService } from '../services/user.service.js'
 
 export const stayService = {
@@ -10,11 +10,8 @@ export const stayService = {
     getById,
     setStaysToLocalStrage,
     loadStaysFromLocalStorage,
-    getStayLabels
-    // getNextId,
-    // avgPriceByLabels,
-    // avgLabelsByStock,
-    // getEmptyStay
+    // getStayLabels,
+    // getNextId
 }
 
 const gStays = [
@@ -1736,82 +1733,88 @@ const gStays = [
 ]
 
 const STORAGE_KEY = 'stays'
+const BASE_URL = `stay/`
 
-async function query(filterBy) {
-    let stays = await storageService.query(STORAGE_KEY)
-    console.log({ stays })
-    if (!stays || !stays.length) stays = gStays
-    await storageService.postMany(STORAGE_KEY, stays)
+async function query(filterBy = {}) {
+    return httpService.get(BASE_URL, { params: filterBy })
+    .then((res) => res)
+    // let stays = await storageService.query(STORAGE_KEY)
+    // if (!stays || !stays.length) stays = gStays
+    // await storageService.postMany(STORAGE_KEY, stays)
 
-    if (filterBy) {
-        const { priceRange, bedrooms, propertyTypes, placeTypes, amenities } =
-            filterBy
+    // if (filterBy) {
+    //     const { priceRange, bedrooms, propertyTypes, placeTypes, amenities } =
+    //         filterBy
 
-        const chosePropertyTypes = Object.keys(propertyTypes).filter(
-            (p) => propertyTypes[p]
-        )
-        if (chosePropertyTypes.length) {
-            stays = stays.filter((stay) =>
-                chosePropertyTypes.some(
-                    (chosePropertyType) =>
-                        chosePropertyType === stay.propertyType
-                )
-            )
-        }
+    //     const chosePropertyTypes = Object.keys(propertyTypes).filter(
+    //         (p) => propertyTypes[p]
+    //     )
+    //     if (chosePropertyTypes.length) {
+    //         stays = stays.filter((stay) =>
+    //             chosePropertyTypes.some(
+    //                 (chosePropertyType) =>
+    //                     chosePropertyType === stay.propertyType
+    //             )
+    //         )
+    //     }
 
-        const checkedPlaceTypes = Object.keys(placeTypes).filter(
-            (p) => placeTypes[p]
-        )
-        if (checkedPlaceTypes.length) {
-            stays = stays.filter((stay) =>
-                checkedPlaceTypes.some(
-                    (checkedPlaceType) => checkedPlaceType === stay.placeType
-                )
-            )
-        }
+    //     const checkedPlaceTypes = Object.keys(placeTypes).filter(
+    //         (p) => placeTypes[p]
+    //     )
+    //     if (checkedPlaceTypes.length) {
+    //         stays = stays.filter((stay) =>
+    //             checkedPlaceTypes.some(
+    //                 (checkedPlaceType) => checkedPlaceType === stay.placeType
+    //             )
+    //         )
+    //     }
 
-        const [minPrice, maxPrice] = priceRange
-        if (minPrice) {
-            stays = stays.filter((stay) => stay.price >= minPrice)
-        }
+    //     const [minPrice, maxPrice] = priceRange
+    //     if (minPrice) {
+    //         stays = stays.filter((stay) => stay.price >= minPrice)
+    //     }
 
-        if (maxPrice) {
-            stays = stays.filter((stay) => stay.price <= maxPrice)
-        }
+    //     if (maxPrice) {
+    //         stays = stays.filter((stay) => stay.price <= maxPrice)
+    //     }
 
-        if (bedrooms) {
-            stays = stays.filter((stay) => stay.bedrooms === bedrooms)
-        }
-        // amenities is an object mapping between amenity and bool (true/false)
-        const checkedAmenities = Object.keys(amenities).filter(
-            (a) => amenities[a]
-        )
-        stays = stays.filter((stay) =>
-            checkedAmenities.every((amenity) =>
-                stay.amenities.includes(amenity)
-            )
-        )
-    }
-    return stays
+    //     if (bedrooms) {
+    //         stays = stays.filter((stay) => stay.bedrooms === bedrooms)
+    //     }
+    //     // amenities is an object mapping between amenity and bool (true/false)
+    //     const checkedAmenities = Object.keys(amenities).filter(
+    //         (a) => amenities[a]
+    //     )
+    //     stays = stays.filter((stay) =>
+    //         checkedAmenities.every((amenity) =>
+    //             stay.amenities.includes(amenity)
+    //         )
+    //     )
+    // }
+    // return stays
 }
 
 function getById(stayId) {
-    return storageService.get(STORAGE_KEY, stayId)
+    return httpService.get(BASE_URL + stayId)
+    .then((res) => res)
 }
 
 async function remove(stayId) {
-    await storageService.remove(STORAGE_KEY, stayId)
+    return httpService.delete(BASE_URL + stayId)
+    .then((res) => res)
 }
 
 async function save(stay) {
-    var savedStay
-    if (stay._id) {
-        savedStay = await storageService.put(STORAGE_KEY, stay)
-    } else {
-        stay.inStock = utilService.randomBoolean()
-        savedStay = await storageService.post(STORAGE_KEY, stay)
-    }
-    return savedStay
+    if (stay._id) return httpService.put(BASE_URL + stay._id, stay).then((res) => res)
+    return httpService.post(BASE_URL, stay).then((res) => res)
+    // var savedStay
+    // if (stay._id) {
+    //     savedStay = await storageService.put(BASE_URL, stay)
+    // } else {
+    //     stay.inStock = utilService.randomBoolean()
+    //     savedStay = await storageService.post(BASE_URL, stay)
+    // }
+    // return savedStay
 }
 
 function loadStaysFromLocalStorage() {
@@ -1823,7 +1826,16 @@ function setStaysToLocalStrage(stays) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stays))
 }
 
-function getStayLabels(stays) {
-    const labels = stays.map(({ labels }) => labels)
-    return [...new Set(labels)]
-}
+// function getStayLabels(stays) {
+//     const labels = stays.map(({ labels }) => labels)
+//     return [...new Set(labels)]
+// }
+
+// function getNextId(stayId) {
+//     return httpService.get(BASE_URL)
+//         .then(stays => {
+//             const stayIdx = stays.findIndex(stay => stay._id === stayId)
+//             const nextStayIdx = stayIdx + 1 === stays.length ? 0 : stayIdx + 1
+//             return stays[nextStayIdx]._id
+//         })
+// }
