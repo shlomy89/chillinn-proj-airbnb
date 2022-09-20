@@ -1,5 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
-// import './assets/styles/'
+import { Route, Routes } from 'react-router-dom'
 import { StayApp } from './views/stay-app.jsx'
 import { AppHeader } from './cmps/app-header'
 import { About } from './views/about.jsx'
@@ -27,7 +26,9 @@ function App() {
             <AppHeader />
             <main className='container'>
                 {!stays ? (
-                    <div>Loading...</div>
+                    <Box sx={{ display: 'flex' }}>
+                        <CircularProgress />
+                    </Box>
                 ) : (
                     <Routes>
                         <Route path='stay/edit/:id' element={<StayEdit />} />

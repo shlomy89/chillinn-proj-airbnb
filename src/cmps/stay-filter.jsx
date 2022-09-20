@@ -163,7 +163,7 @@ export const StayFilter = ({ onChangeFilter }) => {
             type
         }
     }
-    /* ----------------------------- Mui cmps style ----------------------------- */
+    
     function AirbnbThumbComponent(props) {
         const { children, ...other } = props
         return (
@@ -218,7 +218,6 @@ export const StayFilter = ({ onChangeFilter }) => {
             color: theme.palette.getContrastText('#000000'),
         },
     }))
-    /* ------------------------------------ / ----------------------------------- */
 
     return (
         <form className='filter-container'>
@@ -287,7 +286,10 @@ export const StayFilter = ({ onChangeFilter }) => {
                         value={propertyT}
                         key={`property_${propertyT}`}
                     >
-                        {propertyT}
+                        <div>
+                        <img src={AptIcon} />
+                        <div>{propertyT}</div>
+                        </div>
                     </Button>
                 ))}
                 <Divider className="divider" />
