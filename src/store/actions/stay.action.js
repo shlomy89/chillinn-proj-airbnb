@@ -5,8 +5,6 @@ export function loadStays() {
         try {
             const { filterBy } = getState().stayModule
             const stays = await stayService.query(filterBy)
-            console.log({ stays })
-            console.log('stays:', stays)
 
             dispatch({ type: 'SET_STAYS', stays })
         } catch (error) {

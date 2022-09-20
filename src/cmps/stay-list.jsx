@@ -2,7 +2,7 @@ import { StayPreview } from './stay-preview.jsx'
 
 export function StayList({ stays, onSetLikeBtn }) {
     return (
-        stays && <section className='stay-list simple-cards-grid'>
+        <section className='stay-list simple-cards-grid'>
             {stays.map(stay =>
                 <StayPreview
                     onSetLikeBtn={onSetLikeBtn}

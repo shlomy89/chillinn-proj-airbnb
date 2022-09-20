@@ -33,6 +33,8 @@ import { ReservationCard } from '../cmps/details-cmp/reservation-card'
 import { AirCover } from '../cmps/details-cmp/air-cover'
 import { BorderLine } from '../cmps/details-cmp/border-line'
 import { ReviewStats } from '../cmps/details-cmp/ReviewStats'
+import CircularProgress from '@mui/material/CircularProgress'
+import Box from '@mui/material/Box'
 
 export const StayDetails = () => {
     const [stay, setStay] = useState(null)
@@ -41,11 +43,11 @@ export const StayDetails = () => {
     const params = useParams()
     const navigate = useNavigate()
 
-    useEffect(() => {
+    useEffect(() => { 
         const stayId = params.id
+        console.log('stayId:', stayId);
         const getReviews = async () => {
             const stay = await stayService.getById(stayId)
-            console.log(stay)
             setStay(stay)
             const reviews = await reviewService.query({ stayId })
             setReviews(reviews)
@@ -79,7 +81,11 @@ export const StayDetails = () => {
     //     }
     // }
 
-    if (!stay) return <div>Loading...</div>
+    if (!stay) {
+        return <Box sx={{ display: 'flex' }}>
+            <CircularProgress />
+        </Box>
+    }
 
     return (
         <div className='stay-details'>
