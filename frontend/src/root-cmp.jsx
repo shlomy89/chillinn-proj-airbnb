@@ -12,6 +12,8 @@ import { loadStays } from './store/actions/stay.action.js'
 import { useEffect } from 'react'
 import { Host } from './views/host.jsx'
 import { AppFooter } from './cmps/details-cmp/app-footer.jsx'
+import Box from '@mui/material/Box'
+import CircularProgress from '@mui/material/CircularProgress'
 
 function App() {
     const dispatch = useDispatch()
