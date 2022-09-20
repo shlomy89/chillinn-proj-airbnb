@@ -1737,15 +1737,9 @@ const gStays = [
 
 const STORAGE_KEY = 'stays'
 
-<<<<<<< HEAD
-function query(filterBy) {
-    let stays = storageService.query(STORAGE_KEY)
-    
-=======
 async function query(filterBy) {
     let stays = await storageService.query(STORAGE_KEY)
     console.log({ stays })
->>>>>>> eea6ebd869f05ba388a9131f1a9b658dc6d46b35
     if (!stays || !stays.length) stays = gStays
     await storageService.postMany(STORAGE_KEY, stays)
 
