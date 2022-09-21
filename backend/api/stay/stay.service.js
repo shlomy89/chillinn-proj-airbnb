@@ -14,10 +14,6 @@ async function query(filterBy = {}) {
     }
 }
 
-// 632982b8569470128f5dbbab
-
-// 632982b1569470128f5dbbaa
-
 async function getById(stayId) {
     try {
         const collection = await dbService.getCollection('stay')
@@ -77,7 +73,6 @@ function _buildCriteria(filterBy) {
     const chosePropertyTypes = Object.keys(propertyTypes).filter((p) => propertyTypes[p])
     const checkedPlaceTypes = Object.keys(placeTypes).filter((p) => placeTypes[p])
     const checkedAmenities = Object.keys(amenities).filter((a) => amenities[a])
-    
 
     if (chosePropertyTypes.length) {
         const typesRegex = chosePropertyTypes.map(t => new RegExp(`^${t}$`, 'i'))

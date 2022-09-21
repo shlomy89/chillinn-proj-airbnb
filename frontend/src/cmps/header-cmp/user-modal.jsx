@@ -7,25 +7,25 @@ import { userService } from "../../services/user.service"
 import { useDispatch } from "react-redux"
 
 export function UserModal({ handleUserModal }) {
-	const [loggUser, setLoggUser] = useState(userService.getLoggedinUser())
+	const [loggedinUser, setLoggedInUser] = useState(userService.getLoggedinUser())
 	// const isActive = useSelector((state) => state.headerModule.headerMode.isActive)
 	const user = useSelector((state) => state.userModule.user)
-   const navigate = useNavigate()
+	const navigate = useNavigate()
 	// const notificationsAmount = user.notifications?.length
 	// const dispatch = useDispatch()
-   // const navigate = useNavigate()
+	// const navigate = useNavigate()
 
 	// const resetUserNotifications = async () => {
 	// 	const currUser = await userService.getById(loggUser?._id)
 	// 	const updatedUser = { ...currUser, notifications: [] }
 	// 	const newUser = await userService.update(updatedUser)
-	// 	userService.setLoggedinUser(newUser)
+	// 	userService.setLoggedInUser(newUser)
 	// 	dispatch(updateUserNotifications([]))
 	// }
 
 	function onLogOut() {
 		userService.logout()
-		userService.setLoggedinUser(null)
+		userService.setLoggedInUser(null)
 		// dispatch(updateUser({}))
 		navigate("/")
 	}
@@ -45,17 +45,27 @@ export function UserModal({ handleUserModal }) {
 						</Link>
 					)}
 				</li> */}
-				<li>
-					{loggUser ? (
-						<a href='#footer' className='user-modal-about-link'>
-							<span className='user-modal-span'>About</span>
-						</a>
-					) : (
-						<Link to={"/user/login"}>
-							<span className='user-modal-span'>Log in</span>
-						</Link>
-					)}
-				</li>
+				{/* <li> */}
+				{loggedinUser ? (
+					<a href='#footer' className='user-modal-about-link'>
+						<span className='user-modal-span'>User</span>
+					</a>
+				) : (
+					<React.Fragment>
+						<li>
+							<Link to={"login"}>
+								<span className='user-modal-span'>Log in</span>
+							</Link>
+						</li>
+
+						<li>
+							<Link to={"signup"}>
+								<span className='user-modal-span'>Sign up</span>
+							</Link>
+						</li>
+					</React.Fragment>
+				)}
+				{/* </li> */}
 				<hr />
 				<li>
 					<Link to={"/host"}>
@@ -68,7 +78,7 @@ export function UserModal({ handleUserModal }) {
 					</Link>
 				</li>
 				<li onClick={onLogOut}>
-					{loggUser ? (
+					{loggedinUser ? (
 						<span className='user-modal-span'>Log out</span>
 					) : (
 						<a href='#footer' className='user-modal-about-link'>

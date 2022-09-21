@@ -1,6 +1,7 @@
 const userService = require('./user.service')
 const socketService = require('../../services/socket.service')
 const logger = require('../../services/logger.service')
+const orderService = require('../order/order.service')
 
 async function getUser(req, res) {
     try {
@@ -47,9 +48,20 @@ async function updateUser(req, res) {
     }
 }
 
+async function getUsersByOrders(req, res) {
+    try {
+        const orders = await orderService.getOrders()
+        console.log({ orders })
+        const users = await userService.getUsersByOrders(orders)
+        res.send(users)
+    } catch (error) {
+        console.log('failed to get users by orders', error)
+    }
+}
 module.exports = {
     getUser,
     getUsers,
     deleteUser,
-    updateUser
+    updateUser,
+    getUsersByOrders
 }
