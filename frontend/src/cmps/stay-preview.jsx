@@ -24,7 +24,6 @@ export function StayPreview({ stay }) {
         }
     }
 
-
     function onClickItem(stayId) {
 		window.scrollTo(0, 0)
         navigate(`/stay/${stayId}`)   
@@ -68,8 +67,6 @@ export function StayPreview({ stay }) {
                             ${numberWithCommas(stay.price)}{' '}
                         </span>
                         <span className='night'>night</span>
-                        {/* <span className="dot"> · </span> */}
-                        {/* <span className="night">total</span> */}
                     </div>
                 </div>
             </Link>
