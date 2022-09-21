@@ -12,8 +12,8 @@ export const GenericModal = ({ isOpen, onClose, children }) => {
             >
                 <Modal
                     isOpen={isOpen}
-                    style={require('../../assets/styles/cmps/_air-cover-modal.scss')}
                     contentLabel='Example Modal'
+                    className={'generic-modal-containerr'}
                 >
                     <button onClick={onClose}>x</button>
                     {children}

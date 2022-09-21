@@ -26,7 +26,6 @@ export const AirCover = ({ text }) => {
             <BorderLine />
             <GenericModal isOpen={open} onClose={handleClose}>
                 <section className='air-cover-modal-container'>
-                    Hi Sagiv Ma kore
                     <img
                         className='air-cover-image'
                         src={require('../../assets/img/air-cover-image.png')}
