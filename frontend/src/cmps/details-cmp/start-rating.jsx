@@ -5,7 +5,6 @@ export const StarRating = ({ rating, reviews }) => {
         <div className='star-rating'>
             <div className='rating-container'>
                 <StarIcon fill='black' />
-
                 {rating}
             </div>
             <span className='dot'>·</span>

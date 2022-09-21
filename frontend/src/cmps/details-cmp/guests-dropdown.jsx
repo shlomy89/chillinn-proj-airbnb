@@ -45,11 +45,7 @@ export function Dropdown() {
 
     return (
         <div>
-            <FormControl
-                sx={{ m: 1, width: 300 }}
-                // value={agesData}
-                // onChange={setAgesData}
-            >
+            <FormControl sx={{ m: 1, width: 300 }}>
                 <InputLabel>Guests</InputLabel>
                 <Select
                     input={<OutlinedInput label='Guests' />}

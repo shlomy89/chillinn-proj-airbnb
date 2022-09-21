@@ -16,8 +16,6 @@ export const ReservationCard = () => {
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
 
-    // const []
-
     const selectionRange = {
         startDate: startDate,
         endDate: endDate,
