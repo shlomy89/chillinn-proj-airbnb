@@ -248,7 +248,5 @@
 21.9.2022, 22:51:44 - DEBUG - Getting Stays
 21.9.2022, 22:58:45 - DEBUG - Getting Stays
 21.9.2022, 23:20:48 - DEBUG - Getting Stays
-21.9.2022, 23:36:24 - DEBUG - Getting Stays
-21.9.2022, 23:39:51 - DEBUG - Getting Stays
-21.9.2022, 23:40:05 - DEBUG - Getting Stays
-21.9.2022, 23:46:00 - DEBUG - Getting Stays
+>>>>>>> e01fef3f4918ba4eea8e13b4f6962d71b008811a
+21.9.2022, 23:40:58 - INFO - Server is running on port: 3030
