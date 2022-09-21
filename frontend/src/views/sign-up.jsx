@@ -30,7 +30,11 @@ export function Signup() {
             password: data.get('password')
         }
 
-        if (!credentials.username || !credentials.password || !credentials.firstname || !credentials.lastname) return
+        if (!credentials.username ||
+            !credentials.password ||
+            !credentials.firstname ||
+            !credentials.lastname) return
+
         await dispatch(onSignup(credentials))
         navigate('/')
     }
@@ -38,7 +42,7 @@ export function Signup() {
     const theme = createTheme()
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>cd ..
             <Container component="main" maxWidth="xs">
                 <CssBaseline />
                 <Box
@@ -55,7 +59,6 @@ export function Signup() {
                     <Typography component="h1" variant="h5">
                         Sign up
                     </Typography>
-                    <ImgUploader/>
                     <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
                         <Grid container spacing={2}>
                             <Grid item xs={12} sm={6}>
@@ -101,6 +104,7 @@ export function Signup() {
                                 />
                             </Grid>
                         </Grid>
+                        <ImgUploader />
                         <Button
                             type="submit"
                             fullWidth

@@ -81,7 +81,6 @@ export const StayApp = () => {
         setSearchParams({ encoded: serializedBase64 })
     }, [filter])
 
-
     const resetFilters = (ev) => {
         ev.preventDefault()
         setFilter(getDefaultFilterState())
