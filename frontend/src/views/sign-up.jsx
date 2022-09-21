@@ -38,7 +38,6 @@ export function Signup() {
         await dispatch(onSignup(credentials))
         navigate('/')
     }
-
     const theme = createTheme()
 
     return (

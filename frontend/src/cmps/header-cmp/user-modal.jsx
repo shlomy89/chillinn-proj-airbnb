@@ -2,14 +2,15 @@ import React, { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 // import { updateUserNotifications, updateUser } from "../../../store/user.action"
-
+import Divider from '@mui/material/Divider'
 import { userService } from "../../services/user.service"
 import { useDispatch } from "react-redux"
 
 export function UserModal({ handleUserModal }) {
-	const [loggedinUser, setLoggedInUser] = useState(userService.getLoggedinUser())
+	const [loggedInUser, setLoggedInUser] = useState(userService.getLoggedinUser())
 	// const isActive = useSelector((state) => state.headerModule.headerMode.isActive)
 	const user = useSelector((state) => state.userModule.user)
+	console.log("user", user)
 	const navigate = useNavigate()
 	// const notificationsAmount = user.notifications?.length
 	// const dispatch = useDispatch()
@@ -25,7 +26,7 @@ export function UserModal({ handleUserModal }) {
 
 	function onLogOut() {
 		userService.logout()
-		userService.setLoggedInUser(null)
+		setLoggedInUser(null)
 		// dispatch(updateUser({}))
 		navigate("/")
 	}
@@ -46,10 +47,13 @@ export function UserModal({ handleUserModal }) {
 					)}
 				</li> */}
 				{/* <li> */}
-				{loggedinUser ? (
-					<a href='#footer' className='user-modal-about-link'>
-						<span className='user-modal-span'>User</span>
-					</a>
+				{loggedInUser ? (
+					<React.Fragment>
+						<Link to={"stay/order"} className='user-modal-about-link'>
+							<span className='user-modal-span'>Welcome &nbsp;{loggedInUser.firstname} {loggedInUser.lastname}</span>
+						</Link>
+						<Divider />
+					</React.Fragment>
 				) : (
 					<React.Fragment>
 						<li>
@@ -63,25 +67,25 @@ export function UserModal({ handleUserModal }) {
 								<span className='user-modal-span'>Sign up</span>
 							</Link>
 						</li>
+						<Divider />
 					</React.Fragment>
 				)}
-				{/* </li> */}
 				<hr />
 				<li>
-					<Link to={"/host"}>
+					<Link to={"stay/host"}>
 						<span className='user-modal-span'>Host your home</span>
 					</Link>
 				</li>
 				<li>
-					<Link to={"/host"}>
+					<Link to={"stay/host"}>
 						<span className='user-modal-span'>Host an experience</span>
 					</Link>
 				</li>
 				<li onClick={onLogOut}>
-					{loggedinUser ? (
+					{loggedInUser ? (
 						<span className='user-modal-span'>Log out</span>
 					) : (
-						<a href='#footer' className='user-modal-about-link'>
+						<a href='/' className='user-modal-about-link'>
 							<span className='user-modal-span'>About</span>
 						</a>
 					)}

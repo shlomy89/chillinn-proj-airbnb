@@ -12,12 +12,13 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { onLogin } from '../store/actions/user.action.js'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import SuccessAlert from '../cmps/user-msg.jsx'
 
 export function Login() {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    
+
     const handleSubmit = async (event) => {
         event.preventDefault()
         const data = new FormData(event.currentTarget)
@@ -49,6 +50,7 @@ export function Login() {
                     <Typography component="h1" variant="h5">
                         Log in
                     </Typography>
+                    < SuccessAlert msg={'Logged in Successfully'}/>
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"
