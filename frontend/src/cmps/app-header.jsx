@@ -4,7 +4,7 @@ import { onLogout } from '../store/actions/user.action.js'
 import logo from '../assets/img/logo2.png'
 // import { StayFilter } from './stay-filter.jsx'
 import { Button } from '@mui/material'
-// import UserMenu from './header-cmp/user-menu.jsx'
+import {UserMenu} from './header-cmp/user-menu.jsx'
 
 export function AppHeader() {
     const loggedInUser = useSelector((state) => state.userModule.user)
@@ -20,14 +20,14 @@ export function AppHeader() {
     }
 
     return (
-        <header className='app-header flex justify-space-between'>
+        <header className='app-header flex justify-space-between align-center'>
             <img src={logo} className='logo' onClick={onBack} />
 
                 <section>
                 <Link to='/stay/edit'><Button>Host your home</Button></Link>&nbsp;
                 <NavLink to='/login'><Button>Login/Sign Up</Button></NavLink>
                 </section>
-                {/* <UserMenu/> */}
+                <UserMenu/>
 
             {/* {loggedInUser && (
                     <section className='user'>

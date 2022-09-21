@@ -4,23 +4,25 @@
 
 ::selection {
     background-color: $clr1;
-    color: $clr6;
+    color: $clr2;
 }
 
 html {
-    // font-family: cereal, sans-serif;
-    background-color: $clr6;
+    background-color: $clr2;
+    font-family: cereal, sans-serif;
+    // font-family: circular;
+    // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+	// line-height: 2;
+	scroll-behavior: smooth;
 }
 
 body {
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 14px;
+    // font-size: 14px;
     line-height: 1.43;
-    // margin: 0;
-    max-width: 1549px;
-    margin: auto;
-    overflow: auto !important;
-    padding-right: 0 !important;
+    margin: 0;
+    padding:0;
+    // overflow: auto !important;
+    // padding-right: 0 !important;
 }
 
 h1,
@@ -49,7 +51,14 @@ p {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
-// a:hover {
-//     text-decoration: underline;
-// }
+
+button {
+	padding: 0;
+	margin: 0;
+	background-color: inherit;
+	border: 1px solid $clr5;
+	border-radius: 25px;
+	cursor: pointer;
+}
