@@ -4,7 +4,7 @@ const stayService = require('./stay.service')
 // GET LIST
 async function getStays(req, res) {
 
-  let filterBy = { priceRange: [20, 1900], bedrooms: 0, propertyTypes: '', placeTypes: '', amenities: ''}
+  let filterBy = { priceRange: [20, 1900], bedrooms: 0, propertyTypes: {}, placeTypes: {}, amenities: {}}
   try {
     logger.debug('Getting Stays')
     var params = req.query.params

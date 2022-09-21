@@ -4,102 +4,19 @@ import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
-import { useEffect, useMemo } from "react"
+import { useMemo } from "react"
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import Link from '@mui/material/Link'
 import Button from '@mui/material/Button'
 import _ from 'lodash'
 import Divider from '@mui/material/Divider'
-import AptIcon from '../assets/img/icons/apt-icon.jpg'
+import Apartment from '../assets/img/icons/apartment-icon.jpg'
+import Guesthouse from '../assets/img/icons/guesthouse-icon.jpg'
+import Hotel from '../assets/img/icons/hotel-icon.jpg'
+import House from '../assets/img/icons/house-icon.jpg'
 
-export const StayFilter = ({ onChangeFilter }) => {
-
-    const getDefaultState = () => {
-        return {
-            priceRange: [20, 1900],
-            bedrooms: 0,
-            propertyTypes: {
-                'House': false,
-                'Apartment': false,
-                'Guesthouse': false,
-                'Hotel': false
-            },
-            placeTypes: {
-                'Entire home/apt': false,
-                'Private room': false,
-                'Shared room': false
-            },
-            amenities: {
-                'TV': false,
-                'Wifi': false,
-                'Kitchen': false,
-                'Dryer': false,
-                'Washer': false,
-                'Air conditioning': false,
-                'Heating': false,
-                'Iron': false,
-                'Smoking allowed': false,
-                'Pets allowed': false,
-                // 'Cooking basics': false,
-                // 'Cable TV': false,
-                // 'Internet': false,
-                // 'Wheelchair accessible': false,
-                // 'Pool': false,
-                // 'Free parking on premises': false,
-                // 'Doorman': false,
-                // 'Gym': false,
-                // 'Elevator': false,
-                // 'Hot tub': false,
-                // 'Family/kid friendly': false,
-                // 'Suitable for events': false,
-                // 'Smoke detector': false,
-                // 'Carbon monoxide detector': false,
-                // 'First aid kit': false,
-                // 'Safety card': false,
-                // 'Fire extinguisher': false,
-                // 'Essentials': false,
-                // 'Shampoo': false,
-                // '24-hour check-in': false,
-                // 'Hangers': false,
-                // 'Hair dryer': false,
-                // 'Laptop friendly workspace': false,
-                // 'Self check-in': false,
-                // 'Building staff': false,
-                // 'Private entrance': false,
-                // 'Room-darkening shades': false,
-                // 'Hot water': false,
-                // 'Bed linens': false,
-                // 'Extra pillows and blankets': false,
-                // 'Ethernet connection': false,
-                // 'Luggage dropoff allowed': false,
-                // 'Long term stays allowed': false,
-                // 'Ground floor access': false,
-                // 'Wide hallway clearance': false,
-                // 'Step-free access': false,
-                // 'Wide doorway': false,
-                // 'Flat path to front door': false,
-                // 'Well-lit path to entrance': false,
-                // 'Disabled parking spot': false,
-                // 'Step-free access': false,
-                // 'Wide doorway': false,
-                // 'Wide clearance to bed': false,
-                // 'Step-free access': false,
-                // 'Wide doorway': false,
-                // 'Step-free access': false,
-                // 'Wide entryway': false,
-                // 'Waterfront': false,
-                // 'Beachfront': false
-            }
-        }
-    }
-
-    const [filter, setFilter] = React.useState(getDefaultState())
-
-    useEffect(() => {
-        onChangeFilter(filter)
-        console.log('filter:', filter)
-    }, [filter])
+export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handleClose }) => {
 
     const handleFilters = (ev) => {
         setFilter(prevFields => ({
@@ -107,7 +24,6 @@ export const StayFilter = ({ onChangeFilter }) => {
         }))
     }
 
-    // Used to convert from string to integer before assignment
     const handleBedsButton = (ev) => {
         const bedrooms = ev.target.name
         const val = ev.target.value
@@ -116,9 +32,8 @@ export const StayFilter = ({ onChangeFilter }) => {
         }))
     }
 
-    const handlePtButton = (ev) => {
-        ev.preventDefault()
-        const type = ev.target.value
+    const handlePtButton = (propertyT) => {
+        const type = propertyT
         setFilter(prevFields => ({
             ...prevFields,
             propertyTypes: {
@@ -134,22 +49,13 @@ export const StayFilter = ({ onChangeFilter }) => {
 
     const handleCheckBox = ({ target }) => {
         const { id, checked, name } = target
-        let placeType
-        let amenitieType
-        const field = name === 'placeType' ? placeType = id : amenitieType = id
-        const filterKey = name === 'placeTypes' ? 'placeTypes' : 'amenities'
         setFilter(prevFields => ({
             ...prevFields,
-            [filterKey]: {
-                ...prevFields[filterKey],
-                [field]: checked
+            [name]: {
+                ...prevFields[name],
+                [id]: checked
             }
         }))
-    }
-
-    const resetFilters = (ev) => {
-        ev.preventDefault()
-        setFilter(getDefaultState())
     }
 
     const getFieldProps = (field, type, useDefaultValue, debounce) => {
@@ -163,7 +69,7 @@ export const StayFilter = ({ onChangeFilter }) => {
             type
         }
     }
-    
+
     function AirbnbThumbComponent(props) {
         const { children, ...other } = props
         return (
@@ -219,7 +125,15 @@ export const StayFilter = ({ onChangeFilter }) => {
         },
     }))
 
+    const propertyIcon = {
+        House,
+        Hotel,
+        Apartment,
+        Guesthouse
+    }
+
     return (
+        filter &&
         <form className='filter-container'>
             <section className="price-slider">
                 <Typography className="price-titel titel" id="input-slider">
@@ -279,19 +193,20 @@ export const StayFilter = ({ onChangeFilter }) => {
                 </Typography>
                 {Object.keys(filter.propertyTypes).map(propertyT => (
                     <Button
-                        sx={{ borderRadius: 2, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
+                        sx={{ borderRadius: 2, border: 1, borderColor: '#222222', marginInlineEnd: 1, }}
                         className={filter.propertyTypes[propertyT] ? 'active' : ''}
-                        onClick={handlePtButton}
+                        onClick={() => {
+                            handlePtButton(propertyT)
+                        }}
                         name="propertyType"
                         value={propertyT}
                         key={`property_${propertyT}`}
                     >
-                        <div>
-                        <img src={AptIcon} />
+                        <img src={propertyIcon[propertyT]} />&nbsp;
                         <div>{propertyT}</div>
-                        </div>
                     </Button>
-                ))}
+                )
+                )}
                 <Divider className="divider" />
             </section>
 
@@ -306,19 +221,29 @@ export const StayFilter = ({ onChangeFilter }) => {
                         label={a}
                         name='amenities'
                         onChange={handleCheckBox}
-                        control={<Checkbox key={a} id={a} checked={filter.amenities[a]} />}
+                        control={<Checkbox
+                            key={a}
+                            id={a}
+                            checked={filter.amenities[a]} />}
                     />
                 )}
             </section>
-
-            <Link
-                component="button"
-                variant="body1"
-                color="#000000"
-                fontWeight="bold"
-                onClick={(ev) => resetFilters(ev)}>
-                Clear all
-            </Link>
+            <div className="filter-footer">
+                <Link
+                    component="button"
+                    variant="body1"
+                    color="#000000"
+                    fontWeight="bold"
+                    onClick={(ev) => resetFilters(ev)}>
+                    Clear all
+                </Link>
+                <Button
+                    className="filter-btn"
+                    onClick={() => handleClose()}
+                > 
+                    Show {staysCount} homes
+                </Button>
+            </div>
         </form >
     )
 }

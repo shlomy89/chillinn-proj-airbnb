@@ -97,7 +97,7 @@ export const StayDetails = () => {
                     <StarRating rating={4.73} reviews={32} />
                     <span>·</span>{' '}
                     <a className='apartment-location'>
-                        Tel Aviv-Yafo, Tel Aviv District, Israel
+                    {stay.loc.city}, {stay.loc.country}
                     </a>
                 </div>
                 <div className='share-like'>
