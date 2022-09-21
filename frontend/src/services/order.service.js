@@ -5,12 +5,20 @@ export const orderService = {
     getById,
     save,
     update,
-    remove
+    remove,
+    getUsersByOrders
 }
 
 async function query(userId, type) {
-    const orders = await httpService.get('Order', { params: { userId, type } })
+    const orders = await httpService.get(
+        'order' /* { params: { userId, type } }*/
+    )
     return orders
+}
+
+async function getUsersByOrders() {
+    const users = await httpService.get('user/orders')
+    return users
 }
 
 async function getById(orderId) {
@@ -28,6 +36,6 @@ function save(order) {
 }
 
 async function update(order) {
-    const UpdateOrder = await httpService.put(`order/${orderId}`, order)
-    return UpdateOrder
+    // const UpdateOrder = await httpService.put(`order/${orderId}`, order)
+    // return UpdateOrder
 }

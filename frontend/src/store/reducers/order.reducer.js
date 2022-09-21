@@ -1,35 +1,31 @@
 const initialState = {
     orders: [],
+    users: [],
     order: null
 }
 export function orderReducer(state = initialState, action) {
-    var newState = state
-    var orders
     switch (action.type) {
         case 'SET_ORDERS':
-            newState = { ...state, orders: action.orders }
-            break
+            return { ...state, orders: action.orders }
+        case 'SET_USERS':
+            return { ...state, users: action.users }
         case 'SET_ORDER':
-            newState = { ...state, order: action.order }
-            break
-        case 'REMOVE_ORDER':
-            const lastRemovedOrder = state.orders.find(
-                (order) => order._id === action.orderId
-            )
-            orders = state.orders.filter(
-                (order) => order._id !== action.orderId
-            )
-            newState = { ...state, orders, lastRemovedOrder }
-            break
-        case 'ADD_ORDER':
-            newState = { ...state, orders: [...orders, action.order] }
-            break
-        case 'UPDATE_ORDER':
-            orders = state.orders.map((order) =>
-                order._id === action.order_Id ? action.order : order
-            )
-            newState = { ...state, orders, order: action.order }
-            break
+            return { ...state, order: action.order }
+        // case 'REMOVE_ORDER':
+        //     const lastRemovedOrder = state.orders.find(
+        //         (order) => order._id === action.orderId
+        //     )
+        //     const orders = state.orders.filter(
+        //         (order) => order._id !== action.orderId
+        //     )
+        //     return { ...state, orders, lastRemovedOrder }
+        // case 'ADD_ORDER':
+        //     return { ...state, orders: [...orders, action.order] }
+        // case 'UPDATE_ORDER':
+        //     const orders = state.orders.map((order) =>
+        //         order._id === action.order_Id ? action.order : order
+        //     )
+        //     return { ...state, orders, order: action.order }
         default:
             return state
     }

@@ -1,6 +1,6 @@
-import { orderService } from '../services/order.service.js'
-import { userService } from '../services/user.service.js'
-import { socketService } from '../services/socket.service.js'
+import { orderService } from '../../services/order.service.js'
+import { userService } from '../../services/user.service.js'
+import { socketService } from '../../services/socket.service.js'
 
 export function loadOrders(userId, type) {
     return async (dispatch) => {
@@ -10,6 +10,8 @@ export function loadOrders(userId, type) {
                 type: 'SET_ORDERS',
                 orders
             })
+            const users = await orderService.getUsersByOrders()
+            dispatch({ type: 'SET_USERS', users })
         } catch (error) {
             console.log('failed to load orders in order actions', error)
         }
