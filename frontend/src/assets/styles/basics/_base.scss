@@ -10,21 +10,14 @@
 html {
     background-color: $clr2;
     font-family: cereal, sans-serif;
-    // font-family: circular;
-    // font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    // line-height: 2;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-        Helvetica Neue, sans-serif;
-    font-size: 14px;
+    // font-size: 14px;
     line-height: 1.43;
     margin: 0;
-    // max-width: 1200px;
-    margin: auto;
-    padding-right: 0 !important;
+    padding: 0;
 }
 
 h1,

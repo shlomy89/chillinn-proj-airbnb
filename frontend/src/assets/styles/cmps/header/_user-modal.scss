@@ -1,17 +1,18 @@
 .user-modal-container {
   transition: 0.3s;
-  top: 256%;
-    &.active-modal {
-        top: 110.6%;
-    }
-  box-shadow: 3px 2px 3px $clr5;
+  top: 35%;
+    // &.active-modal {
+    //     top: 20%;
+    //     z-index: 20;
+    // }
+  box-shadow:  0px 0px 0px 1px  rgba(128, 128, 128, 0.296);
   overflow: hidden;
   background-color: $clr2;
   position: absolute;
-  height: 240px;
+  height: min-content;
   width: 240px;
   border-radius: 20px;
-  right: 2%;
+  right: -4%;
   transform: translate(-50%, -50%);
   & ul {
     height: 100%;

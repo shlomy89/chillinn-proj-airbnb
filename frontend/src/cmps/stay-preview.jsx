@@ -4,7 +4,7 @@ import { RatingRates } from './rating-rates'
 import { utilService } from '../services/util.service.js'
 import { ReactComponent as LikeHeartEmptyIcon } from '../assets/img/icons/like-heart-empty.svg'
 import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-heart-red.svg'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
+// import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
 export function StayPreview({ stay }) {
