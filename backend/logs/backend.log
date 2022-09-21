@@ -224,3 +224,118 @@
 21/09/2022, 17:45:37 - DEBUG - Getting Stays
 21/09/2022, 17:45:37 - DEBUG - Getting Stays
 21/09/2022, 17:45:38 - DEBUG - Getting Stays
+21/09/2022, 17:46:41 - DEBUG - Getting Stays
+21/09/2022, 18:05:52 - INFO - Server is running on port: 3030
+21/09/2022, 18:05:52 - INFO - New connected socket [id: nZC0PfaGFU9OBUkbAAAB]
+21/09/2022, 18:06:02 - INFO - Server is running on port: 3030
+21/09/2022, 18:06:03 - INFO - New connected socket [id: Svo0rXuri6D6ZMuLAAAB]
+21/09/2022, 18:06:16 - INFO - Server is running on port: 3030
+21/09/2022, 18:06:17 - INFO - New connected socket [id: qdYeRKf99OynIzlZAAAB]
+21/09/2022, 18:06:21 - INFO - Server is running on port: 3030
+21/09/2022, 18:06:21 - INFO - New connected socket [id: FDDqxzu0Yb2c8QKCAAAB]
+21/09/2022, 18:07:21 - INFO - Server is running on port: 3030
+21/09/2022, 18:07:22 - INFO - New connected socket [id: YGP7v3_IzWsV-qauAAAB]
+21/09/2022, 18:11:03 - INFO - Server is running on port: 3030
+21/09/2022, 18:11:03 - INFO - New connected socket [id: jotW_eGrI3UcflUOAAAB]
+21/09/2022, 18:11:10 - INFO - Server is running on port: 3030
+21/09/2022, 18:11:11 - INFO - New connected socket [id: wVL-cE8reQ_x-Hu0AAAB]
+21/09/2022, 18:14:58 - INFO - Server is running on port: 3030
+21/09/2022, 18:14:59 - INFO - New connected socket [id: vqPombRlRYEKCrssAAAB]
+21/09/2022, 18:17:12 - INFO - Server is running on port: 3030
+21/09/2022, 18:17:14 - INFO - New connected socket [id: s1Jzo1VAo9tUvGmeAAAB]
+21/09/2022, 18:19:06 - INFO - Server is running on port: 3030
+21/09/2022, 18:19:07 - INFO - New connected socket [id: tSNZFYJhGLhgAjMCAAAB]
+21/09/2022, 18:20:12 - ERROR - Failed to get orders | {}
+21/09/2022, 18:27:20 - ERROR - Failed to get orders | {}
+21/09/2022, 18:27:23 - ERROR - Failed to get orders | {}
+21/09/2022, 18:27:24 - ERROR - Failed to get orders | {}
+21/09/2022, 18:27:24 - ERROR - Failed to get orders | {}
+21/09/2022, 18:27:24 - ERROR - Failed to get orders | {}
+21/09/2022, 18:27:40 - ERROR - Failed to get orders | {}
+21/09/2022, 18:27:44 - ERROR - Failed to get orders | {}
+21/09/2022, 18:28:19 - INFO - Server is running on port: 3030
+21/09/2022, 18:28:20 - INFO - New connected socket [id: qbiXB99YlwsxmcuzAAAB]
+21/09/2022, 18:28:21 - ERROR - Failed to get orders | {}
+21/09/2022, 18:28:23 - ERROR - Failed to get orders | {}
+21/09/2022, 18:28:24 - ERROR - Failed to get orders | {}
+21/09/2022, 18:28:24 - ERROR - Failed to get orders | {}
+21/09/2022, 18:28:43 - INFO - Server is running on port: 3030
+21/09/2022, 18:28:45 - INFO - New connected socket [id: g4cRUmv1M08SdCUiAAAB]
+21/09/2022, 18:47:20 - DEBUG - Getting Stays
+21/09/2022, 18:47:21 - DEBUG - Getting Stays
+21/09/2022, 18:48:04 - DEBUG - Getting Stays
+21/09/2022, 18:48:05 - DEBUG - Getting Stays
+21/09/2022, 19:17:27 - INFO - Server is running on port: 3030
+21/09/2022, 19:17:27 - INFO - New connected socket [id: xp1OSBYca_VIDOvBAAAB]
+21/09/2022, 19:17:31 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:17:31 - ERROR - Failed to get user | {}
+21/09/2022, 19:17:42 - INFO - Server is running on port: 3030
+21/09/2022, 19:17:43 - INFO - New connected socket [id: 6qDsosUA09953DnVAAAB]
+21/09/2022, 19:17:44 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:17:44 - ERROR - Failed to get user | {}
+21/09/2022, 19:18:55 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:18:55 - ERROR - Failed to get user | {}
+21/09/2022, 19:19:02 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:19:02 - ERROR - Failed to get user | {}
+21/09/2022, 19:19:11 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:19:11 - ERROR - Failed to get user | {}
+21/09/2022, 19:19:12 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:19:12 - ERROR - Failed to get user | {}
+21/09/2022, 19:19:31 - INFO - Server is running on port: 3030
+21/09/2022, 19:19:32 - INFO - New connected socket [id: _vXpAt5WJt3RNyG5AAAB]
+21/09/2022, 19:19:33 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:19:33 - ERROR - Failed to get user | {}
+21/09/2022, 19:19:51 - INFO - Server is running on port: 3030
+21/09/2022, 19:19:52 - INFO - New connected socket [id: rEXJjp0PDaED1WUxAAAB]
+21/09/2022, 19:19:53 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:19:53 - ERROR - Failed to get user | {}
+21/09/2022, 19:19:57 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:19:57 - ERROR - Failed to get user | {}
+21/09/2022, 19:21:23 - INFO - Server is running on port: 3030
+21/09/2022, 19:21:24 - INFO - New connected socket [id: LXIL2EfwvdAd-auNAAAB]
+21/09/2022, 19:21:25 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:21:25 - ERROR - Failed to get user | {}
+21/09/2022, 19:22:56 - INFO - Server is running on port: 3030
+21/09/2022, 19:22:57 - INFO - New connected socket [id: Y_jujMYV7DSZHhGNAAAB]
+21/09/2022, 19:22:58 - ERROR - while finding user by id: orders | {}
+21/09/2022, 19:22:58 - ERROR - Failed to get user | {}
+21/09/2022, 19:23:08 - INFO - Server is running on port: 3030
+21/09/2022, 19:23:08 - INFO - New connected socket [id: IbY4EyK0mXajTLVZAAAB]
+21/09/2022, 19:23:15 - INFO - Server is running on port: 3030
+21/09/2022, 19:23:15 - INFO - New connected socket [id: jKKKy6VsUiDOk3s7AAAB]
+21/09/2022, 19:23:27 - INFO - Server is running on port: 3030
+21/09/2022, 19:23:28 - INFO - New connected socket [id: rw954k8184VTlp0wAAAB]
+21/09/2022, 19:23:32 - INFO - Server is running on port: 3030
+21/09/2022, 19:23:32 - INFO - New connected socket [id: g4yt5CMtxbwMrL7CAAAB]
+21/09/2022, 19:24:13 - INFO - Server is running on port: 3030
+21/09/2022, 19:24:14 - INFO - New connected socket [id: iSGolkUq5FvdfdHJAAAB]
+21/09/2022, 19:24:20 - INFO - Server is running on port: 3030
+21/09/2022, 19:24:20 - INFO - New connected socket [id: 4NgOu6GIjnMG_IVUAAAB]
+21/09/2022, 19:24:42 - INFO - Server is running on port: 3030
+21/09/2022, 19:24:43 - INFO - New connected socket [id: UR-mGmCOWXcmVLkVAAAB]
+21/09/2022, 19:25:06 - INFO - Server is running on port: 3030
+21/09/2022, 19:25:07 - INFO - New connected socket [id: w4Xv4gZvDFYOqvihAAAB]
+21/09/2022, 19:25:17 - INFO - Server is running on port: 3030
+21/09/2022, 19:25:18 - INFO - New connected socket [id: L8aYT1BqKMEBk3ICAAAB]
+21/09/2022, 19:31:24 - DEBUG - Getting Stays
+21/09/2022, 19:31:24 - DEBUG - Getting Stays
+21/09/2022, 19:31:25 - DEBUG - Getting Stays
+21/09/2022, 19:31:28 - DEBUG - Getting Stays
+21/09/2022, 19:31:39 - DEBUG - Getting Stays
+21/09/2022, 19:31:39 - DEBUG - Getting Stays
+21/09/2022, 19:31:42 - DEBUG - Getting Stays
+21/09/2022, 19:31:46 - DEBUG - Getting Stays
+21/09/2022, 19:31:55 - DEBUG - Getting Stays
+21/09/2022, 19:32:06 - DEBUG - Getting Stays
+21/09/2022, 19:43:33 - DEBUG - Getting Stays
+21/09/2022, 19:43:34 - DEBUG - Getting Stays
+21/09/2022, 19:44:38 - DEBUG - Getting Stays
+21/09/2022, 19:44:45 - DEBUG - Getting Stays
+21/09/2022, 19:44:56 - DEBUG - Getting Stays
+21/09/2022, 19:44:57 - DEBUG - Getting Stays
+21/09/2022, 19:45:28 - DEBUG - Getting Stays
+21/09/2022, 19:45:29 - DEBUG - Getting Stays
+21/09/2022, 19:47:56 - DEBUG - Getting Stays
+21/09/2022, 19:47:58 - DEBUG - Getting Stays
+21/09/2022, 19:48:49 - DEBUG - Getting Stays
+21/09/2022, 19:48:53 - DEBUG - Getting Stays

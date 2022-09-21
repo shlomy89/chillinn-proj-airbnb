@@ -1,5 +1,6 @@
 import { BorderLine } from './border-line'
 import clsx from 'clsx'
+import moment from 'moment/moment'
 export const Order = ({
     userImg,
     name,
@@ -13,16 +14,13 @@ export const Order = ({
         <div className='order-wrapper'>
             <div className='order-container'>
                 <div className='order-details-container'>
-                    <img
-                        className='user-image'
-                        src={require('../../assets/img/face1.png')}
-                        alt='user-img'
-                    />
+                    <img className='user-image' src={userImg} alt='user-img' />
                     <section className='order-details'>
                         <div className='order-reserved-date'>
                             <span className='user-name'> {name}</span>
                             <span className='reserved-date'>
-                                Reserved at:{reservedDate}
+                                Reserved at: {moment(+reservedDate).weekday()}
+                                {moment(+reservedDate).format('MMM DD,YYYY')}
                             </span>
                         </div>
                         <div className='order-text-info'>
