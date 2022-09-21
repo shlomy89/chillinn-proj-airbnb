@@ -34,7 +34,7 @@ export function Signup() {
             !credentials.password ||
             !credentials.firstname ||
             !credentials.lastname) return
-            
+
         await dispatch(onSignup(credentials))
         navigate('/')
     }
@@ -42,7 +42,7 @@ export function Signup() {
     const theme = createTheme()
 
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>cd ..
             <Container component="main" maxWidth="xs">
                 <CssBaseline />
                 <Box
