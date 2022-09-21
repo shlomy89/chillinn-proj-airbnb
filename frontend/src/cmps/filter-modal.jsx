@@ -14,14 +14,16 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 700,
+    width: 750,
+    height: '90vh',
+    overflowY: 'scroll',
     bgcolor: 'background.paper',
     borderRadius: '10px',
     boxShadow: 24,
     p: 2,
 }
 
-export default function TransitionsModal({ onChangeFilter }) {
+export default function FilterModal(props) {
     const [open, setOpen] = React.useState(false)
     const handleOpen = () => setOpen(true)
     const handleClose = () => setOpen(false)
@@ -29,9 +31,10 @@ export default function TransitionsModal({ onChangeFilter }) {
     return (
         <div className="filter-modal">
             <Button
+                className="open-filter-btn"
                 variant="outlined"
                 onClick={handleOpen}>
-                Filter
+                Filters
             </Button>
             <Modal
                 aria-labelledby="transition-modal-title"
@@ -53,7 +56,7 @@ export default function TransitionsModal({ onChangeFilter }) {
                             Filters
                         </Typography>
                         <Divider className="divider" />
-                        <StayFilter onChangeFilter={onChangeFilter} />
+                        <StayFilter {...props} handleClose={handleClose} />
                     </Box>
                 </Fade>
             </Modal>
