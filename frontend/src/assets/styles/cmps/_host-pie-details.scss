@@ -1,0 +1,33 @@
+.pie-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    .chart-pie-index-container {
+        display: flex;
+        column-gap: 8px;
+        .index-container {
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+            .index-color {
+                height: 10px;
+                width: 50px;
+                border: 1px solid black;
+                &.approved {
+                    background-color: rgba(103, 193, 57, 255);
+                }
+                &.rejected {
+                    background-color: rgba(244, 108, 108, 255);
+                }
+                &.pending {
+                    background-color: rgba(252, 94, 6, 255);
+                }
+            }
+            .index-text {
+                font-size: 14px;
+                color: gray;
+            }
+        }
+    }
+}

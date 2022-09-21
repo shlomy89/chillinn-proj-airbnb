@@ -88,7 +88,7 @@ export const StayApp = () => {
     }
     
     return (
-        <div className='stay-app'>
+        <div className='stay-app main-layout'>
             <FilterModal
                 resetFilters={resetFilters}
                 filter={filter}

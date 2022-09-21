@@ -2,6 +2,7 @@ export const utilService = {
     makeId,
     makeLorem,
     getRandomIntInclusive,
+    getRandomFloatInclusive,
     delay,
     randomBoolean,
     randomDate,
@@ -55,30 +56,33 @@ function makeChartDate(labels, data) {
 }
 
 function makeId(length = 6) {
-    var txt = '';
-    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var txt = ''
+    var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
     for (var i = 0; i < length; i++) {
-        txt += possible.charAt(Math.floor(Math.random() * possible.length));
+        txt += possible.charAt(Math.floor(Math.random() * possible.length))
     }
 
-    return txt;
+    return txt
 }
 
 function makeLorem(size = 100) {
-    var words = ['The sky', 'above', 'the port', 'was', 'the color of television', 'tuned', 'to', 'a dead channel', '.', 'All', 'this happened', 'more or less', '.', 'I', 'had', 'the story', 'bit by bit', 'from various people', 'and', 'as generally', 'happens', 'in such cases', 'each time', 'it', 'was', 'a different story', '.', 'It', 'was', 'a pleasure', 'to', 'burn'];
-    var txt = '';
+    var words = ['The sky', 'above', 'the port', 'was', 'the color of television', 'tuned', 'to', 'a dead channel', '.', 'All', 'this happened', 'more or less', '.', 'I', 'had', 'the story', 'bit by bit', 'from various people', 'and', 'as generally', 'happens', 'in such cases', 'each time', 'it', 'was', 'a different story', '.', 'It', 'was', 'a pleasure', 'to', 'burn']
+    var txt = ''
     while (size > 0) {
-        size--;
-        txt += words[Math.floor(Math.random() * words.length)] + ' ';
+        size--
+        txt += words[Math.floor(Math.random() * words.length)] + ' '
     }
-    return txt;
+    return txt
 }
 
 function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min + 1)) + min //The maximum is inclusive and the minimum is inclusive 
+}
+function getRandomFloatInclusive(min, max, decimals) {
+    return ((Math.random() * (max - min)) + min).toFixed(decimals)
 }
 
 function delay(ms = 1500) {
@@ -89,5 +93,5 @@ function delay(ms = 1500) {
 
 //example: numberWithCommas(1234567) => return(1,234,456)
 function numberWithCommas(x){
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }

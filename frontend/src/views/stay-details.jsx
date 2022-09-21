@@ -43,9 +43,9 @@ export const StayDetails = () => {
     const params = useParams()
     const navigate = useNavigate()
 
-    useEffect(() => { 
+    useEffect(() => {
         const stayId = params.id
-        console.log('stayId:', stayId);
+        console.log('stayId:', stayId)
         const getReviews = async () => {
             const stay = await stayService.getById(stayId)
             setStay(stay)
@@ -82,13 +82,15 @@ export const StayDetails = () => {
     // }
 
     if (!stay) {
-        return <Box sx={{ display: 'flex' }}>
-            <CircularProgress />
-        </Box>
+        return (
+            <Box sx={{ display: 'flex' }}>
+                <CircularProgress />
+            </Box>
+        )
     }
 
     return (
-        <div className='stay-details'>
+        <div className='stay-details narrow main-layout'>
             <div className='title'>
                 <h3>{stay.name}</h3>
             </div>
@@ -97,7 +99,7 @@ export const StayDetails = () => {
                     <StarRating rating={4.73} reviews={32} />
                     <span>·</span>{' '}
                     <a className='apartment-location'>
-                    {stay.loc.city}, {stay.loc.country}
+                        {stay.loc.city}, {stay.loc.country}
                     </a>
                 </div>
                 <div className='share-like'>

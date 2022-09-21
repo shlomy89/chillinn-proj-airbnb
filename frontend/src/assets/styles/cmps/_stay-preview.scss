@@ -1,5 +1,5 @@
 .stay-preview {
-   width: 260px;
+   // width: 260px;
 
    .like-icon {
       display: inline-block;
@@ -11,8 +11,9 @@
    }
 
    .gallery-container {
-      width: 260px;
-      height: 247px;
+      aspect-ratio: 260/247;
+      // width: 260px;
+      // height: 247px;
       position: relative;
 
       .carousel {
@@ -52,11 +53,11 @@
          overflow: hidden;
          text-overflow: ellipsis;
          text-decoration: none;
-         color: $clr8;
+         color: $clr7;
       }
 
       .rate {
-         color: $clr7;
+         color: $clr6;
          display: inline-block;
          position: relative;
          float: right;
@@ -65,12 +66,12 @@
 
       .name,
       .night-price {
-         color: $clr7;
+         color: $clr6;
          font-weight: bold;
       }
 
       .night {
-         color: $clr7;
+         color: $clr6;
       }
 
       .full-night-price {

@@ -22,3 +22,12 @@
         margin-bottom: 28px;
     }
 }
+
+.air-cover-modal-container {
+    margin-top: 20px;
+    overflow-y: hidden;
+    .air-cover-image {
+        width: 152px;
+        height: 32px;
+    }
+}

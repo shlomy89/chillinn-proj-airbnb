@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { React, useState } from 'react'
 import { RatingRates } from './rating-rates'
 import { utilService } from '../services/util.service.js'
@@ -8,9 +8,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
 export function StayPreview({ stay }) {
-    const { numberWithCommas, getRandomIntInclusive } = utilService
-
+    
+    const { numberWithCommas, getRandomIntInclusive, getRandomFloatInclusive } = utilService
     const [likeClicked, setLikeClicked] = useState(false)
+    const navigate = useNavigate()
 
     function getBedsNum() {
         switch (stay.capacity) {
@@ -24,6 +25,11 @@ export function StayPreview({ stay }) {
     }
 
 
+    function onClickItem(stayId) {
+		window.scrollTo(0, 0)
+        navigate(`/stay/${stayId}`)   
+    }
+
     return (
         <div className='stay-preview'>
             <div
@@ -35,7 +41,7 @@ export function StayPreview({ stay }) {
                 {likeClicked ? <LikeHeartRedIcon /> : <LikeHeartEmptyIcon />}
             </div>
             <div className='gallery-container'>
-                <Carousel className='carousel' showThumbs={false} infiniteLoop>
+                <Carousel className='carousel' showThumbs={false} infiniteLoop onClickItem={() => onClickItem(stay._id)}>
                     {stay.imgUrls.map((url, index) => (
                         <img key={index} src={url} />
                     ))}
@@ -46,8 +52,8 @@ export function StayPreview({ stay }) {
                 <div className='preview-details'>
                     <div className='text rate'>
                         <RatingRates
-                            rating={getRandomIntInclusive(1, 5)}
-                            reviews={32}
+                            rating={getRandomFloatInclusive(2,5,1)}
+                            reviews={getRandomIntInclusive(1, 200)}
                         />
                     </div>
                     <div className='text name'>{stay.name}</div>
@@ -55,7 +61,7 @@ export function StayPreview({ stay }) {
                     <div className='text capacity'>{getBedsNum()}</div>
                     <div className='text price'>
                         <span className='full-night-price'>
-                            ${numberWithCommas(stay.price * 1.3)}
+                            ${numberWithCommas((stay.price * 1.3.toFixed()))}
                         </span>
                         &nbsp;
                         <span className='night-price'>

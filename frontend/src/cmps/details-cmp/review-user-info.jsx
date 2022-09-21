@@ -1,4 +1,4 @@
-export function Review({ review }) {
+export function ReviewUserInfo({ review }) {
     console.log(review)
     return (
         <div className='review'>
