@@ -42,7 +42,7 @@ export const Host = () => {
                             )
                             return (
                                 <Order
-                                    name={user.fullname}
+                                    name={`${user.firstname} ${user.lastname}`}
                                     reservedDate={order.reserevedDate}
                                     guestsNum={order.guestsNum}
                                     vacationDate={order.vacationDate}
