@@ -7,7 +7,6 @@ export const stayService = {
     getById,
     setStaysToLocalStrage,
     loadStaysFromLocalStorage
-    // getStayLabels,
     // getNextId
 }
 
@@ -47,11 +46,6 @@ function loadStaysFromLocalStorage() {
 function setStaysToLocalStrage(stays) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(stays))
 }
-
-// function getStayLabels(stays) {
-//     const labels = stays.map(({ labels }) => labels)
-//     return [...new Set(labels)]
-// }
 
 // function getNextId(stayId) {
 //     return httpService.get(BASE_URL)

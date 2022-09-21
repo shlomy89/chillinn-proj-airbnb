@@ -224,3 +224,18 @@
 21/09/2022, 17:45:37 - DEBUG - Getting Stays
 21/09/2022, 17:45:37 - DEBUG - Getting Stays
 21/09/2022, 17:45:38 - DEBUG - Getting Stays
+21.9.2022, 21:22:52 - INFO - Server is running on port: 3030
+21.9.2022, 21:23:15 - DEBUG - Getting Stays
+21.9.2022, 21:37:07 - DEBUG - Getting Stays
+21.9.2022, 21:41:43 - DEBUG - Getting Stays
+21.9.2022, 21:41:44 - DEBUG - Getting Stays
+21.9.2022, 21:41:49 - DEBUG - Getting Stays
+21.9.2022, 21:41:50 - DEBUG - Getting Stays
+21.9.2022, 21:42:24 - DEBUG - Getting Stays
+21.9.2022, 21:42:25 - DEBUG - Getting Stays
+21.9.2022, 21:57:28 - DEBUG - auth.service - signup with username: shuki@walla.com, firsname: shuki
+21.9.2022, 21:57:28 - DEBUG - auth.route - new account created: {"username":"shuki@walla.com","password":"$2b$10$zbH/Mr6H2MXgqG4PAOnTrOM3YvLeri9KI8UnOZIOQu6S1F3lQ9dKa","firstname":"shuki","lastname":"cohen","score":100,"_id":"632b5e98f9ddfd47aa988ef7"}
+21.9.2022, 21:57:28 - DEBUG - auth.service - login with username: shuki@walla.com
+21.9.2022, 21:57:29 - INFO - User signup: | {"_id":"632b5e98f9ddfd47aa988ef7","username":"shuki@walla.com","firstname":"shuki","lastname":"cohen","score":100}
+21.9.2022, 21:57:31 - DEBUG - Getting Stays
+21.9.2022, 21:59:55 - DEBUG - Getting Stays
