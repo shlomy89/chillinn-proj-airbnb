@@ -15,18 +15,6 @@ export function loadStays() {
     }
 }
 
-// async function post(entityType, newEntity) {
-//   try {
-//       newEntity._id = _makeId()
-//       const entities = await query(entityType)
-//       entities.push(newEntity)
-//       _save(entityType, entities)
-//       return newEntity
-//   } catch (error) {
-//       console.log(error, 'post function failed')
-//   }
-// }
-
 export function removeStay(stayId) {
     return async (dispatch, getState) => {
         try {
@@ -66,8 +54,3 @@ export function setFilterBy(filterBy) {
     }
 }
 
-// export function setLikeBtn() {
-//   return async (dispatch) => {
-//     dispatch({ type: 'SET_LIKE_BTN',  })
-//   }
-// }

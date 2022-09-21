@@ -8,8 +8,6 @@ export const stayService = {
     getById,
     setStaysToLocalStrage,
     loadStaysFromLocalStorage,
-    // getStayLabels,
-    // getNextId
 }
 
 const STORAGE_KEY = 'stays'

@@ -10,7 +10,6 @@ import { Signup } from './views/sign-up.jsx'
 import { Host } from './views/host.jsx'
 import { AppFooter } from './cmps/details-cmp/app-footer.jsx'
 
-
 function App() {
 
     return (
