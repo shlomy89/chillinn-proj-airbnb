@@ -9,13 +9,12 @@ import { Login } from './views/user-login.jsx'
 import { Signup } from './views/sign-up.jsx'
 import { Host } from './views/host.jsx'
 import { AppFooter } from './cmps/details-cmp/app-footer.jsx'
-
+import './assets/styles/views/_root-cmp.scss'
 
 function App() {
-
     return (
         <div className='main-app'>
-            <AppHeader/>
+            <AppHeader />
             <main className='container'>
                 <Routes>
                     <Route path='stay/edit/:id' element={<StayEdit />} />

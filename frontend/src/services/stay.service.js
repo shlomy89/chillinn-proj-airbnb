@@ -1,13 +1,12 @@
 import { httpService } from './http.service'
 
-
 export const stayService = {
     query,
     save,
     remove,
     getById,
     setStaysToLocalStrage,
-    loadStaysFromLocalStorage,
+    loadStaysFromLocalStorage
     // getStayLabels,
     // getNextId
 }
@@ -16,24 +15,28 @@ const STORAGE_KEY = 'stays'
 const BASE_URL = `stay/`
 
 async function query(filterBy = {}) {
-    return httpService.get(BASE_URL, { params: filterBy })
-    .then((res) => res)
+    const res = await httpService.get(BASE_URL, { params: filterBy })
+    return res
 }
 
-function getById(stayId) {
-    return httpService.get(BASE_URL + stayId)
-    .then((res) => res)
+async function getById(stayId) {
+    const res = await httpService.get(BASE_URL + stayId)
+    return res
 }
 
 async function remove(stayId) {
-    return httpService.delete(BASE_URL + stayId)
-    .then((res) => res)
+    const res = await httpService.get(BASE_URL + stayId)
+    return res
 }
 
 async function save(stay) {
-    if (stay._id) return httpService.put(BASE_URL + stay._id, stay)
-    .then((res) => res)
-    return httpService.post(BASE_URL, stay).then((res) => res)
+    const stay = await httpService.get(BASE_URL)
+    if (stay._id) {
+        const res = await httpService.put(BASE_URL + stay._id, stay)
+        return res
+    }
+    const res = await httpService.post(BASE_URL, stay)
+    return res
 }
 
 function loadStaysFromLocalStorage() {

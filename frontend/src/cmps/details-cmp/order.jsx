@@ -39,8 +39,8 @@ export const Order = ({
                     {orderStatus}
                 </span>
             </div>
-            <div className='approve-order'>Approve order</div>
-            <div className='reject-order'>Reject order</div>
+            {/* <div className='approve-order'>Approve order</div>
+            <div className='reject-order'>Reject order</div> */}
             <BorderLine />
         </div>
     )
