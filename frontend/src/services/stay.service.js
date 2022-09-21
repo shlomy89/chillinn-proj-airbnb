@@ -30,8 +30,8 @@ async function remove(stayId) {
 }
 
 async function save(stay) {
-    const stay = await httpService.get(BASE_URL)
-    if (stay._id) {
+    const staySaved = await httpService.get(BASE_URL)
+    if (staySaved._id) {
         const res = await httpService.put(BASE_URL + stay._id, stay)
         return res
     }
