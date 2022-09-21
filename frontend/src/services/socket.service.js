@@ -23,7 +23,7 @@ export const socketService = createDummySocketService()
 socketService.setup()
 
 function createSocketService() {
-  var socket = null;
+  var socket = null
   const socketService = {
     setup() {
       socket = io(baseUrl)
@@ -36,7 +36,7 @@ function createSocketService() {
       socket.on(eventName, cb)
     },
     off(eventName, cb = null) {
-      if (!socket) return;
+      if (!socket) return
       if (!cb) socket.removeAllListeners(eventName)
       else socket.off(eventName, cb)
     },
@@ -90,7 +90,7 @@ function createDummySocketService() {
       this.emit('chat addMsg', { from: 'Someone', txt: 'Aha it worked!' })
     },
   }
-  window.listenersMap = listenersMap;
+  window.listenersMap = listenersMap
   return socketService
 }
 

@@ -1,0 +1,24 @@
+.user-menu-btn{
+   height: 42px;;
+   padding: 5px 5px 5px 12px;
+   width: fit-content;
+   background-color: $clr2;
+   border-radius: 25%;
+   border: 1px solid $clr7;
+   cursor: pointer;
+   border-radius: 21px;
+   transition: box-shadow 0.2s ease;
+
+   .hamburger-svg{
+      height: 16px;
+      width: 16px;
+      color: $clr6;
+      stroke: $clr6;
+      stroke-width: 6;
+   }
+
+   .user-svg{
+      height: 30px;
+      width: 30px;
+   }
+}

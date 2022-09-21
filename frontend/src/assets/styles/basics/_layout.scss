@@ -1,3 +1,32 @@
+:root {
+   --main-layout-width: 1600px;
+}
+
+.narrow {
+   
+   --main-layout-width: 1120px;
+}
+
+.main-layout {
+   display: grid;
+   grid-template-columns: 
+   minmax(80px, 1fr) 
+   minmax(auto, var(--main-layout-width)) 
+   minmax(80px, 1fr);
+
+   >* {
+      grid-column: 2;
+
+      &.full {
+         grid-column: 1 / -1;
+      }
+   }
+
+
+}
+
+
+
 // .main-container {
 //     display: grid;
 //     grid-template-columns: 20px 1fr 20px;

@@ -8,7 +8,7 @@ import { Button } from '@mui/material'
 import { loadStays } from '../store/actions/stay.action.js'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 export function StayDashboard() {
     let stays = useSelector(state => state.stayModule.stays) || stayService.loadStaysFromLocalStorage()
@@ -128,7 +128,7 @@ export function StayDashboard() {
             </div>
             <div className='chart' style={{ width: "50%" }}>
                 <h3>Average prices by stay label</h3>
-                <Bar options={options} data={dataLabelInStock} />;
+                <Bar options={options} data={dataLabelInStock} />
             </div>
         </section>
     )
