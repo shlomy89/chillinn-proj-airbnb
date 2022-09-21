@@ -1,5 +1,5 @@
 .stay-preview {
-   width: 260px;
+   // width: 260px;
 
    .like-icon {
       display: inline-block;
@@ -11,8 +11,9 @@
    }
 
    .gallery-container {
-      width: 260px;
-      height: 247px;
+      aspect-ratio: 260/247;
+      // width: 260px;
+      // height: 247px;
       position: relative;
 
       .carousel {

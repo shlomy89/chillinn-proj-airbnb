@@ -30,8 +30,8 @@ export function StayPreview({ stay, onSetLikeBtn }) {
     const { numberWithCommas, getRandomIntInclusive, getRandomfloatInclusive: getRandomFloatInclusive } = utilService
 
     function onClickItem(stayId) {
-		window.scrollTo(0, 0);
-        navigate(`/stay/${stayId}`);   
+		window.scrollTo(0, 0)
+        navigate(`/stay/${stayId}`)   
     }
 
     return (

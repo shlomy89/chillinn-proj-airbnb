@@ -13,7 +13,7 @@ export function stayReducer(state = INITIAL_STATE, action) {
                 stays: action.stays
             }
         case 'ADD_STAY':
-            console.log('action.stay:', action.stay);
+            console.log('action.stay:', action.stay)
             return {
                 ...state,
                 stays: [...state.stays, action.stay]
@@ -39,6 +39,6 @@ export function stayReducer(state = INITIAL_STATE, action) {
                 isLoading: action.isLoading
             }
         default:
-            return state;
+            return state
     }
 }

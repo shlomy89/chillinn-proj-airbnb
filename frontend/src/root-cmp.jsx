@@ -15,19 +15,19 @@ function App() {
 
     return (
         <div className='main-app'>
-            <AppHeader />
+            <AppHeader/>
             <main className='container'>
-                    <Routes>
-                        <Route path='stay/edit/:id' element={<StayEdit />} />
-                        <Route path='stay/edit' element={<StayEdit />} />
-                        <Route path='stay/:id' element={<StayDetails />} />
-                        <Route path='dashboard' element={<StayDashboard />} />
-                        <Route path='login' element={<Login />} />
-                        <Route path='signup' element={<Signup />} />
-                        <Route path='about' element={<About />} />
-                        <Route path='host' element={<Host />} />
-                        <Route path='' element={<StayApp />} />
-                    </Routes>
+                <Routes>
+                    <Route path='stay/edit/:id' element={<StayEdit />} />
+                    <Route path='stay/edit' element={<StayEdit />} />
+                    <Route path='stay/:id' element={<StayDetails />} />
+                    <Route path='dashboard' element={<StayDashboard />} />
+                    <Route path='login' element={<Login />} />
+                    <Route path='signup' element={<Signup />} />
+                    <Route path='about' element={<About />} />
+                    <Route path='host' element={<Host />} />
+                    <Route path='' element={<StayApp />} />
+                </Routes>
             </main>
             <AppFooter>
                 <section className='container'>chill Inn 2022 &copy;</section>

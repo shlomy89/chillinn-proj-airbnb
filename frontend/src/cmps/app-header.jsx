@@ -20,7 +20,9 @@ export function AppHeader() {
     }
 
     return (
-        <header className='app-header flex justify-space-between align-center'>
+
+        <header className='main-layout'>
+            <div className='app-header flex justify-space-between align-center'>
             <img src={logo} className='logo' onClick={onBack} />
 
                 <section>
@@ -28,31 +30,7 @@ export function AppHeader() {
                 <NavLink to='/login'><Button>Login/Sign Up</Button></NavLink>
                 </section>
                 <UserMenu/>
-
-            {/* {loggedInUser && (
-                    <section className='user'>
-                        <p>
-                            Name: {loggedInUser.firstname}{' '}
-                            {loggedInUser.lastname}
-                        </p>
-                    </section>
-                )} */}
-            {/* <nav>
-                    <NavLink to=''>Home</NavLink>
-                    <NavLink to='dashboard'>Dashboard</NavLink>
-                    <NavLink to='about'>About</NavLink>
-                    {!loggedInUser ? (
-                        <NavLink to='login'>Login</NavLink>
-                    ) : (
-                        <Button
-                            className='btn-back'
-                            variant='outlined'
-                            onClick={logout}
-                        >
-                            Logout
-                        </Button>
-                    )}
-                </nav> */}
+            </div>
         </header>
     )
 }
