@@ -1,6 +1,6 @@
 
 const INITIAL_STATE = {
-    stays: null,
+    stays: [],
     filterBy: null,
     isLoading: false
 }

@@ -4,11 +4,13 @@ export function loadStays() {
     return async (dispatch, getState) => {
         try {
             const { filterBy } = getState().stayModule
+            dispatch({ type: 'SET_LOADING', isLoading: true})
             const stays = await stayService.query(filterBy)
-
             dispatch({ type: 'SET_STAYS', stays })
         } catch (error) {
-            console.log('load toys error in stay action:', error)
+            console.log('load stays error in stay action:', error)
+        } finally {
+            dispatch({ type: 'SET_LOADING', isLoading: false })
         }
     }
 }

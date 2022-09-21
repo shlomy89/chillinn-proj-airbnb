@@ -4,6 +4,16 @@ button[name='bedrooms'] {
     border-color: #e3e3e3;
 }
 
+button.filter-btn {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+button.filter-btn:hover {
+    background-color: #000;
+    color: #ffffff;
+}
+
 button[name='bedrooms']:hover {
     border-color: #222222;
 }
@@ -20,7 +30,7 @@ button[name='propertyType'] {
 }
 
 button[name='propertyType']:hover {
-    border-color: #222222 !important;
+    border-color: #222222;
 }
 
 button[name='propertyType'].active {
@@ -46,4 +56,22 @@ button[name='propertyType'].active {
 
 .property-type-btn {
     max-width: 200px;
+}
+
+.amenitie-checkBox {
+    color: #222222;
+}
+
+.filter-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.open-filter-btn {
+    left: 85%;
+    width: 50px !important;
+    font-size: 12px !important;
+    color: #222222 !important;
+    border-color: #efefef !important;
+    border-radius: 10px !important;
 }

@@ -2,14 +2,11 @@ const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
 
-// const PAGE_SIZE = 5
-
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     try {
-        console.log('criteria:', criteria);
         const collection = await dbService.getCollection('stay')
-        var stays = await collection.find().toArray()
+        var stays = await collection.find(criteria).toArray()
         return stays
     } catch (err) {
         logger.error('cannot find stays', err)
@@ -17,11 +14,15 @@ async function query(filterBy = {}) {
     }
 }
 
+// 632982b8569470128f5dbbab
+
+// 632982b1569470128f5dbbaa
+
 async function getById(stayId) {
     try {
         const collection = await dbService.getCollection('stay')
         const stay = await collection.findOne({ _id: stayId })
-        console.log('stay:', stay);
+
         return stay
     } catch (err) {
         logger.error(`while finding stay ${stayId}`, err)
@@ -67,66 +68,44 @@ async function update(stay) {
 }
 
 function _buildCriteria(filterBy) {
-    const criteria = {}
+    const criteria = {
+        price: {}
+    }
     const { priceRange, bedrooms, propertyTypes, placeTypes, amenities } = filterBy
     const [minPrice, maxPrice] = priceRange
 
     const chosePropertyTypes = Object.keys(propertyTypes).filter((p) => propertyTypes[p])
     const checkedPlaceTypes = Object.keys(placeTypes).filter((p) => placeTypes[p])
     const checkedAmenities = Object.keys(amenities).filter((a) => amenities[a])
+    
 
     if (chosePropertyTypes.length) {
-        // stays = stays.filter((stay) =>
-        //     chosePropertyTypes.some(
-        //         (chosePropertyType) =>
-        //             chosePropertyType === stay.propertyType
-        //     )
-        // )
-        criteria.propertyType = { $in: chosePropertyTypes } 
+        const typesRegex = chosePropertyTypes.map(t => new RegExp(`^${t}$`, 'i'))
+        criteria.propertyType = { $in: typesRegex }
+    } 
+
+    if (checkedAmenities.length) {
+        const amenitiesRegex = checkedAmenities.map(a => new RegExp(`^${a}$`, 'i'))
+        criteria.amenities = { $all: amenitiesRegex }
     }
-    
+
     if (checkedPlaceTypes.length) {
-        // stays = stays.filter((stay) =>
-        //     checkedPlaceTypes.some(
-        //         (checkedPlaceType) => checkedPlaceType === stay.placeType
-        //     )
-        // )
-        criteria.placeType = { $in: checkedPlaceTypes } 
+        criteria.placeType = { $in: checkedPlaceTypes }
     }
 
     if (minPrice) {
-        // stays = stays.filter((stay) => stay.price >= minPrice)
-        criteria.price = { $gte: minPrice }
+        criteria.price = { ...criteria.price, $gte: minPrice }
     }
 
     if (maxPrice) {
-        // stays = stays.filter((stay) => stay.price <= maxPrice)
-        criteria.price = { $lte: maxPrice }
+        criteria.price = { ...criteria.price, $lte: maxPrice }
     }
 
     if (bedrooms) {
-        // stays = stays.filter((stay) => stay.bedrooms === bedrooms)
         criteria.bedrooms = { $eq: bedrooms }
-
     }
 
-    // stays = stays.filter((stay) =>
-    //     checkedAmenities.every((amenity) =>
-    //         stay.amenities.includes(amenity)
-    //     )
-    // )
-    criteria.amenities = { $all: checkedAmenities } 
-    
     return criteria
-}
-
-function _makeId(length = 5) {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for (var i = 0; i < length; i++) {
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    }
-    return text
 }
 
 module.exports = {
