@@ -18,11 +18,6 @@ export function AppHeader() {
         <header className='main-layout'>
             <div className='app-header flex justify-space-between align-center'>
                 <img src={logo} className='logo' onClick={onBack} />
-
-                <section>
-                    <Link to='/stay/edit'><Button>Host your home</Button></Link>&nbsp;
-                    <NavLink to='/login'><Button>Login/Sign Up</Button></NavLink>
-                </section>
                 <UserMenu />
             </div>
         </header>
