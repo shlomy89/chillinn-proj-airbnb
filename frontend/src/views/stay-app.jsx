@@ -1,16 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { StayList } from '../cmps/stay-list'
-import { reviewService } from '../services/review.service'
 import FilterModal from '../cmps/filter-modal.jsx'
 import { useEffect, useState } from 'react'
 import Box from '@mui/material/Box'
 import CircularProgress from '@mui/material/CircularProgress'
 import { useSearchParams } from "react-router-dom"
-import {
-    loadStays,
-    removeStay,
-    setFilterBy
-} from '../store/actions/stay.action'
+import { loadStays, setFilterBy } from '../store/actions/stay.action'
 
 export const StayApp = () => {
     const { stays, isLoading } = useSelector(state => state.stayModule)
@@ -18,7 +13,7 @@ export const StayApp = () => {
     const [filter, setFilter] = useState()
     const dispatch = useDispatch()
 
-    const getDefaultState = () => {
+    const getDefaultFilterState = () => {
         return {
             priceRange: [20, 1900],
             bedrooms: 0,
@@ -61,53 +56,35 @@ export const StayApp = () => {
         if (searchParams && searchParams.has('encoded')) {
             const encoded = searchParams.get('encoded')
             if (encoded) {
-                const decodedFilters = atob(encoded)
+                const decodedFilters = window.atob(encoded)
                 if (decodedFilters) {
                     return JSON.parse(decodedFilters)
                 }
             }
         }
-        return getDefaultState()
+        return getDefaultFilterState()
     }
-
-    useEffect(() => {
-        if (!filter) {
-            return
-        }
-        
-        dispatch(setFilterBy(filter))
-        dispatch(loadStays())
-
-        const serializedFilters = JSON.stringify(filter)
-        const serializedBase64 = btoa(serializedFilters)
-
-        setSearchParams({ encoded: serializedBase64 })
-    }, [filter])
 
     useEffect(() => {
         setFilter(getFiltersState())
     }, [])
 
-    const onRemoveStay = (stayId) => {
-        dispatch(removeStay(stayId))
-    }
+    useEffect(() => {
+        if (!filter) return
+        
+        dispatch(setFilterBy(filter))
+        dispatch(loadStays())
 
-    const onSetLikeBtn = () => {
-        // dispatch(setLikeBtn())
-    }
+        const serializedFilters = JSON.stringify(filter)
+        const serializedBase64 = window.btoa(serializedFilters)
 
-    const onAddReview = async (stayId) => {
-        const txt = prompt('Write the review here')
-        try {
-            const review = await reviewService.add({ txt, stayId })
-        } catch (err) {
-            console.error(err)
-        }
-    }
+        setSearchParams({ encoded: serializedBase64 })
+    }, [filter])
+
 
     const resetFilters = (ev) => {
         ev.preventDefault()
-        setFilter(getDefaultState())
+        setFilter(getDefaultFilterState())
     }
     
     return (
@@ -122,7 +99,7 @@ export const StayApp = () => {
                 <Box sx={{ display: 'flex' }}>
                     <CircularProgress />
                 </Box>
-            ) : (<StayList onSetLikeBtn={onSetLikeBtn} stays={stays} />)
+            ) : (<StayList stays={stays} />)
             }
         </div>
     )

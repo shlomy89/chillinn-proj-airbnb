@@ -7,13 +7,10 @@ import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-hea
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
-export function StayPreview({ stay, onSetLikeBtn }) {
-    const [likeClicked, setLikeClicked] = useState(false)
+export function StayPreview({ stay }) {
+    const { numberWithCommas, getRandomIntInclusive } = utilService
 
-    function onToggleLike() {
-        // TODO: add/remove from wishlist
-        setLikeClicked(!likeClicked)
-    }
+    const [likeClicked, setLikeClicked] = useState(false)
 
     function getBedsNum() {
         switch (stay.capacity) {
@@ -26,14 +23,13 @@ export function StayPreview({ stay, onSetLikeBtn }) {
         }
     }
 
-    const { numberWithCommas, getRandomIntInclusive } = utilService
 
     return (
         <div className='stay-preview'>
             <div
                 className='like-icon'
                 onClick={() => {
-                    onToggleLike()
+                    setLikeClicked(!likeClicked)
                 }}
             >
                 {likeClicked ? <LikeHeartRedIcon /> : <LikeHeartEmptyIcon />}
