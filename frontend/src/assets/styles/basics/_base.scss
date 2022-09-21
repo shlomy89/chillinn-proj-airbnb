@@ -17,12 +17,14 @@ html {
 }
 
 body {
-    // font-size: 14px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+        Helvetica Neue, sans-serif;
+    font-size: 14px;
     line-height: 1.43;
     margin: 0;
-    padding: 0;
-    // overflow: auto !important;
-    // padding-right: 0 !important;
+    // max-width: 1200px;
+    margin: auto;
+    padding-right: 0 !important;
 }
 
 h1,
