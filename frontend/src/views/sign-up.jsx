@@ -42,7 +42,7 @@ export function Signup() {
     const theme = createTheme()
 
     return (
-        <ThemeProvider theme={theme}>cd ..
+        <ThemeProvider theme={theme}>
             <Container component="main" maxWidth="xs">
                 <CssBaseline />
                 <Box
