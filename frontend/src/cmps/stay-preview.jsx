@@ -7,14 +7,11 @@ import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-hea
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
-export function StayPreview({ stay, onSetLikeBtn }) {
+export function StayPreview({ stay }) {
+    
+    const { numberWithCommas, getRandomIntInclusive, getRandomFloatInclusive } = utilService
     const [likeClicked, setLikeClicked] = useState(false)
     const navigate = useNavigate()
-
-    function onToggleLike() {
-        // TODO: add/remove from wishlist
-        setLikeClicked(!likeClicked)
-    }
 
     function getBedsNum() {
         switch (stay.capacity) {
@@ -27,8 +24,6 @@ export function StayPreview({ stay, onSetLikeBtn }) {
         }
     }
 
-    const { numberWithCommas, getRandomIntInclusive, getRandomfloatInclusive: getRandomFloatInclusive } = utilService
-
     function onClickItem(stayId) {
 		window.scrollTo(0, 0)
         navigate(`/stay/${stayId}`)   
@@ -39,7 +34,7 @@ export function StayPreview({ stay, onSetLikeBtn }) {
             <div
                 className='like-icon'
                 onClick={() => {
-                    onToggleLike()
+                    setLikeClicked(!likeClicked)
                 }}
             >
                 {likeClicked ? <LikeHeartRedIcon /> : <LikeHeartEmptyIcon />}
@@ -72,8 +67,6 @@ export function StayPreview({ stay, onSetLikeBtn }) {
                             ${numberWithCommas(stay.price)}{' '}
                         </span>
                         <span className='night'>night</span>
-                        {/* <span className="dot"> · </span> */}
-                        {/* <span className="night">total</span> */}
                     </div>
                 </div>
             </Link>

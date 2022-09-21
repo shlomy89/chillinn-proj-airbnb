@@ -2,7 +2,7 @@ export const utilService = {
     makeId,
     makeLorem,
     getRandomIntInclusive,
-    getRandomfloatInclusive: getRandomFloatInclusive,
+    getRandomFloatInclusive,
     delay,
     randomBoolean,
     randomDate,
