@@ -1,5 +1,6 @@
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../assets/img/logo2.png'
+import { SearchBar } from './header-cmp/search-bar.jsx'
 import { UserMenu } from './header-cmp/user-menu.jsx'
 
 export function AppHeader() {
@@ -14,7 +15,13 @@ export function AppHeader() {
         <header className='main-layout'>
             <div className='app-header flex justify-space-between align-center'>
                 <img src={logo} className='logo' onClick={onBack} />
-                <UserMenu />
+                <SearchBar />
+                <div className="user-options flex row justify-space-between align-center">
+                    <Link to={"stay/host"}>
+                        <button className='btn-host'>Become a Host</button>
+                    </Link>
+                    <UserMenu />
+                </div>
             </div>
         </header>
     )

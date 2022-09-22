@@ -16,7 +16,7 @@ function handleUserModal() {
 
    return (
       <div className='user-menu'>
-      <button className='user-menu-btn flex justify-center align-center' onClick={handleUserModal}>
+      <button className='user-menu-btn flex justify-space-between align-center' onClick={handleUserModal}>
          <img className='hamburger-svg' src={hamburgerSvg} />
          <img className='user-svg' src={userSvg} />
       </button>

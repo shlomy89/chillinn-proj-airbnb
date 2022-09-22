@@ -14,7 +14,9 @@ import './assets/styles/views/_root-cmp.scss'
 function App() {
     return (
         <div className='main-app'>
-            <AppHeader />
+            <header className='heder-container main-layout full'>
+                <AppHeader />
+            </header>
             <main className='container'>
                 <Routes>
                     <Route path='stay/edit/:id' element={<StayEdit />} />

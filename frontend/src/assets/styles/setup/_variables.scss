@@ -1,5 +1,8 @@
-// Colors
+:root {
+   --main-layout-width: 1600px;
+}
 
+// Colors
 $clr1: #2e53ab;
 $clr2: #fff;
 $clr3: #000;
@@ -9,12 +12,12 @@ $clr6: #222222;
 $clr7: #717171;
 
 // LAYOUT
-$layoutPadding: 20px;
+// $layoutPadding: 20px;
 
 // Breakpoints
-$mobile-breakpoint: 460px;
-$narrow-breakpoint: 720px;
-$normal-breakpoint: 960px;
+// $mobile-breakpoint: 460px;
+// $narrow-breakpoint: 720px;
+// $normal-breakpoint: 960px;
 
 // $padded-break-narrow: $break-narrow + $layoutPadding * 2;
 // $padded-break-normal: $break-normal + $layoutPadding * 2;
