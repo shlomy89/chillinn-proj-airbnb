@@ -332,3 +332,81 @@
 22/09/2022, 12:05:34 - DEBUG - Getting Stays
 22/09/2022, 12:05:40 - DEBUG - Getting Stays
 22/09/2022, 12:08:11 - DEBUG - Getting Stays
+21.9.2022, 23:52:23 - DEBUG - Getting Stays
+22.9.2022, 0:01:34 - INFO - Server is running on port: 3030
+22.9.2022, 0:01:45 - DEBUG - auth.service - login with username: shuki
+22.9.2022, 0:01:46 - ERROR - Failed to Login Invalid username or password
+22.9.2022, 0:01:47 - DEBUG - Getting Stays
+22.9.2022, 0:02:02 - DEBUG - Getting Stays
+22.9.2022, 0:03:36 - DEBUG - Getting Stays
+22.9.2022, 0:03:57 - DEBUG - auth.service - login with username: shuki
+22.9.2022, 0:03:57 - ERROR - Failed to Login Invalid username or password
+22.9.2022, 0:03:59 - DEBUG - Getting Stays
+22.9.2022, 0:04:16 - DEBUG - auth.service - login with username: shuki
+22.9.2022, 0:04:16 - ERROR - Failed to Login Invalid username or password
+22.9.2022, 0:04:19 - DEBUG - Getting Stays
+22.9.2022, 0:04:55 - DEBUG - auth.service - signup with username: sv, firsname: s
+22.9.2022, 0:04:55 - DEBUG - auth.route - new account created: {"username":"sv","password":"$2b$10$rCruawI10/w9jZjJ/5g3eeJx9mACNAGomTMJ2N94qSzSh5yLZVN42","firstname":"s","lastname":"v","score":100,"_id":"632b7c77783d4233199da26d"}
+22.9.2022, 0:04:55 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:04:55 - INFO - User signup: | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:04:58 - DEBUG - Getting Stays
+22.9.2022, 0:11:40 - DEBUG - Getting Stays
+22.9.2022, 0:11:49 - INFO - Server is running on port: 3030
+22.9.2022, 0:11:56 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:11:57 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:11:59 - DEBUG - Getting Stays
+22.9.2022, 0:21:03 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:21:03 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:21:05 - DEBUG - Getting Stays
+22.9.2022, 0:21:28 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:21:28 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:21:30 - DEBUG - Getting Stays
+22.9.2022, 0:24:17 - DEBUG - Getting Stays
+22.9.2022, 0:24:50 - DEBUG - Getting Stays
+22.9.2022, 0:27:15 - DEBUG - Getting Stays
+22.9.2022, 0:29:02 - DEBUG - Getting Stays
+22.9.2022, 0:29:23 - DEBUG - Getting Stays
+22.9.2022, 0:30:18 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:30:18 - ERROR - Failed to Login Invalid username or password
+22.9.2022, 0:30:21 - DEBUG - Getting Stays
+22.9.2022, 0:30:35 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:30:35 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:30:38 - DEBUG - Getting Stays
+22.9.2022, 0:31:54 - DEBUG - Getting Stays
+22.9.2022, 0:33:32 - DEBUG - Getting Stays
+22.9.2022, 0:34:02 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:34:02 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:34:05 - DEBUG - Getting Stays
+22.9.2022, 0:34:54 - DEBUG - Getting Stays
+22.9.2022, 0:35:12 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:35:12 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:35:30 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:35:30 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:35:32 - DEBUG - Getting Stays
+22.9.2022, 0:35:53 - DEBUG - Getting Stays
+22.9.2022, 0:37:48 - DEBUG - Getting Stays
+22.9.2022, 0:37:57 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:37:58 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"s","lastname":"v","score":100}
+22.9.2022, 0:38:02 - DEBUG - Getting Stays
+22.9.2022, 0:39:33 - DEBUG - Getting Stays
+22.9.2022, 0:40:05 - DEBUG - Getting Stays
+22.9.2022, 0:41:17 - DEBUG - Getting Stays
+22.9.2022, 0:41:19 - DEBUG - Getting Stays
+22.9.2022, 0:42:06 - DEBUG - Getting Stays
+22.9.2022, 0:42:51 - DEBUG - Getting Stays
+22.9.2022, 0:44:48 - DEBUG - Getting Stays
+22.9.2022, 0:44:57 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:44:57 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"sergio","lastname":"konstanta","score":100}
+22.9.2022, 0:44:59 - DEBUG - Getting Stays
+22.9.2022, 0:45:30 - DEBUG - Getting Stays
+22.9.2022, 0:45:45 - DEBUG - auth.service - login with username: sv
+22.9.2022, 0:45:45 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"Sergio","lastname":"Konstanta","score":100}
+22.9.2022, 0:45:47 - DEBUG - Getting Stays
+22.9.2022, 1:13:01 - DEBUG - auth.service - login with username: sv
+22.9.2022, 1:13:01 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"Sergio","lastname":"Konstanta","score":100}
+22.9.2022, 1:13:01 - DEBUG - Getting Stays
+22.9.2022, 1:15:58 - DEBUG - Getting Stays
+22.9.2022, 1:16:09 - DEBUG - auth.service - login with username: sv
+22.9.2022, 1:16:09 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"Sergio","lastname":"Konstanta","score":100}
+22.9.2022, 1:16:11 - DEBUG - Getting Stays
+22.9.2022, 1:18:36 - DEBUG - Getting Stays
