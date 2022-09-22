@@ -21,8 +21,9 @@ export const Host = () => {
     const stays = useSelector((state) => state.stayModule.stays)
 
     useEffect(() => {
-        dispatch(loadOrders())
-        dispatch(loadStays())
+        dispatch(loadStays()).then(() => {
+            dispatch(loadOrders())
+        })
     }, [])
 
     console.log({ orders, users, stays })
@@ -33,24 +34,30 @@ export const Host = () => {
             <section className='host-container'>
                 <div className='orders-status-container'>
                     <section className='reviews-container'>
-                        {orders.map((order) => {
-                            const stay = stays.find(
-                                (stay) => stay._id === order.stayId
-                            )
-                            const user = users.find(
-                                (user) => user._id === order.userId
-                            )
-                            return (
-                                <Order
-                                    name={`${user.firstname} ${user.lastname}`}
-                                    reservedDate={order.reserevedDate}
-                                    guestsNum={order.guestsNum}
-                                    vacationDate={order.vacationDate}
-                                    apartmentLocation={`${stay.loc.city},${stay.loc.country}`}
-                                    userImg={user.imgUrl}
-                                />
-                            )
-                        })}
+                        {users.length > 0 &&
+                            orders.map((order) => {
+                                const stay = stays.find(
+                                    (stay) => stay._id === order.stayId
+                                )
+                                const user = users.find(
+                                    (user) => user._id === order.userId
+                                )
+                                return (
+                                    <section className='orders-container'>
+                                        <Order
+                                            name={`${user.fullname}`}
+                                            // name={`${user.firstname}${user.lastname}`}
+                                            reservedDate={order.reserevedDate}
+                                            guestsNum={order.guestsNum}
+                                            vacationDate={order.vacationDate}
+                                            apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
+                                            userImg={user.imgUrl}
+                                        />
+                                        <button>approve</button>
+                                        <button>decline</button>
+                                    </section>
+                                )
+                            })}
                         {/* <Order
                             name={'John Smith'}
                             reservedDate={'Monday August 15, 2022'}
