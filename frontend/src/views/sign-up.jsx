@@ -19,6 +19,7 @@ export function Signup() {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    let userImg = 'https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png'
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -27,7 +28,8 @@ export function Signup() {
             firstname: data.get('firstname'),
             lastname: data.get('lastname'),
             username: data.get('username'),
-            password: data.get('password')
+            password: data.get('password'),
+            imgUrl: userImg
         }
 
         if (!credentials.username ||
@@ -39,6 +41,10 @@ export function Signup() {
         navigate('/')
     }
     const theme = createTheme()
+
+    const setImgUrl = (userImgUrl) => {
+        userImg = userImgUrl
+    }
 
     return (
         <ThemeProvider theme={theme}>
@@ -103,7 +109,7 @@ export function Signup() {
                                 />
                             </Grid>
                         </Grid>
-                        <ImgUploader />
+                        <ImgUploader setImgUrl={setImgUrl} />
                         <Button
                             type="submit"
                             fullWidth

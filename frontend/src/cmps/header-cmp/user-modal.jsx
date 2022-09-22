@@ -10,7 +10,6 @@ export function UserModal({ handleUserModal }) {
 	const [loggedInUser, setLoggedInUser] = useState(userService.getLoggedinUser())
 	// const isActive = useSelector((state) => state.headerModule.headerMode.isActive)
 	const user = useSelector((state) => state.userModule.user)
-	console.log("user", user)
 	const navigate = useNavigate()
 	// const notificationsAmount = user.notifications?.length
 	// const dispatch = useDispatch()

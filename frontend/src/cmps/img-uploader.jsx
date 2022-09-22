@@ -12,12 +12,15 @@ export class ImgUploader extends Component {
   uploadImg = async (ev) => {
     this.setState({ isUploading: true })
     const { secure_url, height, width } = await uploadService.uploadImg(ev)
+    this.props.setImgUrl(secure_url)
     this.setState({ isUploading: false, imgUrl: secure_url, height, width })
+    // this.props.isUploading(this.state.isUploading)
     this.props.onUploaded && this.props.onUploaded(secure_url)
   }
 
   get uploadMsg() {
     const { imgUrl, isUploading } = this.state
+    
     if (imgUrl) return 'Upload Another?'
     return isUploading ? 'Uploading....' : 'Upload Image'
   }

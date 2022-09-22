@@ -42,12 +42,13 @@ export const Host = () => {
                             )
                             return (
                                 <Order
-                                    name={`${user.firstname} ${user.lastname}`}
+                                    // name={`${user.firstname} ${user.lastname}`}
                                     reservedDate={order.reserevedDate}
                                     guestsNum={order.guestsNum}
                                     vacationDate={order.vacationDate}
-                                    apartmentLocation={`${stay.loc.city},${stay.loc.country}`}
-                                    userImg={user.imgUrl}
+                                    key={order.stayId}
+                                    // apartmentLocation={`${stay.loc.city},${stay.loc.country}`}
+                                    // userImg={user.imgUrl}
                                 />
                             )
                         })}
