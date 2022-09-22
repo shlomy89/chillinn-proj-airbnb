@@ -37,7 +37,7 @@ export function UserModal({ handleUserModal }) {
 					{loggUser ? (
 						<Link to={"/host"}>
 							<span className='user-modal-span'>{loggUser.isHost ? "Statistics & Dashboard" : "My trips & Wishlist"}</span>
-							{notificationsAmount ? <div className='user-notifications-dot'>{notificationsAmount}</div> : <React.Fragment></React.Fragment>}
+							{notificationsAmount ? <div className='user-notifications-dot'>{notificationsAmount}</div> : <></>}
 						</Link>
 					) : (
 						<Link to={"/user/signup"}>
@@ -47,14 +47,14 @@ export function UserModal({ handleUserModal }) {
 				</li> */}
 				{/* <li> */}
 				{loggedInUser ? (
-					<React.Fragment>
+					<>
 						<Link to={"stay/order"} className='user-modal-about-link'>
 							<span className='user-modal-span'>Welcome &nbsp;{loggedInUser.firstname} {loggedInUser.lastname}</span>
 						</Link>
 						<Divider />
-					</React.Fragment>
+					</>
 				) : (
-					<React.Fragment>
+					<>
 						<li>
 							<Link to={"login"}>
 								<span className='user-modal-span'>Log in</span>
@@ -67,7 +67,7 @@ export function UserModal({ handleUserModal }) {
 							</Link>
 						</li>
 						<Divider />
-					</React.Fragment>
+					</>
 				)}
 				<hr />
 				<li>
