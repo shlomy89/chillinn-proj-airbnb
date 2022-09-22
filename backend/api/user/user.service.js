@@ -20,7 +20,7 @@ async function getUsersByOrders(orders) {
         console.log({ users })
         // !! makes the command to be boolean;
         const usersByOrders = users.filter(
-            (user) => !!orders.find((order) => order.userId === user._id)
+            (user) => !!orders.find((order) => order.userId === ObjectId(user._id).toString())
         )
         console.log({ usersByOrders })
         return usersByOrders
@@ -116,7 +116,7 @@ async function add(user) {
             password: user.password,
             firstname: user.firstname,
             lastname: user.lastname,
-            score: 100
+            imgUrl: user.imgUrl,
         }
         const collection = await dbService.getCollection('user')
         await collection.insertOne(userToAdd)
