@@ -1,8 +1,3 @@
-// .filter-container {
-//     display: grid;
-//     grid-template-columns: auto, auto, 1fr;
-// }
-
 button[name='bedrooms'] {
     background-color: #ffffff;
     color: #222222;
@@ -73,10 +68,20 @@ button[name='propertyType'].active {
 }
 
 .open-filter-btn {
-    left: 85%;
-    width: 50px !important;
+    justify-content: space-evenly;
+    margin-inline-start: auto;
+    width: 88px;
+    height: 48px !important;
+    padding: 7px ;
+    font-family: cereal;
     font-size: 12px !important;
     color: #222222 !important;
     border-color: #efefef !important;
     border-radius: 10px !important;
+    border:1px solid lightgray ;
+
+    .filter-icon{
+        width: 16px;
+        height: 16px;
+    }
 }

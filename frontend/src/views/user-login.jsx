@@ -50,7 +50,7 @@ export function Login() {
                     <Typography component="h1" variant="h5">
                         Log in
                     </Typography>
-                    < SuccessAlert msg={'Logged in Successfully'}/>
+                    {/* < SuccessAlert msg={'Logged in Successfully'}/> */}
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"

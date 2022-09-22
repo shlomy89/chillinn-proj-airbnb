@@ -85,7 +85,6 @@ export const ReservationCard = ({ stay }) => {
                             color: 'rgb(61, 145, 255)'
                         }}
                     >
-                        {console.log('asdjkfhajkdsfhjkasdhfjkahdfadksfjh')}
                         <div
                             onClick={() => {
                                 console.log('check')

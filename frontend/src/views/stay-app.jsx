@@ -71,7 +71,7 @@ export const StayApp = () => {
 
     useEffect(() => {
         if (!filter) return
-        
+
         dispatch(setFilterBy(filter))
         dispatch(loadStays())
 
@@ -85,7 +85,7 @@ export const StayApp = () => {
         ev.preventDefault()
         setFilter(getDefaultFilterState())
     }
-    
+
     return (
         <div className='stay-app main-layout'>
             <FilterModal
@@ -95,7 +95,8 @@ export const StayApp = () => {
                 staysCount={stays.length} />
 
             {isLoading ? (
-                <Box sx={{ display: 'flex' }}>
+
+                <Box sx={{ display: 'flex', margin: '100px auto' }}>
                     <CircularProgress />
                 </Box>
             ) : (<StayList stays={stays} />)
