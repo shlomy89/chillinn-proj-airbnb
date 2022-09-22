@@ -10,7 +10,7 @@
     box-shadow: 0 0 5px 5px #00000015;
     position: sticky;
     top: 13%;
-    z-index: -1;
+    z-index: 1;
     transition: 0.5s;
     .reservation-card-header {
         display: flex;

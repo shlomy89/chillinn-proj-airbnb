@@ -21,11 +21,13 @@ export function orderReducer(state = initialState, action) {
         //     return { ...state, orders, lastRemovedOrder }
         // case 'ADD_ORDER':
         //     return { ...state, orders: [...orders, action.order] }
-        // case 'UPDATE_ORDER':
-        //     const orders = state.orders.map((order) =>
-        //         order._id === action.order_Id ? action.order : order
-        //     )
-        //     return { ...state, orders, order: action.order }
+        case 'UPDATE_ORDER':
+            const orders = [
+                ...state.orders.map((order) =>
+                    order._id === action.order._id ? action.order : order
+                )
+            ]
+            return { ...state, orders, order: action.order }
         default:
             return state
     }
