@@ -10,12 +10,33 @@ import { ReserveButton } from './reserve-button'
 import { SummaryPrice } from './summary-price'
 import * as React from 'react'
 import Swal from 'sweetalert2'
+import { useDispatch } from 'react-redux'
+import { onAddOrder } from '../../store/actions/order.actions'
+import { sum } from 'lodash'
 
-export const ReservationCard = () => {
+const agesInfo = {
+    Adults: {
+        type: 'Adults',
+        info: 'Age 13+',
+        value: 1
+    },
+    Children: {
+        type: 'Children',
+        info: 'Ages 2-12',
+        value: 0
+    },
+    Infants: {
+        type: 'Infants',
+        info: 'Under 2',
+        value: 0
+    }
+}
+
+export const ReservationCard = ({ stay }) => {
     const [value, setValue] = useState(null)
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(new Date())
-
+    const [agesData, setAgesData] = useState(agesInfo)
     const selectionRange = {
         startDate: startDate,
         endDate: endDate,
@@ -34,6 +55,20 @@ export const ReservationCard = () => {
         console.log('handleOpen')
     }
     const handleClose = () => setOpen(false)
+
+    const dispatch = useDispatch()
+
+    const onClick = () => {
+        dispatch(
+            onAddOrder({
+                stay,
+                startDate,
+                endDate,
+                guestsNum: sum(agesData, 'value')
+            })
+        )
+    }
+
     return (
         <div className='reservation-card-container'>
             <div className='reservation-card-header'>
@@ -50,25 +85,25 @@ export const ReservationCard = () => {
                             color: 'rgb(61, 145, 255)'
                         }}
                     >
+                        {console.log('asdjkfhajkdsfhjkasdhfjkahdfadksfjh')}
                         <div
-                            onClick={() => setShowDatePicker(true)}
+                            onClick={() => {
+                                console.log('check')
+                                setShowDatePicker(true)
+                            }}
                             className='rdrDateInput rdrDateDisplayItem rdrDateDisplayItemActive'
                         >
                             <input
                                 readOnly=''
                                 placeholder='Early'
-                                defaultValue={moment(startDate).format(
-                                    'MMM DD, YYYY'
-                                )}
+                                value={moment(startDate).format('MMM DD, YYYY')}
                             />
                         </div>
                         <span className='rdrDateInput rdrDateDisplayItem'>
                             <input
                                 readOnly=''
                                 placeholder='Continuous'
-                                defaultValue={moment(endDate).format(
-                                    'MMM DD, YYYY'
-                                )}
+                                value={moment(endDate).format('MMM DD, YYYY')}
                             />
                         </span>
                     </div>
@@ -92,8 +127,8 @@ export const ReservationCard = () => {
                     </div>
                 </>
             )}
-            <Dropdown />
-            <ReserveButton onClick={() => console.log('get')} />
+            <Dropdown agesData={agesData} setAgesData={setAgesData} />
+            <ReserveButton onClick={onClick} />
             <p className='no-charge'>you won't be charged yet</p>
             <section className='summary-price-container'>
                 <SummaryPrice text={'$320 x 5 nigths'} total={1600} />

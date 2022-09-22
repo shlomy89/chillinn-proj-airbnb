@@ -46,47 +46,45 @@ export function onRemoveOrder(orderId) {
     }
 }
 
-export function onAddOrder(orderToAdd) {
-    const { buyerUser } = orderToAdd
-    return async (dispatch) => {
+export function onAddOrder({ stay, startDate, endDate, guestsNum }) {
+    // const { buyerUser } = orderToAdd
+    return async (dispatch, getState) => {
         try {
-            const notification = {
-                byUser: {
-                    fullName: buyerUser.fullname,
-                    imgUrl: buyerUser.imgUrl,
-                    _id: buyerUser._id
-                },
-                createdAt: Date.now(),
-                stay: {
-                    _id: orderToAdd.stay._id,
-                    name: orderToAdd.loc.address,
-                    reviewsAvg: orderToAdd.stay.reviewsAvg
-                },
-                txt: 'Your stay has been reserved',
-                isRead: false
-            }
-            const savedOrder = await orderService.save(orderToAdd)
+            // const notification = {
+            //     byUser: {
+            // fullName: buyerUser.fullname,
+            //         imgUrl: buyerUser.imgUrl,
+            //         _id: buyerUser._id
+            //     },
+            //     createdAt: Date.now(),
+            //     stay: {
+            //         _id: orderToAdd.stay._id,
+            //         name: orderToAdd.loc.address,
+            //         reviewsAvg: orderToAdd.stay.reviewsAvg
+            //     },
+            //     txt: 'Your stay has been reserved',
+            //     isRead: false
+            // }
+            const { _id: userId } = getState().userModule.user
+            const stayId = stay._id
+            const savedOrder = await orderService.save({
+                startDate: startDate.getTime(),
+                endDate: endDate.getTime(),
+                guestsNum,
+                stayId,
+                userId
+            })
             dispatch({ type: 'ADD_ORDER', order: savedOrder })
-            socketService.emit('notificationSent', notification)
+            // socketService.emit('notificationSent', notification)
         } catch (error) {}
     }
 }
 
-export function onCanceledOrder(tripId, buyerUserId, hostId) {
+export function onUpdateOrder(order) {
     return async (dispatch) => {
         try {
-            const buyerUser = await userService.getById(buyerUserId)
-            const hostUser = await userService.getById(hostId)
-            buyerUser.myTrips = buyerUser.myTrips.filter((trip) => {
-                return trip._id !== tripId
-            })
-            hostUser.orders = hostUser.orders.filter((trip) => {
-                return trip._id !== tripId
-            })
-            const updateUser = await orderService.update(buyerUser)
-            const updateHost = await userService.update(hostUser)
-            dispatch({ type: 'UPDATE_USER', user: updateUser })
-            dispatch({ type: 'UPDATE_USER', user: updateHost })
+            await orderService.update(order)
+            dispatch({ type: 'UPDATE_ORDER', order })
         } catch (error) {
             console.log('failed to cancel order in order actions', error)
         }
@@ -117,19 +115,19 @@ export function setFilter(filterBy) {
     }
 }
 
-export function onEditOrder(orderToSave) {
-    return async (dispatch) => {
-        try {
-            const updatedOrder = await orderService.update(orderToSave)
-            dispatch({
-                type: 'UPDATE_ORDER',
-                order: updatedOrder
-            })
-        } catch (error) {
-            console.log('failed to update order in order actions', error)
-        }
-    }
-}
+// export function onEditOrder(orderToSave) {
+//     return async (dispatch) => {
+//         try {
+//             const updatedOrder = await orderService.update(orderToSave)
+//             dispatch({
+//                 type: 'UPDATE_ORDER',
+//                 order: updatedOrder
+//             })
+//         } catch (error) {
+//             console.log('failed to update order in order actions', error)
+//         }
+//     }
+// }
 
 export function checkOut() {
     return async (dispatch, getState) => {

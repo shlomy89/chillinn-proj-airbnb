@@ -1,7 +1,7 @@
 import '../../assets/styles/cmps/_reserve-button.scss'
 import Swal from 'sweetalert2'
 
-export const ReserveButton = () => {
+export const ReserveButton = ({ onClick }) => {
     const openModal = () => {
         Swal.fire({
             title: 'Reserved!',
@@ -14,7 +14,13 @@ export const ReserveButton = () => {
         })
     }
     return (
-        <div className='reserve-button' onClick={() => openModal()}>
+        <div
+            className='reserve-button'
+            onClick={() => {
+                onClick()
+                openModal()
+            }}
+        >
             Reserve
         </div>
     )

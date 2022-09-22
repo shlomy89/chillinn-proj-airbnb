@@ -231,7 +231,7 @@ export const StayDetails = () => {
                         />
                     </section>
                 </div>
-                <ReservationCard />
+                <ReservationCard stay={stay} />
             </div>
             <ReviewStats
                 reviews={[

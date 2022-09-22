@@ -10,27 +10,7 @@ import { GuessPicker } from './guest-picker'
 import { values } from 'lodash'
 import { sumBy } from 'lodash'
 
-const agesInfo = {
-    Adults: {
-        type: 'Adults',
-        info: 'Age 13+',
-        value: 1
-    },
-    Children: {
-        type: 'Children',
-        info: 'Ages 2-12',
-        value: 0
-    },
-    Infants: {
-        type: 'Infants',
-        info: 'Under 2',
-        value: 0
-    }
-}
-
-export function Dropdown() {
-    const [agesData, setAgesData] = useState(agesInfo)
-
+export function Dropdown({ agesData, setAgesData }) {
     const onChange = (type, value) => {
         if (value < 0 || value > 10) {
             return
