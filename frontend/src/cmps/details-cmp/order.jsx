@@ -25,7 +25,10 @@ export const Order = ({
                         </div>
                         <div className='order-text-info'>
                             <span>{guestsNum} guests | </span>
-                            <span>{vacationDate}</span>
+                            <span>
+                                {/* {moment(+vacationDate).weekday()} */}
+                                {moment(+vacationDate).format('MMM Do[-] MMM')}
+                            </span>
                         </div>
                         <span className='order-text-info'>
                             Your apartment in

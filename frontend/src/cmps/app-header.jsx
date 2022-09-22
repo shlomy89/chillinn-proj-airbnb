@@ -1,13 +1,9 @@
-import { useDispatch } from 'react-redux'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
-import { onLogout } from '../store/actions/user.action.js'
+import { useNavigate } from 'react-router-dom'
 import logo from '../assets/img/logo2.png'
-import { Button } from '@mui/material'
 import { UserMenu } from './header-cmp/user-menu.jsx'
 
 export function AppHeader() {
     const navigate = useNavigate()
-    const dispatch = useDispatch()
 
     const onBack = () => {
         navigate('/')

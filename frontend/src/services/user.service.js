@@ -1,7 +1,7 @@
 import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
 import { socketService, SOCKET_EVENT_USER_UPDATED, SOCKET_EMIT_USER_WATCH } from './socket.service'
-import { showSuccessMsg } from '../services/event-bus.service'
+import { showSuccessMsg, eventBusService } from '../services/event-bus.service'
 
 export const userService = {
     login,
@@ -48,24 +48,24 @@ async function update(user) {
     // user = await httpService.put(`user/${user._id}`, user)
     // Handle case in which admin updates other user's details
     if (getLoggedinUser()._id === user._id) saveLocalUser(user)
-    
+
     return user
 }
 
 async function login(userCred) {
-    const users = await storageService.query('user')
-    const user = users.find(user => user.username === userCred.username)
-    // const user = await httpService.post('auth/login', userCred)
+    const user = await httpService.post('auth/login', userCred)
     if (user) {
-        socketService.login(user._id)
+        showSuccessMsg('Logged in Successfully')
+        // socketService.login(user._id)
         return saveLocalUser(user)
     }
+    // const users = await storageService.query('user')
+    // const user = users.find(user => user.username === userCred.username)
 }
 
 async function signup(userCred) {
-    console.log("userCred", userCred)
-    // const user = await storageService.post('user', userCred)
     const user = await httpService.post('auth/signup', userCred)
+    // const user = await storageService.post('user', userCred)
     // socketService.login(user._id)
     return saveLocalUser(user)
 }
