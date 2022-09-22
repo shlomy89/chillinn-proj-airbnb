@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import Button from '@mui/material/Button'
 import { StayFilter } from './stay-filter.jsx'
+import  filterSvg  from '../assets/img/icons/filter-icon.svg'
 
 const style = {
     position: 'absolute',
@@ -27,12 +28,11 @@ export default function FilterModal(props) {
 
     return (
         <div className="filter-modal">
-            <Button
-                className="open-filter-btn"
-                variant="outlined"
+            <button className="open-filter-btn flex align-center"
                 onClick={handleOpen}>
+                    <img src={filterSvg}className="filter-icon" />&nbsp;
                 Filters
-            </Button>
+            </button>
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"

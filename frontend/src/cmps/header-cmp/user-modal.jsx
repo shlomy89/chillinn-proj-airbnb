@@ -49,18 +49,17 @@ export function UserModal({ handleUserModal }) {
 				</li> */}
                 {/* <li> */}
                 {loggedInUser ? (
-                    <>
+                    <li>
                         <Link
                             to={'stay/order'}
                             className='user-modal-about-link'
                         >
                             <span className='user-modal-span'>
-                                Welcome &nbsp;{loggedInUser.firstname}{' '}
-                                {loggedInUser.lastname}
+                                {loggedInUser.firstname} {loggedInUser.lastname}
                             </span>
                         </Link>
                         <Divider />
-                    </>
+                    </li>
                 ) : (
                     <>
                         <li>
