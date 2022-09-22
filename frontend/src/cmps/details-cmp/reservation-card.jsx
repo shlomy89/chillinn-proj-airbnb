@@ -12,7 +12,7 @@ import * as React from 'react'
 import Swal from 'sweetalert2'
 import { useDispatch } from 'react-redux'
 import { onAddOrder } from '../../store/actions/order.actions'
-import { sum } from 'lodash'
+import { sum, sumBy, values } from 'lodash'
 
 const agesInfo = {
     Adults: {
@@ -35,7 +35,9 @@ const agesInfo = {
 export const ReservationCard = ({ stay }) => {
     const [value, setValue] = useState(null)
     const [startDate, setStartDate] = useState(new Date())
-    const [endDate, setEndDate] = useState(new Date())
+    const [endDate, setEndDate] = useState(
+        new Date(Date.now() + 24 * 60 * 60 * 1000)
+    )
     const [agesData, setAgesData] = useState(agesInfo)
     const selectionRange = {
         startDate: startDate,
@@ -52,7 +54,6 @@ export const ReservationCard = ({ stay }) => {
     const [open, setOpen] = React.useState(false)
     const handleOpen = () => {
         setOpen(true)
-        console.log('handleOpen')
     }
     const handleClose = () => setOpen(false)
 
@@ -64,18 +65,20 @@ export const ReservationCard = ({ stay }) => {
                 stay,
                 startDate,
                 endDate,
-                guestsNum: sum(agesData, 'value')
+                guestsNum: sumBy(values(agesData), 'value')
             })
         )
     }
+
+    const nights = (endDate - startDate) / (1000 * 60 * 60 * 24)
 
     return (
         <div className='reservation-card-container'>
             <div className='reservation-card-header'>
                 <div className='price-per-night'>
-                    $533 <span className='per-night'>night</span>
+                    {stay.price} <span className='per-night'>night</span>
                 </div>
-                <StarRating rating={4.9} reviews={7} />
+                <StarRating rating={4.9} reviews={stay.reviews.length} />
             </div>
             {!showDatePicker && (
                 <div className='rdrDateDisplayWrapper'>
@@ -85,10 +88,8 @@ export const ReservationCard = ({ stay }) => {
                             color: 'rgb(61, 145, 255)'
                         }}
                     >
-                        {console.log('asdjkfhajkdsfhjkasdhfjkahdfadksfjh')}
                         <div
                             onClick={() => {
-                                console.log('check')
                                 setShowDatePicker(true)
                             }}
                             className='rdrDateInput rdrDateDisplayItem rdrDateDisplayItemActive'
@@ -127,16 +128,29 @@ export const ReservationCard = ({ stay }) => {
                     </div>
                 </>
             )}
-            <Dropdown agesData={agesData} setAgesData={setAgesData} />
+            <Dropdown
+                agesData={agesData}
+                setAgesData={setAgesData}
+                capacity={stay.capacity}
+            />
             <ReserveButton onClick={onClick} />
             <p className='no-charge'>you won't be charged yet</p>
             <section className='summary-price-container'>
-                <SummaryPrice text={'$320 x 5 nigths'} total={1600} />
-                <SummaryPrice text={'Cleaning fee'} total={144} />
-                <SummaryPrice text={'Service fee'} total={0} />
+                <SummaryPrice
+                    text={`${stay.price} * ${nights} nights`}
+                    total={stay.price * nights}
+                />
+
+                <SummaryPrice
+                    text={'Service fee'}
+                    total={Math.round(stay.price * nights * 0.14)}
+                />
             </section>
             <div className='total-price'></div>
-            <SummaryPrice text={'Total'} total={1744} />
+            <SummaryPrice
+                text={'Total'}
+                total={Math.round(stay.price * nights * 1.14)}
+            />
         </div>
     )
 }

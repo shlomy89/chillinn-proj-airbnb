@@ -2,7 +2,13 @@ import { ReactComponent as PlusIcon } from '../../assets/img/icons/plus-icon.svg
 import { ReactComponent as MinusIcon } from '../../assets/img/icons/minus-icon.svg'
 import clsx from 'clsx'
 
-export const GuessPicker = ({ type, info, 'data-value': value, onChange }) => {
+export const GuessPicker = ({
+    type,
+    info,
+    'data-value': value,
+    onChange,
+    capacity
+}) => {
     return (
         <div className='guest-picker-container'>
             <div className='age-container'>
@@ -11,7 +17,7 @@ export const GuessPicker = ({ type, info, 'data-value': value, onChange }) => {
             </div>
             <div className='value-container'>
                 <div
-                    onClick={() => onChange(type, value - 1)}
+                    onClick={() => onChange(type, value - 1, '-')}
                     className={clsx('icon-container', {
                         disabled: value <= 0
                     })}
@@ -20,9 +26,9 @@ export const GuessPicker = ({ type, info, 'data-value': value, onChange }) => {
                 </div>
                 <span>{value}</span>
                 <div
-                    onClick={() => onChange(type, value + 1)}
+                    onClick={() => onChange(type, value + 1, '+')}
                     className={clsx('icon-container', {
-                        disabled: value >= 10
+                        disabled: capacity <= 0
                     })}
                 >
                     <PlusIcon />

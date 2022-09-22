@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import moment from 'moment/moment'
 export const Order = ({ userImg, name, order, apartmentLocation, onClick }) => {
     const { createdAt, startDate, endDate, guestsNum, orderStatus } = order
-    console.log('order:', order)
 
     return (
         <div className='order-wrapper'>

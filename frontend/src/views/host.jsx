@@ -15,8 +15,6 @@ import {
 } from '../store/actions/order.actions'
 import { loadStays } from '../store/actions/stay.action.js'
 
-// console.log(reviews)
-
 export const Host = () => {
     const dispatch = useDispatch()
 
@@ -25,12 +23,16 @@ export const Host = () => {
     const stays = useSelector((state) => state.stayModule.stays)
 
     useEffect(() => {
+        let timeOut
         dispatch(loadStays()).then(() => {
-            dispatch(loadOrders())
+            timeOut = setInterval(() => {
+                dispatch(loadOrders())
+            }, 3000)
         })
+        return () => {
+            clearInterval(timeOut)
+        }
     }, [])
-
-    console.log({ orders, users, stays })
 
     const onUpdateOrderClick = (order, orderStatus) => {
         dispatch(
@@ -59,56 +61,12 @@ export const Host = () => {
                                     <Order
                                         onClick={onUpdateOrderClick}
                                         name={`${user.firstname} ${user.lastname}`}
-                                        // name={`${user.firstname}${user.lastname}`}
-                                        // reservedDate={order.reserevedDate}
-                                        // guestsNum={order.guestsNum}
-                                        // vacationDate={order.vacationDate}
                                         order={order}
                                         apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
                                         userImg={user.imgUrl}
                                     />
                                 )
                             })}
-                        {/* <Order
-                            name={'John Smith'}
-                            reservedDate={'Monday August 15, 2022'}
-                            guestsNum={'3'}
-                            vacationDate={'Aug 17-20'}
-                            apartmentLocation={
-                                'Teal Aviv-Yafo, Tel Aviv District, Israel'
-                            }
-                            orderStatus={'approved'}
-                        /> */}
-                        {/* <Order
-                            name={'John Smith'}
-                            reservedDate={'Monday August 15, 2022'}
-                            guestsNum={'3'}
-                            vacationDate={'Aug 17-20'}
-                            apartmentLocation={
-                                'Teal Aviv-Yafo, Tel Aviv District, Israel'
-                            }
-                            orderStatus={'approved'}
-                        />
-                        <Order
-                            name={'John Smith'}
-                            reservedDate={'Monday August 15, 2022'}
-                            guestsNum={'3'}
-                            vacationDate={'Aug 17-20'}
-                            apartmentLocation={
-                                'Teal Aviv-Yafo, Tel Aviv District, Israel'
-                            }
-                            orderStatus={'pending'}
-                        />
-                        <Order
-                            name={'John Smith'}
-                            reservedDate={'Monday August 15, 2022'}
-                            guestsNum={'3'}
-                            vacationDate={'Aug 17-20'}
-                            apartmentLocation={
-                                'Teal Aviv-Yafo, Tel Aviv District, Israel'
-                            }
-                            orderStatus={'rejected'}
-                        /> */}
                     </section>
                 </div>
 
