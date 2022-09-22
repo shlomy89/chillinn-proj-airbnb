@@ -1,15 +1,10 @@
 import { BorderLine } from './border-line'
 import clsx from 'clsx'
 import moment from 'moment/moment'
-export const Order = ({
-    userImg,
-    name,
-    reservedDate,
-    vacationDate,
-    guestsNum,
-    apartmentLocation,
-    orderStatus
-}) => {
+export const Order = ({ userImg, name, order, apartmentLocation, onClick }) => {
+    const { createdAt, startDate, endDate, guestsNum, orderStatus } = order
+    console.log('order:', order)
+
     return (
         <div className='order-wrapper'>
             <div className='order-container'>
@@ -19,15 +14,21 @@ export const Order = ({
                         <div className='order-reserved-date'>
                             <span className='user-name'> {name}</span>
                             <span className='reserved-date'>
-                                Reserved at: {moment(+reservedDate).weekday()}
-                                {moment(+reservedDate).format('MMM DD,YYYY')}
+                                Reserved at:{' '}
+                                {`${moment(+createdAt).format('dddd')} ${moment(
+                                    +createdAt
+                                ).format('MMM DD, YYYY')}`}
                             </span>
                         </div>
                         <div className='order-text-info'>
                             <span>{guestsNum} guests | </span>
                             <span>
                                 {/* {moment(+vacationDate).weekday()} */}
-                                {moment(+vacationDate).format('MMM Do[-] MMM')}
+                                {`${moment(startDate).format('MMM')} ${moment(
+                                    startDate
+                                ).format('DD')} - ${moment(endDate).format(
+                                    'DD'
+                                )}`}
                             </span>
                         </div>
                         <span className='order-text-info'>
@@ -36,9 +37,21 @@ export const Order = ({
                         </span>
                     </section>
                 </div>
-                <span className={clsx('order-status', orderStatus)}>
-                    {orderStatus}
-                </span>
+                {orderStatus !== 'pending' ? (
+                    <span className={clsx('order-status', orderStatus)}>
+                        {orderStatus}
+                    </span>
+                ) : (
+                    <div className='order-actions-button'>
+                        {' '}
+                        <div onClick={() => onClick(order, 'approved')}>
+                            approve
+                        </div>
+                        <div onClick={() => onClick(order, 'rejected')}>
+                            Reject
+                        </div>
+                    </div>
+                )}
             </div>
             {/* <div className='approve-order'>Approve order</div>
             <div className='reject-order'>Reject order</div> */}

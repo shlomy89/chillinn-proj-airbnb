@@ -8,7 +8,11 @@ import { stayService } from '../services/stay.service'
 import { Order } from '../cmps/details-cmp/order'
 import { HostSummaryIncome } from '../cmps/details-cmp/host-summary-income'
 import { useDispatch, useSelector } from 'react-redux'
-import { loadOrder, loadOrders } from '../store/actions/order.actions'
+import {
+    loadOrder,
+    loadOrders,
+    onUpdateOrder
+} from '../store/actions/order.actions'
 import { loadStays } from '../store/actions/stay.action.js'
 
 // console.log(reviews)
@@ -28,6 +32,15 @@ export const Host = () => {
 
     console.log({ orders, users, stays })
 
+    const onUpdateOrderClick = (order, orderStatus) => {
+        dispatch(
+            onUpdateOrder({
+                ...order,
+                orderStatus
+            })
+        )
+    }
+
     return (
         <div className='orders-status-header'>
             Orders status
@@ -43,19 +56,17 @@ export const Host = () => {
                                     (user) => user._id === order.userId
                                 )
                                 return (
-                                    <section className='orders-container'>
-                                        <Order
-                                            name={`${user.fullname}`}
-                                            // name={`${user.firstname}${user.lastname}`}
-                                            reservedDate={order.reserevedDate}
-                                            guestsNum={order.guestsNum}
-                                            vacationDate={order.vacationDate}
-                                            apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
-                                            userImg={user.imgUrl}
-                                        />
-                                        <button>approve</button>
-                                        <button>decline</button>
-                                    </section>
+                                    <Order
+                                        onClick={onUpdateOrderClick}
+                                        name={`${user.firstname} ${user.lastname}`}
+                                        // name={`${user.firstname}${user.lastname}`}
+                                        // reservedDate={order.reserevedDate}
+                                        // guestsNum={order.guestsNum}
+                                        // vacationDate={order.vacationDate}
+                                        order={order}
+                                        apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
+                                        userImg={user.imgUrl}
+                                    />
                                 )
                             })}
                         {/* <Order

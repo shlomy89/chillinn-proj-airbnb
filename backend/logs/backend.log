@@ -410,4 +410,86 @@
 22.9.2022, 1:16:09 - INFO - User login:  | {"_id":"632b7c77783d4233199da26d","username":"sv","firstname":"Sergio","lastname":"Konstanta","score":100}
 22.9.2022, 1:16:11 - DEBUG - Getting Stays
 22.9.2022, 1:18:36 - DEBUG - Getting Stays
-22.9.2022, 13:27:39 - DEBUG - Getting Stays
+22/09/2022, 12:14:54 - DEBUG - Getting Stays
+22/09/2022, 12:30:19 - DEBUG - Getting Stays
+22/09/2022, 12:32:18 - INFO - Server is running on port: 3030
+22/09/2022, 12:32:19 - INFO - New connected socket [id: -rxsJWJJTTIywVjKAAAB]
+22/09/2022, 12:32:45 - DEBUG - Getting Stays
+22/09/2022, 12:33:42 - INFO - Server is running on port: 3030
+22/09/2022, 12:33:44 - INFO - New connected socket [id: Ci3OJiiRBFw8A131AAAB]
+22/09/2022, 12:33:46 - DEBUG - Getting Stays
+22/09/2022, 12:35:22 - DEBUG - Getting Stays
+22/09/2022, 13:01:11 - DEBUG - Getting Stays
+22/09/2022, 13:11:31 - DEBUG - Getting Stays
+22/09/2022, 13:12:56 - DEBUG - Getting Stays
+22/09/2022, 13:14:12 - DEBUG - Getting Stays
+22/09/2022, 13:15:31 - DEBUG - Getting Stays
+22/09/2022, 13:15:37 - DEBUG - Getting Stays
+22/09/2022, 13:16:21 - DEBUG - Getting Stays
+22/09/2022, 13:16:37 - DEBUG - Getting Stays
+22/09/2022, 13:18:00 - DEBUG - Getting Stays
+22/09/2022, 13:18:35 - DEBUG - Getting Stays
+22/09/2022, 13:18:38 - DEBUG - Getting Stays
+22/09/2022, 13:18:49 - DEBUG - Getting Stays
+22/09/2022, 13:20:27 - DEBUG - Getting Stays
+22/09/2022, 13:20:55 - DEBUG - Getting Stays
+22/09/2022, 13:21:34 - DEBUG - Getting Stays
+22/09/2022, 13:22:17 - DEBUG - Getting Stays
+22/09/2022, 13:22:24 - DEBUG - Getting Stays
+22/09/2022, 13:22:30 - DEBUG - Getting Stays
+22/09/2022, 13:22:43 - DEBUG - auth.service - signup with username: dod, firsname: dod
+22/09/2022, 13:22:43 - DEBUG - auth.route - new account created: {"username":"dod","password":"$2b$10$j9NaPtyVAVSeMDEp.PGyRu5YG.syqkLsEJ1UiXGkhYK1hDdcnzm..","firstname":"dod","lastname":"dod","score":100,"_id":"632c3773dfe4ec62d511a654"}
+22/09/2022, 13:22:43 - DEBUG - auth.service - login with username: dod
+22/09/2022, 13:22:43 - INFO - User signup: | {"_id":"632c3773dfe4ec62d511a654","username":"dod","firstname":"dod","lastname":"dod","score":100}
+22/09/2022, 13:22:45 - DEBUG - Getting Stays
+22/09/2022, 13:23:07 - DEBUG - Getting Stays
+22/09/2022, 13:23:17 - DEBUG - Getting Stays
+22/09/2022, 13:23:59 - DEBUG - Getting Stays
+22/09/2022, 13:25:44 - DEBUG - Getting Stays
+22/09/2022, 13:26:52 - DEBUG - Getting Stays
+22/09/2022, 13:28:14 - DEBUG - Getting Stays
+22/09/2022, 13:29:00 - DEBUG - Getting Stays
+22/09/2022, 13:33:53 - DEBUG - Getting Stays
+22/09/2022, 13:34:20 - DEBUG - Getting Stays
+22/09/2022, 13:35:55 - DEBUG - Getting Stays
+22/09/2022, 13:36:22 - DEBUG - Getting Stays
+22/09/2022, 13:37:28 - DEBUG - Getting Stays
+22/09/2022, 13:37:52 - DEBUG - Getting Stays
+22/09/2022, 13:56:19 - DEBUG - Getting Stays
+22/09/2022, 13:57:26 - INFO - Server is running on port: 3030
+22/09/2022, 13:57:26 - INFO - New connected socket [id: jPNT--uAEDafMjYlAAAB]
+22/09/2022, 13:57:50 - DEBUG - Getting Stays
+22/09/2022, 13:58:01 - DEBUG - Getting Stays
+22/09/2022, 13:58:18 - DEBUG - auth.service - signup with username: sa, firsname: sa
+22/09/2022, 13:58:19 - DEBUG - auth.route - new account created: {"username":"sa","password":"$2b$10$9wJHSgSOA4wpVmf8ICCcgOBoYHJUlXAcHenl0m1rWb5XiePKtVOWe","firstname":"sa","lastname":"sa","score":100,"_id":"632c3fcb95b7586a36cf4b6d"}
+22/09/2022, 13:58:19 - DEBUG - auth.service - login with username: sa
+22/09/2022, 13:58:19 - INFO - User signup: | {"_id":"632c3fcb95b7586a36cf4b6d","username":"sa","firstname":"sa","lastname":"sa","score":100}
+22/09/2022, 13:58:20 - DEBUG - Getting Stays
+22/09/2022, 14:00:32 - DEBUG - Getting Stays
+22/09/2022, 14:01:35 - DEBUG - Getting Stays
+22/09/2022, 14:01:55 - DEBUG - Getting Stays
+22/09/2022, 14:04:42 - DEBUG - Getting Stays
+22/09/2022, 14:06:30 - DEBUG - Getting Stays
+22/09/2022, 14:07:33 - DEBUG - Getting Stays
+22/09/2022, 14:09:09 - DEBUG - Getting Stays
+22/09/2022, 14:09:13 - DEBUG - Getting Stays
+22/09/2022, 14:09:47 - DEBUG - Getting Stays
+22/09/2022, 14:12:12 - DEBUG - Getting Stays
+22/09/2022, 14:12:22 - DEBUG - Getting Stays
+22/09/2022, 14:12:45 - DEBUG - Getting Stays
+22/09/2022, 14:13:27 - DEBUG - Getting Stays
+22/09/2022, 14:14:08 - DEBUG - Getting Stays
+22/09/2022, 14:15:35 - DEBUG - Getting Stays
+22/09/2022, 14:18:34 - DEBUG - Getting Stays
+22/09/2022, 14:19:23 - DEBUG - Getting Stays
+22/09/2022, 14:20:20 - DEBUG - Getting Stays
+22/09/2022, 14:21:13 - DEBUG - Getting Stays
+22/09/2022, 14:21:22 - DEBUG - auth.service - signup with username: 123, firsname: sad
+22/09/2022, 14:21:22 - DEBUG - auth.route - new account created: {"username":"123","password":"$2b$10$I/2KAB84AOhex3ZbpOailO.cDubZG4EejgtR.zOgu2WBE7NGUHn.S","firstname":"sad","lastname":"dasd","score":100,"_id":"632c453295b7586a36cf4b74"}
+22/09/2022, 14:21:22 - DEBUG - auth.service - login with username: 123
+22/09/2022, 14:21:22 - INFO - User signup: | {"_id":"632c453295b7586a36cf4b74","username":"123","firstname":"sad","lastname":"dasd","score":100}
+22/09/2022, 14:21:24 - DEBUG - Getting Stays
+22/09/2022, 14:21:56 - DEBUG - Getting Stays
+22/09/2022, 14:31:44 - INFO - Server is running on port: 3030
+22/09/2022, 14:31:45 - INFO - New connected socket [id: 2axszbVAw4dly-iQAAAB]
+22.9.2022, 17:06:36 - INFO - Server is running on port: 3030

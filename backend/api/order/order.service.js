@@ -43,7 +43,7 @@ async function remove(orderId) {
 
 async function add(order) {
     order.createdAt = Date.now()
-    order.inStock = true
+    order.orderStatus = 'pending'
     try {
         const collection = await dbService.getCollection('order')
         const addedOrder = await collection.insertOne(order)
