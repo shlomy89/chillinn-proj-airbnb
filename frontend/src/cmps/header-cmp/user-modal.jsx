@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import {React, useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux"
 // import { updateUserNotifications, updateUser } from "../../../store/user.action"
@@ -10,7 +10,6 @@ export function UserModal({ handleUserModal }) {
 	const [loggedInUser, setLoggedInUser] = useState(userService.getLoggedinUser())
 	// const isActive = useSelector((state) => state.headerModule.headerMode.isActive)
 	const user = useSelector((state) => state.userModule.user)
-	console.log("user", user)
 	const navigate = useNavigate()
 	// const notificationsAmount = user.notifications?.length
 	// const dispatch = useDispatch()

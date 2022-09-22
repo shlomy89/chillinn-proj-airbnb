@@ -490,3 +490,5 @@
 22/09/2022, 14:21:22 - INFO - User signup: | {"_id":"632c453295b7586a36cf4b74","username":"123","firstname":"sad","lastname":"dasd","score":100}
 22/09/2022, 14:21:24 - DEBUG - Getting Stays
 22/09/2022, 14:21:56 - DEBUG - Getting Stays
+22/09/2022, 14:31:44 - INFO - Server is running on port: 3030
+22/09/2022, 14:31:45 - INFO - New connected socket [id: 2axszbVAw4dly-iQAAAB]
