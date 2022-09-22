@@ -17,10 +17,14 @@ async function getUsersByOrders(orders) {
     try {
         const collection = await dbService.getCollection('user')
         const users = await collection.find().toArray()
+        console.log({ orders })
         console.log({ users })
         // !! makes the command to be boolean;
         const usersByOrders = users.filter(
-            (user) => !!orders.find((order) => order.userId === user._id)
+            (user) =>
+                !!orders.find(
+                    (order) => order.userId === ObjectId(user._id).toString()
+                )
         )
         console.log({ usersByOrders })
         return usersByOrders
