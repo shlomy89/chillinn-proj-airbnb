@@ -7,12 +7,15 @@ import FormControl from '@mui/material/FormControl'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 import { useState } from 'react'
 import { GuessPicker } from './guest-picker'
-import { values } from 'lodash'
-import { sumBy } from 'lodash'
+import { sumBy, values } from 'lodash'
 
-export function Dropdown({ agesData, setAgesData }) {
-    const onChange = (type, value) => {
-        if (value < 0 || value > 10) {
+export function Dropdown({ agesData, setAgesData, capacity }) {
+    const onChange = (type, value, operator) => {
+        if (
+            (value < 0 && operator === '-') ||
+            (sumBy(values(agesData), 'value') + 1 > Math.min(capacity, 10) &&
+                operator === '+')
+        ) {
             return
         }
         setAgesData((agesInfo) => ({
@@ -39,6 +42,9 @@ export function Dropdown({ agesData, setAgesData }) {
                             info={info}
                             value={value}
                             onChange={onChange}
+                            capacity={
+                                capacity - sumBy(values(agesData), 'value')
+                            }
                             key={type}
                         />
                     ))}
