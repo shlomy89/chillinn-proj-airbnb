@@ -31,7 +31,11 @@ export const HostSummaryIncome = () => {
             clearInterval(timeOut)
         }
     }, [])
-
+    const totalIncome = sumBy(orders, (order) => {
+        const stay = find(stays, { _id: order.stayId })
+        if (!stay) return 0
+        return order.nights * stay.price
+    })
     return (
         <div className='host-summary-income-container'>
             <div className='income-info-container'>
@@ -40,9 +44,9 @@ export const HostSummaryIncome = () => {
             </div>
             <div className='income-info-container'>
                 <span className='income-text'>
-                    Average Rating: {/* Average Rating: * */}
+                    Total Income: {/* Average Rating: * */}
                 </span>
-                <span className='income-price'>*</span>
+                <span className='income-price'>{totalIncome}</span>
             </div>
             <div className='income-info-container'>
                 <span className='income-text'>Amount of reviews:</span>

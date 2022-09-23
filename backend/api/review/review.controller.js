@@ -29,20 +29,18 @@ async function deleteReview(req, res) {
     }
 }
 
-
 async function addReview(req, res) {
-
     var loggedinUser = authService.validateToken(req.cookies.loginToken)
- 
+
     try {
         var review = req.body
         review.byUserId = loggedinUser._id
         review = await reviewService.add(review)
-        
+
         // prepare the updated review for sending out
         review.aboutStay = await stayService.getById(review.stayId)
-        
-        // Give the user credit 
+
+        // Give the user credit
         loggedinUser.score += 10
 
         loggedinUser = await userService.update(loggedinUser)
@@ -57,12 +55,11 @@ async function addReview(req, res) {
 
         // socketService.broadcast({type: 'review-added', data: review, userId: loggedinUser._id})
         // socketService.emitToUser({type: 'review-about-you', data: review, userId: review.aboutUserId})
-        
+
         // const fullUser = await userService.getById(loggedinUser._id)
         // socketService.emitTo({type: 'user-updated', data: fullUser, label: fullUser._id})
 
         res.send(review)
-
     } catch (err) {
         logger.error('Failed to add review', err)
         res.status(500).send({ err: 'Failed to add review' })

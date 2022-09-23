@@ -1,35 +1,40 @@
 .heder-container {
     box-shadow: 0px 2px 2px $clr5;
+    margin-bottom: 20px;
 
-    .app-header {
-        z-index: 100;
-        width: 100%;
-        background-color: $clr2;
-        height: 80px;
-        transition: background-color 1s;
-        grid-column: 1 / -1;
+    .main-layout {
+        .app-header {
+            // z-index: 100;
+            // width: 100%;
+            // margin-right: 120px;
+            background-color: $clr2;
+            height: 80px;
+            transition: background-color 1s;
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
+            .user-options {
+                .btn-host {
+                    font-size: 14px;
+                    color: $clr6;
+                    background-color: transparent;
+                    border: none;
+                    height: 42px;
+                    width: 130px;
+                    border-radius: 22px;
+                    margin: 0 15px;
+                    &:hover {
+                        background-color: rgba(235, 235, 235, 0.354);
+                    }
+                }
+            }
+        }
         .logo {
             height: 50px;
             width: auto;
             cursor: pointer;
-        }
-
-        .user-options{
-            
-            .btn-host{
-                font-size: 14px;
-                color: $clr6;
-                background-color: transparent;
-                border: none;
-                height: 42px;
-                width: 130px;
-                border-radius: 22px;
-                margin: 0 15px;
-                &:hover{
-                    background-color: rgba(235, 235, 235, 0.354);
-                }
-            }
         }
     }
 }

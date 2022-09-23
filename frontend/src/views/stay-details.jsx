@@ -35,11 +35,14 @@ import { BorderLine } from '../cmps/details-cmp/border-line'
 import { ReviewStats } from '../cmps/details-cmp/ReviewStats'
 import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
+import { addReview } from '../store/actions/review.actions'
+import { useDispatch } from 'react-redux'
 
 export const StayDetails = () => {
+    const dispatch = useDispatch()
     const [stay, setStay] = useState(null)
     const [reviews, setReviews] = useState(null)
-
+    const [review, setReview] = useState({ text: '', rating: 0 })
     const params = useParams()
     const navigate = useNavigate()
 
@@ -49,6 +52,7 @@ export const StayDetails = () => {
             const stay = await stayService.getById(stayId)
             setStay(stay)
             const reviews = await reviewService.query({ stayId })
+            console.log({ reviews })
             setReviews(reviews)
         }
         getReviews()
@@ -68,6 +72,9 @@ export const StayDetails = () => {
         }
     }
 
+    const onAddReview = async () => {
+        dispatch(addReview({ ...review, stayId: stay._id }))
+    }
     // const onRemoveReview = async (reviewId) => {
     //     try {
     //         await reviewService.remove(reviewId)
@@ -137,9 +144,7 @@ export const StayDetails = () => {
                                     src='https://a0.muscache.com/im/pictures/user/5c9836a5-c81e-4b14-ba79-978811fff5ee.jpg?im_w=240'
                                 />
                             </div>
-                            <div className='apartment-content-container'>
-                                <span>{stay.capacity} guests</span>
-                            </div>
+                            <div className='apartment-content-container'></div>
                         </div>
                         <BorderLine />
 
@@ -191,7 +196,7 @@ export const StayDetails = () => {
                                     Icon={CarbonMonoxideAlarmIcon}
                                 />
                             </div>
-                            <div className='amenities-list'>
+                            {/* <div className='amenities-list'>
                                 <IconText text={'Wifi'} Icon={WifiIcon} />
                                 <IconText text={'Washer'} Icon={WasherIcon} />
                                 <IconText
@@ -206,12 +211,43 @@ export const StayDetails = () => {
                                     text={'Smoke alarm'}
                                     Icon={SmokeAlarmIcon}
                                 />
-                            </div>
+                            </div> */}
                         </div>
                         <button className='show-all-amenities'>
                             Show all amenities{' '}
                         </button>
                     </section>
+                    <div className='add-review-container'>
+                        <div
+                            onClick={onAddReview}
+                            className='add-review-button'
+                        >
+                            Add Review
+                        </div>
+                        <span>Rating: </span>
+                        <input
+                            type='number'
+                            value={review.rating}
+                            onChange={(e) =>
+                                setReview((review) => ({
+                                    ...review,
+                                    rating: e.target.value
+                                }))
+                            }
+                        />
+
+                        <span>Review: </span>
+                        <textarea
+                            type='text'
+                            value={review.text}
+                            onChange={(e) =>
+                                setReview((review) => ({
+                                    ...review,
+                                    text: e.target.value
+                                }))
+                            }
+                        />
+                    </div>
                     {/* {stay.reviews.map(review=> {
                     <BorderLine />
                     <section className='review'>

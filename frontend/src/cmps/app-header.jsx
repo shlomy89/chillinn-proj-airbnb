@@ -11,13 +11,12 @@ export function AppHeader() {
     }
 
     return (
-
         <header className='main-layout'>
-            <div className='app-header flex justify-space-between align-center'>
+            <div className='app-header'>
                 <img src={logo} className='logo' onClick={onBack} />
                 <SearchBar />
-                <div className="user-options flex row justify-space-between align-center">
-                    <Link to={"stay/host"}>
+                <div className='user-options flex row justify-space-between align-center'>
+                    <Link to={'stay/host'}>
                         <button className='btn-host'>Become a Host</button>
                     </Link>
                     <UserMenu />

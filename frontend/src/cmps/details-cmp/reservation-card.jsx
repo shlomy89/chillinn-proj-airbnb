@@ -13,6 +13,7 @@ import Swal from 'sweetalert2'
 import { useDispatch } from 'react-redux'
 import { onAddOrder } from '../../store/actions/order.actions'
 import { sum, sumBy, values } from 'lodash'
+import { DatePicker } from './date-picker'
 
 const agesInfo = {
     Adults: {
@@ -33,29 +34,11 @@ const agesInfo = {
 }
 
 export const ReservationCard = ({ stay }) => {
-    const [value, setValue] = useState(null)
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(
         new Date(Date.now() + 24 * 60 * 60 * 1000)
     )
     const [agesData, setAgesData] = useState(agesInfo)
-    const selectionRange = {
-        startDate: startDate,
-        endDate: endDate,
-        key: 'selection'
-    }
-
-    function handleSelect(ranges) {
-        setStartDate(ranges.selection.startDate)
-        setEndDate(ranges.selection.endDate)
-    }
-
-    const [showDatePicker, setShowDatePicker] = useState(false)
-    const [open, setOpen] = React.useState(false)
-    const handleOpen = () => {
-        setOpen(true)
-    }
-    const handleClose = () => setOpen(false)
 
     const dispatch = useDispatch()
 
@@ -65,7 +48,8 @@ export const ReservationCard = ({ stay }) => {
                 stay,
                 startDate,
                 endDate,
-                guestsNum: sumBy(values(agesData), 'value')
+                guestsNum: sumBy(values(agesData), 'value'),
+                nights
             })
         )
     }
@@ -76,58 +60,16 @@ export const ReservationCard = ({ stay }) => {
         <div className='reservation-card-container'>
             <div className='reservation-card-header'>
                 <div className='price-per-night'>
-                    {stay.price} <span className='per-night'>night</span>
+                    ${stay.price} <span className='per-night'>night</span>
                 </div>
                 <StarRating rating={4.9} reviews={stay.reviews.length} />
             </div>
-            {!showDatePicker && (
-                <div className='rdrDateDisplayWrapper'>
-                    <div
-                        className='rdrDateDisplay'
-                        style={{
-                            color: 'rgb(61, 145, 255)'
-                        }}
-                    >
-                        <div
-                            onClick={() => {
-                                setShowDatePicker(true)
-                            }}
-                            className='rdrDateInput rdrDateDisplayItem rdrDateDisplayItemActive'
-                        >
-                            <input
-                                readOnly=''
-                                placeholder='Early'
-                                value={moment(startDate).format('MMM DD, YYYY')}
-                            />
-                        </div>
-                        <span className='rdrDateInput rdrDateDisplayItem'>
-                            <input
-                                readOnly=''
-                                placeholder='Continuous'
-                                value={moment(endDate).format('MMM DD, YYYY')}
-                            />
-                        </span>
-                    </div>
-                </div>
-            )}
-            {showDatePicker && (
-                <>
-                    <DateRangePicker
-                        showPreview={false}
-                        onChange={handleSelect}
-                        ranges={[selectionRange]}
-                        staticRanges={[]}
-                        inputRanges={[]}
-                        placeholder='asdf'
-                    />
-                    <div
-                        onClick={() => setShowDatePicker(false)}
-                        className='close-date-picker'
-                    >
-                        Close
-                    </div>
-                </>
-            )}
+            <DatePicker
+                checkIn={startDate}
+                checkOut={endDate}
+                setCheckIn={setStartDate}
+                setCheckOut={setEndDate}
+            />
             <Dropdown
                 agesData={agesData}
                 setAgesData={setAgesData}
@@ -154,3 +96,71 @@ export const ReservationCard = ({ stay }) => {
         </div>
     )
 }
+
+//   function handleSelect(ranges) {
+//       setStartDate(ranges.selection.startDate)
+//       setEndDate(ranges.selection.endDate)
+//   }
+
+//   const [showDatePicker, setShowDatePicker] = useState(false)
+//   const [open, setOpen] = React.useState(false)
+//   const handleOpen = () => {
+//       setOpen(true)
+//   }
+//   const handleClose = () => setOpen(false)
+/* <div className='show-date-picker-wrapper'>
+    {!showDatePicker && (
+        <div className='show-date-picker-close'>
+        <div
+        className='rdrDateDisplay'
+        style={{
+            color: 'rgb(61, 145, 255)'
+        }}
+        >
+        <div
+        onClick={() => {
+            setShowDatePicker(true)
+        }}
+        className='rdrDateInput rdrDateDisplayItem rdrDateDisplayItemActive'
+        >
+        <input
+        readOnly=''
+        placeholder='Early'
+        value={moment(startDate).format(
+            'MMM DD, YYYY'
+            )}
+                    />
+                </div>
+                <span className='rdrDateInput rdrDateDisplayItem'>
+                <input
+                readOnly=''
+                placeholder='Continuous'
+                value={moment(endDate).format(
+                    'MMM DD, YYYY'
+                    )}
+                    />
+                    </span>
+                    </div>
+                    </div>
+                    )}
+                    {showDatePicker && (
+        <div className='date-range-picker-container'>
+            <DateRangePicker
+                preventOverflow={false}
+                showPreview={false}
+                onChange={handleSelect}
+                ranges={[selectionRange]}
+                staticRanges={[]}
+                inputRanges={[]}
+                className='date-range-picker'
+            />
+            <div
+                onClick={() => setShowDatePicker(false)}
+                className='close-date-picker'
+            >
+                Close
+            </div>
+        </div>
+    )} */
+
+/* </div> */

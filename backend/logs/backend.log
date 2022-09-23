@@ -493,3 +493,382 @@
 22/09/2022, 14:31:44 - INFO - Server is running on port: 3030
 22/09/2022, 14:31:45 - INFO - New connected socket [id: 2axszbVAw4dly-iQAAAB]
 22.9.2022, 17:06:36 - INFO - Server is running on port: 3030
+22/09/2022, 17:25:00 - DEBUG - Getting Stays
+22/09/2022, 17:25:36 - DEBUG - Getting Stays
+22/09/2022, 17:25:48 - DEBUG - Getting Stays
+22/09/2022, 17:25:49 - DEBUG - Getting Stays
+22/09/2022, 17:26:49 - DEBUG - auth.service - signup with username: shlomi, firsname: Shlomi
+22/09/2022, 17:26:49 - DEBUG - auth.route - new account created: {"username":"shlomi","password":"$2b$10$ic2ooQ4U1sqA7J7XxnmB4O0EiA.ZEMFCjbEUEa5f2f83zZoZPtoHW","firstname":"Shlomi","lastname":"shlomi","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png","_id":"632c70a915f35cbfb2328b3c"}
+22/09/2022, 17:26:49 - DEBUG - auth.service - login with username: shlomi
+22/09/2022, 17:26:50 - INFO - User signup: | {"_id":"632c70a915f35cbfb2328b3c","username":"shlomi","firstname":"Shlomi","lastname":"shlomi","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png"}
+22/09/2022, 17:26:50 - DEBUG - Getting Stays
+22/09/2022, 17:26:55 - DEBUG - Getting Stays
+22/09/2022, 17:27:04 - DEBUG - Getting Stays
+22/09/2022, 17:27:06 - DEBUG - Getting Stays
+22/09/2022, 17:34:18 - DEBUG - Getting Stays
+22/09/2022, 17:34:19 - DEBUG - Getting Stays
+22/09/2022, 17:34:42 - DEBUG - Getting Stays
+22/09/2022, 17:39:28 - DEBUG - Getting Stays
+22/09/2022, 17:41:21 - DEBUG - Getting Stays
+22/09/2022, 17:41:35 - DEBUG - Getting Stays
+22/09/2022, 17:41:37 - DEBUG - Getting Stays
+22/09/2022, 17:42:57 - DEBUG - auth.service - signup with username: sagiv, firsname: Sagiv
+22/09/2022, 17:42:57 - DEBUG - auth.route - new account created: {"username":"sagiv","password":"$2b$10$wlHMAuY/gNswta6COvknJe3IQihFEcagXq4ow9rBbEbrJs69qUObS","firstname":"Sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png","_id":"632c747115f35cbfb2328b3e"}
+22/09/2022, 17:42:57 - DEBUG - auth.service - login with username: sagiv
+22/09/2022, 17:42:57 - INFO - User signup: | {"_id":"632c747115f35cbfb2328b3e","username":"sagiv","firstname":"Sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png"}
+22/09/2022, 17:42:59 - DEBUG - Getting Stays
+22/09/2022, 17:43:16 - DEBUG - Getting Stays
+22/09/2022, 17:43:17 - DEBUG - Getting Stays
+22/09/2022, 17:45:34 - DEBUG - Getting Stays
+22/09/2022, 17:46:38 - DEBUG - auth.service - signup with username: sagiv, firsname: Sagiv
+22/09/2022, 17:46:38 - DEBUG - auth.route - new account created: {"username":"sagiv","password":"$2b$10$m/z5fqrR4xsNf3JIhVwV8O9ehKsYXro8K2nyHZNlblFQIXLc/WU0W","firstname":"Sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663857994/i84vxwufe6x8opgayquw.png","_id":"632c754e15f35cbfb2328b40"}
+22/09/2022, 17:46:38 - DEBUG - auth.service - login with username: sagiv
+22/09/2022, 17:46:38 - INFO - User signup: | {"_id":"632c754e15f35cbfb2328b40","username":"sagiv","firstname":"Sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663857994/i84vxwufe6x8opgayquw.png"}
+22/09/2022, 17:46:40 - DEBUG - Getting Stays
+22/09/2022, 17:47:17 - DEBUG - Getting Stays
+22/09/2022, 17:47:18 - DEBUG - Getting Stays
+22/09/2022, 17:51:06 - DEBUG - Getting Stays
+22/09/2022, 17:56:21 - DEBUG - Getting Stays
+22/09/2022, 18:02:40 - DEBUG - Getting Stays
+22/09/2022, 18:02:41 - DEBUG - Getting Stays
+22/09/2022, 18:02:42 - DEBUG - Getting Stays
+22/09/2022, 18:05:08 - DEBUG - Getting Stays
+22/09/2022, 18:05:17 - DEBUG - Getting Stays
+22/09/2022, 18:08:34 - DEBUG - Getting Stays
+22/09/2022, 18:15:21 - DEBUG - Getting Stays
+22/09/2022, 18:15:25 - DEBUG - Getting Stays
+22/09/2022, 18:15:26 - DEBUG - Getting Stays
+22/09/2022, 18:15:31 - DEBUG - Getting Stays
+22/09/2022, 18:15:33 - DEBUG - Getting Stays
+22/09/2022, 18:18:04 - DEBUG - Getting Stays
+22/09/2022, 18:18:06 - DEBUG - Getting Stays
+22/09/2022, 18:18:07 - DEBUG - Getting Stays
+22/09/2022, 19:07:08 - DEBUG - Getting Stays
+22/09/2022, 19:07:09 - DEBUG - Getting Stays
+22/09/2022, 19:10:28 - DEBUG - Getting Stays
+22/09/2022, 19:16:49 - DEBUG - Getting Stays
+22/09/2022, 19:16:57 - DEBUG - Getting Stays
+22/09/2022, 19:21:52 - DEBUG - Getting Stays
+22/09/2022, 20:10:32 - DEBUG - Getting Stays
+22/09/2022, 20:11:25 - DEBUG - Getting Stays
+22/09/2022, 20:12:59 - DEBUG - Getting Stays
+22/09/2022, 20:13:53 - DEBUG - Getting Stays
+22/09/2022, 20:17:23 - DEBUG - Getting Stays
+22/09/2022, 20:17:25 - DEBUG - Getting Stays
+22/09/2022, 20:18:11 - DEBUG - Getting Stays
+22/09/2022, 20:18:18 - DEBUG - Getting Stays
+22/09/2022, 20:26:02 - DEBUG - Getting Stays
+22/09/2022, 20:28:02 - DEBUG - Getting Stays
+22/09/2022, 20:30:27 - DEBUG - Getting Stays
+22/09/2022, 20:30:40 - DEBUG - Getting Stays
+22/09/2022, 20:32:10 - DEBUG - Getting Stays
+22/09/2022, 20:34:31 - DEBUG - Getting Stays
+22/09/2022, 20:35:43 - DEBUG - Getting Stays
+22/09/2022, 20:36:25 - DEBUG - Getting Stays
+23/09/2022, 10:33:29 - DEBUG - Getting Stays
+23/09/2022, 10:40:18 - DEBUG - Getting Stays
+23/09/2022, 11:31:19 - INFO - Server is running on port: 3030
+23/09/2022, 11:31:20 - INFO - New connected socket [id: -748ic6jkntIgULDAAAB]
+23/09/2022, 11:31:21 - INFO - New connected socket [id: H8cCkBRfY5l62-sTAAAD]
+23/09/2022, 11:31:32 - DEBUG - Getting Stays
+23/09/2022, 11:39:03 - DEBUG - Getting Stays
+23/09/2022, 11:49:11 - DEBUG - Getting Stays
+23/09/2022, 11:52:33 - DEBUG - Getting Stays
+23/09/2022, 12:00:32 - DEBUG - Getting Stays
+23/09/2022, 12:23:09 - DEBUG - Getting Stays
+23/09/2022, 12:23:35 - DEBUG - Getting Stays
+23/09/2022, 13:48:23 - DEBUG - Getting Stays
+23/09/2022, 13:50:14 - DEBUG - Getting Stays
+23/09/2022, 13:50:20 - DEBUG - Getting Stays
+23/09/2022, 14:26:18 - DEBUG - Getting Stays
+23/09/2022, 14:26:20 - DEBUG - Getting Stays
+23/09/2022, 14:36:49 - DEBUG - Getting Stays
+23/09/2022, 14:52:14 - INFO - Req was made
+23/09/2022, 14:52:55 - INFO - Server is running on port: 3030
+23/09/2022, 14:52:56 - INFO - New connected socket [id: yufsLz4O5ckFCUPXAAAB]
+23/09/2022, 14:52:56 - INFO - New connected socket [id: xO97asffVr7HqUkaAAAD]
+23/09/2022, 14:53:20 - INFO - Req was made
+23/09/2022, 14:57:23 - INFO - Req was made
+23/09/2022, 14:57:23 - INFO - Req was made
+23/09/2022, 14:57:23 - INFO - Req was made
+23/09/2022, 14:57:23 - INFO - Req was made
+23/09/2022, 14:57:32 - INFO - Req was made
+23/09/2022, 14:58:47 - INFO - Server is running on port: 3030
+23/09/2022, 14:58:48 - INFO - New connected socket [id: oMNf8xG2pcwANm7BAAAB]
+23/09/2022, 14:58:49 - INFO - New connected socket [id: dkc39AI408VU8y-rAAAD]
+23/09/2022, 14:58:58 - INFO - Req was made
+23/09/2022, 14:59:45 - INFO - Server is running on port: 3030
+23/09/2022, 14:59:47 - INFO - New connected socket [id: RMggVolGgbZ2pmCMAAAC]
+23/09/2022, 14:59:47 - INFO - New connected socket [id: tk6UUChoI_W65s6gAAAD]
+23/09/2022, 14:59:51 - INFO - Req was made
+23/09/2022, 15:00:11 - INFO - Server is running on port: 3030
+23/09/2022, 15:00:12 - INFO - New connected socket [id: 3HLbKza4Sr3kQAHtAAAC]
+23/09/2022, 15:00:12 - INFO - New connected socket [id: rRymaIPBbPQZoIC0AAAD]
+23/09/2022, 15:00:16 - INFO - Req was made
+23/09/2022, 15:00:23 - INFO - Req was made
+23/09/2022, 15:01:34 - INFO - Server is running on port: 3030
+23/09/2022, 15:01:35 - INFO - New connected socket [id: exg7ivLbWM3ovmy6AAAC]
+23/09/2022, 15:01:35 - INFO - New connected socket [id: LmgsN0TxEle5iROZAAAD]
+23/09/2022, 15:01:41 - INFO - Req was made
+23/09/2022, 15:01:41 - ERROR - cannot find reviews | {}
+23/09/2022, 15:01:41 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:04:30 - INFO - Req was made
+23/09/2022, 15:04:30 - INFO - Req was made
+23/09/2022, 15:04:30 - ERROR - cannot find reviews | {}
+23/09/2022, 15:04:30 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:04:31 - ERROR - cannot find reviews | {}
+23/09/2022, 15:04:31 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:04:31 - INFO - Req was made
+23/09/2022, 15:04:31 - ERROR - cannot find reviews | {}
+23/09/2022, 15:04:31 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:04:31 - INFO - Req was made
+23/09/2022, 15:04:31 - ERROR - cannot find reviews | {}
+23/09/2022, 15:04:31 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:04:52 - INFO - Server is running on port: 3030
+23/09/2022, 15:04:52 - INFO - New connected socket [id: 25U9_D-UL_9boYulAAAB]
+23/09/2022, 15:04:53 - INFO - New connected socket [id: xYxhHcHlybaC_5AEAAAD]
+23/09/2022, 15:05:08 - INFO - Req was made
+23/09/2022, 15:05:08 - ERROR - cannot find reviews | {}
+23/09/2022, 15:05:08 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:05:39 - INFO - Server is running on port: 3030
+23/09/2022, 15:05:40 - INFO - New connected socket [id: AV9orP8kuT3_PAQDAAAB]
+23/09/2022, 15:05:41 - INFO - New connected socket [id: FscyBewKfq8mGclYAAAD]
+23/09/2022, 15:07:23 - INFO - Server is running on port: 3030
+23/09/2022, 15:07:25 - INFO - New connected socket [id: ChxWuGw_dDY-CPE_AAAC]
+23/09/2022, 15:07:25 - INFO - New connected socket [id: Q7XeUQZzUHKKqE5FAAAD]
+23/09/2022, 15:08:10 - INFO - Req was made
+23/09/2022, 15:08:10 - INFO - Req was made
+23/09/2022, 15:08:10 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:10 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:11 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:11 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:11 - INFO - Req was made
+23/09/2022, 15:08:11 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:11 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:11 - INFO - Req was made
+23/09/2022, 15:08:11 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:11 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:16 - INFO - Req was made
+23/09/2022, 15:08:17 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:17 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:43 - INFO - Server is running on port: 3030
+23/09/2022, 15:08:43 - INFO - New connected socket [id: v4PvKt-1vp1s2zSgAAAB]
+23/09/2022, 15:08:44 - INFO - New connected socket [id: tuRtlZ4mPE74ud9VAAAD]
+23/09/2022, 15:08:52 - INFO - Req was made
+23/09/2022, 15:08:52 - INFO - Req was made
+23/09/2022, 15:08:52 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:52 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:52 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:52 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:53 - INFO - Req was made
+23/09/2022, 15:08:53 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:53 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:08:53 - INFO - Req was made
+23/09/2022, 15:08:53 - ERROR - cannot find reviews | {}
+23/09/2022, 15:08:53 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:09:05 - INFO - Req was made
+23/09/2022, 15:09:05 - ERROR - cannot find reviews | {}
+23/09/2022, 15:09:05 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:09:32 - INFO - Server is running on port: 3030
+23/09/2022, 15:09:33 - INFO - New connected socket [id: ospJcfjmBQyE1LRzAAAC]
+23/09/2022, 15:09:33 - INFO - New connected socket [id: LbOVSH6WaAmbXZ0nAAAD]
+23/09/2022, 15:09:40 - INFO - Req was made
+23/09/2022, 15:09:40 - ERROR - cannot find reviews | {}
+23/09/2022, 15:09:40 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:09:59 - INFO - Server is running on port: 3030
+23/09/2022, 15:10:00 - INFO - New connected socket [id: WsmZEr8KbZQXGaIqAAAC]
+23/09/2022, 15:10:00 - INFO - New connected socket [id: BkHa8zMgh1sDVr_MAAAD]
+23/09/2022, 15:10:22 - INFO - Server is running on port: 3030
+23/09/2022, 15:10:23 - INFO - New connected socket [id: 6JjhmR4eNSqhhikCAAAB]
+23/09/2022, 15:10:24 - INFO - New connected socket [id: H0Qfb8sVicQQ2CT-AAAD]
+23/09/2022, 15:10:37 - INFO - Req was made
+23/09/2022, 15:10:37 - ERROR - cannot find reviews | {}
+23/09/2022, 15:10:37 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:12:15 - INFO - Req was made
+23/09/2022, 15:12:15 - ERROR - cannot find reviews | {}
+23/09/2022, 15:12:15 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:12:39 - INFO - Req was made
+23/09/2022, 15:12:40 - INFO - Req was made
+23/09/2022, 15:12:40 - ERROR - cannot find reviews | {}
+23/09/2022, 15:12:40 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:13:14 - INFO - Server is running on port: 3030
+23/09/2022, 15:13:15 - INFO - New connected socket [id: pb8AUKkLn_QkWk9TAAAC]
+23/09/2022, 15:13:15 - INFO - New connected socket [id: oCPX4kL6izLss-d3AAAD]
+23/09/2022, 15:13:27 - INFO - Server is running on port: 3030
+23/09/2022, 15:13:28 - INFO - New connected socket [id: pWwgQvIcUBglK4cuAAAC]
+23/09/2022, 15:13:28 - INFO - New connected socket [id: KzEIOjWnX-VT-EWdAAAD]
+23/09/2022, 15:13:36 - INFO - Req was made
+23/09/2022, 15:13:36 - ERROR - cannot find reviews | {}
+23/09/2022, 15:13:36 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:14:40 - INFO - Server is running on port: 3030
+23/09/2022, 15:14:41 - INFO - New connected socket [id: m1mytrpMvDIcXeHkAAAC]
+23/09/2022, 15:14:41 - INFO - New connected socket [id: 1Kg_uW71ORh6a-9kAAAD]
+23/09/2022, 15:14:49 - INFO - Req was made
+23/09/2022, 15:14:49 - ERROR - cannot find reviews | {}
+23/09/2022, 15:14:49 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:15:03 - INFO - Server is running on port: 3030
+23/09/2022, 15:15:04 - INFO - New connected socket [id: a9qiDTEj5iSLJiSvAAAC]
+23/09/2022, 15:15:04 - INFO - New connected socket [id: uWECOtvJxtVJ1rAIAAAD]
+23/09/2022, 15:15:10 - INFO - Req was made
+23/09/2022, 15:15:38 - INFO - Req was made
+23/09/2022, 15:15:39 - INFO - Req was made
+23/09/2022, 15:15:59 - INFO - Server is running on port: 3030
+23/09/2022, 15:16:00 - INFO - New connected socket [id: 7WiAUeqDj604Q-9zAAAB]
+23/09/2022, 15:16:01 - INFO - New connected socket [id: UQL7hzBZGAdynogHAAAD]
+23/09/2022, 15:16:07 - INFO - Req was made
+23/09/2022, 15:16:40 - INFO - Req was made
+23/09/2022, 15:16:49 - INFO - Req was made
+23/09/2022, 15:16:53 - INFO - Req was made
+23/09/2022, 15:18:20 - INFO - Server is running on port: 3030
+23/09/2022, 15:18:21 - INFO - New connected socket [id: rRsv8w2H-p1EGgKSAAAC]
+23/09/2022, 15:18:21 - INFO - New connected socket [id: UKEXIgeyXX5PG2fjAAAD]
+23/09/2022, 15:18:28 - INFO - Req was made
+23/09/2022, 15:19:22 - INFO - Server is running on port: 3030
+23/09/2022, 15:19:23 - INFO - New connected socket [id: oQEgnWyhHmhtABnIAAAB]
+23/09/2022, 15:19:24 - INFO - New connected socket [id: Px0DL9Cxzxs3XdQKAAAD]
+23/09/2022, 15:19:28 - INFO - Server is running on port: 3030
+23/09/2022, 15:19:29 - INFO - New connected socket [id: aWBHGWxWxOOCL3P0AAAC]
+23/09/2022, 15:19:29 - INFO - New connected socket [id: 637ta5vrxlrkoH9FAAAD]
+23/09/2022, 15:19:34 - INFO - Server is running on port: 3030
+23/09/2022, 15:19:35 - INFO - New connected socket [id: UkP9Y8onY0aL53xiAAAB]
+23/09/2022, 15:19:36 - INFO - New connected socket [id: fYUMwFfBQeYiFKELAAAD]
+23/09/2022, 15:20:01 - INFO - Req was made
+23/09/2022, 15:20:50 - INFO - Server is running on port: 3030
+23/09/2022, 15:20:51 - INFO - New connected socket [id: y4zKbD52ffrxQVnuAAAB]
+23/09/2022, 15:20:52 - INFO - New connected socket [id: sSvDVIBmC2FhIRyLAAAD]
+23/09/2022, 15:21:08 - INFO - Server is running on port: 3030
+23/09/2022, 15:21:09 - INFO - New connected socket [id: NvTfnZxZ8TQ49J4iAAAC]
+23/09/2022, 15:21:09 - INFO - New connected socket [id: UR2vr8RUkpseJGHMAAAD]
+23/09/2022, 15:21:12 - INFO - Server is running on port: 3030
+23/09/2022, 15:21:13 - INFO - New connected socket [id: _cVg29TlNTtKv2gxAAAC]
+23/09/2022, 15:21:13 - INFO - New connected socket [id: OCrILiiiEYUw7_eBAAAD]
+23/09/2022, 15:21:25 - INFO - Req was made
+23/09/2022, 15:21:50 - INFO - Server is running on port: 3030
+23/09/2022, 15:21:50 - INFO - New connected socket [id: ku60aJE0MtMc8dgVAAAB]
+23/09/2022, 15:21:51 - INFO - New connected socket [id: 3ercp1DnOfhjPMELAAAD]
+23/09/2022, 15:21:57 - INFO - Req was made
+23/09/2022, 15:23:39 - INFO - Server is running on port: 3030
+23/09/2022, 15:23:40 - INFO - New connected socket [id: EyAtRwZ3OEwzyIhYAAAC]
+23/09/2022, 15:23:40 - INFO - New connected socket [id: 9bNGoQA3VxUjL74LAAAD]
+23/09/2022, 15:23:44 - INFO - Server is running on port: 3030
+23/09/2022, 15:23:45 - INFO - New connected socket [id: luaVR7VNLAd-pc0oAAAC]
+23/09/2022, 15:23:45 - INFO - New connected socket [id: J6D6cCyPuSsjB7b2AAAD]
+23/09/2022, 15:23:54 - INFO - Req was made
+23/09/2022, 15:24:40 - INFO - Server is running on port: 3030
+23/09/2022, 15:24:41 - INFO - New connected socket [id: ltqELOiHCmbFq765AAAB]
+23/09/2022, 15:24:42 - INFO - New connected socket [id: Oj1109mtfQ2uEMsSAAAD]
+23/09/2022, 15:24:45 - INFO - Req was made
+23/09/2022, 15:24:56 - INFO - Req was made
+23/09/2022, 15:24:58 - INFO - Req was made
+23/09/2022, 15:26:54 - INFO - Server is running on port: 3030
+23/09/2022, 15:26:55 - INFO - New connected socket [id: GoUZSfp_2CCkkR2LAAAB]
+23/09/2022, 15:26:56 - INFO - New connected socket [id: meI-zW9NSuvzpPOlAAAD]
+23/09/2022, 15:27:04 - INFO - Req was made
+23/09/2022, 15:27:13 - INFO - Req was made
+23/09/2022, 15:27:15 - INFO - Req was made
+23/09/2022, 15:27:58 - INFO - Server is running on port: 3030
+23/09/2022, 15:27:59 - INFO - New connected socket [id: AcvFz60m5zmqYTHfAAAC]
+23/09/2022, 15:27:59 - INFO - New connected socket [id: bVGUHsepaV4o91OFAAAD]
+23/09/2022, 15:28:05 - INFO - Req was made
+23/09/2022, 15:28:11 - INFO - Req was made
+23/09/2022, 15:28:12 - INFO - Req was made
+23/09/2022, 15:28:16 - INFO - Req was made
+23/09/2022, 15:29:37 - INFO - Req was made
+23/09/2022, 15:29:37 - INFO - Req was made
+23/09/2022, 15:29:37 - INFO - Req was made
+23/09/2022, 15:29:37 - INFO - Req was made
+23/09/2022, 15:30:07 - INFO - Req was made
+23/09/2022, 15:30:18 - INFO - Req was made
+23/09/2022, 15:30:48 - INFO - Server is running on port: 3030
+23/09/2022, 15:30:49 - INFO - New connected socket [id: tCB-rjiZqMQPTjOpAAAC]
+23/09/2022, 15:30:49 - INFO - New connected socket [id: dN130HkauioBlxHwAAAD]
+23/09/2022, 15:30:58 - INFO - Server is running on port: 3030
+23/09/2022, 15:30:59 - INFO - New connected socket [id: 3-8_TLIT-tM3r1auAAAB]
+23/09/2022, 15:31:00 - INFO - New connected socket [id: 07X0InSClc8Gp2FLAAAD]
+23/09/2022, 15:31:04 - INFO - Req was made
+23/09/2022, 15:31:04 - ERROR - cannot find reviews | {}
+23/09/2022, 15:31:04 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:31:35 - INFO - Server is running on port: 3030
+23/09/2022, 15:31:36 - INFO - New connected socket [id: QP3FQ97BWTC9TBowAAAB]
+23/09/2022, 15:31:36 - INFO - New connected socket [id: FVtER_v5y2B8QE49AAAD]
+23/09/2022, 15:31:41 - INFO - Req was made
+23/09/2022, 15:31:41 - ERROR - cannot find reviews | {}
+23/09/2022, 15:31:41 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:32:08 - INFO - Server is running on port: 3030
+23/09/2022, 15:32:09 - INFO - New connected socket [id: YUu7OoID-Tr7mzutAAAC]
+23/09/2022, 15:32:09 - INFO - New connected socket [id: VSp1p3Xvxz5NliDwAAAD]
+23/09/2022, 15:32:13 - INFO - Req was made
+23/09/2022, 15:32:26 - INFO - Req was made
+23/09/2022, 15:32:27 - INFO - Req was made
+23/09/2022, 15:37:42 - INFO - Server is running on port: 3030
+23/09/2022, 15:37:43 - INFO - New connected socket [id: W0TQ0ABJD6RB-gUGAAAC]
+23/09/2022, 15:37:43 - INFO - New connected socket [id: qj7daSiGloDET9RQAAAD]
+23/09/2022, 15:37:52 - INFO - Req was made
+23/09/2022, 15:38:09 - INFO - Req was made
+23/09/2022, 15:38:11 - INFO - Req was made
+23/09/2022, 15:39:15 - DEBUG - auth.service - login with username: sagiv
+23/09/2022, 15:39:15 - INFO - User login:  | {"_id":"632c754e15f35cbfb2328b40","username":"sagiv","firstname":"Sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663857994/i84vxwufe6x8opgayquw.png","score":120}
+23/09/2022, 15:39:15 - DEBUG - Getting Stays
+23/09/2022, 15:39:25 - INFO - Req was made
+23/09/2022, 15:39:34 - INFO - Req was made
+23/09/2022, 15:39:37 - INFO - Req was made
+23/09/2022, 15:40:31 - INFO - Server is running on port: 3030
+23/09/2022, 15:40:31 - INFO - New connected socket [id: dwZG7NJVjbYAvtHhAAAB]
+23/09/2022, 15:40:32 - INFO - New connected socket [id: Vl89rE5ZjYnMMObcAAAD]
+23/09/2022, 15:40:37 - INFO - Req was made
+23/09/2022, 15:41:09 - INFO - Server is running on port: 3030
+23/09/2022, 15:41:09 - INFO - New connected socket [id: yP_E-wYWuYkEsWi-AAAB]
+23/09/2022, 15:41:10 - INFO - New connected socket [id: YAdvgnwG2nPg9YIfAAAD]
+23/09/2022, 15:41:13 - INFO - Req was made
+23/09/2022, 15:43:07 - INFO - Server is running on port: 3030
+23/09/2022, 15:43:07 - INFO - New connected socket [id: bkQCTZaEUJ7QNY6eAAAB]
+23/09/2022, 15:43:07 - INFO - New connected socket [id: RscNfdcVNqwwZiZWAAAD]
+23/09/2022, 15:43:12 - INFO - Req was made
+23/09/2022, 15:43:20 - INFO - Req was made
+23/09/2022, 15:44:50 - INFO - Req was made
+23/09/2022, 15:44:54 - INFO - Req was made
+23/09/2022, 15:45:49 - INFO - Server is running on port: 3030
+23/09/2022, 15:45:50 - INFO - New connected socket [id: nrYkw39SJCI3Fhz1AAAB]
+23/09/2022, 15:45:51 - INFO - New connected socket [id: PfYjSsTeOzw5fpKeAAAD]
+23/09/2022, 15:46:00 - INFO - Req was made
+23/09/2022, 15:46:00 - ERROR - cannot find reviews | {}
+23/09/2022, 15:46:00 - ERROR - Cannot get reviews | {}
+23/09/2022, 15:47:21 - INFO - Server is running on port: 3030
+23/09/2022, 15:47:22 - INFO - New connected socket [id: 68h9YaWzjKRitGD-AAAB]
+23/09/2022, 15:47:22 - INFO - New connected socket [id: 7TiGTG-8cdPFAyRcAAAD]
+23/09/2022, 15:47:27 - INFO - Req was made
+23/09/2022, 15:47:59 - INFO - Server is running on port: 3030
+23/09/2022, 15:48:00 - INFO - New connected socket [id: s9SZ13qEWL7CcNcuAAAC]
+23/09/2022, 15:48:00 - INFO - New connected socket [id: gL0RqEsDRtS_UsoLAAAD]
+23/09/2022, 15:48:12 - INFO - Req was made
+23/09/2022, 15:48:41 - INFO - Req was made
+23/09/2022, 15:48:43 - INFO - Req was made
+23/09/2022, 15:49:56 - INFO - Req was made
+23/09/2022, 15:50:08 - INFO - Req was made
+23/09/2022, 15:50:19 - INFO - Req was made
+23/09/2022, 15:53:34 - DEBUG - Getting Stays
+23/09/2022, 16:51:21 - INFO - Req was made
+23/09/2022, 16:58:33 - INFO - Req was made
+23/09/2022, 17:01:54 - INFO - Req was made
+23/09/2022, 17:01:55 - INFO - Req was made
+23/09/2022, 17:01:55 - INFO - Req was made
+23/09/2022, 17:01:55 - INFO - Req was made
+23/09/2022, 17:01:56 - INFO - Req was made
+23/09/2022, 17:02:22 - INFO - Req was made
+23/09/2022, 17:02:23 - INFO - Req was made
+23/09/2022, 17:02:23 - INFO - Req was made
+23/09/2022, 17:02:23 - INFO - Req was made
+23/09/2022, 17:02:23 - INFO - Req was made
+23/09/2022, 17:04:37 - INFO - Req was made
+23/09/2022, 17:04:37 - INFO - Req was made
+23/09/2022, 17:04:37 - INFO - Req was made
+23/09/2022, 17:04:37 - INFO - Req was made
+23/09/2022, 17:04:37 - INFO - Req was made
+23/09/2022, 17:13:00 - INFO - Req was made
+23/09/2022, 17:13:34 - INFO - Req was made
+23/09/2022, 17:13:39 - INFO - Req was made
+23/09/2022, 17:14:09 - INFO - Req was made
+23/09/2022, 17:14:09 - INFO - Req was made
+23/09/2022, 17:14:09 - INFO - Req was made
+23/09/2022, 17:14:09 - INFO - Req was made
+23/09/2022, 17:14:09 - INFO - Req was made

@@ -18,7 +18,7 @@ async function getById(stayId) {
     try {
         const collection = await dbService.getCollection('stay')
         const stay = await collection.findOne({ _id: stayId })
-
+        console.log({ stayId })
         return stay
     } catch (err) {
         logger.error(`while finding stay ${stayId}`, err)
@@ -67,20 +67,29 @@ function _buildCriteria(filterBy) {
     const criteria = {
         price: {}
     }
-    const { priceRange, bedrooms, propertyTypes, placeTypes, amenities } = filterBy
+    const { priceRange, bedrooms, propertyTypes, placeTypes, amenities } =
+        filterBy
     const [minPrice, maxPrice] = priceRange
 
-    const chosePropertyTypes = Object.keys(propertyTypes).filter((p) => propertyTypes[p])
-    const checkedPlaceTypes = Object.keys(placeTypes).filter((p) => placeTypes[p])
+    const chosePropertyTypes = Object.keys(propertyTypes).filter(
+        (p) => propertyTypes[p]
+    )
+    const checkedPlaceTypes = Object.keys(placeTypes).filter(
+        (p) => placeTypes[p]
+    )
     const checkedAmenities = Object.keys(amenities).filter((a) => amenities[a])
 
     if (chosePropertyTypes.length) {
-        const typesRegex = chosePropertyTypes.map(t => new RegExp(`^${t}$`, 'i'))
+        const typesRegex = chosePropertyTypes.map(
+            (t) => new RegExp(`^${t}$`, 'i')
+        )
         criteria.propertyType = { $in: typesRegex }
-    } 
+    }
 
     if (checkedAmenities.length) {
-        const amenitiesRegex = checkedAmenities.map(a => new RegExp(`^${a}$`, 'i'))
+        const amenitiesRegex = checkedAmenities.map(
+            (a) => new RegExp(`^${a}$`, 'i')
+        )
         criteria.amenities = { $all: amenitiesRegex }
     }
 

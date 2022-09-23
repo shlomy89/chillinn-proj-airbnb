@@ -6,7 +6,6 @@ async function getOrders() {
     try {
         const collection = await dbService.getCollection('order')
         const orders = await collection.find().toArray()
-        console.log({ orders })
         return orders
     } catch (err) {
         logger.error('cannot find orders', err)
