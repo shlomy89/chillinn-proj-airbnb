@@ -1,3 +1,55 @@
+.filter-container {
+    overflow-y: scroll;
+}
+
+.inner-filter-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #ebebeb
+}
+
+h2.sub-titel {
+    font-size: 1.3em;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0px;
+    padding: 0px;
+    color: #222222;
+    font-family: Circular;
+    padding: 0px 0px 24px;
+}
+
+.property-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 16px !important;
+    height: 100%;
+
+    .property-img {
+        width: 32px;
+        height: 32px;
+        width: 32px;
+    }
+
+    .inner-property-button{
+        position: relative;
+        min-height: 120px;
+        height: 100%;
+        padding: 16px;
+    }
+
+    .inner-property-button-txt{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: left;
+        padding-top: 24px;
+        white-space: normal;
+    }
+}
+
+
 button[name='bedrooms'] {
     background-color: #ffffff;
     color: #222222;
@@ -38,10 +90,6 @@ button[name='propertyType'].active {
     border: 1px solid #222222;
 }
 
-.titel {
-    color: #222222;
-}
-
 .amenitie-checkBox {
     display: block !important;
 }
@@ -63,8 +111,8 @@ button[name='propertyType'].active {
 }
 
 .filter-footer {
-    display: flex;
-    justify-content: space-between;
+    border-top: 1px solid #ebebeb;
+    padding: 16px 24px !important;
 }
 
 .open-filter-btn {
@@ -72,16 +120,55 @@ button[name='propertyType'].active {
     margin-inline-start: auto;
     width: 88px;
     height: 48px !important;
-    padding: 7px ;
+    padding: 7px;
     font-family: cereal;
     font-size: 12px !important;
     color: #222222 !important;
     border-color: #efefef !important;
     border-radius: 10px !important;
-    border:1px solid lightgray ;
+    border: 1px solid lightgray;
 
-    .filter-icon{
+    .filter-icon {
         width: 16px;
         height: 16px;
     }
+}
+
+.filter-modal {
+    padding: 0px !important;
+}
+
+.filter-container {
+    margin: 0;
+    padding: 24px;
+
+}
+
+.filter-header {
+    min-height: 64px !important;
+    padding-left: 16px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.right-space {
+    flex: 0 0 32px;
+    text-align: right;
+}
+
+.left-space {
+    flex: 0 0 32px;
+    text-align: left;
+}
+
+.filter-modal-title {
+    font-family: Circular;
+    color: #222222;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 800;
+}
+
+.amenities-list {
+    max-height: 450px;
+    flex-wrap: wrap;
 }

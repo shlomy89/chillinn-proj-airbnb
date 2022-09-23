@@ -2,15 +2,14 @@ import * as React from 'react'
 import Slider, { SliderThumb } from '@mui/material/Slider'
 import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
-import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
 import { useMemo } from "react"
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import Link from '@mui/material/Link'
+import IconButton from '@mui/material/IconButton'
 import Button from '@mui/material/Button'
 import _ from 'lodash'
-import Divider from '@mui/material/Divider'
 import { ReactComponent as CloseIcon } from '../assets/img/icons/close-icon.svg'
 import Apartment from '../assets/img/icons/apartment-icon.jpg'
 import Guesthouse from '../assets/img/icons/guesthouse-icon.jpg'
@@ -33,7 +32,8 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
         }))
     }
 
-    const handlePtButton = (propertyT) => {
+    const handlePtButton = (ev, propertyT) => {
+        ev.preventDefault()
         const type = propertyT
         setFilter(prevFields => ({
             ...prevFields,
@@ -135,125 +135,134 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
 
     return (
         filter &&
-        <section className="filter-container">
-            <Button onClick={handleClose}>
-                <CloseIcon />
-            </Button>
-            <Typography id="transition-modal-title" variant="h5" component="div" textAlign='center'>
-                Filters
-            </Typography>
-            <Divider className="divider" />
-            <form className='filter-form'>
-                <section className="price-slider">
-                    <Typography className="price-titel titel" id="input-slider">
-                        Price:
-                    </Typography>
-                    <AirbnbSlider
-                        components={{ Thumb: AirbnbThumbComponent }}
-                        min={0}
-                        max={2000}
-                        step={10}
-                        {...getFieldProps('priceRange', 'range', true, true)}
-                        valueLabelDisplay="auto" />
-                    <Divider className="divider" />
-                </section>
-
-                <section className="place-type">
-                    <Typography className="place-type-titel titel">
-                        Type of place:
-                    </Typography>
-                    {Object.keys(filter.placeTypes).map(placeT =>
-                        <FormControlLabel
-                            className='placeT-checkBox'
-                            key={placeT}
-                            label={placeT}
-                            name='placeTypes'
-                            onChange={handleCheckBox}
-                            control={<Checkbox key={placeT} id={placeT} checked={filter.placeTypes[placeT]} />}
-                        />
-                    )}
-                    <Divider className="divider" />
-                </section>
-
-                <section className="rooms-btn">
-                    <Typography className="bedrooms-titel titel">
-                        Bedrooms:
-                    </Typography>
-                    {_.range(0, 9).map(n => (
-                        <RoomButton
-                            sx={{ borderRadius: 5, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
-                            className={filter.bedrooms === n ? 'active' : ''}
-                            value={n}
-                            id="bedrooms"
-                            type="number"
-                            name="bedrooms"
-                            key={`room_${n}`}
-                            onClick={handleBedsButton}
-                        >
-                            {n === 0 ? 'Any' : n}
-                        </RoomButton>
-                    ))}
-                    <Divider className="divider" />
-                </section>
-
-                <section className="property-type">
-                    <Typography className="property-titel titel">
-                        Property type:
-                    </Typography>
-                    {Object.keys(filter.propertyTypes).map(propertyT => (
-                        <Button
-                            sx={{ borderRadius: 2, border: 1, borderColor: '#222222', marginInlineEnd: 1, }}
-                            className={filter.propertyTypes[propertyT] ? 'active' : ''}
-                            onClick={() => {
-                                handlePtButton(propertyT)
-                            }}
-                            name="propertyType"
-                            value={propertyT}
-                            key={`property_${propertyT}`}
-                        >
-                            <img src={propertyIcon[propertyT]} />&nbsp;
-                            <div>{propertyT}</div>
-                        </Button>
-                    )
-                    )}
-                    <Divider className="divider" />
-                </section>
-
-                <section className="amenities">
-                    <Typography className="amenities-titel titel">
-                        Amenities:
-                    </Typography>
-                    {Object.keys(filter.amenities).map(a =>
-                        <FormControlLabel
-                            className='amenitie-checkBox'
-                            key={a}
-                            label={a}
-                            name='amenities'
-                            onChange={handleCheckBox}
-                            control={<Checkbox
-                                key={a}
-                                id={a}
-                                checked={filter.amenities[a]} />}
-                        />
-                    )}
-                </section>
-                <div className="filter-footer">
-                    <Link
-                        component="button"
-                        variant="body1"
-                        color="#000000"
-                        fontWeight="bold"
-                        onClick={(ev) => resetFilters(ev)}>
-                        Clear all
-                    </Link>
-                    <Button
-                        className="filter-btn"
-                        onClick={() => handleClose()}
-                    >
-                        Show {staysCount} homes
-                    </Button>
+        <React.Fragment>
+            <header className="filter-header flex justify-space-between">
+                <IconButton className="close-filter" onClick={handleClose}>
+                    <CloseIcon />
+                </IconButton>
+                <div className="filter-header-title flex align-center">
+                    <div className="filter-modal-title">
+                        Filters
+                    </div>
                 </div>
-            </form >
-        </section>
+                <div className="right-space" />
+            </header>
+            <section className="filter-container">
+                <form className='filter-form'>
+                    <section className="price-slider inner-filter-container">
+                        <h2 className="price-titel sub-titel" id="input-slider">
+                            Price
+                        </h2>
+                        <AirbnbSlider
+                            components={{ Thumb: AirbnbThumbComponent }}
+                            min={0}
+                            max={2000}
+                            step={10}
+                            {...getFieldProps('priceRange', 'range', true, true)}
+                            valueLabelDisplay="auto" />
+                    </section>
+
+                    <section className="place-type inner-filter-container">
+                        <h2 className="place-type-titel sub-titel">
+                            Type of place
+                        </h2>
+                        {Object.keys(filter.placeTypes).map(placeT =>
+                            <FormControlLabel
+                                className='placeT-checkBox'
+                                key={placeT}
+                                label={placeT}
+                                name='placeTypes'
+                                onChange={handleCheckBox}
+                                control={<Checkbox key={placeT} id={placeT} checked={filter.placeTypes[placeT]} />}
+                            />
+                        )}
+                    </section>
+
+                    <section className="rooms-btn inner-filter-container">
+                        <h2 className="bedrooms-titel sub-titel">
+                            Bedrooms
+                        </h2>
+                        {_.range(0, 9).map(n => (
+                            <RoomButton
+                                sx={{ borderRadius: 5, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
+                                className={filter.bedrooms === n ? 'active' : ''}
+                                value={n}
+                                id="bedrooms"
+                                type="number"
+                                name="bedrooms"
+                                key={`room_${n}`}
+                                onClick={handleBedsButton}
+                            >
+                                {n === 0 ? 'Any' : n}
+                            </RoomButton>
+                        ))}
+                    </section>
+
+                    <section className="property-type inner-filter-container">
+                        <h2 className="property-titel sub-titel">
+                            Property type
+                        </h2>
+                        <div className="property-buttons">
+                            {Object.keys(filter.propertyTypes).map(propertyT => (
+                                <button
+                                    className={filter.propertyTypes[propertyT] ? 'active' : ''}
+                                    onClick={(ev) => {
+                                        handlePtButton(ev, propertyT)
+                                    }}
+                                    name="propertyType"
+                                    value={propertyT}
+                                    key={`property_${propertyT}`}
+                                >
+                                    <div className="inner-property-button flex column justify-space-between">
+                                        <img className="property-img" src={propertyIcon[propertyT]} />
+                                        <div className="inner-property-button-txt">{propertyT}</div>
+                                    </div>
+                                </button>
+                            )
+                            )}
+                        </div>
+                    </section>
+
+                    <section className="amenities flex column inner-filter-container">
+                        <div>
+                            <h2 className="amenities-titel sub-titel">
+                                Amenities
+                            </h2>
+                        </div>
+                        <div className="amenities-list flex column">
+                            {Object.keys(filter.amenities).map(a =>
+                                <FormControlLabel
+                                    className='amenitie-checkBox'
+                                    key={a}
+                                    label={a}
+                                    name='amenities'
+                                    onChange={handleCheckBox}
+                                    control={<Checkbox
+                                        key={a}
+                                        id={a}
+                                        checked={filter.amenities[a]} />}
+                                />
+                            )}
+                        </div>
+                    </section>
+                </form >
+            </section >
+            <footer className="filter-footer flex justify-space-between">
+                <Link
+                    component="button"
+                    variant="body1"
+                    color="#000000"
+                    fontWeight="bold"
+                    onClick={(ev) => resetFilters(ev)}>
+                    Clear all
+                </Link>
+                <Button
+                    className="filter-btn"
+                    onClick={() => handleClose()}
+                >
+                    Show {staysCount} homes
+                </Button>
+            </footer>
+        </React.Fragment>
     )
 }

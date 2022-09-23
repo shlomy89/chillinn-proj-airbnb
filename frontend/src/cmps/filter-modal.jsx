@@ -5,16 +5,17 @@ import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import Button from '@mui/material/Button'
 import { StayFilter } from './stay-filter.jsx'
-import  filterSvg  from '../assets/img/icons/filter-icon.svg'
+import filterSvg from '../assets/img/icons/filter-icon.svg'
 
 const style = {
+    display: 'flex',
+    flexDirection: 'column',
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: 750,
     height: '90vh',
-    overflowY: 'scroll',
     bgcolor: 'background.paper',
     borderRadius: '10px',
     boxShadow: 24,
@@ -27,15 +28,13 @@ export default function FilterModal(props) {
     const handleClose = () => setOpen(false)
 
     return (
-        <div className="filter-modal">
+        <React.Fragment>
             <button className="open-filter-btn flex align-center"
                 onClick={handleOpen}>
-                    <img src={filterSvg}className="filter-icon" />&nbsp;
+                <img src={filterSvg} className="filter-icon" />&nbsp;
                 Filters
             </button>
             <Modal
-                aria-labelledby="transition-modal-title"
-                aria-describedby="transition-modal-description"
                 open={open}
                 onClose={handleClose}
                 closeAfterTransition
@@ -45,11 +44,13 @@ export default function FilterModal(props) {
                 }}
             >
                 <Fade in={open}>
-                    <Box sx={style}>
+                    <Box
+                    className="filter-modal"
+                    sx={style}>
                         <StayFilter {...props} handleClose={handleClose} />
                     </Box>
                 </Fade>
             </Modal>
-        </div >
+        </React.Fragment>
     )
 }
