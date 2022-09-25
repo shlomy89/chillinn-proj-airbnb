@@ -1,7 +1,6 @@
 import '../../assets/styles/cmps/_review.scss'
 import { ShowMoreButton } from './show-more-button'
 import { ReactComponent as ShowMoreIcon } from '../../assets/img/icons/show-more-icon.svg'
-import { BorderLine } from './border-line'
 import LinesEllipsis from 'react-lines-ellipsis'
 
 export const Review = ({ name, date, review }) => {
@@ -32,7 +31,6 @@ export const Review = ({ name, date, review }) => {
             <div className='show-more-button'>
                 <ShowMoreButton text={'Show more'} Icon={ShowMoreIcon} />
             </div>
-            <BorderLine />
         </div>
     )
 }

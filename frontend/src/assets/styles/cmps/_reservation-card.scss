@@ -13,10 +13,14 @@
     z-index: 1;
     transition: 0.5s;
     .reservation-card-header {
+        margin-bottom: 24px;
         display: flex;
         justify-content: space-between;
     }
-
+    .price {
+        font-size: 22px;
+        font-weight: 600;
+    }
     .per-night {
         color: #111111d5;
     }

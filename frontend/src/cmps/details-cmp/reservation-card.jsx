@@ -60,7 +60,8 @@ export const ReservationCard = ({ stay }) => {
         <div className='reservation-card-container'>
             <div className='reservation-card-header'>
                 <div className='price-per-night'>
-                    ${stay.price} <span className='per-night'>night</span>
+                    <span className='price'>${stay.price}</span>{' '}
+                    <span className='per-night'>night</span>
                 </div>
                 <StarRating rating={4.9} reviews={stay.reviews.length} />
             </div>

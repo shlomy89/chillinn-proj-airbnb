@@ -1,4 +1,3 @@
-import { BorderLine } from './border-line'
 import clsx from 'clsx'
 import moment from 'moment/moment'
 export const Order = ({ userImg, name, order, apartmentLocation, onClick }) => {
@@ -54,7 +53,6 @@ export const Order = ({ userImg, name, order, apartmentLocation, onClick }) => {
             </div>
             {/* <div className='approve-order'>Approve order</div>
             <div className='reject-order'>Reject order</div> */}
-            <BorderLine />
         </div>
     )
 }

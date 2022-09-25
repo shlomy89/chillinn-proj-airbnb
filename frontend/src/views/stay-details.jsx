@@ -31,8 +31,7 @@ import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/s
 import { ThingToKnow } from '../cmps/details-cmp/thing-to-know'
 import { ReservationCard } from '../cmps/details-cmp/reservation-card'
 import { AirCover } from '../cmps/details-cmp/air-cover'
-import { BorderLine } from '../cmps/details-cmp/border-line'
-import { ReviewStats } from '../cmps/details-cmp/ReviewStats'
+import { ReviewStats } from '../cmps/details-cmp/Review-stats'
 import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
 import { addReview } from '../store/actions/review.actions'
@@ -146,14 +145,14 @@ export const StayDetails = () => {
                             </div>
                             <div className='apartment-content-container'></div>
                         </div>
-                        <BorderLine />
-
+                        <div className='border-bottom'></div>
                         <div className='apartment-info'>
                             <ApartmentInfo
                                 text={'Self check-in'}
                                 textInfo={'Check yourself in with the lockbox.'}
                                 Icon={DoorIcon}
                             />
+
                             {/* <ApartmentInfo
                         text={'Veller Homes is a Superhost'}
                         textInfo={
@@ -167,7 +166,7 @@ export const StayDetails = () => {
                     /> */}
                         </div>
                     </section>
-                    <BorderLine />
+                    <div className='border-bottom'></div>
                     <section className='air-cover'>
                         <AirCover
                             text={
@@ -196,6 +195,7 @@ export const StayDetails = () => {
                                     Icon={CarbonMonoxideAlarmIcon}
                                 />
                             </div>
+
                             {/* <div className='amenities-list'>
                                 <IconText text={'Wifi'} Icon={WifiIcon} />
                                 <IconText text={'Washer'} Icon={WasherIcon} />
@@ -213,58 +213,21 @@ export const StayDetails = () => {
                                 />
                             </div> */}
                         </div>
+
                         <button className='show-all-amenities'>
                             Show all amenities{' '}
                         </button>
+                        <div className='border-bottom'></div>
                     </section>
-                    <div className='add-review-container'>
-                        <div
-                            onClick={onAddReview}
-                            className='add-review-button'
-                        >
-                            Add Review
-                        </div>
-                        <span>Rating: </span>
-                        <input
-                            type='number'
-                            value={review.rating}
-                            onChange={(e) =>
-                                setReview((review) => ({
-                                    ...review,
-                                    rating: e.target.value
-                                }))
-                            }
-                        />
-
-                        <span>Review: </span>
-                        <textarea
-                            type='text'
-                            value={review.text}
-                            onChange={(e) =>
-                                setReview((review) => ({
-                                    ...review,
-                                    text: e.target.value
-                                }))
-                            }
-                        />
-                    </div>
                     {/* {stay.reviews.map(review=> {
-                    <BorderLine />
-                    <section className='review'>
+                        <section className='review'>
                         <Review
-                            name={review.by.fullname}
-                            date={review.at}
-                            review={review.txt}
+                        name={review.by.fullname}
+                        date={review.at}
+                        review={review.txt}
                         />
-                    </section>
+                        </section>
                     })} */}
-                    <section className='review'>
-                        <Review
-                            name={stay.reviews[0].by.fullname}
-                            date={stay.reviews[0].at}
-                            review={stay.reviews[0].txt}
-                        />
-                    </section>
                 </div>
                 <ReservationCard stay={stay} />
             </div>
@@ -312,8 +275,45 @@ export const StayDetails = () => {
                     }
                 ]}
             />
+            <section className='review'>
+                <Review
+                    name={stay.reviews[0].by.fullname}
+                    date={stay.reviews[0].at}
+                    review={stay.reviews[0].txt}
+                />
+                <div className='add-review-container'>
+                    <div onClick={onAddReview} className='add-review-button'>
+                        Add Review
+                    </div>
+                    <span>Rating: </span>
+                    <input
+                        type='number'
+                        value={review.rating}
+                        onChange={(e) =>
+                            setReview((review) => ({
+                                ...review,
+                                rating: e.target.value
+                            }))
+                        }
+                    />
+
+                    <span>Review: </span>
+                    <textarea
+                        type='text'
+                        value={review.text}
+                        onChange={(e) =>
+                            setReview((review) => ({
+                                ...review,
+                                text: e.target.value
+                            }))
+                        }
+                    />
+                </div>
+            </section>
+            <div className='border-bottom'></div>
+            <h1 className='to-know-header'>Things to know</h1>
             <section className='things-to-know-container'>
-                {/* <div className='to-know-header'>Things to know</div> */}
+                {/* <div className='to-know-header'></div> */}
                 <ThingToKnow header='House rules'>
                     <IconText
                         text={'Check-in: 3:00 PM - 12:00 AM'}
