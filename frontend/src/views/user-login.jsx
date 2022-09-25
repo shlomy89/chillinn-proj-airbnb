@@ -13,22 +13,37 @@ import { onLogin } from '../store/actions/user.action.js'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SuccessAlert from '../cmps/user-msg.jsx'
+import { useEffect, useState } from 'react'
+import { eventBusService } from '../services/event-bus.service.js'
 
 export function Login() {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-        const data = new FormData(event.currentTarget)
+    const [success, setSuccess] = useState()
+
+    const handleSubmit = (ev) => {
+        ev.preventDefault()
+
+        const data = new FormData(ev.currentTarget)
         const user = {
             username: data.get('username'),
             password: data.get('password')
         }
         if (!user.username || !user.password) return
-        await dispatch(onLogin(user))
-        navigate('/')
+        dispatch(onLogin(user))
+
+        // if (res) {
+        //     console.log('here:');
+        //     setSuccess(true)
+
+        //     setTimeout(() => {
+        //         navigate('/')
+        //     }, 2000)
+        // }
+
+        return false
     }
 
     const theme = createTheme()
@@ -50,8 +65,8 @@ export function Login() {
                     <Typography component="h1" variant="h5">
                         Log in
                     </Typography>
-                    {/* < SuccessAlert msg={'Logged in Successfully'}/> */}
-                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                    { success && <SuccessAlert v msg={'Logged in Successfully, you are being redirected...'}/> }
+                    { !success && <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"
                             required
@@ -87,7 +102,7 @@ export function Login() {
                                 </Link>
                             </Grid>
                         </Grid>
-                    </Box>
+                    </Box> }
                 </Box>
             </Container>
         </ThemeProvider>

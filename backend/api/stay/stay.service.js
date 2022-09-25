@@ -18,7 +18,6 @@ async function getById(stayId) {
     try {
         const collection = await dbService.getCollection('stay')
         const stay = await collection.findOne({ _id: ObjectId(stayId) })
-        console.log({ stayId })
         return stay
     } catch (err) {
         logger.error(`while finding stay ${stayId}`, err)
@@ -38,8 +37,6 @@ async function remove(stayId) {
 }
 
 async function add(stay) {
-    stay.createdAt = Date.now()
-    stay.inStock = true
     try {
         const collection = await dbService.getCollection('stay')
         const addedStay = await collection.insertOne(stay)

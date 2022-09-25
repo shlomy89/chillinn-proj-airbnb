@@ -11,7 +11,7 @@ const router = express.Router()
 // router.use(requireAuth)
 
 router.get('/', log, getReviews)
-router.post('/', log, requireAuth, addReview)
+router.post('/', log, addReview)
 router.delete('/:id', requireAuth, deleteReview)
 
 module.exports = router

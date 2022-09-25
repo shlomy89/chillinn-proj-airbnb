@@ -47,6 +47,7 @@ export const StayDetails = () => {
 
     useEffect(() => {
         const stayId = params.id
+        console.log("stayId", stayId)
         const getReviews = async () => {
             const stay = await stayService.getById(stayId)
             setStay(stay)
@@ -88,7 +89,7 @@ export const StayDetails = () => {
 
     if (!stay) {
         return (
-            <Box sx={{ display: 'flex' }}>
+            <Box sx={{ display: 'flex', margin: '100px auto' }}>
                 <CircularProgress />
             </Box>
         )

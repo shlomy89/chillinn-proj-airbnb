@@ -6,10 +6,10 @@ const asyncLocalStorage = require('../../services/als.service')
 async function query(filterBy = {}) {
     try {
         const criteria = _buildCriteria(filterBy)
+        console.log("criteria", criteria)
         const collection = await dbService.getCollection('review')
-        // const revi = await collection.find().toArray()
-        // console.log({revi})
-        console.log({ criteria })
+        // const reviews = await collection.find().toArray()
+        // return reviews
         let reviews = await collection
             .aggregate([
                 {
@@ -39,7 +39,6 @@ async function query(filterBy = {}) {
                 }
             ])
             .toArray()
-        console.log({ reviews })
         reviews = reviews.map((review) => {
             review.user = {
                 _id: review.user._id,
@@ -56,6 +55,7 @@ async function query(filterBy = {}) {
             delete review.stayId
             return review
         })
+        console.log("reviews", reviews)
         return reviews
     } catch (err) {
         logger.error('cannot find reviews', err)
@@ -81,7 +81,7 @@ async function remove(reviewId) {
 }
 
 async function add(review) {
-    console.log({ review })
+    console.log("review", review)
     try {
         const reviewToAdd = {
             byUserId: ObjectId(review.byUserId),
