@@ -3,7 +3,7 @@ import Slider, { SliderThumb } from '@mui/material/Slider'
 import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import { styled } from '@mui/material/styles'
-import { useMemo } from "react"
+import { useMemo, useEffect, useState } from "react"
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import Link from '@mui/material/Link'
@@ -16,10 +16,25 @@ import Guesthouse from '../assets/img/icons/guesthouse-icon.jpg'
 import Hotel from '../assets/img/icons/hotel-icon.jpg'
 import House from '../assets/img/icons/house-icon.jpg'
 
-export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handleClose }) => {
+export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, handleClose }) => {
+
+    const [localFilter, setLocalFilter] = useState(filter)
+
+    const resetFilters = (ev) => {
+        ev.preventDefault()
+        // separation between StayFilter local state and stay app state
+        // submiting only on demand
+        setLocalFilter(getDefaultFilters())
+    }
+
+    const submit = (ev) => {
+        ev.preventDefault()
+        setFilter(localFilter)
+        handleClose()
+    }
 
     const handleFilters = (ev) => {
-        setFilter(prevFields => ({
+        setLocalFilter(prevFields => ({
             ...prevFields, [ev.target.name]: ev.target.value
         }))
     }
@@ -27,7 +42,7 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
     const handleBedsButton = (ev) => {
         const bedrooms = ev.target.name
         const val = ev.target.value
-        setFilter(prevFields => ({
+        setLocalFilter(prevFields => ({
             ...prevFields, [bedrooms]: +val
         }))
     }
@@ -35,7 +50,7 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
     const handlePtButton = (ev, propertyT) => {
         ev.preventDefault()
         const type = propertyT
-        setFilter(prevFields => ({
+        setLocalFilter(prevFields => ({
             ...prevFields,
             propertyTypes: {
                 ...prevFields.propertyTypes,
@@ -45,12 +60,12 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
     }
 
     const debouncedChangeHandler = useMemo(
-        () => debounce(handleFilters, 300)
+        () => debounce(handleFilters, 500)
         , [])
 
     const handleCheckBox = ({ target }) => {
         const { id, checked, name } = target
-        setFilter(prevFields => ({
+        setLocalFilter(prevFields => ({
             ...prevFields,
             [name]: {
                 ...prevFields[name],
@@ -66,7 +81,7 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
             onChange,
             name: field,
             id: field,
-            [valueField]: filter[field],
+            [valueField]: localFilter[field],
             type
         }
     }
@@ -134,7 +149,7 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
     }
 
     return (
-        filter &&
+        localFilter &&
         <React.Fragment>
             <header className="filter-header flex justify-space-between">
                 <IconButton className="close-filter" onClick={handleClose}>
@@ -166,14 +181,14 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
                         <h2 className="place-type-titel sub-titel">
                             Type of place
                         </h2>
-                        {Object.keys(filter.placeTypes).map(placeT =>
+                        {Object.keys(localFilter.placeTypes).map(placeT =>
                             <FormControlLabel
                                 className='placeT-checkBox'
                                 key={placeT}
                                 label={placeT}
                                 name='placeTypes'
                                 onChange={handleCheckBox}
-                                control={<Checkbox key={placeT} id={placeT} checked={filter.placeTypes[placeT]} />}
+                                control={<Checkbox key={placeT} id={placeT} checked={localFilter.placeTypes[placeT]} />}
                             />
                         )}
                     </section>
@@ -185,7 +200,7 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
                         {_.range(0, 9).map(n => (
                             <RoomButton
                                 sx={{ borderRadius: 5, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
-                                className={filter.bedrooms === n ? 'active' : ''}
+                                className={localFilter.bedrooms === n ? 'active' : ''}
                                 value={n}
                                 id="bedrooms"
                                 type="number"
@@ -203,9 +218,9 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
                             Property type
                         </h2>
                         <div className="property-buttons">
-                            {Object.keys(filter.propertyTypes).map(propertyT => (
+                            {Object.keys(localFilter.propertyTypes).map(propertyT => (
                                 <button
-                                    className={filter.propertyTypes[propertyT] ? 'active' : ''}
+                                    className={localFilter.propertyTypes[propertyT] ? 'active' : ''}
                                     onClick={(ev) => {
                                         handlePtButton(ev, propertyT)
                                     }}
@@ -230,7 +245,7 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
                             </h2>
                         </div>
                         <div className="amenities-list flex column">
-                            {Object.keys(filter.amenities).map(a =>
+                            {Object.keys(localFilter.amenities).map(a =>
                                 <FormControlLabel
                                     className='amenitie-checkBox'
                                     key={a}
@@ -240,7 +255,7 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
                                     control={<Checkbox
                                         key={a}
                                         id={a}
-                                        checked={filter.amenities[a]} />}
+                                        checked={localFilter.amenities[a]} />}
                                 />
                             )}
                         </div>
@@ -253,16 +268,16 @@ export const StayFilter = ({ resetFilters, filter, setFilter, staysCount, handle
                     variant="body1"
                     color="#000000"
                     fontWeight="bold"
-                    onClick={(ev) => resetFilters(ev)}>
+                    onClick={resetFilters}>
                     Clear all
                 </Link>
                 <Button
                     className="filter-btn"
-                    onClick={() => handleClose()}
+                    onClick={submit}
                 >
                     Show {staysCount} homes
                 </Button>
             </footer>
         </React.Fragment>
-    )
+    ) 
 }

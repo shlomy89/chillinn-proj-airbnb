@@ -26,14 +26,8 @@ export function loadReviews() {
 export function addReview(review) {
     return async (dispatch) => {
         try {
-            console.log('aljkshdfjkladsfhjl')
             const addedReview = await reviewService.add(review)
-            // dispatch(getActionAddReview(addedReview))
-
-            // Change the score in user kept in sessionStorage
-            // userService.saveLocalUser(addedReview.byUser)
-            // const { score } = addedReview.byUser
-            // dispatch({ type: 'SET_SCORE', score })
+            dispatch(getActionAddReview(addedReview))
         } catch (err) {
             console.log('ReviewActions: err in addReview', err)
             throw err

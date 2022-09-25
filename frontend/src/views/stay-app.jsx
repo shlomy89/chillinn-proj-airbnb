@@ -6,6 +6,7 @@ import Box from '@mui/material/Box'
 import CircularProgress from '@mui/material/CircularProgress'
 import { useSearchParams } from "react-router-dom"
 import { loadStays, setFilterBy } from '../store/actions/stay.action'
+import {FilterCarousel} from '../cmps/filter-carousel.jsx'
 
 export const StayApp = () => {
     const { stays, isLoading } = useSelector(state => state.stayModule)
@@ -17,6 +18,42 @@ export const StayApp = () => {
         return {
             priceRange: [20, 1900],
             bedrooms: 0,
+            labels: {
+                'Islands': false,
+                'Desidn': false,
+                'Arctic': false,
+                'Surfing': false,
+                'Domes': false,
+                'OMG': false,
+                'Beach': false,
+                'Amazing pool': false,
+                'National parks': false,
+                'Cabins': false,
+                'Campers': false,
+                'Amazing views': false,
+                'Lakefront': false,
+                'Tiny homes': false,
+                'Desert': false,
+                'A-frames': false,
+                'Caves': false,
+                'Tropical': false,
+                'Shared homes': false,
+                'Earth homes': false,
+                'Iconic cities': false,
+                'Bed & breakfasts': false,
+                'Luxe': false,
+                'Farms': false,
+                'Counrtyside': false,
+                'Castles': false,
+                'Historical homes': false,
+                'Skiing': false,
+                'Yurts': false,
+                'Golfing': false,
+                'Beachfront': false,
+                'Vineyards': false,
+                'Towers': false,
+                'Containers': false,
+            },
             propertyTypes: {
                 'House': false,
                 'Apartment': false,
@@ -81,18 +118,18 @@ export const StayApp = () => {
         setSearchParams({ encoded: serializedBase64 })
     }, [filter])
 
-    const resetFilters = (ev) => {
-        ev.preventDefault()
-        setFilter(getDefaultFilterState())
+    const getDefaultFilters = () => {
+        return getDefaultFilterState()
     }
 
     return (
         <div className='stay-app main-layout'>
             <FilterModal
-                resetFilters={resetFilters}
+                getDefaultFilters={getDefaultFilters}
                 filter={filter}
                 setFilter={setFilter}
                 staysCount={stays.length} />
+                <FilterCarousel filter={filter} />
 
             {isLoading ? (
 
