@@ -1,12 +1,14 @@
 const initialState = {
   reviews: [],
 }
+  console.log("reviews", reviews)
 
 export function reviewReducer(state = initialState, action = {}) {
   switch (action.type) {
     case 'SET_REVIEWS':
       return { ...state, reviews: action.reviews }
     case 'ADD_REVIEW':
+      console.log('action HHHHHHHHH:', action)
       return { ...state, reviews: [...state.reviews, action.review] }
     case 'REMOVE_REVIEW':
       return { ...state, reviews: state.reviews.filter(review => review._id !== action.reviewId) }

@@ -30,10 +30,9 @@ export const reviewService = {
 }
 
 function query(filterBy) {
-    var queryStr = !filterBy ? '' : `?name=${filterBy.name}&sort=anaAref`
+    // var queryStr = !filterBy ? '' : `?name=${filterBy.name}&sort=anaAref`
     // return httpService.get(`review${queryStr}`)
-
-    return httpService.get(`review`, filterBy)
+    return httpService.get('review', filterBy)
 }
 
 async function remove(reviewId) {
@@ -42,13 +41,10 @@ async function remove(reviewId) {
     reviewChannel.postMessage(getActionRemoveReview(reviewId))
 }
 async function add(review) {
-    // const addedReview = await httpService.post(`review`, review)
-
+    // const addedReview = await httpService.post('review', review)
     review.byUser = userService.getLoggedinUser()
     review.aboutUser = await userService.getById(review.aboutUserId)
     const addedReview = await httpService.post('review', review)
-
     // reviewChannel.postMessage(getActionAddReview(addedReview))
-
     return addedReview
 }

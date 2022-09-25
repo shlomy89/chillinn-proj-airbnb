@@ -13,10 +13,6 @@ async function getOrders() {
     }
 }
 
-// 632982b8569470128f5dbbab
-
-// 632982b1569470128f5dbbaa
-
 async function getById(orderId) {
     try {
         const collection = await dbService.getCollection('order')

@@ -32,14 +32,14 @@ h2.sub-titel {
         width: 32px;
     }
 
-    .inner-property-button{
+    .inner-property-button {
         position: relative;
         min-height: 120px;
         height: 100%;
         padding: 16px;
     }
 
-    .inner-property-button-txt{
+    .inner-property-button-txt {
         font-weight: 600;
         font-size: 16px;
         line-height: 20px;
@@ -171,4 +171,22 @@ button[name='propertyType'].active {
 .amenities-list {
     max-height: 450px;
     flex-wrap: wrap;
+}
+
+.filter-carousel-container {
+    position: relative;
+
+    .filter-carousel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+
+        .icon-carusel {
+            height: 24px;
+            width: 24px;
+            object-fit: cover;
+        }
+    }
 }
