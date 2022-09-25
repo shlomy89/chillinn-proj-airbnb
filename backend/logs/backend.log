@@ -1177,3 +1177,25 @@
 25.9.2022, 2:52:28 - ERROR - Failed to Login Invalid username or password
 25.9.2022, 2:52:30 - DEBUG - Getting Stays
 25.9.2022, 2:55:51 - INFO - Server is running on port: 3030
+25.9.2022, 10:45:50 - INFO - Server is running on port: 3030
+25.9.2022, 10:47:59 - DEBUG - Getting Stays
+25.9.2022, 11:16:24 - INFO - Req was made
+25.9.2022, 11:16:57 - DEBUG - Getting Stays
+25.9.2022, 11:26:11 - DEBUG - auth.service - login with username: inbar
+25.9.2022, 11:26:13 - INFO - User login:  | {"_id":"632fff956ba92b77f966053a","username":"inbar","firstname":"Inbar","lastname":"Sabag","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png","score":null}
+25.9.2022, 11:26:13 - DEBUG - auth.service - login with username: inbar
+25.9.2022, 11:26:14 - INFO - User login:  | {"_id":"632fff956ba92b77f966053a","username":"inbar","firstname":"Inbar","lastname":"Sabag","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png","score":null}
+25.9.2022, 11:26:41 - DEBUG - auth.service - signup with username: inbar, firsname: inbar
+25.9.2022, 11:26:41 - ERROR - Failed to signup Username already taken
+25.9.2022, 11:27:01 - DEBUG - Getting Stays
+25.9.2022, 11:27:30 - ERROR - while finding stay order | {}
+25.9.2022, 11:27:30 - ERROR - Failed to get stay | {}
+25.9.2022, 11:28:22 - DEBUG - Getting Stays
+25.9.2022, 12:20:49 - DEBUG - Getting Stays
+25.9.2022, 12:22:10 - DEBUG - Getting Stays
+25.9.2022, 12:23:48 - DEBUG - Getting Stays
+25.9.2022, 12:55:49 - INFO - Req was made
+25.9.2022, 12:56:13 - DEBUG - Getting Stays
+25.9.2022, 13:09:05 - DEBUG - Getting Stays
+25.9.2022, 13:14:09 - DEBUG - Getting Stays
+25.9.2022, 13:17:37 - DEBUG - Getting Stays

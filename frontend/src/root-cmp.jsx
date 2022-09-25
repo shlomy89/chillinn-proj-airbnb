@@ -14,10 +14,10 @@ import './assets/styles/views/_root-cmp.scss'
 function App() {
     return (
         <div className='main-app'>
-            <header className='heder-container main-layout full'>
+            <header className='header-container main-layout full'>
                 <AppHeader />
             </header>
-            <main className='container'>
+            <main className='main-container'>
                 <Routes>
                     <Route path='stay/edit/:id' element={<StayEdit />} />
                     <Route path='stay/edit' element={<StayEdit />} />
