@@ -3,22 +3,21 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import searchSvg from '../../assets/img/icons/search-icon.svg'
 
-export function SearchBar() {
-    const [isSearchBarOpen, setIsSearchBarOpen] = useState(false)
-
-    function handelClick(btn) {
-        setIsSearchBarOpen(true)
-    }
+export function SearchBar({ handelClick }) {
 
     return (
         <div className='search-bar flex justify-space-between align-center'>
-            <button className='btn-where' onClick={() => handelClick('where')}>
+            <button className='btn-where'
+                onClick={() => handelClick('where')}
+            >
                 Anywhere
             </button>
 
             <span className='divider'></span>
 
-            <button className='btn-dates' onClick={() => handelClick('dates')}>
+            <button className='btn-dates'
+                onClick={() => handelClick('dates')}
+            >
                 AnyWeek
             </button>
 

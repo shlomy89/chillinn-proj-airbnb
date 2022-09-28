@@ -6,6 +6,7 @@
     }
 
     .stay-apartment-location-header-container {
+        margin-top: -20px;
         display: flex;
         justify-content: space-between;
         .apartment-location-rating {
@@ -63,6 +64,7 @@
         .apartment-owner-img {
             border-radius: 50%;
             width: 56px;
+            height: 56px;
         }
         .apartment-content-container {
             display: flex;

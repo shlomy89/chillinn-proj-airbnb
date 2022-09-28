@@ -1,5 +1,4 @@
 import '../../assets/styles/cmps/_air-cover.scss'
-import { BorderLine } from './border-line'
 import { ShowMoreButton } from './show-more-button'
 import { ReactComponent as ShowMoreIcon } from '../../assets/img/icons/show-more-icon.svg'
 import Swal from 'sweetalert2'
@@ -21,9 +20,8 @@ export const AirCover = ({ text }) => {
             />
             <span className='air-cover-text'>{text}</span>
             <div className='learn-more-button' onClick={() => handleOpen()}>
-                <ShowMoreButton text={'Learn more'} Icon={ShowMoreIcon} />
+                {/* <ShowMoreButton text={'Learn more'} Icon={ShowMoreIcon} /> */}
             </div>
-            <BorderLine />
             <GenericModal isOpen={open} onClose={handleClose}>
                 <section className='air-cover-modal-container'>
                     <img
@@ -32,6 +30,7 @@ export const AirCover = ({ text }) => {
                     />
                 </section>
             </GenericModal>
+            <div className='border-bottom'></div>
         </div>
     )
 }
