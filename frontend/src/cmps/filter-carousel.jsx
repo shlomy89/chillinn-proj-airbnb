@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import AliceCarousel from 'react-alice-carousel'
-import 'react-alice-carousel/lib/alice-carousel.css'
+import nextIcon from '../assets/img/icons/right-arrow.svg'
+import prevIcon from '../assets/img/icons/left-arrow.svg'
 
 export const FilterCarousel = ({ setFilter }) => {
 
@@ -95,17 +96,22 @@ export const FilterCarousel = ({ setFilter }) => {
 
     const items = icon.map((i, idx) => {
         return (
-            <div
-                id={typeList[idx]}
-                className='icon-container flex column justify-center align-center'
-                onClick={handleClick}>
-                <img
-                    className='icon-carousel'
-                    src={i}
+            <section className='icon-carousel-wrapper flex column justify-center align-center'>
+                <button
                     id={typeList[idx]}
-                    role="presentation" />
-                {typeList[idx]}
-            </div>
+                    className={`${activeType === typeList[idx] ? 'active' : ''} icon-btn flex column justify-center align-center`}
+                    onClick={handleClick}>
+                    <img
+                        className='icon-carousel'
+                        src={i}
+                        id={typeList[idx]}
+                        role="presentation" />
+                    <div className='type-container flex column justify-center align-center'>
+                        <span className='type'>{typeList[idx]}</span>
+                        <div className='hover-border' />
+                    </div>
+                </button>
+            </section>
         )
     })
 
@@ -121,7 +127,20 @@ export const FilterCarousel = ({ setFilter }) => {
                 responsive={responsive}
                 controlsStrategy="alternate"
                 disableDotsControls={true}
-                items={items} />
+                items={items} 
+                paddingLeft={40}
+                renderPrevButton={() => {
+                    return <button className="prev-btn">
+                        <img src={prevIcon} className="alice-carousel__prev-btn-item" />
+                        </button>
+                  }}
+                  renderNextButton={() => {
+                    return <button  className="next-btn">
+                        <img src={nextIcon} className="alice-carousel__next-btn-item" />
+                        </button>
+                  }}
+        
+                />
         </section>
     )
 }
