@@ -1,24 +1,6 @@
 import { PieChart, Pie, Cell } from 'recharts'
 import clsx from 'clsx'
 
-const data = [
-    {
-        name: 'Approved',
-        value: 121,
-        color: 'rgba(103,193,57,255)'
-    },
-    {
-        name: 'Rejected',
-        value: 25,
-        color: 'rgba(244,108,108,255)'
-    },
-    {
-        name: 'Pending',
-        value: 30,
-        color: 'rgba(252,94,6,255)'
-    }
-]
-
 const ChartPieIndex = ({ orderStatus }) => {
     return (
         <div className='index-container'>
@@ -28,7 +10,9 @@ const ChartPieIndex = ({ orderStatus }) => {
     )
 }
 
-export const HostPieDetails = () => {
+export const HostPieDetails = ({ data }) => {
+    console.log('data:', data)
+
     return (
         <div className='pie-chart-container'>
             <PieChart width={210} height={210}>
@@ -47,9 +31,9 @@ export const HostPieDetails = () => {
                 </Pie>
             </PieChart>
             <div className='chart-pie-index-container'>
-                <ChartPieIndex orderStatus={'pending'} />
-                <ChartPieIndex orderStatus={'rejected'} />
-                <ChartPieIndex orderStatus={'approved'} />
+                <ChartPieIndex orderStatus={`${data[2].value} pending`} />
+                <ChartPieIndex orderStatus={`${data[1].value} rejected`} />
+                <ChartPieIndex orderStatus={`${data[0].value} approved`} />
             </div>
         </div>
     )

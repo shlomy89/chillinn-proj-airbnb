@@ -6,8 +6,9 @@ const asyncLocalStorage = require('../../services/als.service')
 async function query(filterBy = {}) {
     try {
         const criteria = _buildCriteria(filterBy)
-        console.log("criteria", criteria)
+        console.log('criteria', criteria)
         const collection = await dbService.getCollection('review')
+        // console.log(await collection.find().toArray())
         // const reviews = await collection.find().toArray()
         // return reviews
         let reviews = await collection
@@ -39,23 +40,22 @@ async function query(filterBy = {}) {
                 }
             ])
             .toArray()
-        reviews = reviews.map((review) => {
-            review.user = {
-                _id: review.user._id,
-                firstname: review.user.firstname,
-                lastname: review.user.lastname
-            }
-            review.stay = {
-                _id: review.stay._id,
-                name: review.stay.name,
-                price: review.stay.price
-            }
-            review.createdAt = ObjectId(review._id).getTimestamp()
-            delete review.byUserId
-            delete review.stayId
-            return review
-        })
-        console.log("reviews", reviews)
+        // reviews = reviews.map((review) => {
+        //     review.user = {
+        //         _id: review.user._id,
+        //         firstname: review.user.firstname,
+        //         lastname: review.user.lastname
+        //     }
+        //     review.stay = {
+        //         _id: review.stay._id,
+        //         name: review.stay.name,
+        //         price: review.stay.price
+        //     }
+        //     review.createdAt = ObjectId(review._id).getTimestamp()
+        //     delete review.byUserId
+        //     delete review.stayId
+        //     return review
+        // })
         return reviews
     } catch (err) {
         logger.error('cannot find reviews', err)
@@ -81,7 +81,7 @@ async function remove(reviewId) {
 }
 
 async function add(review) {
-    console.log("review", review)
+    console.log('review', review)
     try {
         const reviewToAdd = {
             byUserId: ObjectId(review.byUserId),

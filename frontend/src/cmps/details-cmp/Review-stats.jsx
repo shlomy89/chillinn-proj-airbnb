@@ -9,12 +9,12 @@ export function ReviewStats({ reviews }) {
         Value: 0
     }
     reviews.forEach((review) => {
-        stats.Accuracy += review.rate.accuracy
-        stats.Checkin += review.rate.checkin
-        stats.Cleanliness += review.rate.cleanliness
-        stats.Communication += review.rate.communication
-        stats.Location += review.rate.location
-        stats.Value += review.rate.value
+        stats.Accuracy += review.rating.accuracy
+        stats.Checkin += review.rating.checkin
+        stats.Cleanliness += review.rating.cleanliness
+        stats.Communication += review.rating.communication
+        stats.Location += review.rating.location
+        stats.Value += review.rating.value
     })
     for (const key in stats) {
         stats[key] = (stats[key] / reviews.length).toFixed(1)

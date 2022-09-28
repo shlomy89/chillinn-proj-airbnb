@@ -33,7 +33,7 @@ const agesInfo = {
     }
 }
 
-export const ReservationCard = ({ stay }) => {
+export const ReservationCard = ({ stay, rating, reviews }) => {
     const [startDate, setStartDate] = useState(new Date())
     const [endDate, setEndDate] = useState(
         new Date(Date.now() + 24 * 60 * 60 * 1000)
@@ -60,10 +60,10 @@ export const ReservationCard = ({ stay }) => {
         <div className='reservation-card-container'>
             <div className='reservation-card-header'>
                 <div className='price-per-night'>
-                    <span className='price'>${stay.price}</span>{' '}
+                    <span className='price'>${stay.price.toFixed(2)}</span>{' '}
                     <span className='per-night'>night</span>
                 </div>
-                <StarRating rating={4.9} reviews={stay.reviews.length} />
+                <StarRating rating={rating} reviews={reviews?.length} />
             </div>
             <DatePicker
                 checkIn={startDate}
@@ -81,18 +81,18 @@ export const ReservationCard = ({ stay }) => {
             <section className='summary-price-container'>
                 <SummaryPrice
                     text={`${stay.price} * ${nights} nights`}
-                    total={stay.price * nights}
+                    total={Math.round(stay.price * nights).toFixed(2)}
                 />
 
                 <SummaryPrice
                     text={'Service fee'}
-                    total={Math.round(stay.price * nights * 0.14)}
+                    total={Math.round(stay.price * nights * 0.14).toFixed(2)}
                 />
             </section>
             <div className='total-price'></div>
             <SummaryPrice
                 text={'Total'}
-                total={Math.round(stay.price * nights * 1.14)}
+                total={Math.round(stay.price * nights * 1.14).toFixed(2)}
             />
         </div>
     )

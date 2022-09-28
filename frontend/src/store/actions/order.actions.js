@@ -46,7 +46,7 @@ export function onRemoveOrder(orderId) {
     }
 }
 
-export function onAddOrder({ stay, startDate, endDate, guestsNum }) {
+export function onAddOrder({ stay, startDate, endDate, guestsNum, nights }) {
     // const { buyerUser } = orderToAdd
     return async (dispatch, getState) => {
         try {
@@ -71,6 +71,7 @@ export function onAddOrder({ stay, startDate, endDate, guestsNum }) {
                 startDate: startDate.getTime(),
                 endDate: endDate.getTime(),
                 guestsNum,
+                nights,
                 stayId,
                 userId
             })
