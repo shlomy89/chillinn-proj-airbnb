@@ -48,6 +48,9 @@
 @import 'cmps/order';
 @import 'cmps/host-summary-income';
 @import 'cmps/host-pie-details';
+// @import "react-alice-carousel/lib/scss/alice-carousel.scss";
+@import 'cmps/alice-carousel';
+
 @import 'cmps/add-review';
 @import 'cmps/amenity';
 // preview
@@ -56,3 +59,4 @@
 @import 'cmps/header/user-menu-button';
 @import 'cmps/header/user-modal';
 @import 'cmps/header/search-bar';
+@import 'cmps/header/search-input';

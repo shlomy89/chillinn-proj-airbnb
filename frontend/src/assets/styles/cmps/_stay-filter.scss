@@ -112,6 +112,9 @@ button[name='propertyType'].active {
 }
 
 .open-filter-btn {
+    display: block;
+    position: relative;
+    float: right;
     justify-content: space-evenly;
     margin-inline-start: auto;
     width: 88px;
@@ -174,20 +177,67 @@ button[name='propertyType'].active {
 
 .filter-carousel-container {
 
-    .icon-carousel {
-        width: 24px !important;
-        height: 24px !important;
+    .alice-carousel__stage-item{
+        width: max-content !important;
+        margin-inline-end: 40px;
+
+        section.icon-carousel-wrapper {
+            width: max-content;
+        }
     }
 
-    .icon-container {
-        gap: 8px;
+    .icon-btn {
+        gap: 6px;
+        padding: 4px 0 14px;
+        margin: 12px 0 0;
+        border: none;
         font-family: Circular;
-        color: #717171;
         font-size: 12px;
         line-height: 16px;
+        opacity: 0.6;
+
+        &.icon-btn.active {
+            color: #000000;
+            opacity: 1;
+
+            .hover-border {
+                background-color: #000000;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: #000000;
+            transition:  0.2s;
+            opacity: 1;
+
+            .hover-border {
+                background-color: lightgray;
+            }
+        }
+
+        &:active {
+            transform: scale(0.95);
+            transition: 0.3s;
+        }
+
+        .type-container {
+            gap: 6px;
+
+
+        }
+
+        img.icon-carousel {
+            width: 24px !important;
+            height: 24px !important;
+        }
+
+        .hover-border {
+            background-color: transparent;
+            height: 2px;
+            width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
     }
-}
-
-.filters-container {
-
 }
