@@ -94,10 +94,6 @@ button[name='propertyType'].active {
     display: block !important;
 }
 
-.filter-container .amenities {
-    column-count: 2;
-}
-
 .divider {
     margin-block-start: 20px !important;
 }
@@ -169,24 +165,29 @@ button[name='propertyType'].active {
 }
 
 .amenities-list {
-    max-height: 450px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 100px;
+    grid-row-gap: 20px;
 }
 
 .filter-carousel-container {
-    position: relative;
 
-    .filter-carousel {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 15px;
-
-        .icon-carusel {
-            height: 24px;
-            width: 24px;
-            object-fit: cover;
-        }
+    .icon-carousel {
+        width: 24px !important;
+        height: 24px !important;
     }
+
+    .icon-container {
+        gap: 8px;
+        font-family: Circular;
+        color: #717171;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+.filters-container {
+
 }

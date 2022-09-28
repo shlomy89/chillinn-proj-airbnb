@@ -8,7 +8,8 @@ async function getStays(req, res) {
         bedrooms: 0,
         propertyTypes: {},
         placeTypes: {},
-        amenities: {}
+        amenities: {},
+        labels: ''
     }
     try {
         logger.debug('Getting Stays')
@@ -21,13 +22,13 @@ async function getStays(req, res) {
                 bedrooms: params.bedrooms,
                 propertyTypes: params.propertyTypes,
                 placeTypes: params.placeTypes,
-                amenities: params.amenities
+                amenities: params.amenities,
+                labels: params.labels
             }
         }
 
         const stays = await stayService.query(filterBy)
         res.json(stays)
-        console.log(`after sending collection: ${Date.now()}`)
     } catch (err) {
         logger.error('Failed to get stays', err)
         res.status(500).send({ err: 'Failed to get stays' })

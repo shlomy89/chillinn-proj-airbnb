@@ -3,7 +3,7 @@ import Slider, { SliderThumb } from '@mui/material/Slider'
 import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import { styled } from '@mui/material/styles'
-import { useMemo, useEffect, useState } from "react"
+import { useMemo, useState } from "react"
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import Link from '@mui/material/Link'
@@ -244,7 +244,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                                 Amenities
                             </h2>
                         </div>
-                        <div className="amenities-list flex column">
+                        <div className="amenities-list">
                             {Object.keys(localFilter.amenities).map(a =>
                                 <FormControlLabel
                                     className='amenitie-checkBox'

@@ -13,8 +13,7 @@ import { onLogin } from '../store/actions/user.action.js'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SuccessAlert from '../cmps/user-msg.jsx'
-import { useEffect, useState } from 'react'
-import { eventBusService } from '../services/event-bus.service.js'
+import { useState, useEffect } from 'react'
 
 export function Login() {
 
@@ -23,7 +22,11 @@ export function Login() {
 
     const [success, setSuccess] = useState()
 
-    const handleSubmit = (ev) => {
+    // useEffect(() => {
+    //     console.log('loggedInUser:', loggedInUser)
+    // }, [loggedInUser])
+
+    const handleSubmit = async (ev) => {
         ev.preventDefault()
 
         const data = new FormData(ev.currentTarget)
@@ -31,19 +34,16 @@ export function Login() {
             username: data.get('username'),
             password: data.get('password')
         }
-        if (!user.username || !user.password) return
-        dispatch(onLogin(user))
+        if (!user.username || !user.password) return setSuccess(false)
+
+        await dispatch(onLogin(user))
 
         // if (res) {
-        //     console.log('here:');
-        //     setSuccess(true)
-
-        //     setTimeout(() => {
-        //         navigate('/')
-        //     }, 2000)
+        setSuccess(true)
+        setTimeout(() => {
+            navigate('/')
+        }, 3000)
         // }
-
-        return false
     }
 
     const theme = createTheme()
@@ -65,8 +65,8 @@ export function Login() {
                     <Typography component="h1" variant="h5">
                         Log in
                     </Typography>
-                    { success && <SuccessAlert v msg={'Logged in Successfully, you are being redirected...'}/> }
-                    { !success && <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                    {success && <SuccessAlert msg={'Logged in Successfully, you are being redirected...'} />}
+                    {!success && <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"
                             required
@@ -102,7 +102,7 @@ export function Login() {
                                 </Link>
                             </Grid>
                         </Grid>
-                    </Box> }
+                    </Box>}
                 </Box>
             </Container>
         </ThemeProvider>

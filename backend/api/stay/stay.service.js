@@ -6,10 +6,8 @@ async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('stay')
-        console.log(`before getting collection: ${Date.now()}`)
-        var stays = await collection.find(criteria).toArray()
-        console.log(stays[0])
-        console.log(`after getting collection: ${Date.now()}`)
+
+        const stays = await collection.find(criteria).toArray()
         return stays
     } catch (err) {
         logger.error('cannot find stays', err)
@@ -67,23 +65,37 @@ function _buildCriteria(filterBy) {
     const criteria = {
         price: {}
     }
-    const { priceRange, bedrooms, propertyTypes, placeTypes, amenities } =
-        filterBy
+
+    const {
+        priceRange,
+        bedrooms,
+        propertyTypes,
+        placeTypes,
+        amenities,
+        labels
+    } = filterBy
+
     const [minPrice, maxPrice] = priceRange
 
     const chosePropertyTypes = Object.keys(propertyTypes).filter(
         (p) => propertyTypes[p]
     )
+
     const checkedPlaceTypes = Object.keys(placeTypes).filter(
         (p) => placeTypes[p]
     )
+
     const checkedAmenities = Object.keys(amenities).filter((a) => amenities[a])
 
+    if (labels) {
+        criteria.type = { $eq: labels }
+    }
+
     if (chosePropertyTypes.length) {
-        const typesRegex = chosePropertyTypes.map(
+        const propertyRegex = chosePropertyTypes.map(
             (t) => new RegExp(`^${t}$`, 'i')
         )
-        criteria.propertyType = { $in: typesRegex }
+        criteria.propertyType = { $in: propertyRegex }
     }
 
     if (checkedAmenities.length) {

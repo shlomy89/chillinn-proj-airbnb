@@ -19,7 +19,7 @@ export function Signup() {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    let userImg = 'https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png'
+    const userImg = 'https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png'
 
     const handleSubmit = async (event) => {
         event.preventDefault()
