@@ -9,7 +9,7 @@ import { Carousel } from 'react-responsive-carousel'
 
 export function StayPreview({ stay }) {
     
-    const { numberWithCommas, getRandomIntInclusive, getRandomFloatInclusive } = utilService
+    const { numberWithCommas, getRandomIntInclusive, getRandomFloatInclusive, randomBoolean } = utilService
     const [likeClicked, setLikeClicked] = useState(false)
     const navigate = useNavigate()
 
@@ -51,18 +51,20 @@ export function StayPreview({ stay }) {
                 <div className='preview-details'>
                     <div className='text rate'>
                         <RatingRates
-                            rating={getRandomFloatInclusive(2,5,1)}
-                            reviews={getRandomIntInclusive(1, 200)}
+                            rating={getRandomFloatInclusive(4,5,1)}
+                            reviews={getRandomIntInclusive(1, 50)}
                         />
                     </div>
                     <div className='text name'>{stay.name}</div>
                     <div className='text summary'>{stay.summary}</div>
                     <div className='text capacity'>{getBedsNum()}</div>
                     <div className='text price'>
+                    {randomBoolean() && 
                         <span className='full-night-price'>
-                            ${numberWithCommas((stay.price * 1.3.toFixed()))}
+                            ${numberWithCommas(((stay.price * 1.3).toFixed()))}&nbsp;
                         </span>
-                        &nbsp;
+                        }
+                    
                         <span className='night-price'>
                             ${numberWithCommas(stay.price)}{' '}
                         </span>
