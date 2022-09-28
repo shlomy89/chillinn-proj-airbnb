@@ -12,6 +12,7 @@ import { AppFooter } from './cmps/details-cmp/app-footer.jsx'
 import './assets/styles/views/_root-cmp.scss'
 
 function App() {
+
     return (
         <div className='main-app'>
             <header className='heder-container main-layout full'>

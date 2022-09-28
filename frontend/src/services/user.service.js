@@ -55,7 +55,6 @@ async function update(user) {
 async function login(userCred) {
     const user = await httpService.post('auth/login', userCred)
     if (user) {
-        // showSuccessMsg('Logged in Successfully')
         // socketService.login(user._id)
         return saveLocalUser(user)
     }
