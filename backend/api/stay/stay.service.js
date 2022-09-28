@@ -3,11 +3,14 @@ const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy = {}) {
+    console.log({ filterBy })
     const criteria = _buildCriteria(filterBy)
+    console.log({ criteria })
     try {
+        console.log({ filterBy })
         const collection = await dbService.getCollection('stay')
-
         const stays = await collection.find(criteria).toArray()
+        console.log({ stays: stays.length })
         return stays
     } catch (err) {
         logger.error('cannot find stays', err)
@@ -67,12 +70,13 @@ function _buildCriteria(filterBy) {
     }
 
     const {
-        priceRange,
+        priceRange = [],
         bedrooms,
-        propertyTypes,
-        placeTypes,
-        amenities,
-        labels
+        propertyTypes = {},
+        placeTypes = {},
+        amenities = {},
+        labels,
+        hostId
     } = filterBy
 
     const [minPrice, maxPrice] = priceRange
@@ -119,6 +123,10 @@ function _buildCriteria(filterBy) {
 
     if (bedrooms) {
         criteria.bedrooms = { $eq: bedrooms }
+    }
+
+    if (hostId) {
+        return { 'host._id': { $eq: hostId } }
     }
 
     return criteria

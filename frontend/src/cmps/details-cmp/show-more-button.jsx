@@ -1,12 +1,11 @@
 import '../../assets/styles/cmps/_show-more-button.scss'
 
-export const ShowMoreButton = ({ text, Icon }) => {
+export const ShowMoreButton = ({ text, Icon, onClick }) => {
     return (
-        <div className='show-more-button'>
+        <div className='show-more-button' onClick={onClick}>
             {text}
             <div className='icon-weight'>
-                {' '}
-                <Icon />{' '}
+                <Icon />
             </div>
         </div>
     )

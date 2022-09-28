@@ -7,7 +7,6 @@ import { StarRating } from '../cmps/details-cmp/start-rating'
 import { ActionButton } from '../cmps/details-cmp/action-button'
 import { ReactComponent as HeartIcon } from '../../src/assets/img/icons/heart-icon.svg'
 import { ReactComponent as ShareIcon } from '../../src/assets/img/icons/share-icon.svg'
-import { ApartmentInfo } from '../cmps/details-cmp/apartment-info'
 import { ReactComponent as DoorIcon } from '../../src/assets/img/icons/door-icon.svg'
 import { IconText } from '../cmps/details-cmp/icon-text'
 import { ReactComponent as KitchenIcon } from '../../src/assets/img/icons/kitchen-icon.svg'
@@ -35,75 +34,48 @@ import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
 import { addReview } from '../store/actions/review.actions'
 import { useDispatch } from 'react-redux'
-import { mean, meanBy, transform } from 'lodash'
+import { compact, mean, meanBy, transform, values } from 'lodash'
 import { AddReview } from '../cmps/details-cmp/add-review'
+import { Collapse } from 'react-collapse'
+import { Amenity } from '../cmps/details-cmp/amenity'
+import { useMemo } from 'react'
+import { map } from 'lodash'
+import { sortBy } from 'lodash'
 
 export const StayDetails = () => {
     const dispatch = useDispatch()
     const [stay, setStay] = useState(null)
     const [reviews, setReviews] = useState([])
+    const [isOpen, setIsOpen] = useState(null)
 
     const params = useParams()
     const navigate = useNavigate()
 
-    const rating = meanBy(reviews, ({ rating }) => +rating).toFixed(2)
+    const rating = meanBy(reviews, ({ rating }) =>
+        mean(values(rating))
+    ).toFixed(2)
 
     useEffect(() => {
         const stayId = params.id
-        console.log('stayId', stayId)
         const getReviews = async () => {
             const stay = await stayService.getById(stayId)
             setStay(stay)
             const reviews = await reviewService.query({ stayId })
-            console.log({ reviews })
-            setReviews(reviews)
+
+            setReviews(
+                reviews.sort((revA, revB) =>
+                    new Date(revA.date).getTime() >
+                    new Date(revB.date).getTime()
+                        ? -1
+                        : 1
+                )
+            )
         }
         getReviews()
     }, [params.id])
 
-    // const onBack = () => {
-
-    const onRemoveReview = async (reviewId) => {
-        try {
-            await reviewService.remove(reviewId)
-            const newReviews = reviews.filter(
-                (review) => review._id !== reviewId
-            )
-            setReviews(newReviews)
-        } catch (err) {
-            console.log(err)
-        }
-    }
-
-    // const onAddReview = async () => {
-    //     dispatch(addReview({ ...review, stayId: stay._id }))
-    // }
-    // const onRemoveReview = async (reviewId) => {
-    //     try {
-    //         await reviewService.remove(reviewId)
-    //         const newReviews = reviews.filter(
-    //             (review) => review._id !== reviewId
-    //         )
-    //         setReviews(newReviews)
-    //     } catch (err) {
-    //         console.log(err)
-    //     }
-    // }
-
-    const amanities = transform(
-        stay?.amenities,
-        (res, amanity) => {
-            import(
-                `../assets/img/icons/${amanity
-                    .replaceAll(' ', '-')
-                    .toLowerCase()}-icon.svg`
-            )
-                .then((icon) => res.push(amanity))
-                .catch((e) => {
-                    console.log(e)
-                })
-        },
-        []
+    const amenities = compact(
+        map(stay?.amenities, (amenity) => <Amenity amenity={amenity} />)
     )
 
     if (!stay) {
@@ -113,7 +85,7 @@ export const StayDetails = () => {
             </Box>
         )
     }
-
+    console.log(stay.host._id)
     return (
         <div className='stay-details narrow main-layout'>
             <div className='title'>
@@ -167,23 +139,7 @@ export const StayDetails = () => {
                         </div>
                         <div className='border-bottom'></div>
                         <div className='apartment-info'>
-                            <ApartmentInfo
-                                text={'Self check-in'}
-                                textInfo={'Check yourself in with the lockbox.'}
-                                Icon={DoorIcon}
-                            />
-
-                            {/* <ApartmentInfo
-                        text={'Veller Homes is a Superhost'}
-                        textInfo={
-                            'Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.'
-                        }
-                        Icon={SuperHostIcon}
-                        />
-                        <ApartmentInfo
-                        text={'Free cancellation'}
-                        Icon={FreeCancellationIcon}
-                    /> */}
+                            {amenities.slice(0, 3)}
                         </div>
                     </section>
                     <div className='border-bottom'></div>
@@ -200,62 +156,26 @@ export const StayDetails = () => {
                         </div>
                         <div className='amenities-list-container'>
                             <div className='amenities-list'>
-                                {amanities.map((amenety) => (
-                                    <div>
-                                        {amenety}
-                                        <img
-                                            src={require(`../../src/assets/img/icons/${amenety.toLowerCase()}-icon.svg`)}
-                                        />
-                                    </div>
-                                ))}
-                                {/* <IconText text={'Kitchen'} Icon={KitchenIcon} />
-                                <IconText
-                                    text={'TV with standard cable'}
-                                    Icon={TvIcon}
-                                />
-                                <IconText text={'Dryer'} Icon={DryerIcon} />
-                                <IconText
-                                    text={'High chair'}
-                                    Icon={HighChairIcon}
-                                />
-                                <IconText
-                                    text={'Carbon monoxide alarm'}
-                                    Icon={CarbonMonoxideAlarmIcon}
-                                /> */}
+                                {amenities.slice(0, 10)}
                             </div>
-
-                            {/* <div className='amenities-list'>
-                                <IconText text={'Wifi'} Icon={WifiIcon} />
-                                <IconText text={'Washer'} Icon={WasherIcon} />
-                                <IconText
-                                    text={'Air conditioning'}
-                                    Icon={AirConditioningIcon}
-                                />
-                                <IconText
-                                    text={'Hair dryer'}
-                                    Icon={HairDryerIcon}
-                                />
-                                <IconText
-                                    text={'Smoke alarm'}
-                                    Icon={SmokeAlarmIcon}
-                                />
-                            </div> */}
                         </div>
-
-                        <button className='show-all-amenities'>
-                            Show all amenities{' '}
-                        </button>
+                        <Collapse className='amenities-list' isOpened={isOpen}>
+                            <div className='amenities-list-container'>
+                                <div className='amenities-list'>
+                                    {amenities.slice(10)}
+                                </div>
+                            </div>
+                        </Collapse>
+                        {amenities.length > 10 && (
+                            <button
+                                onClick={() => setIsOpen(!isOpen)}
+                                className='show-all-amenities'
+                            >
+                                Show {isOpen ? 'less' : 'more'} amenities
+                            </button>
+                        )}
                         <div className='border-bottom'></div>
                     </section>
-                    {/* {stay.reviews.map(review=> {
-                        <section className='review'>
-                        <Review
-                        name={review.by.fullname}
-                        date={review.at}
-                        review={review.txt}
-                        />
-                        </section>
-                    })} */}
                 </div>
                 <ReservationCard
                     stay={stay}
@@ -265,42 +185,12 @@ export const StayDetails = () => {
             </div>
             <ReviewStats reviews={reviews} />
             <section className='review'>
-                {/* <Review
-                    name={stay.reviews[0].by.fullname}
-                    date={stay.reviews[0].at}
-                    review={stay.reviews[0].txt}
-                /> */}
-                {reviews?.slice(0, 6).map((review) => (
-                    <Review review={review} />
-                ))}
-                {/* <div className='add-review-container'>
-                    <div onClick={onAddReview} className='add-review-button'>
-                        Add Review
-                    </div>
-                    <span>Rating: </span>
-                    <input
-                        type='number'
-                        value={review.rating}
-                        onChange={(e) =>
-                            setReview((review) => ({
-                                ...review,
-                                rating: e.target.value
-                            }))
-                        }
-                    />
+                <div className='reviews-container'>
+                    {reviews?.slice(0, 6).map((review) => (
+                        <Review review={review} />
+                    ))}
+                </div>
 
-                    <span>Review: </span>
-                    <textarea
-                        type='text'
-                        value={review.text}
-                        onChange={(e) =>
-                            setReview((review) => ({
-                                ...review,
-                                text: e.target.value
-                            }))
-                        }
-                    />
-                </div> */}
                 <AddReview stay={stay} />
             </section>
             <div className='border-bottom'></div>
@@ -308,14 +198,6 @@ export const StayDetails = () => {
             <section className='things-to-know-container'>
                 {/* <div className='to-know-header'></div> */}
                 <ThingToKnow header='House rules'>
-                    {/* <IconText
-                        text={'Check-in: 3:00 PM - 12:00 AM'}
-                        Icon={CheckInOutIcon}
-                    /> */}
-                    {/* <IconText
-                        text={'Checkout: 10:00 AM'}
-                        Icon={CheckInOutIcon}
-                    /> */}
                     <IconText text={'No smoking'} Icon={NoSmokingIcon} />
                     <IconText
                         text={'No parties or events'}
@@ -347,41 +229,3 @@ export const StayDetails = () => {
         </div>
     )
 }
-
-/*
-<Button className='btn-back' variant="outlined" onClick={onBack}>Back</Button>
-<section>
-    <h3>Name: {stay.name}</h3>
-</section>
-<section>
-    <h3>Price: {stay.price}</h3>
-</section>
-{/* <section>
-    <h3>
-        Labels:
-        <ul>
-            {stay.labels &&
-                stay.labels.map((label) => <li key={label}>{label}</li>)}
-        </ul>
-    </h3>
-
-</section> *}
-<section>
-    <h3>{stay.inStock ? '' : '(out of stock)'}</h3>
-</section>
-{/* <Link to={`/stay/${nextStayId}`}>
-    <Button variant="outlined">Next Stay</Button>
-</Link> *}
-{/* <img src={image} alt="" /> *}
-{reviews && <section className="stays-reviews">
-    {reviews.map(review => (
-        <article key={review._id}>
-            <h3>{review.txt}</h3>
-            <h3>Written by {review.user.firstname}</h3>
-            {/* <h5>{utilService.getCreatedTime(review.createdAt)}</h5> *}
-            <button onClick={() => onRemoveReview(review._id)}>Remove</button>
-            <hr />
-        </article>
-    ))}
-</section>}
-*/

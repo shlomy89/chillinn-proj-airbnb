@@ -2,10 +2,11 @@ const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
 
-async function getOrders() {
+async function getOrders(stayId) {
     try {
+        console.log({ stayId })
         const collection = await dbService.getCollection('order')
-        const orders = await collection.find().toArray()
+        const orders = await collection.find({ stayId }).toArray()
         return orders
     } catch (err) {
         logger.error('cannot find orders', err)

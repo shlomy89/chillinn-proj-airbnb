@@ -2,15 +2,15 @@ import { orderService } from '../../services/order.service.js'
 import { userService } from '../../services/user.service.js'
 import { socketService } from '../../services/socket.service.js'
 
-export function loadOrders(userId, type) {
+export function loadOrders({ stayId }) {
     return async (dispatch) => {
         try {
-            const orders = await orderService.query(userId, type)
+            const orders = await orderService.query(stayId)
             dispatch({
                 type: 'SET_ORDERS',
                 orders
             })
-            const users = await orderService.getUsersByOrders()
+            const users = await orderService.getUsersByOrders(stayId)
             dispatch({ type: 'SET_USERS', users })
         } catch (error) {
             console.log('failed to load orders in order actions', error)
@@ -48,6 +48,7 @@ export function onRemoveOrder(orderId) {
 
 export function onAddOrder({ stay, startDate, endDate, guestsNum, nights }) {
     // const { buyerUser } = orderToAdd
+
     return async (dispatch, getState) => {
         try {
             // const notification = {
@@ -65,16 +66,23 @@ export function onAddOrder({ stay, startDate, endDate, guestsNum, nights }) {
             //     txt: 'Your stay has been reserved',
             //     isRead: false
             // }
-            const { _id: userId } = getState().userModule.user
             const stayId = stay._id
-            const savedOrder = await orderService.save({
+            const user = getState().userModule.user
+            console.log(user)
+            const params = {
                 startDate: startDate.getTime(),
                 endDate: endDate.getTime(),
                 guestsNum,
                 nights,
-                stayId,
-                userId
-            })
+                stayId
+            }
+            console.log(params)
+            if (!user) {
+                params.userId = null
+            } else {
+                params.userId = user._id
+            }
+            const savedOrder = await orderService.save(params)
             dispatch({ type: 'ADD_ORDER', order: savedOrder })
             // socketService.emit('notificationSent', notification)
         } catch (error) {}

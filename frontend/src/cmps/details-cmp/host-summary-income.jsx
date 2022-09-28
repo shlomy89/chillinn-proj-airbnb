@@ -48,17 +48,17 @@ export const HostSummaryIncome = () => {
         }
     ]
 
-    useEffect(() => {
-        let timeOut
-        dispatch(loadStays()).then(() => {
-            timeOut = setInterval(() => {
-                dispatch(loadOrders())
-            }, 3000)
-        })
-        return () => {
-            clearInterval(timeOut)
-        }
-    }, [])
+    // useEffect(() => {
+    //     let timeOut
+    //     dispatch(loadStays()).then(() => {
+    //         timeOut = setInterval(() => {
+    //             dispatch(loadOrders())
+    //         }, 3000)
+    //     })
+    //     return () => {
+    //         clearInterval(timeOut)
+    //     }
+    // }, [])
     const totalIncome = sumBy(approvedOrders, (order) =>
         calculateIncome(order, stays)
     )
