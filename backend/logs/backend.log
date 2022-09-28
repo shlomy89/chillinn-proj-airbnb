@@ -1472,3 +1472,41 @@
 28.9.2022, 19:51:36 - DEBUG - Getting Stays
 28.9.2022, 19:52:08 - DEBUG - Getting Stays
 28.9.2022, 19:53:46 - INFO - Server is running on port: 3030
+28.9.2022, 20:05:11 - INFO - Server is running on port: 3030
+28.9.2022, 20:05:18 - DEBUG - Getting Stays
+28.9.2022, 20:05:47 - INFO - Server is running on port: 3030
+28.9.2022, 20:05:56 - DEBUG - Getting Stays
+28.9.2022, 20:11:27 - DEBUG - Getting Stays
+28.9.2022, 20:11:29 - DEBUG - Getting Stays
+28.9.2022, 20:12:51 - DEBUG - Getting Stays
+28.9.2022, 20:12:52 - DEBUG - Getting Stays
+28.9.2022, 20:13:21 - DEBUG - Getting Stays
+28.9.2022, 20:13:23 - DEBUG - Getting Stays
+28.9.2022, 20:13:44 - DEBUG - Getting Stays
+28.9.2022, 20:14:06 - DEBUG - Getting Stays
+28.9.2022, 20:14:23 - DEBUG - Getting Stays
+28.9.2022, 20:14:23 - DEBUG - Getting Stays
+28.9.2022, 20:16:29 - DEBUG - Getting Stays
+28.9.2022, 20:16:50 - DEBUG - Getting Stays
+28.9.2022, 20:16:51 - DEBUG - Getting Stays
+28.9.2022, 20:17:20 - DEBUG - Getting Stays
+28.9.2022, 20:17:21 - DEBUG - Getting Stays
+28.9.2022, 20:18:02 - DEBUG - Getting Stays
+28.9.2022, 20:18:03 - DEBUG - Getting Stays
+28.9.2022, 20:18:13 - DEBUG - Getting Stays
+28.9.2022, 20:18:14 - DEBUG - Getting Stays
+28.9.2022, 20:25:21 - DEBUG - Getting Stays
+28.9.2022, 20:25:22 - DEBUG - Getting Stays
+28.9.2022, 20:31:26 - DEBUG - Getting Stays
+28.9.2022, 20:34:26 - DEBUG - Getting Stays
+28.9.2022, 20:35:28 - INFO - Req was made
+28.9.2022, 20:35:47 - INFO - Req was made
+28.9.2022, 20:35:50 - DEBUG - Getting Stays
+28.9.2022, 20:36:17 - DEBUG - Getting Stays
+28.9.2022, 20:57:49 - DEBUG - auth.service - login with username: 75091963
+28.9.2022, 20:57:49 - ERROR - Failed to Login Invalid username or password
+28.9.2022, 20:57:54 - DEBUG - Getting Stays
+28.9.2022, 20:58:12 - INFO - Server is running on port: 3030
+28.9.2022, 21:00:29 - DEBUG - auth.service - login with username: 75091963
+28.9.2022, 21:00:31 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab4d","username":"75091963","firstname":"Edgar","lastname":"","imgUrl":"https://a0.muscache.com/im/pictures/d17abb7c-beb0-4dbe-976e-fc633de18b4b.jpg?aki_policy=profile_small"}
+28.9.2022, 21:00:35 - DEBUG - Getting Stays

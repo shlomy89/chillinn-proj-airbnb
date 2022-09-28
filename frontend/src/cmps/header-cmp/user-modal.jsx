@@ -51,7 +51,7 @@ export function UserModal({ handleUserModal }) {
 				{loggedInUser ? (
 					<li>
 						<Link
-							to={'stay/order'}
+							to={'host/622f3401e36c59e6164fab4d'}
 							className='user-modal-about-link'
 						>
 							<span className='user-modal-span'>
