@@ -58,6 +58,11 @@
         }
     }
 
+    .reviews-container {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 125px;
+    }
     .apartment-secondary-header-container {
         display: flex;
         justify-content: space-between;
@@ -81,9 +86,12 @@
         margin-bottom: 24px;
     }
     .amenities-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
         .amenities-header {
             font-size: 26px;
-            line-height: 26px;
+            // line-height: 26px;
             display: flex;
             margin-bottom: 25px;
             margin-top: 25px;
@@ -92,14 +100,6 @@
         .amenities-list-container {
             display: flex;
             justify-content: space-between;
-            .amenities-list {
-                display: flex;
-                flex-direction: row;
-                column-gap: 150px;
-                row-gap: 12px;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
         }
 
         .show-all-amenities {

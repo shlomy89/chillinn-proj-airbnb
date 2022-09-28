@@ -18,21 +18,27 @@ import { loadStays } from '../store/actions/stay.action.js'
 export const Host = () => {
     const dispatch = useDispatch()
 
+    const { id: hostId } = useParams()
+
     const orders = useSelector((state) => state.orderModule.orders)
     const users = useSelector((state) => state.orderModule.users)
     const stays = useSelector((state) => state.stayModule.stays)
+    const filterBy = useSelector((state) => state.stayModule.filterBy)
 
     useEffect(() => {
-        let timeOut
-        dispatch(loadStays()).then(() => {
-            timeOut = setInterval(() => {
-                dispatch(loadOrders())
-            }, 3000)
-        })
-        return () => {
-            clearInterval(timeOut)
+        dispatch({ type: 'SET_FILTER_BY', filterBy: { hostId } })
+    }, [hostId])
+
+    useEffect(() => {
+        dispatch(loadStays())
+    }, [filterBy?.hostId])
+
+    useEffect(() => {
+        if (!stays.length) {
+            return
         }
-    }, [])
+        dispatch(loadOrders({ stayId: stays[0]._id }))
+    }, [stays])
 
     const onUpdateOrderClick = (order, orderStatus) => {
         dispatch(
@@ -54,12 +60,14 @@ export const Host = () => {
                                 const stay = stays.find(
                                     (stay) => stay._id === order.stayId
                                 )
+
                                 if (!stay) return null
                                 const user = users.find(
                                     (user) => user._id === order.userId
                                 )
                                 return (
                                     <Order
+                                        ket={order._id}
                                         onClick={onUpdateOrderClick}
                                         name={
                                             user

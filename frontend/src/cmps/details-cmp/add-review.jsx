@@ -42,6 +42,8 @@ export function AddReview({ stay, set }) {
                 stayId: stay._id
             })
         )
+        setReviewText('')
+        setRating([5, 5, 5, 5, 5, 5])
     }
 
     const theme = createTheme({

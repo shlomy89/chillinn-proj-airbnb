@@ -17,13 +17,16 @@ async function getStays(req, res) {
 
         if (params) {
             params = JSON.parse(params)
+            console.log({ params: params.hostId })
+
             filterBy = {
                 priceRange: params.priceRange,
                 bedrooms: params.bedrooms,
                 propertyTypes: params.propertyTypes,
                 placeTypes: params.placeTypes,
                 amenities: params.amenities,
-                labels: params.labels
+                labels: params.labels,
+                hostId: params.hostId
             }
         }
 

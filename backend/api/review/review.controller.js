@@ -31,24 +31,23 @@ async function deleteReview(req, res) {
 
 async function addReview(req, res) {
     var loggedinUser = authService.validateToken(req.cookies.loginToken)
-
     try {
         var review = req.body
-        review.byUserId = loggedinUser._id
+        review.byUserId = loggedinUser?._id ?? userService.GUEST_ID
         review = await reviewService.add(review)
-        
+
         // prepare the updated review for sending out
         review.aboutStay = await stayService.getById(review.stayId)
 
-        // Give the user credit
-        loggedinUser.score += 10
+        // // Give the user credit
+        // loggedinUser.score += 10
 
-        loggedinUser = await userService.update(loggedinUser)
-        review.byUser = loggedinUser
+        // loggedinUser = await userService.update(loggedinUser)
+        // review.byUser = loggedinUser
 
         // User info is saved also in the login-token, update it
-        const loginToken = authService.getLoginToken(loggedinUser)
-        res.cookie('loginToken', loginToken)
+        // const loginToken = authService.getLoginToken(loggedinUser)
+        // res.cookie('loginToken', loginToken)
 
         // delete review.aboutUserId
         // delete review.byUserId

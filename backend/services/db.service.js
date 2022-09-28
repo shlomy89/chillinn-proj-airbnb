@@ -4,7 +4,8 @@ const config = require('../config')
 const reviews = require('./reviews.json')
 const ObjectId = require('mongodb').ObjectId
 const stays = require('./stay.json')
-const { omit, map } = require('lodash')
+const currentStays = require('./stays.json')
+const { omit, map, find, transform } = require('lodash')
 module.exports = {
     getCollection
 }
@@ -50,17 +51,32 @@ const refactorReviews = async () => {
     await connect()
     const reviewsCollection = await getCollection('review')
     const staysCollection = await getCollection('stay')
-    staysCollection.insertMany(
-        map(stays, (stay) => ({
-            ...omit(stay, 'reviews'),
-            _id: new ObjectId(stay._id)
-        }))
+    // await staysCollection.deleteMany({})
+    //const staysArr = await staysCollection.find().toArray()
+
+    await staysCollection.insertMany(
+        transform(
+            currentStays,
+            (res, stay) => {
+                const oldStay = find(stays, { name: stay.name })
+                if (!oldStay) {
+                    return
+                }
+                res.push({
+                    ...stay,
+                    _id: new ObjectId(stay._id),
+                    amenities: oldStay.amenities
+                })
+            },
+            []
+        )
     )
 
     console.log('done')
-    // const stays = await staysCollection.find().toArray()
-    // await staysCollection.deleteMany()
-    // await fs.writeFile('stay.json', JSON.stringify(stays), () =>
+    // console.log('done')
+    // // const stays = await staysCollection.find().toArray()
+    // // await staysCollection.deleteMany()
+    // await fs.writeFile('stays.json', JSON.stringify(staysArr), () =>
     //     console.log('done')
     // )
 
@@ -88,5 +104,4 @@ const refactorReviews = async () => {
     // )
     return
 }
-
-refactorReviews()
+//refactorReviews()

@@ -3,8 +3,11 @@ import { ShowMoreButton } from './show-more-button'
 import { ReactComponent as ShowMoreIcon } from '../../assets/img/icons/show-more-icon.svg'
 import LinesEllipsis from 'react-lines-ellipsis'
 import moment from 'moment'
+import { useState } from 'react'
 
 export const Review = ({ review }) => {
+    const [showMore, setShowMore] = useState(false)
+    const [isShowMoreRendered, setIsShowMoreRendered] = useState(false)
     return (
         <div className='review-details'>
             <div className='user-details'>
@@ -31,15 +34,26 @@ export const Review = ({ review }) => {
             <div className='user-review'>
                 <LinesEllipsis
                     text={review.text}
-                    maxLine='3'
+                    maxLine={!showMore ? 3 : 10}
                     ellipsis='...'
                     trimRight
                     basedOn='letters'
+                    onReflow={({ clamped }) => {
+                        if (!isShowMoreRendered) {
+                            setIsShowMoreRendered(clamped)
+                        }
+                    }}
                 />
             </div>
-            <div className='show-more-button'>
-                <ShowMoreButton text={'Show more'} Icon={ShowMoreIcon} />
-            </div>
+            {isShowMoreRendered && (
+                <div className='show-more-button'>
+                    <ShowMoreButton
+                        text={`Show ${!showMore ? 'more' : 'less'}`}
+                        Icon={ShowMoreIcon}
+                        onClick={() => setShowMore((prev) => !prev)}
+                    />
+                </div>
+            )}
         </div>
     )
 }
