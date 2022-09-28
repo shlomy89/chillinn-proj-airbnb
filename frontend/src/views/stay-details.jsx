@@ -19,12 +19,11 @@ import { ReactComponent as WifiIcon } from '../../src/assets/img/icons/wifi-icon
 import { ReactComponent as WasherIcon } from '../../src/assets/img/icons/washer-icon.svg'
 import { ReactComponent as AirConditioningIcon } from '../../src/assets/img/icons/air-conditioning-icon.svg'
 import { ReactComponent as HairDryerIcon } from '../../src/assets/img/icons/hair-dryer-icon.svg'
-import { ReactComponent as SmokeAlarmIcon } from '../../src/assets/img/icons/smoke-alarm-icon.svg'
 import { Review } from '../cmps/details-cmp/review'
-import { ReactComponent as CheckInOutIcon } from '../../src/assets/img/icons/check-in-out-icon.svg'
+// import { ReactComponent as CheckInOutIcon } from '../../src/assets/img/icons/check-in-out-icon.svg'
 import { ReactComponent as NoSmokingIcon } from '../../src/assets/img/icons/no-smoking-icon.svg'
 import { ReactComponent as NoPartiesIcon } from '../../src/assets/img/icons/no-parties-icon.svg'
-import { ReactComponent as PetsAreAllowedIcon } from '../../src/assets/img/icons/pets-are-allowed-icon.svg'
+import { ReactComponent as PetsAllowedIcon } from '../../src/assets/img/icons/pets-allowed-icon.svg'
 // import { ShowMoreButton } from '../cmps/details-cmp/show-more-button'
 import { ReactComponent as HealthCheckIcon } from '../../src/assets/img/icons/health-check-icon.svg'
 import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/smoking-alarm-icon.svg'
@@ -36,18 +35,22 @@ import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
 import { addReview } from '../store/actions/review.actions'
 import { useDispatch } from 'react-redux'
+import { mean, meanBy, transform } from 'lodash'
+import { AddReview } from '../cmps/details-cmp/add-review'
 
 export const StayDetails = () => {
     const dispatch = useDispatch()
     const [stay, setStay] = useState(null)
-    const [reviews, setReviews] = useState(null)
-    const [review, setReview] = useState({ text: '', rating: 0 })
+    const [reviews, setReviews] = useState([])
+
     const params = useParams()
     const navigate = useNavigate()
 
+    const rating = meanBy(reviews, ({ rating }) => +rating).toFixed(2)
+
     useEffect(() => {
         const stayId = params.id
-        console.log("stayId", stayId)
+        console.log('stayId', stayId)
         const getReviews = async () => {
             const stay = await stayService.getById(stayId)
             setStay(stay)
@@ -72,9 +75,9 @@ export const StayDetails = () => {
         }
     }
 
-    const onAddReview = async () => {
-        dispatch(addReview({ ...review, stayId: stay._id }))
-    }
+    // const onAddReview = async () => {
+    //     dispatch(addReview({ ...review, stayId: stay._id }))
+    // }
     // const onRemoveReview = async (reviewId) => {
     //     try {
     //         await reviewService.remove(reviewId)
@@ -86,6 +89,22 @@ export const StayDetails = () => {
     //         console.log(err)
     //     }
     // }
+
+    const amanities = transform(
+        stay?.amenities,
+        (res, amanity) => {
+            import(
+                `../assets/img/icons/${amanity
+                    .replaceAll(' ', '-')
+                    .toLowerCase()}-icon.svg`
+            )
+                .then((icon) => res.push(amanity))
+                .catch((e) => {
+                    console.log(e)
+                })
+        },
+        []
+    )
 
     if (!stay) {
         return (
@@ -102,7 +121,7 @@ export const StayDetails = () => {
             </div>
             <div className='stay-apartment-location-header-container'>
                 <div className='apartment-location-rating'>
-                    <StarRating rating={4.73} reviews={32} />
+                    <StarRating rating={rating} reviews={reviews?.length} />
                     <span>·</span>{' '}
                     <a className='apartment-location'>
                         {stay.loc.city}, {stay.loc.country}
@@ -141,7 +160,7 @@ export const StayDetails = () => {
                                 </span>
                                 <img
                                     className='apartment-owner-img'
-                                    src='https://a0.muscache.com/im/pictures/user/5c9836a5-c81e-4b14-ba79-978811fff5ee.jpg?im_w=240'
+                                    src={stay.host.thumbnailUrl}
                                 />
                             </div>
                             <div className='apartment-content-container'></div>
@@ -181,7 +200,15 @@ export const StayDetails = () => {
                         </div>
                         <div className='amenities-list-container'>
                             <div className='amenities-list'>
-                                <IconText text={'Kitchen'} Icon={KitchenIcon} />
+                                {amanities.map((amenety) => (
+                                    <div>
+                                        {amenety}
+                                        <img
+                                            src={require(`../../src/assets/img/icons/${amenety.toLowerCase()}-icon.svg`)}
+                                        />
+                                    </div>
+                                ))}
+                                {/* <IconText text={'Kitchen'} Icon={KitchenIcon} />
                                 <IconText
                                     text={'TV with standard cable'}
                                     Icon={TvIcon}
@@ -194,7 +221,7 @@ export const StayDetails = () => {
                                 <IconText
                                     text={'Carbon monoxide alarm'}
                                     Icon={CarbonMonoxideAlarmIcon}
-                                />
+                                /> */}
                             </div>
 
                             {/* <div className='amenities-list'>
@@ -230,59 +257,23 @@ export const StayDetails = () => {
                         </section>
                     })} */}
                 </div>
-                <ReservationCard stay={stay} />
+                <ReservationCard
+                    stay={stay}
+                    reviews={reviews}
+                    rating={rating}
+                />
             </div>
-            <ReviewStats
-                reviews={[
-                    {
-                        rate: {
-                            accuracy: 4,
-                            checkin: 3,
-                            cleanliness: 4.5,
-                            communication: 4.2,
-                            location: 3.7,
-                            value: 4.8
-                        }
-                    },
-                    {
-                        rate: {
-                            accuracy: 4,
-                            checkin: 3,
-                            cleanliness: 4.5,
-                            communication: 4.2,
-                            location: 3.7,
-                            value: 4.8
-                        }
-                    },
-                    {
-                        rate: {
-                            accuracy: 4,
-                            checkin: 3,
-                            cleanliness: 4.5,
-                            communication: 4.2,
-                            location: 3.7,
-                            value: 4.8
-                        }
-                    },
-                    {
-                        rate: {
-                            accuracy: 4,
-                            checkin: 3,
-                            cleanliness: 4.5,
-                            communication: 4.2,
-                            location: 3.7,
-                            value: 4.8
-                        }
-                    }
-                ]}
-            />
+            <ReviewStats reviews={reviews} />
             <section className='review'>
-                <Review
+                {/* <Review
                     name={stay.reviews[0].by.fullname}
                     date={stay.reviews[0].at}
                     review={stay.reviews[0].txt}
-                />
-                <div className='add-review-container'>
+                /> */}
+                {reviews?.slice(0, 6).map((review) => (
+                    <Review review={review} />
+                ))}
+                {/* <div className='add-review-container'>
                     <div onClick={onAddReview} className='add-review-button'>
                         Add Review
                     </div>
@@ -309,21 +300,22 @@ export const StayDetails = () => {
                             }))
                         }
                     />
-                </div>
+                </div> */}
+                <AddReview stay={stay} />
             </section>
             <div className='border-bottom'></div>
             <h1 className='to-know-header'>Things to know</h1>
             <section className='things-to-know-container'>
                 {/* <div className='to-know-header'></div> */}
                 <ThingToKnow header='House rules'>
-                    <IconText
+                    {/* <IconText
                         text={'Check-in: 3:00 PM - 12:00 AM'}
                         Icon={CheckInOutIcon}
-                    />
-                    <IconText
+                    /> */}
+                    {/* <IconText
                         text={'Checkout: 10:00 AM'}
                         Icon={CheckInOutIcon}
-                    />
+                    /> */}
                     <IconText text={'No smoking'} Icon={NoSmokingIcon} />
                     <IconText
                         text={'No parties or events'}
@@ -331,7 +323,7 @@ export const StayDetails = () => {
                     />
                     <IconText
                         text={'Pets are allowed'}
-                        Icon={PetsAreAllowedIcon}
+                        Icon={PetsAllowedIcon}
                     />
                 </ThingToKnow>
 

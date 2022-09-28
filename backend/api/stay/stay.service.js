@@ -6,7 +6,7 @@ async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('stay')
-    
+
         const stays = await collection.find(criteria).toArray()
         return stays
     } catch (err) {
@@ -66,14 +66,24 @@ function _buildCriteria(filterBy) {
         price: {}
     }
 
-    const { priceRange, bedrooms, propertyTypes, placeTypes, amenities, labels } =
-        filterBy
+    const {
+        priceRange,
+        bedrooms,
+        propertyTypes,
+        placeTypes,
+        amenities,
+        labels
+    } = filterBy
 
     const [minPrice, maxPrice] = priceRange
 
-    const chosePropertyTypes = Object.keys(propertyTypes).filter((p) => propertyTypes[p])
+    const chosePropertyTypes = Object.keys(propertyTypes).filter(
+        (p) => propertyTypes[p]
+    )
 
-    const checkedPlaceTypes = Object.keys(placeTypes).filter((p) => placeTypes[p])
+    const checkedPlaceTypes = Object.keys(placeTypes).filter(
+        (p) => placeTypes[p]
+    )
 
     const checkedAmenities = Object.keys(amenities).filter((a) => amenities[a])
 

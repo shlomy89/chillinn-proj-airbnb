@@ -9,10 +9,10 @@ const mode = window.innerWidth < 780 ? 1 : 2
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#FF385C'
+            main: '#2e53ab'
         },
         secondary: {
-            main: '#FF385C'
+            main: '#2e53ab'
         }
     }
 })

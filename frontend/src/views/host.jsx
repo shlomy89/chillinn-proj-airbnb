@@ -54,16 +54,21 @@ export const Host = () => {
                                 const stay = stays.find(
                                     (stay) => stay._id === order.stayId
                                 )
+                                if (!stay) return null
                                 const user = users.find(
                                     (user) => user._id === order.userId
                                 )
                                 return (
                                     <Order
                                         onClick={onUpdateOrderClick}
-                                        name={`${user.firstname} ${user.lastname}`}
+                                        name={
+                                            user
+                                                ? `${user.firstname} ${user.lastname}`
+                                                : 'Guest'
+                                        }
                                         order={order}
                                         apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
-                                        userImg={user.imgUrl}
+                                        userImg={user?.imgUrl}
                                     />
                                 )
                             })}

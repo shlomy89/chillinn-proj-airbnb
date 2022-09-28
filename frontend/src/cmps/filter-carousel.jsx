@@ -5,7 +5,6 @@ import nextIcon from '../assets/img/icons/right-arrow.svg'
 import prevIcon from '../assets/img/icons/left-arrow.svg'
 
 export const FilterCarousel = ({ setFilter }) => {
-
     const typeList = [
         'A-frames',
         'Amazing pools',
@@ -21,7 +20,7 @@ export const FilterCarousel = ({ setFilter }) => {
         'Camping',
         'Castles',
         'Caves',
-        'Chef\'s kitchens',
+        "Chef's kitchens",
         'Containers',
         'Countryside',
         'Creative spaces',
@@ -55,8 +54,7 @@ export const FilterCarousel = ({ setFilter }) => {
         'Tropical',
         'Vineyards',
         'Windmills',
-        'Yurts',
-
+        'Yurts'
     ]
 
     const [icon, setIcon] = useState([])
@@ -69,8 +67,9 @@ export const FilterCarousel = ({ setFilter }) => {
     const getIcon = async () => {
         let iconUrl = []
         typeList.map((t) => {
-            import(`../assets/img/filter-carousel-icon/${t}.jpg`)
-                .then(imgData => iconUrl.push(imgData.default))
+            import(`../assets/img/filter-carousel-icon/${t}.jpg`).then(
+                (imgData) => iconUrl.push(imgData.default)
+            )
         })
         setIcon(iconUrl)
     }
@@ -81,7 +80,7 @@ export const FilterCarousel = ({ setFilter }) => {
     }
 
     useEffect(() => {
-        setFilter(prevFields => ({
+        setFilter((prevFields) => ({
             ...prevFields,
             labels: activeType
         }))
@@ -118,14 +117,14 @@ export const FilterCarousel = ({ setFilter }) => {
     const responsive = {
         0: { items: 1 },
         568: { items: 2 },
-        1024: { items: 10 },
+        1024: { items: 10 }
     }
 
     return (
-        <section className="filter-carousel-container">
+        <section className='filter-carousel-container'>
             <AliceCarousel
                 responsive={responsive}
-                controlsStrategy="alternate"
+                controlsStrategy='alternate'
                 disableDotsControls={true}
                 items={items} 
                 paddingLeft={40}

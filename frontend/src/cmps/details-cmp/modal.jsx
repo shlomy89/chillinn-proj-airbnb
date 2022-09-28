@@ -1,6 +1,5 @@
 import '../../assets/styles/cmps/_air-cover-modal.scss'
 import Modal from 'react-modal'
-import OutsideClickHandler from 'react-outside-click-handler'
 
 export const GenericModal = ({ isOpen, onClose, children }) => {
     return (

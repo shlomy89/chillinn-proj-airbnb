@@ -41,10 +41,6 @@ async function remove(reviewId) {
     reviewChannel.postMessage(getActionRemoveReview(reviewId))
 }
 async function add(review) {
-    // const addedReview = await httpService.post('review', review)
-    review.byUser = userService.getLoggedinUser()
-    review.aboutUser = await userService.getById(review.aboutUserId)
     const addedReview = await httpService.post('review', review)
-    // reviewChannel.postMessage(getActionAddReview(addedReview))
     return addedReview
 }

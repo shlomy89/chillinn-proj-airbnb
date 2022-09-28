@@ -1,0 +1,30 @@
+.rating-bars-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .css-dqr9h-MuiRating-label {
+        color: $clr1;
+    }
+
+    .bar-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .rating-bar-header {
+        font-size: rem(22px);
+        line-height: 3;
+    }
+
+    .MuiRating-sizeMedium {
+        height: 100%;
+    }
+}
+
+.add-review-btn {
+    margin: 10px auto;
+    text-align: center;
+}

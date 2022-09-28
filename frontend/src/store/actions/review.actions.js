@@ -24,9 +24,15 @@ export function loadReviews() {
 }
 
 export function addReview(review) {
-    return async (dispatch) => {
+    return async (dispatch, getState) => {
         try {
-            const addedReview = await reviewService.add(review)
+            const { _id: userId } = getState().userModule.user
+                ? getState().userModule.user
+                : { _id: null }
+            const addedReview = await reviewService.add({
+                ...review,
+                byUserId: userId
+            })
             dispatch(getActionAddReview(addedReview))
         } catch (err) {
             console.log('ReviewActions: err in addReview', err)
