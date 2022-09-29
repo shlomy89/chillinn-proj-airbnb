@@ -16,11 +16,8 @@ const calculateIncome = (order, stays) => {
 }
 
 export const HostSummaryIncome = () => {
-    const dispatch = useDispatch()
-
     const orders = useSelector((state) => state.orderModule.orders)
-    const users = useSelector((state) => state.orderModule.users)
-    const stays = useSelector((state) => state.stayModule.stays)
+    const stays = useSelector((state) => state.stayModule.hostStays)
     // const amountOfReviews = sumBy(
     //     filter(stays, (stay) => !!find(orders, { stayId: stay._id })),
     //     ({ reviews }) => reviews.length

@@ -30,8 +30,6 @@ export const reviewService = {
 }
 
 function query(filterBy) {
-    // var queryStr = !filterBy ? '' : `?name=${filterBy.name}&sort=anaAref`
-    // return httpService.get(`review${queryStr}`)
     return httpService.get('review', filterBy)
 }
 

@@ -1,12 +1,15 @@
 const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
+const { GUEST_ID } = require('../user/user.service')
 const ObjectId = require('mongodb').ObjectId
 
 async function getOrders(stayId) {
     try {
-        console.log({ stayId })
         const collection = await dbService.getCollection('order')
-        const orders = await collection.find({ stayId }).toArray()
+        const orders = await collection
+            .find({ stayId: ObjectId(stayId) })
+            .toArray()
+        console.log({ orders })
         return orders
     } catch (err) {
         logger.error('cannot find orders', err)
@@ -41,8 +44,15 @@ async function add(order) {
     order.createdAt = Date.now()
     order.orderStatus = 'pending'
     try {
+        console.log({ order })
         const collection = await dbService.getCollection('order')
-        const addedOrder = await collection.insertOne(order)
+        const userId = ObjectId(order.userId ?? GUEST_ID)
+        const addedOrder = await collection.insertOne({
+            ...order,
+            userId,
+            stayId: ObjectId(order.stayId)
+        })
+        console.log({ addedOrder })
         return addedOrder
     } catch (err) {
         logger.error('cannot insert order', err)

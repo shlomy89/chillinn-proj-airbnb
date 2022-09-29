@@ -32,8 +32,8 @@ import { AirCover } from '../cmps/details-cmp/air-cover'
 import { ReviewStats } from '../cmps/details-cmp/Review-stats'
 import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
-import { addReview } from '../store/actions/review.actions'
-import { useDispatch } from 'react-redux'
+import { addReview, loadReviews } from '../store/actions/review.actions'
+import { useDispatch, useSelector } from 'react-redux'
 import { compact, mean, meanBy, transform, values } from 'lodash'
 import { AddReview } from '../cmps/details-cmp/add-review'
 import { Collapse } from 'react-collapse'
@@ -45,8 +45,15 @@ import { sortBy } from 'lodash'
 export const StayDetails = () => {
     const dispatch = useDispatch()
     const [stay, setStay] = useState(null)
-    const [reviews, setReviews] = useState([])
+    // const [reviews, setReviews] = useState([])
     const [isOpen, setIsOpen] = useState(null)
+    const reviews = useSelector((state) =>
+        state.reviewModule.reviews.sort((revA, revB) =>
+            new Date(revA.date).getTime() > new Date(revB.date).getTime()
+                ? -1
+                : 1
+        )
+    )
 
     const params = useParams()
     const navigate = useNavigate()
@@ -60,16 +67,7 @@ export const StayDetails = () => {
         const getReviews = async () => {
             const stay = await stayService.getById(stayId)
             setStay(stay)
-            const reviews = await reviewService.query({ stayId })
-
-            setReviews(
-                reviews.sort((revA, revB) =>
-                    new Date(revA.date).getTime() >
-                    new Date(revB.date).getTime()
-                        ? -1
-                        : 1
-                )
-            )
+            dispatch(loadReviews({ stayId }))
         }
         getReviews()
     }, [params.id])
@@ -192,7 +190,7 @@ export const StayDetails = () => {
                         <Review review={review} />
                     ))}
                 </div>
-
+                <h3 className='add-review-header'>Add Review</h3>
                 <AddReview stay={stay} />
             </section>
             <div className='border-bottom'></div>

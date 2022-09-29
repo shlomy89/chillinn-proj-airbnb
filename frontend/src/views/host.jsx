@@ -13,7 +13,7 @@ import {
     loadOrders,
     onUpdateOrder
 } from '../store/actions/order.actions'
-import { loadStays } from '../store/actions/stay.action.js'
+import { loadHostStays, loadStays } from '../store/actions/stay.action.js'
 
 export const Host = () => {
     const dispatch = useDispatch()
@@ -22,7 +22,7 @@ export const Host = () => {
 
     const orders = useSelector((state) => state.orderModule.orders)
     const users = useSelector((state) => state.orderModule.users)
-    const stays = useSelector((state) => state.stayModule.stays)
+    const stays = useSelector((state) => state.stayModule.hostStays)
     const filterBy = useSelector((state) => state.stayModule.filterBy)
 
     useEffect(() => {
@@ -30,7 +30,7 @@ export const Host = () => {
     }, [hostId])
 
     useEffect(() => {
-        dispatch(loadStays())
+        dispatch(loadHostStays())
     }, [filterBy?.hostId])
 
     useEffect(() => {
@@ -50,39 +50,38 @@ export const Host = () => {
     }
 
     return (
-        <div className='orders-status-header'>
-            Orders status
-            <section className='host-container'>
-                <div className='orders-status-container'>
-                    <section className='reviews-container'>
-                        {users.length > 0 &&
-                            orders.map((order) => {
-                                const stay = stays.find(
-                                    (stay) => stay._id === order.stayId
-                                )
+        <div className='host-page-container'>
+            <span className='orders-status-header'>Orders status </span>
+            <div className='host-container'>
+                <section className='orders-container'>
+                    {users.length > 0 &&
+                        orders.map((order) => {
+                            const stay = stays.find(
+                                (stay) => stay._id === order.stayId
+                            )
 
-                                if (!stay) return null
-                                const user = users.find(
-                                    (user) => user._id === order.userId
-                                )
-                                return (
-                                    <Order
-                                        ket={order._id}
-                                        onClick={onUpdateOrderClick}
-                                        name={
-                                            user
-                                                ? `${user.firstname} ${user.lastname}`
-                                                : 'Guest'
-                                        }
-                                        order={order}
-                                        apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
-                                        userImg={user?.imgUrl}
-                                    />
-                                )
-                            })}
-                    </section>
-                </div>
+                            if (!stay) return null
+                            const user = users.find(
+                                (user) => user._id === order.userId
+                            )
+                            console.log({ user, order: order.userId })
 
+                            return (
+                                <Order
+                                    ket={order._id}
+                                    onClick={onUpdateOrderClick}
+                                    name={
+                                        user
+                                            ? `${user.firstname} ${user.lastname}`
+                                            : 'Guest'
+                                    }
+                                    order={order}
+                                    apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
+                                    imgUrl={user?.imgUrl}
+                                />
+                            )
+                        })}
+                </section>
                 <div className='hosting-summary-container'>
                     <span className='hosting-header'>Hosting Summary</span>
                     <span className='secondary-header'>Fantastic Job!</span>
@@ -93,7 +92,7 @@ export const Host = () => {
                     </span>
                     <HostSummaryIncome />
                 </div>
-            </section>
+            </div>
         </div>
     )
 }

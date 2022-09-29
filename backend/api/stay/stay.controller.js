@@ -17,7 +17,6 @@ async function getStays(req, res) {
 
         if (params) {
             params = JSON.parse(params)
-            // console.log({ params: params.hostId })
 
             filterBy = {
                 priceRange: params.priceRange,
