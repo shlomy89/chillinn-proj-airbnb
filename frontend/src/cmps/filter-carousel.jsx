@@ -84,7 +84,6 @@ export const FilterCarousel = ({ setFilter }) => {
             ...prevFields,
             labels: activeType
         }))
-        console.log('activeType:', activeType)
     }, [activeType])
 
     const handleClick = (ev) => {
@@ -140,7 +139,6 @@ export const FilterCarousel = ({ setFilter }) => {
                         <img src={nextIcon} className="alice-carousel__next-btn-item" />
                         </button>
                   }}
-        
                 />
         </section>
     )
