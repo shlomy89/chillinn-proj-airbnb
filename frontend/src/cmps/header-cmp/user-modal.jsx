@@ -1,57 +1,30 @@
-import { React, useEffect, useState } from 'react'
+import { React, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-// import { updateUserNotifications, updateUser } from "../../../store/user.action"
 import Divider from '@mui/material/Divider'
 import { userService } from '../../services/user.service'
-import { useDispatch } from 'react-redux'
 
 export function UserModal({ handleUserModal }) {
 	const [loggedInUser, setLoggedInUser] = useState(
 		userService.getLoggedinUser()
 	)
-	// const isActive = useSelector((state) => state.headerModule.headerMode.isActive)
 	const user = useSelector((state) => state.userModule.user)
 	const navigate = useNavigate()
-	// const notificationsAmount = user.notifications?.length
-	// const dispatch = useDispatch()
-	// const navigate = useNavigate()
 
-	// const resetUserNotifications = async () => {
-	// 	const currUser = await userService.getById(loggUser?._id)
-	// 	const updatedUser = { ...currUser, notifications: [] }
-	// 	const newUser = await userService.update(updatedUser)
-	// 	userService.setLoggedInUser(newUser)
-	// 	dispatch(updateUserNotifications([]))
-	// }
 
 	function onLogOut() {
 		userService.logout()
 		setLoggedInUser(null)
-		// dispatch(updateUser({}))
 		navigate('/')
 	}
 
 	return (
 		<nav className={`user-modal-container `} onClick={handleUserModal}>
 			<ul>
-				{/* <li onClick={resetUserNotifications}>
-					{loggUser ? (
-						<Link to={"/host"}>
-							<span className='user-modal-span'>{loggUser.isHost ? "Statistics & Dashboard" : "My trips & Wishlist"}</span>
-							{notificationsAmount ? <div className='user-notifications-dot'>{notificationsAmount}</div> : <></>}
-						</Link>
-					) : (
-						<Link to={"/user/signup"}>
-							<span className='user-modal-span'>Sign up</span>
-						</Link>
-					)}
-				</li> */}
-				{/* <li> */}
 				{loggedInUser ? (
 					<li>
 						<Link
-							to={'host/622f3401e36c59e6164fab4d'}
+							to={'host/622f3402e36c59e6164fabfe'}
 							className='user-modal-about-link'
 						>
 							<span className='user-modal-span'>

@@ -80,9 +80,11 @@ export const StayDetails = () => {
 
     if (!stay) {
         return (
+        <div className='stay-app main-layout'>
             <Box sx={{ display: 'flex', margin: '100px auto' }}>
                 <CircularProgress />
             </Box>
+        </div>
         )
     }
     console.log(stay.host._id)

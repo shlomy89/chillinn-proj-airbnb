@@ -18,64 +18,14 @@ export const StayApp = () => {
         return {
             priceRange: [20, 1900],
             bedrooms: 0,
+            bathrooms: 0,
+            beds: 0,
             labels: '',
-            // {
-            //     'A-frames': false,
-            //     'Amazing pool': false,
-            //     'Amazing views': false,
-            //     'Arctic': false,
-            //     'Barns': false,
-            //     'Beach': false,
-            //     'Beachfront': false,
-            //     'Bed & breakfasts': false,
-            //     'Boats': false,
-            //     'Cabins': false,
-            //     'Campers': false,
-            //     'Camping': false,
-            //     'Castles': false,
-            //     'Caves': false,
-            //     'Chef\'s kitchens': false,
-            //     'Containers': false,
-            //     'Countryside': false,
-            //     'Creative spaces': false,
-            //     'Dammusos': false,
-            //     'Desert': false,
-            //     'Desidn': false,
-            //     'Domes': false,
-            //     'Earth homes': false,
-            //     'Farms': false,
-            //     'Golfing': false,
-            //     'Grand pianos': false,
-            //     'Historical homes': false,
-            //     'Islands': false,
-            //     'Lake': false,
-            //     'Lakefront': false,
-            //     'Luxe': false,
-            //     'Mansions': false,
-            //     'Minsus': false,
-            //     'National parks': false,
-            //     'OMG': false,
-            //     'Riads': false,
-            //     'Ryokans': false,
-            //     'Shared homes': false,
-            //     'Skiing': false,
-            //     'Ski-in-out': false,
-            //     'Surfing': false,
-            //     'Tiny homes': false,
-            //     'Towers': false,
-            //     'Tree houses': false,
-            //     'Trolli': false,
-            //     'Tropical': false,
-            //     'Vineyards': false,
-            //     'Windmills': false,
-            //     'Yurts': false
-            // },
             propertyTypes: {
                 'Apartment': false,
                 'Guesthouse': false,
                 'Hotel': false,
                 'House': false,
-
             },
             placeTypes: {
                 'Entire home/apt': false,
@@ -83,12 +33,17 @@ export const StayApp = () => {
                 'Shared room': false
             },
             amenities: {
-                '24-hour check-in': false,
+                'Wifi': false,
+                'Iron': false,
+                'Kitchen': false,
+                'Air conditioning': false,
                 'Beachfront': false,
                 'Bed linens': false,
                 'Building staff': false,
                 'Carbon monoxide detector': false,
+                'TV': false,
                 'Cooking basics': false,
+                '24-hour check-in': false,
                 'Disabled parking spot': false,
                 'Essentials': false,
                 'Ethernet connection': false,
@@ -157,25 +112,25 @@ export const StayApp = () => {
 
     return (
         <React.Fragment>
-            <section className='filters-container flex column'>
+            <section className='filters-container flex justify-center align-center'>
+                <FilterCarousel
+                    setFilter={setFilter} />
+
                 <FilterModal
                     staysCount={stays.length}
                     filter={filter}
                     setFilter={setFilter}
                     getDefaultFilters={getDefaultFilters} />
-
-                <FilterCarousel
-                    setFilter={setFilter} />
             </section>
-            <div className='stay-app main-layout'>
-                {isLoading ? (
+        <div className='stay-app main-layout'>
+            {isLoading ? (
 
-                    <Box sx={{ display: 'flex', margin: '100px auto' }}>
-                        <CircularProgress />
-                    </Box>
-                ) : (<StayList stays={stays} />)
-                }
-            </div>
+                <Box sx={{ display: 'flex', margin: '100px auto' }}>
+                    <CircularProgress />
+                </Box>
+            ) : (<StayList stays={stays} />)
+            }
+        </div>
         </React.Fragment>
     )
 }

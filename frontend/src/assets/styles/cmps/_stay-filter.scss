@@ -56,21 +56,48 @@ button[name='bedrooms'] {
     border-color: #e3e3e3;
 }
 
+button[name='bedrooms']:hover {
+    border-color: #222222;
+}
+
+button[name='bedrooms'].active {
+    background-color: #000;
+    color: #ffffff;
+}
+button[name='bathrooms'] {
+    background-color: #ffffff;
+    color: #222222;
+    border-color: #e3e3e3;
+}
+
+button[name='bathrooms']:hover {
+    border-color: #222222;
+}
+button[name='bathrooms'].active {
+    background-color: #000;
+    color: #ffffff;
+}
+button[name='beds'] {
+    background-color: #ffffff;
+    color: #222222;
+    border-color: #e3e3e3;
+}
+
+button[name='beds']:hover {
+    border-color: #222222;
+}
+
+button[name='beds'].active {
+    background-color: #000;
+    color: #ffffff;
+}
+
 button.filter-btn {
     background-color: #222222;
     color: #ffffff;
 }
 
 button.filter-btn:hover {
-    background-color: #000;
-    color: #ffffff;
-}
-
-button[name='bedrooms']:hover {
-    border-color: #222222;
-}
-
-button[name='bedrooms'].active {
     background-color: #000;
     color: #ffffff;
 }
@@ -116,7 +143,7 @@ button[name='propertyType'].active {
     position: relative;
     float: right;
     justify-content: space-evenly;
-    margin-inline-start: auto;
+    margin-inline-start:  25px;
     width: 88px;
     height: 48px !important;
     padding: 7px;
@@ -176,6 +203,7 @@ button[name='propertyType'].active {
 }
 
 .filter-carousel-container {
+    width: 90%;
     padding: 0 5px;
     .alice-carousel__stage-item{
         width: max-content !important;
@@ -188,8 +216,8 @@ button[name='propertyType'].active {
 
     .icon-btn {
         gap: 6px;
-        padding: 4px 0 14px;
-        margin: 12px 0 0;
+        // padding: 4px 0 14px;
+        // margin: 12px 0 0;
         border: none;
         font-family: Circular;
         font-size: 12px;
@@ -240,4 +268,9 @@ button[name='propertyType'].active {
             margin-top: 10px;
         }
     }
+}
+
+.filters-container {
+    width: 90%;
+    margin: auto;
 }
