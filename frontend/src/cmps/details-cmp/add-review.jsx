@@ -8,6 +8,7 @@ import SendIcon from '@mui/icons-material/Send'
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { addReview } from '../../store/actions/review.actions'
+import { Key } from '@mui/icons-material'
 
 export function AddReview({ stay, set }) {
     const dispatch = useDispatch()
@@ -71,9 +72,15 @@ export function AddReview({ stay, set }) {
     return (
         <div>
             <div className='rating-bars-container'>
-                {types.map((type, idx) =>
-                    RatingBar(type, idx, rating, setRating)
-                )}
+                {types.map((type, idx) => (
+                    <RatingBar
+                        type={type}
+                        idx={idx}
+                        rating={rating}
+                        setRating={setRating}
+                        key={idx}
+                    />
+                ))}
             </div>
             <div className='type-area'>
                 <ThemeProvider theme={theme}>
@@ -103,14 +110,14 @@ export function AddReview({ stay, set }) {
     )
 }
 
-function RatingBar(type, idx, value, setValue) {
+function RatingBar({ type, idx, rating, setRating }) {
     // const [value, setValue] = React.useState(5);
     const [hover, setHover] = useState(-1)
 
-    function setnewValue() {
-        value[idx] = hover
-        setValue([...value])
-        console.log(value)
+    function setNewValue() {
+        rating[idx] = hover
+        setRating([...rating])
+        console.log(rating)
     }
 
     return (
@@ -118,10 +125,10 @@ function RatingBar(type, idx, value, setValue) {
             <span className='rating-bar-header'>{type}</span>
             <Rating
                 name='hover-feedback'
-                value={value[idx]}
+                value={rating[idx]}
                 precision={0.5}
                 onChange={() => {
-                    setnewValue()
+                    setNewValue()
                 }}
                 onChangeActive={(event, newHover) => {
                     setHover(newHover)

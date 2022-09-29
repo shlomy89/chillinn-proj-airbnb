@@ -23,8 +23,11 @@ export const Review = ({ review }) => {
 
                 <div className='user-name-details'>
                     <span className='user-name'>
-                        {' '}
-                        {`${review.user.firstname} ${review.user.lastname}`}
+                        {`${review.user.firstname} ${
+                            review.user.lastname === ''
+                                ? '- Review'
+                                : review.user.lastname
+                        }`}
                     </span>
                     <span className='user-date'>
                         {moment(review.date).format('MMM ,YYYY')}
@@ -39,6 +42,7 @@ export const Review = ({ review }) => {
                     trimRight
                     basedOn='letters'
                     onReflow={({ clamped }) => {
+                        console.log(clamped)
                         if (!isShowMoreRendered) {
                             setIsShowMoreRendered(clamped)
                         }

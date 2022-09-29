@@ -16,6 +16,22 @@ export function loadStays() {
     }
 }
 
+export function loadHostStays() {
+    return async (dispatch, getState) => {
+        try {
+            const { filterBy } = getState().stayModule
+            dispatch({ type: 'SET_LOADING', isLoading: true })
+            const stays = await stayService.query(filterBy)
+            console.log({ stays })
+            dispatch({ type: 'SET_HOST_STAYS', stays })
+        } catch (error) {
+            console.log('load stays error in stay action:', error)
+        } finally {
+            dispatch({ type: 'SET_LOADING', isLoading: false })
+        }
+    }
+}
+
 export function removeStay(stayId) {
     return async (dispatch, getState) => {
         try {

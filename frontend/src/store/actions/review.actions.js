@@ -12,10 +12,10 @@ export function getActionSetWatchedUser(user) {
     return { type: 'SET_WATCHED_USER', user }
 }
 
-export function loadReviews() {
+export function loadReviews(filterBy) {
     return async (dispatch) => {
         try {
-            const reviews = await reviewService.query()
+            const reviews = await reviewService.query(filterBy)
             dispatch({ type: 'SET_REVIEWS', reviews })
         } catch (err) {
             console.log('ReviewActions: err in loadReviews', err)
@@ -37,7 +37,8 @@ export function addReview(review) {
             } else {
                 addedReview = await reviewService.add(review)
             }
-            dispatch(getActionAddReview(addedReview))
+            dispatch(loadReviews({ stayId: review.stayId }))
+            // dispatch(getActionAddReview(addedReview))
         } catch (err) {
             console.log('ReviewActions: err in addReview', err)
             throw err

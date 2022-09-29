@@ -21,19 +21,12 @@ async function getUsersByOrders(orders) {
         const collection = await dbService.getCollection('user')
         const userIdOrders = map(
             orders,
-            ({ userId }) => userId ?? ObjectId(GUEST_ID)
+            ({ userId }) => ObjectId(userId) ?? ObjectId(GUEST_ID)
         )
+        console.log({ userIdOrders })
         const users = await collection
             .find({ _id: { $in: userIdOrders } })
             .toArray()
-        // !! makes the command to be boolean;
-        // const usersByOrders = users.filter(
-        //     (user) =>
-        //         !!orders.find(
-        //             (order) => order.userId === ObjectId(user._id).toString()
-        //         )
-        // )
-        console.log({ users })
         return users
     } catch (error) {
         console.log(error)
@@ -127,7 +120,8 @@ async function add(user) {
             password: user.password,
             firstname: user.firstname,
             lastname: user.lastname,
-            imgUrl: user.imgUrl
+            imgUrl: user.imgUrl,
+            isHost: false
         }
         const collection = await dbService.getCollection('user')
         await collection.insertOne(userToAdd)

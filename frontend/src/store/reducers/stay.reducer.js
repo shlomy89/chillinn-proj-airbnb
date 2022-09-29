@@ -1,12 +1,18 @@
-
 const INITIAL_STATE = {
     stays: [],
+    hostStays: [],
     filterBy: null,
     isLoading: false
 }
 
 export function stayReducer(state = INITIAL_STATE, action) {
     switch (action.type) {
+        case 'SET_HOST_STAYS': {
+            return {
+                ...state,
+                hostStays: action.stays
+            }
+        }
         case 'SET_STAYS':
             return {
                 ...state,
@@ -21,12 +27,14 @@ export function stayReducer(state = INITIAL_STATE, action) {
         case 'REMOVE_STAY':
             return {
                 ...state,
-                stays: state.stays.filter(stay => stay._id !== action.stayId)
+                stays: state.stays.filter((stay) => stay._id !== action.stayId)
             }
         case 'UPDATE_STAY':
             return {
                 ...state,
-                stays: state.stays.map(stay => stay._id === action.stay._id ? action.stay : stay)
+                stays: state.stays.map((stay) =>
+                    stay._id === action.stay._id ? action.stay : stay
+                )
             }
         case 'SET_FILTER_BY':
             return {

@@ -55,7 +55,6 @@ async function query(filterBy = {}) {
         //     delete review.stayId
         //     return review
         // })
-        console.log({ reviews })
         return reviews
     } catch (err) {
         logger.error('cannot find reviews', err)
