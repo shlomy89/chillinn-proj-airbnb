@@ -12,7 +12,6 @@ import { AppFooter } from './cmps/details-cmp/app-footer.jsx'
 import './assets/styles/views/_root-cmp.scss'
 
 function App() {
-
     return (
         <div className='main-app'>
             <header className='header-container main-layout full'>
@@ -27,7 +26,7 @@ function App() {
                     <Route path='login' element={<Login />} />
                     <Route path='signup' element={<Signup />} />
                     <Route path='about' element={<About />} />
-                    <Route path='host' element={<Host />} />
+                    <Route path='host/:id' element={<Host />} />
                     <Route path='' element={<StayApp />} />
                 </Routes>
             </main>

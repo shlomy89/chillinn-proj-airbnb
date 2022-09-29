@@ -1,16 +1,16 @@
 import clsx from 'clsx'
 import moment from 'moment/moment'
-export const Order = ({ userImg, name, order, apartmentLocation, onClick }) => {
+export const Order = ({ imgUrl, name, order, apartmentLocation, onClick }) => {
     const { createdAt, startDate, endDate, guestsNum, orderStatus } = order
 
     return (
         <div className='order-wrapper'>
             <div className='order-container'>
                 <div className='order-details-container'>
-                    <img className='user-image' src={userImg} alt='user-img' />
+                    <img className='user-image' src={imgUrl} alt='user-img' />
                     <section className='order-details'>
                         <div className='order-reserved-date'>
-                            <span className='user-name'> {name}</span>
+                            <span className='user-name'>{name}</span>
                             <span className='reserved-date'>
                                 Reserved at:{' '}
                                 {`${moment(+createdAt).format('dddd')} ${moment(
@@ -25,8 +25,8 @@ export const Order = ({ userImg, name, order, apartmentLocation, onClick }) => {
                                 {`${moment(startDate).format('MMM')} ${moment(
                                     startDate
                                 ).format('DD')} - ${moment(endDate).format(
-                                    'DD'
-                                )}`}
+                                    'MMM'
+                                )} ${moment(endDate).format('DD')}`}
                             </span>
                         </div>
                         <span className='order-text-info'>

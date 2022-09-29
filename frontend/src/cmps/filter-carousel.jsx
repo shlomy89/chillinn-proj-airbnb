@@ -127,7 +127,9 @@ export const FilterCarousel = ({ setFilter }) => {
                 controlsStrategy='alternate'
                 disableDotsControls={true}
                 items={items} 
+                innerWidth={1}
                 paddingLeft={40}
+                paddingRight={40}
                 renderPrevButton={() => {
                     return <button className="prev-btn">
                         <img src={prevIcon} className="alice-carousel__prev-btn-item" />

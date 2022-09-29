@@ -2,6 +2,8 @@ const dbService = require('../../services/db.service')
 const logger = require('../../services/logger.service')
 const reviewService = require('../review/review.service')
 const ObjectId = require('mongodb').ObjectId
+const { map } = require('lodash')
+const GUEST_ID = '63345a2da2a849ed47c57332'
 
 module.exports = {
     query,
@@ -10,21 +12,22 @@ module.exports = {
     remove,
     update,
     add,
+    GUEST_ID,
     getUsersByOrders
 }
 
 async function getUsersByOrders(orders) {
     try {
         const collection = await dbService.getCollection('user')
-        const users = await collection.find().toArray()
-        // !! makes the command to be boolean;
-        const usersByOrders = users.filter(
-            (user) =>
-                !!orders.find(
-                    (order) => order.userId === ObjectId(user._id).toString()
-                )
+        const userIdOrders = map(
+            orders,
+            ({ userId }) => ObjectId(userId) ?? ObjectId(GUEST_ID)
         )
-        return usersByOrders
+        console.log({ userIdOrders })
+        const users = await collection
+            .find({ _id: { $in: userIdOrders } })
+            .toArray()
+        return users
     } catch (error) {
         console.log(error)
     }
@@ -117,7 +120,8 @@ async function add(user) {
             password: user.password,
             firstname: user.firstname,
             lastname: user.lastname,
-            imgUrl: user.imgUrl
+            imgUrl: user.imgUrl,
+            isHost: false
         }
         const collection = await dbService.getCollection('user')
         await collection.insertOne(userToAdd)

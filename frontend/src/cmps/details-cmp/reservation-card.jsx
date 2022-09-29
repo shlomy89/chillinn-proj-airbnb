@@ -43,6 +43,7 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
     const dispatch = useDispatch()
 
     const onClick = () => {
+        console.log('hiiii')
         dispatch(
             onAddOrder({
                 stay,
@@ -76,7 +77,13 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
                 setAgesData={setAgesData}
                 capacity={stay.capacity}
             />
-            <ReserveButton onClick={onClick} />
+
+            <ReserveButton
+                onClick={onClick}
+                stay={stay}
+                startDate={startDate}
+                endDate={endDate}
+            />
             <p className='no-charge'>you won't be charged yet</p>
             <section className='summary-price-container'>
                 <SummaryPrice

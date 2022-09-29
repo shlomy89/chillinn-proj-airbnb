@@ -1,5 +1,6 @@
 .reservation-card-container {
     border: 1px solid rgb(221, 221, 221);
+    position: sticky;
     border-radius: 12px;
     padding: 24px;
     min-width: 372px;
@@ -8,7 +9,6 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 5px 5px #00000015;
-    position: sticky;
     top: 13%;
     z-index: 1;
     transition: 0.5s;

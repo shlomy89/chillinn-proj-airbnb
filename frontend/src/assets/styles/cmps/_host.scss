@@ -1,7 +1,3 @@
-.orders-container {
-    display: flex;
-}
-
 .orders-status-header {
     margin-top: 20px;
     font-size: 26px;
@@ -9,8 +5,23 @@
 .host-container {
     display: flex;
     justify-content: center;
-    column-gap: 40px;
+    column-gap: 200px;
     // padding-left: auto;
     // padding-right: auto;
     padding-top: 80px;
+}
+
+.host-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .orders-container {
+        display: flex;
+    }
+    .host-container {
+        .orders-container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }

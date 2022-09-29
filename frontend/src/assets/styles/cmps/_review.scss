@@ -1,5 +1,8 @@
 .review-details {
     margin-top: 40px;
+    width: 40%;
+    flex-wrap: wrap;
+
     .user-details {
         display: flex;
         column-gap: 12px;

@@ -17,6 +17,9 @@
         .order-details {
             display: flex;
             flex-direction: column;
+            .user-name {
+                text-transform: capitalize;
+            }
             .order-reserved-date {
                 display: flex;
                 flex-direction: column;

@@ -13,18 +13,24 @@
     /* Color & Background */
     background-attachment: scroll;
     background-color: rgba(0, 0, 0, 0);
+    --mouse-x: 50;
+    --mouse-y: 50;
     background-image: radial-gradient(
-        circle at calc((0 + var(--positionX, 0)) * 10%)
-            calc((0 + var(--positionY, 0)) * 5%),
-        rgb(255, 56, 92) 0%,
-        rgb(230, 30, 77) 27.5%,
-        rgb(227, 28, 95) 40%,
-        rgb(215, 4, 102) 57.5%,
-        rgb(189, 30, 89) 75%,
-        rgb(189, 30, 89) 100%
+        circle at calc((0 + var(--mouse-x, 0)) * 10%)
+            calc((0 + var(--mouse-y, 0)) * 5%),
+        #2e53ab 0%,
+        #2e53ab 27.5%,
+        #2e53ab 40%,
+        #2e53ab 57.5%,
+        #2e53ab 75%,
+        #2e53ab 100%
     );
-    background-position: 2.65628% 87.3141%;
-    background-repeat: repeat;
+
+    background-image: radial-gradient(
+        circle,
+        rgb(49, 132, 255) 0%,
+        #2e53ab 100%
+    );
     color: rgb(255, 255, 255);
 
     min-height: 47.9948px;
@@ -38,4 +44,20 @@
     visibility: visible;
 
     border-radius: 5px;
+
+    padding: 20px 30px;
+    min-width: 300px;
+    background-size: 200% 200%;
+    background-position: calc((100 - var(--mouse-x, 0)) * 1%)
+        calc((100 - var(--mouse-y, 0)) * 1%);
+    //   background-image: radial-gradient(circle, rgba(252,141,47,1) 0%, rgba(255,49,91,1) 100%);
+    cursor: pointer;
+    //   border: none;
+    //   border-radius: 10px;
+    //   font-size: 36px;
+    //   font-family: 'Raleway', sans-serif;
+
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
 }
