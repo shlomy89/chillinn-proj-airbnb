@@ -26,9 +26,11 @@
 }
 
 .carousel .control-arrow:focus,
-.carousel .control-arrow:hover {
-  opacity: 1;
-  filter: alpha(opacity=100);
+.carousel:hover {
+  .control-arrow {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
 }
 
 .carousel .control-arrow:before,
@@ -173,8 +175,6 @@
   padding: 5px;
 }
 
-// .carousel.carousel-slider .control-arrow:hover {
-//   background: rgba(0, 0, 0, 0.2); }
 .carousel .slider-wrapper {
   overflow: hidden;
   margin: auto;

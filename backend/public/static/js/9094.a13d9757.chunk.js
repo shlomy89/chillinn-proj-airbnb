@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[9094],{89094:function(e,n,a){e.exports=a.p+"static/media/garden-or-backyard-icon.e3ee4e93aea918445557.svg"}}]);

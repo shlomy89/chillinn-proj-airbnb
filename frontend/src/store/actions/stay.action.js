@@ -22,7 +22,6 @@ export function loadHostStays() {
             const { filterBy } = getState().stayModule
             dispatch({ type: 'SET_LOADING', isLoading: true })
             const stays = await stayService.query(filterBy)
-            console.log({ stays })
             dispatch({ type: 'SET_HOST_STAYS', stays })
         } catch (error) {
             console.log('load stays error in stay action:', error)
@@ -44,7 +43,7 @@ export function removeStay(stayId) {
 }
 
 export function updateStay(stay) {
-    return async (dispatch) => {
+    return async dispatch => {
         try {
             await stayService.save(stay)
             dispatch({ type: 'UPDATE_STAY', stay })
@@ -55,7 +54,7 @@ export function updateStay(stay) {
 }
 
 export function addStay(stay) {
-    return async (dispatch) => {
+    return async dispatch => {
         try {
             await stayService.save(stay)
             dispatch({ type: 'ADD_STAY', stay })
@@ -66,7 +65,7 @@ export function addStay(stay) {
 }
 
 export function setFilterBy(filterBy) {
-    return async (dispatch) => {
+    return async dispatch => {
         dispatch({ type: 'SET_FILTER_BY', filterBy })
     }
 }

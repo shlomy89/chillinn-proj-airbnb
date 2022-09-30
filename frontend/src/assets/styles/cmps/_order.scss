@@ -1,47 +1,43 @@
 .order-container {
-    font-size: 16px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+  padding: 12px;
+
+  border-radius: 12px;
+  border: 1px solid black;
+
+
+  .order-details-container {
     display: flex;
-    align-items: center;
-    margin-top: 20px;
-    column-gap: 30px;
-    .order-details-container {
+    column-gap: 8px;
+    .user-image {
+      margin-top: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid grey;
+    }
+
+    .order-details {
+      display: flex;
+      flex-direction: column;
+
+      .user-name {
+        text-transform: capitalize;
+      }
+
+      .order-reserved-date {
         display: flex;
+        flex-direction: column;
+      }
 
-        .user-image {
-            margin-top: 10px;
-            width: 50px;
-            height: 50px;
-            // border: 1px solid black;
-            border-radius: 50%;
-        }
-        .order-details {
-            display: flex;
-            flex-direction: column;
-            .user-name {
-                text-transform: capitalize;
-            }
-            .order-reserved-date {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .order-text-info {
-                color: rgba(136, 139, 152, 255);
-            }
-        }
+      .order-text-info {
+        color: rgba(136, 139, 152, 255);
+      }
     }
-
-    .order-status {
-        &.approved {
-            color: #67c139;
-        }
-        &.pending {
-            color: rgba(252, 94, 6, 255);
-        }
-        &.rejected {
-            color: rgba(244, 108, 108, 255);
-        }
-    }
+  }
 }
 
 .order-actions-button {

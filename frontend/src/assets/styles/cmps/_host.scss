@@ -1,27 +1,96 @@
-.orders-status-header {
-    margin-top: 20px;
-    font-size: 26px;
-}
-.host-container {
-    display: flex;
-    justify-content: center;
-    column-gap: 200px;
-    // padding-left: auto;
-    // padding-right: auto;
-    padding-top: 80px;
+.host-page-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .host-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 1200px;
+
+  .host-header {
+    margin-top: 20px;
+    font-size: 26px;
+  }
+
+  .host-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    .orders-container {
+    justify-content: center;
+    padding-top: 40px;
+    width: 100%;
+
+    .orders-wrapper {
+
+      height: 400px;
+      width: 100%;
+
+      .orders-status-header {
+        font-size: 26px;
+      }
+
+      .orders-table {
+        flex: 1;
+        height: 800px;
+        width: 100%;
+        min-width: 0;
+      }
+
+      .orders-container {
         display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+      }
     }
-    .host-container {
-        .orders-container {
-            display: flex;
-            flex-direction: column;
-        }
+
+    .summary-container {
+      display: flex;
+      justify-content: space-between;
+      .summary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      .summary-header {
+        font-size: 32px;
+      }
+      }
     }
+
+  }
+}
+
+.order-user-image-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  .order-user-image {
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+
+.order-actions {
+  min-width: 400px;
+}
+
+.order-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.order-row-cell {
+  display: flex;
+  align-items: center;
 }

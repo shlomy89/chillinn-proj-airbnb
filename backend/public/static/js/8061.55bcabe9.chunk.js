@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[8061],{88061:function(n,a,c){n.exports=c.p+"static/media/beachfront-icon.a943a814c740caab43d4.svg"}}]);

@@ -4,7 +4,6 @@ const orderService = require('./order.service')
 // GET LIST
 async function getOrders(req, res) {
     try {
-        console.log(req.query.stayId)
         const orders = await orderService.getOrders(req.query.stayId)
         res.json(orders)
     } catch (err) {

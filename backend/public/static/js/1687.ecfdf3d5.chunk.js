@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[1687],{61687:function(i,n,s){i.exports=s.p+"static/media/first-aid-kit-icon.623f9d1542f1041532be.svg"}}]);

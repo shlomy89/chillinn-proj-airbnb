@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[7305],{17305:function(a,n,e){a.exports=e.p+"static/media/heart-icon.ab6597a07b219c37aa98.svg"}}]);

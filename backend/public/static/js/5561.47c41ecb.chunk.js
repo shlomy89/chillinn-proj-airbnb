@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[5561],{45561:function(n,e,a){n.exports=a.p+"static/media/carbon-monoxide-alarm-icon.86aed8b09a12c9160e28.svg"}}]);

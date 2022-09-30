@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[7670],{97670:function(e,i,n){e.exports=n.p+"static/media/fire-extinguisher-icon.60b64ccdd382e031ace7.svg"}}]);

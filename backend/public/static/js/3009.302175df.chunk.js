@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[3009],{33009:function(e,n,s){e.exports=s.p+"static/media/stove-icon.8bb19ce61c3372da8e2e.svg"}}]);

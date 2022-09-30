@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[8420],{28420:function(e,n,c){e.exports=c.p+"static/media/lake-view-icon.6ed00bae1628ccf39297.svg"}}]);

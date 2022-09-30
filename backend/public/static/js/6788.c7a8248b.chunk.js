@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[6788],{56788:function(n,a,c){n.exports=c.p+"static/media/hot-water-icon.91af9043ac754d2fc1af.svg"}}]);

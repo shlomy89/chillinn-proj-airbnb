@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[6327],{76327:function(e,i,n){e.exports=n.p+"static/media/refrigirator-icon.86527280c0ef84f57fdd.svg"}}]);

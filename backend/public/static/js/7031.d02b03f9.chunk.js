@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[7031],{17031:function(e,n,s){e.exports=s.p+"static/media/baking-sheet-icon.aed741873b3524c74a53.svg"}}]);

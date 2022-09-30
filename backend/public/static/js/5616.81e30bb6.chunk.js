@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[5616],{15616:function(n,c,e){n.exports=e.p+"static/media/bbq-grill-icon.f793b9d89c39c4799d5e.svg"}}]);
