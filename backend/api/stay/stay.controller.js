@@ -6,11 +6,14 @@ async function getStays(req, res) {
     let filterBy = {
         priceRange: [20, 1900],
         bedrooms: 0,
+        beds: 0,
+        bathrooms: 0,
         propertyTypes: {},
         placeTypes: {},
         amenities: {},
         labels: ''
     }
+
     try {
         logger.debug('Getting Stays')
         var params = req.query.params
@@ -21,6 +24,8 @@ async function getStays(req, res) {
             filterBy = {
                 priceRange: params.priceRange,
                 bedrooms: params.bedrooms,
+                bathrooms: params.bathrooms,
+                beds: params.beds,
                 propertyTypes: params.propertyTypes,
                 placeTypes: params.placeTypes,
                 amenities: params.amenities,

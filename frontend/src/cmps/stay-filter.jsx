@@ -3,7 +3,7 @@ import Slider, { SliderThumb } from '@mui/material/Slider'
 import Checkbox from '@mui/material/Checkbox'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import { styled } from '@mui/material/styles'
-import { useMemo, useState } from "react"
+import { useMemo, useState, useEffect } from "react"
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import Link from '@mui/material/Link'
@@ -20,10 +20,12 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
 
     const [localFilter, setLocalFilter] = useState(filter)
 
+    useEffect(() => {
+        console.log('localFilter:', localFilter)
+    }, [localFilter])
+
     const resetFilters = (ev) => {
         ev.preventDefault()
-        // separation between StayFilter local state and stay app state
-        // submiting only on demand
         setLocalFilter(getDefaultFilters())
     }
 
@@ -40,10 +42,10 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
     }
 
     const handleBedsButton = (ev) => {
-        const bedrooms = ev.target.name
+        const field = ev.target.name
         const val = ev.target.value
         setLocalFilter(prevFields => ({
-            ...prevFields, [bedrooms]: +val
+            ...prevFields, [field]: +val
         }))
     }
 
@@ -175,6 +177,9 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                             step={10}
                             {...getFieldProps('priceRange', 'range', true, true)}
                             valueLabelDisplay="auto" />
+                        {/* <input
+                            value={min}
+                            type="number" /> */}
                     </section>
 
                     <section className="place-type inner-filter-container">
@@ -206,8 +211,43 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                                 type="number"
                                 name="bedrooms"
                                 key={`room_${n}`}
-                                onClick={handleBedsButton}
-                            >
+                                onClick={handleBedsButton}>
+                                {n === 0 ? 'Any' : n}
+                            </RoomButton>
+                        ))}
+                    </section>
+                    <section className="rooms-btn inner-filter-container">
+                        <h2 className="bedrooms-titel sub-titel">
+                            Bathrooms
+                        </h2>
+                        {_.range(0, 9).map(n => (
+                            <RoomButton
+                                sx={{ borderRadius: 5, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
+                                className={localFilter.bathrooms === n ? 'active' : ''}
+                                value={n}
+                                id="bathrooms"
+                                type="number"
+                                name="bathrooms"
+                                key={`bathroom_${n}`}
+                                onClick={handleBedsButton}>
+                                {n === 0 ? 'Any' : n}
+                            </RoomButton>
+                        ))}
+                    </section>
+                    <section className="rooms-btn inner-filter-container">
+                        <h2 className="bedrooms-titel sub-titel">
+                            Beds
+                        </h2>
+                        {_.range(0, 9).map(n => (
+                            <RoomButton
+                                sx={{ borderRadius: 5, border: 1, borderColor: '#222222', marginInlineEnd: 1 }}
+                                className={localFilter.beds === n ? 'active' : ''}
+                                value={n}
+                                id="beds"
+                                type="number"
+                                name="beds"
+                                key={`beds_${n}`}
+                                onClick={handleBedsButton}>
                                 {n === 0 ? 'Any' : n}
                             </RoomButton>
                         ))}
@@ -279,5 +319,5 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                 </Button>
             </footer>
         </React.Fragment>
-    ) 
+    )
 }

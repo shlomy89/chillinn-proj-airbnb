@@ -1,10 +1,8 @@
-import { React, useEffect, useState } from 'react'
+import { React, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-// import { updateUserNotifications, updateUser } from "../../../store/user.action"
 import Divider from '@mui/material/Divider'
 import { userService } from '../../services/user.service'
-import { useDispatch } from 'react-redux'
 
 export function UserModal({ handleUserModal }) {
     const [loggedInUser, setLoggedInUser] = useState(
@@ -17,20 +15,12 @@ export function UserModal({ handleUserModal }) {
     // const dispatch = useDispatch()
     // const navigate = useNavigate()
 
-    // const resetUserNotifications = async () => {
-    // 	const currUser = await userService.getById(loggUser?._id)
-    // 	const updatedUser = { ...currUser, notifications: [] }
-    // 	const newUser = await userService.update(updatedUser)
-    // 	userService.setLoggedInUser(newUser)
-    // 	dispatch(updateUserNotifications([]))
-    // }
 
-    function onLogOut() {
-        userService.logout()
-        setLoggedInUser(null)
-        // dispatch(updateUser({}))
-        navigate('/')
-    }
+	function onLogOut() {
+		userService.logout()
+		setLoggedInUser(null)
+		navigate('/')
+	}
 
     return (
         <nav className={`user-modal-container `} onClick={handleUserModal}>
