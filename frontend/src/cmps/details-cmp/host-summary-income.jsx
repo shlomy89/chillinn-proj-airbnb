@@ -18,11 +18,6 @@ const calculateIncome = (order, stays) => {
 export const HostSummaryIncome = () => {
     const orders = useSelector((state) => state.orderModule.orders)
     const stays = useSelector((state) => state.stayModule.hostStays)
-    // const amountOfReviews = sumBy(
-    //     filter(stays, (stay) => !!find(orders, { stayId: stay._id })),
-    //     ({ reviews }) => reviews.length
-    // )
-
     const approvedOrders = filter(orders, { orderStatus: 'approved' })
     const rejectedOrders = filter(orders, { orderStatus: 'rejected' })
     const pendingOrders = filter(orders, { orderStatus: 'pending' })
@@ -45,17 +40,6 @@ export const HostSummaryIncome = () => {
         }
     ]
 
-    // useEffect(() => {
-    //     let timeOut
-    //     dispatch(loadStays()).then(() => {
-    //         timeOut = setInterval(() => {
-    //             dispatch(loadOrders())
-    //         }, 3000)
-    //     })
-    //     return () => {
-    //         clearInterval(timeOut)
-    //     }
-    // }, [])
     const totalIncome = sumBy(approvedOrders, (order) =>
         calculateIncome(order, stays)
     )
@@ -66,6 +50,7 @@ export const HostSummaryIncome = () => {
         ),
         (order) => calculateIncome(order, stays)
     )
+
     return (
         <div className='host-summary-income-container'>
             <div className='income-info-container'>

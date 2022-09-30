@@ -3,7 +3,6 @@ const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy = {}) {
-    console.log("filterBy", filterBy)
     const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('stay')
@@ -123,7 +122,7 @@ function _buildCriteria(filterBy) {
     if (bedrooms) {
         criteria.bedrooms = { $eq: bedrooms }
     }
-    
+
     if (beds) {
         criteria.capacity = { $eq: beds }
     }

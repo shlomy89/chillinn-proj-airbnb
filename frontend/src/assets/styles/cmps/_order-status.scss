@@ -1,0 +1,15 @@
+.order-status {
+  text-transform: capitalize;
+
+  &.approved {
+    color: #67c139;
+  }
+
+  &.pending {
+    color: rgba(252, 94, 6, 255);
+  }
+
+  &.rejected {
+    color: rgba(244, 108, 108, 255);
+  }
+}

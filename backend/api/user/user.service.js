@@ -23,7 +23,6 @@ async function getUsersByOrders(orders) {
             orders,
             ({ userId }) => ObjectId(userId) ?? ObjectId(GUEST_ID)
         )
-        console.log({ userIdOrders })
         const users = await collection
             .find({ _id: { $in: userIdOrders } })
             .toArray()

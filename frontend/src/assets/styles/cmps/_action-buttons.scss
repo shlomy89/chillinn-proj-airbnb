@@ -1,0 +1,29 @@
+.action-buttons-container {
+  display: flex;
+  column-gap: 12px;
+
+  .action-button {
+    cursor: pointer;
+    color: #67c139;
+
+    &:hover {
+      color: green;
+    }
+
+    &:active {
+      color: #67c139;
+    }
+
+    &.rejected {
+      color: #f46c6c;
+
+      &:hover {
+        color: red;
+      }
+
+      &:active {
+        color: #f46c6c;
+      }
+    }
+  }
+}
