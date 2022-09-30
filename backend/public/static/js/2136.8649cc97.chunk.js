@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[2136],{22136:function(n,c,a){n.exports=a.p+"static/media/patio-or-balcony-icon.67964a691a0eb4f39c2c.svg"}}]);

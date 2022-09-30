@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[1234],{21234:function(e,n,s){e.exports=s.p+"static/media/coffee-maker-icon.866eb3196a6d6b3f46ef.svg"}}]);

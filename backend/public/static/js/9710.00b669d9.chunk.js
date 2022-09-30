@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[9710],{89710:function(n,i,c){n.exports=c.p+"static/media/dining-table-icon.c0cfb96d78596b430aa1.svg"}}]);

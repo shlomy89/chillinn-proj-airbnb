@@ -18,7 +18,7 @@ export function SearchBar({ handelClick }) {
             <button className='btn-dates'
                 onClick={() => handelClick('dates')}
             >
-                AnyWeek
+                Any week
             </button>
 
             <span className='divider'></span>

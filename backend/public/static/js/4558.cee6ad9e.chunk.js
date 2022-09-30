@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[4558],{64558:function(s,e,n){s.exports=n.p+"static/media/dishwasher-icon.2e72cf29caf9fa532021.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[6149],{16149:function(e,s,n){e.exports=n.p+"static/media/dishes-and-silverware-icon.cf7e747f924e1b22962f.svg"}}]);

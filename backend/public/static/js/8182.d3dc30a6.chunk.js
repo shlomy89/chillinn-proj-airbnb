@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[8182],{98182:function(e,n,i){e.exports=i.p+"static/media/king-size-bed-icon.8eddada6ead0c4302783.svg"}}]);

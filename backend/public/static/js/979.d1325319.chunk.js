@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[979],{40979:function(e,n,s){e.exports=s.p+"static/media/books-and-reading-materials-icon.4dbe378b3164eccad00b.svg"}}]);

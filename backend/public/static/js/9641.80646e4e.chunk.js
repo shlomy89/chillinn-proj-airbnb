@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[9641],{99641:function(n,s,e){n.exports=e.p+"static/media/long-term-stays-allowed-icon.b79a04108108692db3fc.svg"}}]);

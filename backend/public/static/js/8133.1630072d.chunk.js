@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[8133],{88133:function(c,e,n){c.exports=n.p+"static/media/kitchen-icon.e2dc65a5a1cba5c1eb5a.svg"}}]);
