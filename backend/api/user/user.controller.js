@@ -51,7 +51,6 @@ async function updateUser(req, res) {
 async function getUsersByOrders(req, res) {
     try {
         const orders = await orderService.getOrders(req.query.stayId)
-        console.log({ orders })
         const users = await userService.getUsersByOrders(orders)
         res.send(users)
     } catch (error) {

@@ -23,7 +23,7 @@
 @import 'cmps/app-footer';
 @import 'cmps/user-msg';
 @import 'cmps/star-rating';
-@import 'cmps/action-button';
+@import 'src/assets/styles/cmps/action-rating';
 @import 'cmps/stay-preview';
 @import 'cmps/stay-list';
 @import 'cmps/review';
@@ -48,10 +48,11 @@
 @import 'cmps/order';
 @import 'cmps/host-summary-income';
 @import 'cmps/host-pie-details';
+@import 'cmps/action-buttons';
 @import 'cmps/date-picker';
 // @import "react-alice-carousel/lib/scss/alice-carousel.scss";
 @import 'cmps/alice-carousel';
-
+@import 'cmps/order-status';
 @import 'cmps/add-review';
 @import 'cmps/amenity';
 // preview
