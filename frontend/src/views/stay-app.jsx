@@ -104,6 +104,7 @@ export const StayApp = () => {
         const serializedBase64 = window.btoa(serializedFilters)
 
         setSearchParams({ encoded: serializedBase64 })
+        console.log('filter:', filter)
     }, [filter])
 
     const getDefaultFilters = () => {

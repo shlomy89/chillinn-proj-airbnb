@@ -68,6 +68,8 @@ function _buildCriteria(filterBy) {
     const {
         priceRange = [],
         bedrooms,
+        beds,
+        bathsrooms,
         propertyTypes = {},
         placeTypes = {},
         amenities = {},
@@ -119,6 +121,14 @@ function _buildCriteria(filterBy) {
 
     if (bedrooms) {
         criteria.bedrooms = { $eq: bedrooms }
+    }
+
+    if (beds) {
+        criteria.capacity = { $eq: beds }
+    }
+
+    if (bathsrooms) {
+        criteria.bathsrooms = { $eq: bathsrooms }
     }
 
     if (hostId) {

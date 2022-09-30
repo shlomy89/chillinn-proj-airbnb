@@ -1,98 +1,85 @@
-import { HostPieDetails } from '../cmps/host/host-pie-details'
-import '../assets/styles/cmps/_host-summary.scss'
-import { Review } from '../cmps/details-cmp/review'
-import React, { useState, useEffect, useMemo } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
-import { reviewService } from '../services/review.service'
-import { stayService } from '../services/stay.service'
-import { Order } from '../cmps/details-cmp/order'
-import { HostSummaryIncome } from '../cmps/details-cmp/host-summary-income'
-import { useDispatch, useSelector } from 'react-redux'
-import {
-    loadOrder,
-    loadOrders,
-    onUpdateOrder
-} from '../store/actions/order.actions'
-import { loadHostStays, loadStays } from '../store/actions/stay.action.js'
+import '../assets/styles/cmps/_host-summary.scss';
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { loadOrders } from '../store/actions/order.actions';
+import { loadHostStays } from '../store/actions/stay.action.js';
+import 'ag-grid-community/styles/ag-grid.css';
+import 'ag-grid-community/styles/ag-theme-alpine.css';
+import 'ag-grid-community/styles/ag-theme-balham.css';
+import 'ag-grid-community/styles/ag-theme-material.css';
+import { OrdersTable } from '../cmps/host/orders-table';
+import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from 'recharts';
+import { keys, map, meanBy, sumBy } from 'lodash';
+import { loadReviews } from '../store/actions/review.actions';
+import { HostPieDetails } from '../cmps/host/host-pie-details';
 
 export const Host = () => {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
 
-    const { id: hostId } = useParams()
+    const { id: hostId } = useParams();
 
-    const orders = useSelector((state) => state.orderModule.orders)
-    const users = useSelector((state) => state.orderModule.users)
-    const stays = useSelector((state) => state.stayModule.hostStays)
-    const filterBy = useSelector((state) => state.stayModule.filterBy)
-
-    useEffect(() => {
-        dispatch({ type: 'SET_FILTER_BY', filterBy: { hostId } })
-    }, [hostId])
+    const orders = useSelector(state => state.orderModule.orders);
+    const users = useSelector(state => state.orderModule.users);
+    const stays = useSelector(state => state.stayModule.hostStays);
+    const user = useSelector(state => state.userModule.user);
+    const filterBy = useSelector(state => state.stayModule.filterBy);
+    const reviews = useSelector(state => state.reviewModule.reviews);
 
     useEffect(() => {
-        dispatch(loadHostStays())
-    }, [filterBy?.hostId])
+        dispatch({ type: 'SET_FILTER_BY', filterBy: { hostId } });
+    }, [hostId]);
+
+    useEffect(() => {
+        dispatch(loadHostStays());
+    }, [filterBy?.hostId]);
 
     useEffect(() => {
         if (!stays.length) {
-            return
+            return;
         }
-        dispatch(loadOrders({ stayId: stays[0]._id }))
-    }, [stays])
-
-    const onUpdateOrderClick = (order, orderStatus) => {
-        dispatch(
-            onUpdateOrder({
-                ...order,
-                orderStatus
-            })
-        )
-    }
+        dispatch(loadOrders({ stayId: stays[0]._id }));
+        dispatch(loadReviews({ stayId: stays[0]._id }));
+    }, [stays]);
 
     return (
-        <div className='host-page-container'>
-            <span className='orders-status-header'>Orders status </span>
-            <div className='host-container'>
-                <section className='orders-container'>
-                    {users.length > 0 &&
-                        orders.map((order) => {
-                            const stay = stays.find(
-                                (stay) => stay._id === order.stayId
-                            )
+        <div className="host-page-wrapper">
+            <div className="host-page-container">
+                <span className="host-header">Hi {user.firstname}! </span>
+                <div className="host-container">
+                    <section className="orders-wrapper ag-theme-material">
+                        <OrdersTable />
+                    </section>
 
-                            if (!stay) return null
-                            const user = users.find(
-                                (user) => user._id === order.userId
-                            )
-                            console.log({ user, order: order.userId })
+                    <div className="summary-container">
+                        <div className="summary">
+                            <span className="summary-header">Reviews Summary</span>
+                            <span className="summary-header">Total Reviews: {reviews.length}</span>
+                            <RadarChart
+                                outerRadius={90}
+                                width={520}
+                                height={250}
+                                tick={false}
+                                data={map(keys(reviews[0]?.rating), ratingKey => ({
+                                    subject: ratingKey.charAt(0).toUpperCase() + ratingKey.slice(1),
+                                    total: meanBy(reviews, review => review.rating[ratingKey]),
+                                }))}
+                            >
+                                <PolarGrid />
+                                <PolarAngleAxis dataKey={({ subject, total }) => `${subject} (${total})`} />
+                                <PolarRadiusAxis angle={30} domain={[0, 5]} />
+                                <Radar dataKey="total" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                            </RadarChart>
+                        </div>
 
-                            return (
-                                <Order
-                                    ket={order._id}
-                                    onClick={onUpdateOrderClick}
-                                    name={
-                                        user
-                                            ? `${user.firstname} ${user.lastname}`
-                                            : 'Guest'
-                                    }
-                                    order={order}
-                                    apartmentLocation={` ${stay.loc.city}, ${stay.loc.country}`}
-                                    imgUrl={user?.imgUrl}
-                                />
-                            )
-                        })}
-                </section>
-                <div className='hosting-summary-container'>
-                    <span className='hosting-header'>Hosting Summary</span>
-                    <span className='secondary-header'>Fantastic Job!</span>
-
-                    <span className='guests-info'>
-                        Guests love what you're doing, keep up the good work and
-                        review your orders stats!
-                    </span>
-                    <HostSummaryIncome />
+                        <div className="summary">
+                            <span className="summary-header">Orders Summary</span>
+                            <span className="summary-header">Total Orders: {orders.length}</span>
+                            <HostPieDetails />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

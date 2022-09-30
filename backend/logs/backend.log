@@ -1865,14 +1865,790 @@
 29/09/2022, 9:35:23 - DEBUG - Getting Stays
 29/09/2022, 9:35:29 - DEBUG - Getting Stays
 29/09/2022, 9:35:29 - DEBUG - Getting Stays
-29.9.2022, 20:12:33 - INFO - Server is running on port: 3030
-29.9.2022, 20:18:50 - DEBUG - Getting Stays
-29.9.2022, 20:54:48 - INFO - Req was made
-29.9.2022, 20:56:43 - DEBUG - Getting Stays
-29.9.2022, 21:06:53 - INFO - Req was made
-29.9.2022, 21:07:02 - DEBUG - Getting Stays
-29.9.2022, 21:08:12 - INFO - Req was made
-29.9.2022, 21:08:26 - DEBUG - Getting Stays
-30.9.2022, 11:34:26 - DEBUG - Getting Stays
-30.9.2022, 11:38:43 - DEBUG - Getting Stays
-30.9.2022, 11:41:01 - INFO - Req was made
+29.9.2022, 9:55:52 - DEBUG - Getting Stays
+29.9.2022, 9:56:24 - DEBUG - Getting Stays
+29.9.2022, 10:00:40 - INFO - Server is running on port: 3030
+29.9.2022, 10:02:38 - INFO - Server is running on port: 3030
+29.9.2022, 10:02:47 - INFO - Server is running on port: 3030
+29.9.2022, 10:04:12 - DEBUG - Getting Stays
+29.9.2022, 10:05:05 - DEBUG - Getting Stays
+29.9.2022, 10:05:37 - DEBUG - Getting Stays
+29.9.2022, 10:06:28 - DEBUG - Getting Stays
+29.9.2022, 10:07:49 - INFO - Server is running on port: 3030
+29.9.2022, 10:07:58 - DEBUG - Getting Stays
+29.9.2022, 10:08:23 - DEBUG - Getting Stays
+29.9.2022, 10:08:41 - DEBUG - Getting Stays
+29.9.2022, 10:09:01 - DEBUG - Getting Stays
+29.9.2022, 10:09:31 - DEBUG - Getting Stays
+29.9.2022, 10:10:39 - DEBUG - Getting Stays
+29.9.2022, 10:10:48 - DEBUG - Getting Stays
+29.9.2022, 10:12:54 - DEBUG - Getting Stays
+29.9.2022, 10:15:11 - DEBUG - Getting Stays
+29.9.2022, 10:15:34 - DEBUG - Getting Stays
+29.9.2022, 10:15:59 - DEBUG - Getting Stays
+29.9.2022, 10:17:01 - INFO - Server is running on port: 3030
+29.9.2022, 10:17:15 - DEBUG - Getting Stays
+29.9.2022, 10:17:59 - INFO - Server is running on port: 3030
+29.9.2022, 10:18:03 - INFO - Server is running on port: 3030
+29.9.2022, 10:18:16 - DEBUG - Getting Stays
+29.9.2022, 10:18:40 - DEBUG - Getting Stays
+29.9.2022, 10:19:32 - INFO - Server is running on port: 3030
+29.9.2022, 10:20:10 - DEBUG - Getting Stays
+29.9.2022, 10:20:49 - DEBUG - Getting Stays
+29.9.2022, 10:22:39 - DEBUG - Getting Stays
+29.9.2022, 10:27:56 - DEBUG - Getting Stays
+9/29/2022, 9:50:05 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:50:16 PM - DEBUG - Getting Stays
+9/29/2022, 9:50:42 PM - DEBUG - auth.service - login with username: 118676
+9/29/2022, 9:50:42 PM - ERROR - Failed to Login Invalid username or password
+9/29/2022, 9:50:45 PM - DEBUG - Getting Stays
+9/29/2022, 9:50:54 PM - INFO - Req was made
+9/29/2022, 9:50:57 PM - INFO - Req was made
+9/29/2022, 9:51:09 PM - INFO - Req was made
+9/29/2022, 9:51:20 PM - INFO - Req was made
+9/29/2022, 9:51:20 PM - INFO - Req was made
+9/29/2022, 9:51:26 PM - DEBUG - auth.service - login with username: 118676
+9/29/2022, 9:51:26 PM - ERROR - Failed to Login Invalid username or password
+9/29/2022, 9:51:29 PM - DEBUG - Getting Stays
+9/29/2022, 9:51:35 PM - DEBUG - Getting Stays
+9/29/2022, 9:51:44 PM - DEBUG - auth.service - login with username: 118676
+9/29/2022, 9:51:44 PM - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+9/29/2022, 9:51:47 PM - DEBUG - Getting Stays
+9/29/2022, 9:52:01 PM - DEBUG - Getting Stays
+9/29/2022, 9:52:01 PM - DEBUG - Getting Stays
+9/29/2022, 9:52:12 PM - DEBUG - Getting Stays
+9/29/2022, 9:52:12 PM - DEBUG - Getting Stays
+9/29/2022, 9:53:10 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:53:17 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:53:22 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:53:25 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:53:57 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:54:00 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:54:54 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:54:59 PM - DEBUG - Getting Stays
+9/29/2022, 9:55:01 PM - DEBUG - Getting Stays
+9/29/2022, 9:55:05 PM - ERROR - cannot update order 6335d56d8e72e3276d5330bb | {"index":0,"code":66}
+9/29/2022, 9:55:05 PM - ERROR - Failed to update order | {"index":0,"code":66}
+9/29/2022, 9:55:06 PM - ERROR - cannot update order 6335d56d8e72e3276d5330bb | {"index":0,"code":66}
+9/29/2022, 9:55:06 PM - ERROR - Failed to update order | {"index":0,"code":66}
+9/29/2022, 9:56:04 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:56:10 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:56:17 PM - DEBUG - Getting Stays
+9/29/2022, 9:56:18 PM - DEBUG - Getting Stays
+9/29/2022, 9:56:22 PM - DEBUG - Getting Stays
+9/29/2022, 9:56:23 PM - DEBUG - Getting Stays
+9/29/2022, 9:56:45 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:57:09 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:57:14 PM - DEBUG - Getting Stays
+9/29/2022, 9:57:15 PM - DEBUG - Getting Stays
+9/29/2022, 9:57:52 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:58:35 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:58:42 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:58:44 PM - INFO - Server is running on port: 3030
+9/29/2022, 9:58:50 PM - DEBUG - Getting Stays
+9/29/2022, 9:58:50 PM - DEBUG - Getting Stays
+9/29/2022, 9:58:53 PM - DEBUG - Getting Stays
+9/29/2022, 9:58:53 PM - DEBUG - Getting Stays
+9/29/2022, 9:59:09 PM - INFO - Server is running on port: 3030
+9/29/2022, 10:00:02 PM - DEBUG - Getting Stays
+9/29/2022, 10:00:30 PM - DEBUG - Getting Stays
+9/29/2022, 10:00:36 PM - DEBUG - Getting Stays
+9/29/2022, 10:00:56 PM - DEBUG - Getting Stays
+9/29/2022, 10:00:56 PM - DEBUG - Getting Stays
+9/29/2022, 10:01:11 PM - DEBUG - Getting Stays
+9/29/2022, 10:01:11 PM - DEBUG - Getting Stays
+9/29/2022, 10:01:12 PM - DEBUG - Getting Stays
+9/29/2022, 10:01:26 PM - DEBUG - Getting Stays
+9/29/2022, 10:01:28 PM - DEBUG - Getting Stays
+9/29/2022, 10:01:28 PM - DEBUG - Getting Stays
+9/29/2022, 10:02:21 PM - DEBUG - Getting Stays
+9/29/2022, 10:02:21 PM - DEBUG - Getting Stays
+9/29/2022, 10:02:22 PM - DEBUG - Getting Stays
+9/29/2022, 10:02:25 PM - DEBUG - Getting Stays
+9/29/2022, 10:02:47 PM - DEBUG - Getting Stays
+9/29/2022, 10:03:03 PM - DEBUG - Getting Stays
+9/29/2022, 10:14:26 PM - DEBUG - Getting Stays
+9/29/2022, 10:14:26 PM - DEBUG - Getting Stays
+9/29/2022, 10:15:12 PM - DEBUG - Getting Stays
+9/29/2022, 10:15:18 PM - DEBUG - Getting Stays
+9/29/2022, 10:26:17 PM - DEBUG - Getting Stays
+9/29/2022, 10:26:17 PM - DEBUG - Getting Stays
+9/29/2022, 11:37:39 PM - DEBUG - Getting Stays
+9/29/2022, 11:38:00 PM - DEBUG - Getting Stays
+9/29/2022, 11:40:26 PM - DEBUG - Getting Stays
+9/29/2022, 11:40:41 PM - DEBUG - Getting Stays
+9/29/2022, 11:44:36 PM - DEBUG - Getting Stays
+9/29/2022, 11:44:49 PM - DEBUG - Getting Stays
+9/29/2022, 11:45:38 PM - DEBUG - Getting Stays
+9/29/2022, 11:46:42 PM - DEBUG - Getting Stays
+9/29/2022, 11:46:43 PM - DEBUG - Getting Stays
+9/29/2022, 11:47:11 PM - DEBUG - Getting Stays
+9/29/2022, 11:47:45 PM - DEBUG - Getting Stays
+9/29/2022, 11:48:13 PM - DEBUG - Getting Stays
+9/29/2022, 11:51:19 PM - DEBUG - Getting Stays
+9/29/2022, 11:51:51 PM - DEBUG - Getting Stays
+9/29/2022, 11:51:51 PM - DEBUG - Getting Stays
+9/30/2022, 12:00:24 AM - DEBUG - Getting Stays
+9/30/2022, 12:01:42 AM - DEBUG - Getting Stays
+9/30/2022, 12:01:45 AM - DEBUG - Getting Stays
+9/30/2022, 12:01:50 AM - ERROR - while finding stay host | {}
+9/30/2022, 12:01:50 AM - ERROR - Failed to get stay | {}
+9/30/2022, 12:01:52 AM - DEBUG - Getting Stays
+9/30/2022, 12:01:53 AM - DEBUG - Getting Stays
+9/30/2022, 12:15:40 AM - DEBUG - Getting Stays
+9/30/2022, 12:15:41 AM - DEBUG - Getting Stays
+9/30/2022, 12:16:34 AM - DEBUG - Getting Stays
+9/30/2022, 12:17:48 AM - DEBUG - Getting Stays
+9/30/2022, 12:17:57 AM - DEBUG - Getting Stays
+9/30/2022, 12:18:02 AM - DEBUG - Getting Stays
+9/30/2022, 12:18:02 AM - DEBUG - Getting Stays
+9/30/2022, 12:18:31 AM - DEBUG - Getting Stays
+9/30/2022, 12:18:31 AM - DEBUG - Getting Stays
+9/30/2022, 12:18:53 AM - DEBUG - Getting Stays
+9/30/2022, 12:19:29 AM - DEBUG - Getting Stays
+9/30/2022, 12:19:29 AM - DEBUG - Getting Stays
+9/30/2022, 12:20:15 AM - DEBUG - Getting Stays
+9/30/2022, 12:21:09 AM - DEBUG - Getting Stays
+9/30/2022, 12:21:26 AM - DEBUG - Getting Stays
+9/30/2022, 12:21:34 AM - DEBUG - Getting Stays
+9/30/2022, 12:21:44 AM - DEBUG - Getting Stays
+9/30/2022, 12:21:58 AM - DEBUG - Getting Stays
+9/30/2022, 12:25:07 AM - DEBUG - Getting Stays
+9/30/2022, 12:25:37 AM - DEBUG - Getting Stays
+9/30/2022, 12:26:19 AM - DEBUG - Getting Stays
+9/30/2022, 12:27:58 AM - DEBUG - Getting Stays
+9/30/2022, 12:28:00 AM - DEBUG - Getting Stays
+9/30/2022, 12:28:00 AM - DEBUG - Getting Stays
+9/30/2022, 12:28:40 AM - DEBUG - Getting Stays
+9/30/2022, 12:28:41 AM - DEBUG - Getting Stays
+9/30/2022, 12:28:42 AM - DEBUG - Getting Stays
+9/30/2022, 12:30:27 AM - DEBUG - Getting Stays
+9/30/2022, 12:30:42 AM - DEBUG - Getting Stays
+9/30/2022, 12:35:52 AM - DEBUG - Getting Stays
+9/30/2022, 12:36:42 AM - DEBUG - Getting Stays
+9/30/2022, 12:38:22 AM - DEBUG - Getting Stays
+9/30/2022, 12:38:45 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:21 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:22 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:33 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:40 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:41 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:53 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:55 AM - DEBUG - Getting Stays
+9/30/2022, 12:40:55 AM - DEBUG - Getting Stays
+9/30/2022, 12:41:07 AM - DEBUG - Getting Stays
+9/30/2022, 12:41:10 AM - DEBUG - Getting Stays
+9/30/2022, 12:41:10 AM - DEBUG - Getting Stays
+9/30/2022, 12:42:06 AM - DEBUG - Getting Stays
+9/30/2022, 12:44:12 AM - DEBUG - Getting Stays
+9/30/2022, 12:46:14 AM - DEBUG - Getting Stays
+9/30/2022, 12:46:15 AM - DEBUG - Getting Stays
+9/30/2022, 12:47:19 AM - DEBUG - Getting Stays
+9/30/2022, 12:49:38 AM - DEBUG - Getting Stays
+9/30/2022, 12:51:38 AM - DEBUG - Getting Stays
+9/30/2022, 12:51:41 AM - DEBUG - Getting Stays
+9/30/2022, 12:52:40 AM - DEBUG - Getting Stays
+9/30/2022, 12:53:48 AM - DEBUG - Getting Stays
+9/30/2022, 12:53:51 AM - DEBUG - Getting Stays
+9/30/2022, 12:53:51 AM - DEBUG - Getting Stays
+9/30/2022, 12:55:26 AM - DEBUG - Getting Stays
+9/30/2022, 12:56:39 AM - DEBUG - Getting Stays
+9/30/2022, 12:56:50 AM - DEBUG - Getting Stays
+9/30/2022, 12:56:53 AM - DEBUG - Getting Stays
+9/30/2022, 12:56:53 AM - DEBUG - Getting Stays
+9/30/2022, 12:57:10 AM - DEBUG - Getting Stays
+9/30/2022, 12:57:12 AM - DEBUG - Getting Stays
+9/30/2022, 12:57:12 AM - DEBUG - Getting Stays
+9/30/2022, 12:57:37 AM - DEBUG - Getting Stays
+9/30/2022, 12:57:40 AM - DEBUG - Getting Stays
+9/30/2022, 12:57:40 AM - DEBUG - Getting Stays
+9/30/2022, 12:57:46 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:08 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:12 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:12 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:18 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:19 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:20 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:26 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:36 AM - DEBUG - Getting Stays
+9/30/2022, 12:58:55 AM - DEBUG - Getting Stays
+9/30/2022, 1:00:22 AM - DEBUG - Getting Stays
+9/30/2022, 1:00:33 AM - DEBUG - Getting Stays
+9/30/2022, 1:00:37 AM - DEBUG - Getting Stays
+9/30/2022, 1:01:01 AM - DEBUG - Getting Stays
+9/30/2022, 1:01:16 AM - DEBUG - Getting Stays
+9/30/2022, 1:04:09 AM - DEBUG - Getting Stays
+9/30/2022, 1:04:11 AM - DEBUG - Getting Stays
+9/30/2022, 1:04:12 AM - DEBUG - Getting Stays
+9/30/2022, 1:04:20 AM - DEBUG - Getting Stays
+9/30/2022, 1:05:53 AM - DEBUG - Getting Stays
+9/30/2022, 1:05:55 AM - DEBUG - Getting Stays
+9/30/2022, 1:05:55 AM - DEBUG - Getting Stays
+9/30/2022, 1:08:50 AM - DEBUG - Getting Stays
+9/30/2022, 1:09:18 AM - DEBUG - Getting Stays
+9/30/2022, 1:09:18 AM - DEBUG - Getting Stays
+9/30/2022, 1:10:59 AM - DEBUG - Getting Stays
+9/30/2022, 1:10:59 AM - DEBUG - Getting Stays
+9/30/2022, 1:11:14 AM - DEBUG - Getting Stays
+9/30/2022, 1:11:23 AM - DEBUG - Getting Stays
+9/30/2022, 1:11:44 AM - DEBUG - Getting Stays
+9/30/2022, 1:11:52 AM - DEBUG - Getting Stays
+9/30/2022, 1:12:19 AM - DEBUG - Getting Stays
+9/30/2022, 1:13:01 AM - DEBUG - Getting Stays
+9/30/2022, 1:13:02 AM - DEBUG - Getting Stays
+9/30/2022, 1:13:02 AM - DEBUG - Getting Stays
+9/30/2022, 1:14:05 AM - DEBUG - Getting Stays
+9/30/2022, 1:14:05 AM - DEBUG - Getting Stays
+9/30/2022, 1:15:36 AM - DEBUG - Getting Stays
+9/30/2022, 8:07:53 AM - DEBUG - Getting Stays
+9/30/2022, 8:09:06 AM - DEBUG - Getting Stays
+9/30/2022, 8:09:22 AM - DEBUG - Getting Stays
+9/30/2022, 8:09:27 AM - DEBUG - Getting Stays
+9/30/2022, 8:09:39 AM - DEBUG - Getting Stays
+9/30/2022, 8:09:47 AM - DEBUG - Getting Stays
+9/30/2022, 8:09:50 AM - DEBUG - Getting Stays
+9/30/2022, 8:09:50 AM - DEBUG - Getting Stays
+9/30/2022, 8:12:07 AM - DEBUG - Getting Stays
+9/30/2022, 8:12:09 AM - DEBUG - Getting Stays
+9/30/2022, 8:12:09 AM - DEBUG - Getting Stays
+9/30/2022, 8:12:14 AM - DEBUG - Getting Stays
+9/30/2022, 8:12:37 AM - DEBUG - Getting Stays
+9/30/2022, 8:12:39 AM - DEBUG - Getting Stays
+9/30/2022, 8:12:39 AM - DEBUG - Getting Stays
+9/30/2022, 8:13:09 AM - DEBUG - Getting Stays
+9/30/2022, 8:13:14 AM - DEBUG - Getting Stays
+9/30/2022, 8:13:14 AM - DEBUG - Getting Stays
+9/30/2022, 8:13:47 AM - DEBUG - Getting Stays
+9/30/2022, 8:14:28 AM - DEBUG - Getting Stays
+9/30/2022, 8:15:57 AM - DEBUG - Getting Stays
+9/30/2022, 8:15:59 AM - DEBUG - Getting Stays
+9/30/2022, 8:16:36 AM - DEBUG - Getting Stays
+9/30/2022, 8:16:44 AM - DEBUG - Getting Stays
+9/30/2022, 8:16:48 AM - DEBUG - Getting Stays
+9/30/2022, 8:17:31 AM - DEBUG - Getting Stays
+9/30/2022, 8:18:34 AM - DEBUG - Getting Stays
+9/30/2022, 8:18:35 AM - DEBUG - Getting Stays
+9/30/2022, 8:22:25 AM - DEBUG - Getting Stays
+9/30/2022, 8:22:31 AM - DEBUG - Getting Stays
+9/30/2022, 8:22:31 AM - DEBUG - Getting Stays
+9/30/2022, 8:24:46 AM - DEBUG - Getting Stays
+9/30/2022, 8:25:25 AM - DEBUG - Getting Stays
+9/30/2022, 8:25:25 AM - DEBUG - Getting Stays
+9/30/2022, 8:26:20 AM - DEBUG - Getting Stays
+9/30/2022, 8:29:05 AM - DEBUG - Getting Stays
+9/30/2022, 8:29:20 AM - DEBUG - Getting Stays
+9/30/2022, 8:31:48 AM - DEBUG - Getting Stays
+9/30/2022, 8:31:52 AM - DEBUG - Getting Stays
+9/30/2022, 8:31:52 AM - DEBUG - Getting Stays
+9/30/2022, 8:32:04 AM - DEBUG - Getting Stays
+9/30/2022, 8:32:12 AM - DEBUG - Getting Stays
+9/30/2022, 8:32:16 AM - DEBUG - Getting Stays
+9/30/2022, 8:32:16 AM - DEBUG - Getting Stays
+9/30/2022, 8:32:27 AM - DEBUG - Getting Stays
+9/30/2022, 8:33:10 AM - DEBUG - Getting Stays
+9/30/2022, 8:33:20 AM - DEBUG - Getting Stays
+9/30/2022, 8:33:49 AM - DEBUG - Getting Stays
+9/30/2022, 8:33:55 AM - DEBUG - Getting Stays
+9/30/2022, 8:34:24 AM - DEBUG - Getting Stays
+9/30/2022, 8:38:02 AM - DEBUG - Getting Stays
+9/30/2022, 8:43:20 AM - DEBUG - Getting Stays
+9/30/2022, 8:44:26 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:21 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:21 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:41 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:42 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:42 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:48 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:50 AM - DEBUG - Getting Stays
+9/30/2022, 8:46:50 AM - DEBUG - Getting Stays
+9/30/2022, 8:47:10 AM - DEBUG - Getting Stays
+9/30/2022, 8:47:14 AM - DEBUG - Getting Stays
+9/30/2022, 8:47:14 AM - DEBUG - Getting Stays
+9/30/2022, 8:47:22 AM - DEBUG - Getting Stays
+9/30/2022, 8:47:24 AM - DEBUG - Getting Stays
+9/30/2022, 8:47:24 AM - DEBUG - Getting Stays
+9/30/2022, 8:47:36 AM - DEBUG - Getting Stays
+9/30/2022, 8:48:06 AM - DEBUG - Getting Stays
+9/30/2022, 8:48:10 AM - DEBUG - Getting Stays
+9/30/2022, 8:48:10 AM - DEBUG - Getting Stays
+9/30/2022, 8:48:31 AM - DEBUG - Getting Stays
+9/30/2022, 8:48:52 AM - DEBUG - Getting Stays
+9/30/2022, 8:49:08 AM - DEBUG - Getting Stays
+9/30/2022, 8:49:10 AM - DEBUG - Getting Stays
+9/30/2022, 8:49:10 AM - DEBUG - Getting Stays
+9/30/2022, 8:49:18 AM - DEBUG - Getting Stays
+9/30/2022, 8:49:19 AM - DEBUG - Getting Stays
+9/30/2022, 8:49:20 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:16 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:18 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:18 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:22 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:24 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:24 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:44 AM - DEBUG - Getting Stays
+9/30/2022, 8:51:48 AM - DEBUG - Getting Stays
+9/30/2022, 8:52:23 AM - DEBUG - Getting Stays
+9/30/2022, 8:54:10 AM - DEBUG - Getting Stays
+9/30/2022, 8:54:25 AM - DEBUG - Getting Stays
+9/30/2022, 8:54:37 AM - DEBUG - Getting Stays
+9/30/2022, 8:54:38 AM - DEBUG - Getting Stays
+9/30/2022, 8:55:34 AM - DEBUG - Getting Stays
+9/30/2022, 9:01:15 AM - DEBUG - Getting Stays
+9/30/2022, 9:02:48 AM - DEBUG - Getting Stays
+9/30/2022, 9:02:51 AM - DEBUG - Getting Stays
+9/30/2022, 9:04:46 AM - DEBUG - Getting Stays
+9/30/2022, 9:05:35 AM - DEBUG - Getting Stays
+9/30/2022, 9:06:15 AM - DEBUG - Getting Stays
+9/30/2022, 9:07:04 AM - DEBUG - Getting Stays
+9/30/2022, 9:07:26 AM - DEBUG - Getting Stays
+9/30/2022, 9:07:36 AM - DEBUG - Getting Stays
+9/30/2022, 9:08:18 AM - DEBUG - Getting Stays
+9/30/2022, 9:18:29 AM - DEBUG - Getting Stays
+9/30/2022, 9:18:36 AM - DEBUG - Getting Stays
+9/30/2022, 9:18:37 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:09 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:11 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:11 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:20 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:23 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:23 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:50 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:54 AM - DEBUG - Getting Stays
+9/30/2022, 9:26:54 AM - DEBUG - Getting Stays
+9/30/2022, 9:34:16 AM - DEBUG - Getting Stays
+9/30/2022, 9:34:17 AM - DEBUG - Getting Stays
+9/30/2022, 9:34:40 AM - DEBUG - Getting Stays
+9/30/2022, 9:34:40 AM - DEBUG - Getting Stays
+9/30/2022, 9:35:06 AM - DEBUG - Getting Stays
+9/30/2022, 9:35:07 AM - DEBUG - Getting Stays
+9/30/2022, 9:37:29 AM - DEBUG - Getting Stays
+9/30/2022, 9:37:32 AM - DEBUG - Getting Stays
+9/30/2022, 9:37:32 AM - DEBUG - Getting Stays
+9/30/2022, 9:37:39 AM - DEBUG - Getting Stays
+9/30/2022, 9:37:42 AM - DEBUG - Getting Stays
+9/30/2022, 9:37:42 AM - DEBUG - Getting Stays
+9/30/2022, 9:38:41 AM - DEBUG - Getting Stays
+9/30/2022, 9:38:45 AM - DEBUG - Getting Stays
+9/30/2022, 9:38:45 AM - DEBUG - Getting Stays
+9/30/2022, 9:39:07 AM - DEBUG - Getting Stays
+9/30/2022, 9:39:09 AM - DEBUG - Getting Stays
+9/30/2022, 9:39:09 AM - DEBUG - Getting Stays
+9/30/2022, 9:39:18 AM - DEBUG - Getting Stays
+9/30/2022, 9:41:07 AM - DEBUG - Getting Stays
+9/30/2022, 9:41:08 AM - DEBUG - Getting Stays
+9/30/2022, 9:41:09 AM - DEBUG - Getting Stays
+9/30/2022, 9:41:20 AM - DEBUG - Getting Stays
+9/30/2022, 9:41:21 AM - DEBUG - Getting Stays
+9/30/2022, 9:41:22 AM - DEBUG - Getting Stays
+9/30/2022, 9:42:18 AM - DEBUG - Getting Stays
+9/30/2022, 9:42:18 AM - DEBUG - Getting Stays
+9/30/2022, 9:42:25 AM - DEBUG - Getting Stays
+9/30/2022, 9:42:26 AM - DEBUG - Getting Stays
+9/30/2022, 9:42:26 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:30 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:32 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:32 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:39 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:41 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:41 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:51 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:54 AM - DEBUG - Getting Stays
+9/30/2022, 9:43:54 AM - DEBUG - Getting Stays
+9/30/2022, 9:44:03 AM - DEBUG - Getting Stays
+9/30/2022, 9:44:05 AM - DEBUG - Getting Stays
+9/30/2022, 9:44:05 AM - DEBUG - Getting Stays
+9/30/2022, 9:44:20 AM - DEBUG - Getting Stays
+9/30/2022, 9:44:20 AM - DEBUG - Getting Stays
+9/30/2022, 9:46:50 AM - DEBUG - Getting Stays
+9/30/2022, 9:46:51 AM - DEBUG - Getting Stays
+9/30/2022, 9:46:51 AM - DEBUG - Getting Stays
+9/30/2022, 9:46:58 AM - DEBUG - Getting Stays
+9/30/2022, 9:47:41 AM - DEBUG - Getting Stays
+9/30/2022, 9:47:41 AM - DEBUG - Getting Stays
+9/30/2022, 9:51:11 AM - DEBUG - Getting Stays
+9/30/2022, 9:52:46 AM - DEBUG - Getting Stays
+9/30/2022, 9:54:15 AM - DEBUG - Getting Stays
+9/30/2022, 9:54:24 AM - DEBUG - Getting Stays
+9/30/2022, 9:54:24 AM - DEBUG - Getting Stays
+9/30/2022, 9:54:31 AM - DEBUG - Getting Stays
+9/30/2022, 9:54:33 AM - DEBUG - Getting Stays
+9/30/2022, 9:54:33 AM - DEBUG - Getting Stays
+9/30/2022, 9:55:07 AM - DEBUG - Getting Stays
+9/30/2022, 9:55:11 AM - DEBUG - Getting Stays
+9/30/2022, 9:55:11 AM - DEBUG - Getting Stays
+9/30/2022, 9:57:39 AM - DEBUG - Getting Stays
+9/30/2022, 9:57:41 AM - DEBUG - Getting Stays
+9/30/2022, 9:57:41 AM - DEBUG - Getting Stays
+9/30/2022, 9:57:56 AM - DEBUG - Getting Stays
+9/30/2022, 9:58:20 AM - DEBUG - Getting Stays
+9/30/2022, 9:58:28 AM - DEBUG - Getting Stays
+9/30/2022, 9:58:28 AM - DEBUG - Getting Stays
+9/30/2022, 10:01:37 AM - DEBUG - Getting Stays
+9/30/2022, 10:01:45 AM - DEBUG - Getting Stays
+9/30/2022, 10:01:46 AM - DEBUG - Getting Stays
+9/30/2022, 10:01:50 AM - DEBUG - Getting Stays
+9/30/2022, 10:01:50 AM - DEBUG - Getting Stays
+9/30/2022, 10:02:17 AM - DEBUG - Getting Stays
+9/30/2022, 10:02:19 AM - DEBUG - Getting Stays
+9/30/2022, 10:02:19 AM - DEBUG - Getting Stays
+9/30/2022, 10:03:10 AM - DEBUG - Getting Stays
+9/30/2022, 10:03:13 AM - DEBUG - Getting Stays
+9/30/2022, 10:03:13 AM - DEBUG - Getting Stays
+9/30/2022, 10:03:20 AM - DEBUG - Getting Stays
+9/30/2022, 10:03:22 AM - DEBUG - Getting Stays
+9/30/2022, 10:03:22 AM - DEBUG - Getting Stays
+9/30/2022, 10:04:33 AM - DEBUG - Getting Stays
+9/30/2022, 10:05:03 AM - DEBUG - Getting Stays
+9/30/2022, 10:05:29 AM - DEBUG - Getting Stays
+9/30/2022, 10:05:31 AM - DEBUG - Getting Stays
+9/30/2022, 10:05:31 AM - DEBUG - Getting Stays
+9/30/2022, 10:05:35 AM - DEBUG - Getting Stays
+9/30/2022, 10:05:46 AM - DEBUG - Getting Stays
+9/30/2022, 10:05:55 AM - DEBUG - Getting Stays
+9/30/2022, 10:08:08 AM - DEBUG - Getting Stays
+9/30/2022, 10:08:10 AM - DEBUG - Getting Stays
+9/30/2022, 10:08:10 AM - DEBUG - Getting Stays
+9/30/2022, 10:08:11 AM - DEBUG - Getting Stays
+9/30/2022, 10:08:11 AM - DEBUG - Getting Stays
+9/30/2022, 10:10:00 AM - DEBUG - Getting Stays
+9/30/2022, 10:14:49 AM - DEBUG - Getting Stays
+9/30/2022, 10:14:58 AM - DEBUG - Getting Stays
+9/30/2022, 10:16:02 AM - DEBUG - Getting Stays
+9/30/2022, 10:17:59 AM - DEBUG - Getting Stays
+9/30/2022, 10:18:05 AM - DEBUG - Getting Stays
+9/30/2022, 10:18:05 AM - DEBUG - Getting Stays
+9/30/2022, 10:18:14 AM - DEBUG - Getting Stays
+9/30/2022, 10:22:34 AM - DEBUG - Getting Stays
+9/30/2022, 10:22:55 AM - DEBUG - Getting Stays
+9/30/2022, 10:23:05 AM - DEBUG - Getting Stays
+9/30/2022, 10:23:17 AM - DEBUG - Getting Stays
+9/30/2022, 10:23:44 AM - DEBUG - Getting Stays
+9/30/2022, 10:24:59 AM - DEBUG - Getting Stays
+9/30/2022, 10:25:02 AM - DEBUG - Getting Stays
+9/30/2022, 10:25:02 AM - DEBUG - Getting Stays
+9/30/2022, 10:26:38 AM - DEBUG - Getting Stays
+9/30/2022, 10:26:50 AM - DEBUG - Getting Stays
+9/30/2022, 10:27:31 AM - DEBUG - Getting Stays
+9/30/2022, 10:28:39 AM - DEBUG - Getting Stays
+9/30/2022, 10:29:24 AM - DEBUG - Getting Stays
+9/30/2022, 10:29:59 AM - DEBUG - Getting Stays
+9/30/2022, 10:30:02 AM - DEBUG - Getting Stays
+9/30/2022, 10:30:30 AM - DEBUG - Getting Stays
+9/30/2022, 10:30:37 AM - DEBUG - Getting Stays
+9/30/2022, 10:30:56 AM - DEBUG - Getting Stays
+9/30/2022, 10:31:23 AM - DEBUG - Getting Stays
+9/30/2022, 10:31:27 AM - DEBUG - Getting Stays
+9/30/2022, 10:31:33 AM - DEBUG - Getting Stays
+9/30/2022, 10:32:39 AM - DEBUG - Getting Stays
+9/30/2022, 10:32:42 AM - DEBUG - Getting Stays
+9/30/2022, 10:32:42 AM - DEBUG - Getting Stays
+9/30/2022, 10:33:15 AM - DEBUG - Getting Stays
+9/30/2022, 10:33:16 AM - DEBUG - Getting Stays
+9/30/2022, 10:34:05 AM - DEBUG - Getting Stays
+9/30/2022, 10:34:08 AM - DEBUG - Getting Stays
+9/30/2022, 10:34:14 AM - DEBUG - Getting Stays
+9/30/2022, 10:34:19 AM - DEBUG - Getting Stays
+9/30/2022, 10:34:23 AM - DEBUG - Getting Stays
+9/30/2022, 10:34:30 AM - DEBUG - Getting Stays
+9/30/2022, 10:35:20 AM - DEBUG - Getting Stays
+9/30/2022, 10:35:40 AM - DEBUG - Getting Stays
+9/30/2022, 10:35:43 AM - DEBUG - Getting Stays
+9/30/2022, 10:35:43 AM - DEBUG - Getting Stays
+9/30/2022, 10:35:53 AM - DEBUG - Getting Stays
+9/30/2022, 10:36:25 AM - DEBUG - Getting Stays
+9/30/2022, 10:37:04 AM - DEBUG - Getting Stays
+9/30/2022, 10:37:23 AM - DEBUG - Getting Stays
+9/30/2022, 10:37:28 AM - DEBUG - Getting Stays
+9/30/2022, 10:37:48 AM - DEBUG - Getting Stays
+9/30/2022, 10:37:51 AM - DEBUG - Getting Stays
+9/30/2022, 10:37:55 AM - DEBUG - Getting Stays
+9/30/2022, 10:37:59 AM - DEBUG - Getting Stays
+9/30/2022, 10:40:16 AM - INFO - Server is running on port: 3030
+9/30/2022, 10:40:20 AM - DEBUG - Getting Stays
+9/30/2022, 10:40:20 AM - INFO - Req was made
+9/30/2022, 10:40:22 AM - INFO - Req was made
+9/30/2022, 10:40:45 AM - DEBUG - Getting Stays
+9/30/2022, 10:40:45 AM - INFO - Req was made
+9/30/2022, 10:40:47 AM - INFO - Req was made
+9/30/2022, 10:41:00 AM - DEBUG - Getting Stays
+9/30/2022, 10:41:00 AM - INFO - Req was made
+9/30/2022, 10:41:01 AM - INFO - Req was made
+9/30/2022, 10:41:32 AM - DEBUG - Getting Stays
+9/30/2022, 10:41:32 AM - INFO - Req was made
+9/30/2022, 10:41:33 AM - INFO - Req was made
+9/30/2022, 10:44:01 AM - DEBUG - Getting Stays
+9/30/2022, 10:44:01 AM - INFO - Req was made
+9/30/2022, 10:44:02 AM - INFO - Req was made
+9/30/2022, 10:45:07 AM - DEBUG - Getting Stays
+9/30/2022, 10:45:07 AM - INFO - Req was made
+9/30/2022, 10:45:08 AM - INFO - Req was made
+9/30/2022, 10:47:58 AM - DEBUG - Getting Stays
+9/30/2022, 10:47:58 AM - INFO - Req was made
+9/30/2022, 10:47:59 AM - INFO - Req was made
+9/30/2022, 10:48:50 AM - DEBUG - Getting Stays
+9/30/2022, 10:48:50 AM - INFO - Req was made
+9/30/2022, 10:48:51 AM - INFO - Req was made
+9/30/2022, 10:49:05 AM - DEBUG - Getting Stays
+9/30/2022, 10:49:05 AM - INFO - Req was made
+9/30/2022, 10:49:06 AM - INFO - Req was made
+9/30/2022, 10:49:23 AM - DEBUG - Getting Stays
+9/30/2022, 10:49:23 AM - INFO - Req was made
+9/30/2022, 10:49:24 AM - INFO - Req was made
+9/30/2022, 10:49:37 AM - DEBUG - Getting Stays
+9/30/2022, 10:49:37 AM - INFO - Req was made
+9/30/2022, 10:49:38 AM - INFO - Req was made
+9/30/2022, 10:49:39 AM - DEBUG - Getting Stays
+9/30/2022, 10:49:39 AM - INFO - Req was made
+9/30/2022, 10:49:40 AM - INFO - Req was made
+9/30/2022, 10:50:19 AM - DEBUG - Getting Stays
+9/30/2022, 10:50:19 AM - DEBUG - Getting Stays
+9/30/2022, 10:50:19 AM - INFO - Req was made
+9/30/2022, 10:50:20 AM - INFO - Req was made
+9/30/2022, 10:51:31 AM - DEBUG - Getting Stays
+9/30/2022, 10:51:31 AM - INFO - Req was made
+9/30/2022, 10:51:32 AM - INFO - Req was made
+9/30/2022, 10:52:20 AM - DEBUG - Getting Stays
+9/30/2022, 10:52:20 AM - INFO - Req was made
+9/30/2022, 10:52:21 AM - INFO - Req was made
+9/30/2022, 10:52:41 AM - DEBUG - Getting Stays
+9/30/2022, 10:52:41 AM - INFO - Req was made
+9/30/2022, 10:52:42 AM - INFO - Req was made
+9/30/2022, 10:52:45 AM - DEBUG - Getting Stays
+9/30/2022, 10:52:45 AM - INFO - Req was made
+9/30/2022, 10:52:46 AM - INFO - Req was made
+9/30/2022, 10:52:52 AM - DEBUG - Getting Stays
+9/30/2022, 10:52:52 AM - INFO - Req was made
+9/30/2022, 10:52:53 AM - INFO - Req was made
+9/30/2022, 10:52:58 AM - DEBUG - Getting Stays
+9/30/2022, 10:52:58 AM - INFO - Req was made
+9/30/2022, 10:52:59 AM - INFO - Req was made
+9/30/2022, 11:00:04 AM - DEBUG - Getting Stays
+9/30/2022, 11:00:04 AM - INFO - Req was made
+9/30/2022, 11:00:05 AM - INFO - Req was made
+9/30/2022, 11:00:11 AM - DEBUG - Getting Stays
+9/30/2022, 11:00:11 AM - INFO - Req was made
+9/30/2022, 11:00:12 AM - INFO - Req was made
+9/30/2022, 11:00:29 AM - DEBUG - Getting Stays
+9/30/2022, 11:00:30 AM - INFO - Req was made
+9/30/2022, 11:00:31 AM - INFO - Req was made
+9/30/2022, 11:07:19 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:10:16 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:10:19 AM - DEBUG - Getting Stays
+9/30/2022, 11:10:36 AM - INFO - Req was made
+9/30/2022, 11:19:23 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:19:28 AM - INFO - Req was made
+9/30/2022, 11:19:30 AM - DEBUG - Getting Stays
+9/30/2022, 11:19:43 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:19:45 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:19:48 AM - DEBUG - Getting Stays
+9/30/2022, 11:22:05 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:23:56 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:28:08 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:28:24 AM - DEBUG - Getting Stays
+9/30/2022, 11:28:26 AM - DEBUG - Getting Stays
+9/30/2022, 11:28:26 AM - INFO - Req was made
+9/30/2022, 11:28:26 AM - ERROR - cannot find orders | {}
+9/30/2022, 11:28:26 AM - ERROR - Failed to get orders | {}
+9/30/2022, 11:28:27 AM - ERROR - cannot find orders | {}
+9/30/2022, 11:28:27 AM - ERROR - Failed to get orders | {}
+9/30/2022, 11:28:27 AM - INFO - Req was made
+9/30/2022, 11:28:43 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:28:46 AM - DEBUG - Getting Stays
+9/30/2022, 11:28:48 AM - DEBUG - Getting Stays
+9/30/2022, 11:28:48 AM - INFO - Req was made
+9/30/2022, 11:28:49 AM - INFO - Req was made
+9/30/2022, 11:29:09 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:29:11 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:12 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:12 AM - INFO - Req was made
+9/30/2022, 11:29:13 AM - INFO - Req was made
+9/30/2022, 11:29:24 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:29:25 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:27 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:27 AM - INFO - Req was made
+9/30/2022, 11:29:28 AM - INFO - Req was made
+9/30/2022, 11:29:33 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:29:37 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:39 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:39 AM - INFO - Req was made
+9/30/2022, 11:29:40 AM - INFO - Req was made
+9/30/2022, 11:29:55 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:29:58 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:59 AM - DEBUG - Getting Stays
+9/30/2022, 11:29:59 AM - INFO - Req was made
+9/30/2022, 11:30:01 AM - INFO - Req was made
+9/30/2022, 11:30:20 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:30:21 AM - DEBUG - Getting Stays
+9/30/2022, 11:30:23 AM - DEBUG - Getting Stays
+9/30/2022, 11:30:23 AM - INFO - Req was made
+9/30/2022, 11:30:24 AM - INFO - Req was made
+9/30/2022, 11:31:20 AM - DEBUG - Getting Stays
+9/30/2022, 11:31:36 AM - INFO - Req was made
+9/30/2022, 11:31:46 AM - DEBUG - Getting Stays
+9/30/2022, 11:31:50 AM - DEBUG - Getting Stays
+9/30/2022, 11:31:50 AM - INFO - Req was made
+9/30/2022, 11:31:50 AM - DEBUG - Getting Stays
+9/30/2022, 11:31:52 AM - INFO - Req was made
+9/30/2022, 11:31:53 AM - DEBUG - Getting Stays
+9/30/2022, 11:31:53 AM - DEBUG - Getting Stays
+9/30/2022, 11:31:53 AM - INFO - Req was made
+9/30/2022, 11:31:54 AM - INFO - Req was made
+9/30/2022, 11:32:05 AM - DEBUG - Getting Stays
+9/30/2022, 11:32:05 AM - DEBUG - Getting Stays
+9/30/2022, 11:32:05 AM - INFO - Req was made
+9/30/2022, 11:32:06 AM - INFO - Req was made
+9/30/2022, 11:32:28 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:32:31 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:32:34 AM - DEBUG - Getting Stays
+9/30/2022, 11:32:35 AM - DEBUG - Getting Stays
+9/30/2022, 11:32:36 AM - INFO - Req was made
+9/30/2022, 11:32:37 AM - INFO - Req was made
+9/30/2022, 11:35:08 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:37:24 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:37:27 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:37:40 AM - INFO - Server is running on port: 3030
+9/30/2022, 11:38:36 AM - DEBUG - Getting Stays
+9/30/2022, 11:38:45 AM - INFO - Req was made
+9/30/2022, 11:40:47 AM - INFO - Req was made
+9/30/2022, 11:42:04 AM - INFO - Req was made
+9/30/2022, 11:42:44 AM - INFO - Req was made
+9/30/2022, 11:45:26 AM - INFO - Req was made
+9/30/2022, 11:51:05 AM - INFO - Req was made
+9/30/2022, 11:54:07 AM - INFO - Req was made
+9/30/2022, 11:57:05 AM - INFO - Req was made
+9/30/2022, 11:57:32 AM - INFO - Req was made
+9/30/2022, 11:57:46 AM - INFO - Req was made
+9/30/2022, 11:58:22 AM - ERROR - while finding stay host | {}
+9/30/2022, 11:58:22 AM - ERROR - Failed to get stay | {}
+9/30/2022, 11:58:24 AM - DEBUG - Getting Stays
+9/30/2022, 11:58:25 AM - DEBUG - Getting Stays
+9/30/2022, 11:58:25 AM - INFO - Req was made
+9/30/2022, 11:58:26 AM - INFO - Req was made
+9/30/2022, 11:59:28 AM - INFO - Server is running on port: 3030
+9/30/2022, 12:00:29 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:00:29 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:00:32 PM - INFO - Req was made
+9/30/2022, 12:00:34 PM - INFO - Req was made
+9/30/2022, 12:00:50 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:00:50 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:00:51 PM - DEBUG - Getting Stays
+9/30/2022, 12:00:51 PM - DEBUG - Getting Stays
+9/30/2022, 12:00:51 PM - INFO - Req was made
+9/30/2022, 12:00:53 PM - INFO - Req was made
+9/30/2022, 12:02:19 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:04:43 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:04:51 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:04:51 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:04:52 PM - INFO - Req was made
+9/30/2022, 12:05:10 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:05:10 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:05:10 PM - INFO - Req was made
+9/30/2022, 12:05:10 PM - DEBUG - Getting Stays
+9/30/2022, 12:05:11 PM - INFO - Req was made
+9/30/2022, 12:05:14 PM - DEBUG - Getting Stays
+9/30/2022, 12:05:14 PM - DEBUG - Getting Stays
+9/30/2022, 12:05:14 PM - INFO - Req was made
+9/30/2022, 12:05:15 PM - INFO - Req was made
+9/30/2022, 12:05:44 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:06:18 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:06:29 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:07:25 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:08:04 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:08:08 PM - DEBUG - Getting Stays
+9/30/2022, 12:08:09 PM - DEBUG - Getting Stays
+9/30/2022, 12:08:09 PM - INFO - Req was made
+9/30/2022, 12:08:11 PM - INFO - Req was made
+9/30/2022, 12:08:18 PM - DEBUG - Getting Stays
+9/30/2022, 12:08:18 PM - DEBUG - Getting Stays
+9/30/2022, 12:08:18 PM - INFO - Req was made
+9/30/2022, 12:08:19 PM - INFO - Req was made
+9/30/2022, 12:08:55 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:09:18 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:09:18 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:09:19 PM - INFO - Req was made
+9/30/2022, 12:09:39 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:09:39 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:09:39 PM - DEBUG - Getting Stays
+9/30/2022, 12:09:39 PM - INFO - Req was made
+9/30/2022, 12:09:40 PM - INFO - Req was made
+9/30/2022, 12:09:50 PM - DEBUG - Getting Stays
+9/30/2022, 12:09:50 PM - DEBUG - Getting Stays
+9/30/2022, 12:09:50 PM - INFO - Req was made
+9/30/2022, 12:09:51 PM - INFO - Req was made
+9/30/2022, 12:11:49 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:11:52 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:11:52 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:11:53 PM - INFO - Req was made
+9/30/2022, 12:12:16 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:12:16 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:12:16 PM - DEBUG - Getting Stays
+9/30/2022, 12:12:16 PM - INFO - Req was made
+9/30/2022, 12:12:18 PM - INFO - Req was made
+9/30/2022, 12:12:20 PM - DEBUG - Getting Stays
+9/30/2022, 12:12:20 PM - DEBUG - Getting Stays
+9/30/2022, 12:12:20 PM - INFO - Req was made
+9/30/2022, 12:12:21 PM - INFO - Req was made
+9/30/2022, 12:12:41 PM - DEBUG - Getting Stays
+9/30/2022, 12:12:41 PM - DEBUG - Getting Stays
+9/30/2022, 12:12:41 PM - INFO - Req was made
+9/30/2022, 12:12:42 PM - INFO - Req was made
+9/30/2022, 12:20:37 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:20:46 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:20:46 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:20:47 PM - INFO - Req was made
+9/30/2022, 12:21:32 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:21:32 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:21:32 PM - DEBUG - Getting Stays
+9/30/2022, 12:21:32 PM - INFO - Req was made
+9/30/2022, 12:21:34 PM - INFO - Req was made
+9/30/2022, 12:21:35 PM - DEBUG - Getting Stays
+9/30/2022, 12:21:35 PM - DEBUG - Getting Stays
+9/30/2022, 12:21:35 PM - INFO - Req was made
+9/30/2022, 12:21:36 PM - INFO - Req was made
+9/30/2022, 12:21:50 PM - DEBUG - Getting Stays
+9/30/2022, 12:21:50 PM - DEBUG - Getting Stays
+9/30/2022, 12:21:50 PM - INFO - Req was made
+9/30/2022, 12:21:51 PM - INFO - Req was made
+9/30/2022, 12:22:31 PM - DEBUG - Getting Stays
+9/30/2022, 12:22:32 PM - DEBUG - Getting Stays
+9/30/2022, 12:22:32 PM - INFO - Req was made
+9/30/2022, 12:22:33 PM - INFO - Req was made
+9/30/2022, 12:23:00 PM - DEBUG - Getting Stays
+9/30/2022, 12:23:00 PM - DEBUG - Getting Stays
+9/30/2022, 12:23:00 PM - INFO - Req was made
+9/30/2022, 12:23:01 PM - INFO - Req was made
+9/30/2022, 12:24:42 PM - DEBUG - Getting Stays
+9/30/2022, 12:24:42 PM - DEBUG - Getting Stays
+9/30/2022, 12:24:42 PM - INFO - Req was made
+9/30/2022, 12:24:43 PM - INFO - Req was made
+9/30/2022, 12:25:49 PM - DEBUG - Getting Stays
+9/30/2022, 12:25:49 PM - DEBUG - Getting Stays
+9/30/2022, 12:25:49 PM - INFO - Req was made
+9/30/2022, 12:25:50 PM - INFO - Req was made
+9/30/2022, 12:26:22 PM - DEBUG - Getting Stays
+9/30/2022, 12:26:22 PM - DEBUG - Getting Stays
+9/30/2022, 12:26:22 PM - INFO - Req was made
+9/30/2022, 12:26:23 PM - INFO - Req was made
+9/30/2022, 12:28:41 PM - DEBUG - Getting Stays
+9/30/2022, 12:28:42 PM - DEBUG - Getting Stays
+9/30/2022, 12:28:42 PM - INFO - Req was made
+9/30/2022, 12:28:43 PM - INFO - Req was made
+9/30/2022, 12:29:18 PM - DEBUG - Getting Stays
+9/30/2022, 12:29:19 PM - DEBUG - Getting Stays
+9/30/2022, 12:29:19 PM - INFO - Req was made
+9/30/2022, 12:29:20 PM - INFO - Req was made
+9/30/2022, 12:30:25 PM - DEBUG - Getting Stays
+9/30/2022, 12:30:26 PM - DEBUG - Getting Stays
+9/30/2022, 12:30:26 PM - INFO - Req was made
+9/30/2022, 12:30:27 PM - INFO - Req was made
+9/30/2022, 12:32:43 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:35:39 PM - INFO - Server is running on port: 3030
+9/30/2022, 12:36:16 PM - DEBUG - Getting Stays
+9/30/2022, 12:36:18 PM - DEBUG - Getting Stays
+9/30/2022, 12:36:18 PM - INFO - Req was made
+9/30/2022, 12:36:19 PM - INFO - Req was made
+9/30/2022, 12:36:21 PM - ERROR - while finding stay host | {}
+9/30/2022, 12:36:21 PM - ERROR - Failed to get stay | {}
+9/30/2022, 12:36:22 PM - INFO - Req was made
+9/30/2022, 12:36:24 PM - INFO - Req was made
+9/30/2022, 12:37:09 PM - INFO - Server is running on port: 3030
