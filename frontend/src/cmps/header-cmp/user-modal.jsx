@@ -36,17 +36,26 @@ export function UserModal({ handleUserModal }) {
         <nav className={`user-modal-container `} onClick={handleUserModal}>
             <ul>
                 {loggedInUser ? (
-                    <li>
-                        <Link
-                            to={`host/${loggedInUser._id}`}
-                            className='user-modal-about-link'
-                        >
+                    loggedInUser.isHost ? (
+                        <li>
+                            <Link
+                                to={`host/${loggedInUser._id}`}
+                                className='user-modal-about-link'
+                            >
+                                <span className='user-modal-span'>
+                                    Manage Orders
+                                </span>
+                            </Link>
+                            <Divider />
+                        </li>
+                    ) : (
+                        <li>
                             <span className='user-modal-span'>
-                                Manage Orders
+                                Hello {user.firstname} {user.lastname}
                             </span>
-                        </Link>
-                        <Divider />
-                    </li>
+                            <Divider />
+                        </li>
+                    )
                 ) : (
                     <>
                         <li>

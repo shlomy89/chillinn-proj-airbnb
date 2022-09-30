@@ -83,23 +83,27 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
                 stay={stay}
                 startDate={startDate}
                 endDate={endDate}
+                guestsNum={sumBy(values(agesData), 'value')}
+                pricePerNight={Math.round(stay.price * nights)}
+                serviceFee={Math.round(stay.price * nights * 0.14)}
+                totalPrice={Math.round(stay.price * nights * 1.14)}
             />
             <p className='no-charge'>you won't be charged yet</p>
             <section className='summary-price-container'>
                 <SummaryPrice
                     text={`${stay.price} * ${nights} nights`}
-                    total={Math.round(stay.price * nights).toFixed(2)}
+                    total={Math.round(stay.price * nights)}
                 />
 
                 <SummaryPrice
                     text={'Service fee'}
-                    total={Math.round(stay.price * nights * 0.14).toFixed(2)}
+                    total={Math.round(stay.price * nights * 0.14)}
                 />
             </section>
             <div className='total-price'></div>
             <SummaryPrice
                 text={'Total'}
-                total={Math.round(stay.price * nights * 1.14).toFixed(2)}
+                total={Math.round(stay.price * nights * 1.14)}
             />
         </div>
     )

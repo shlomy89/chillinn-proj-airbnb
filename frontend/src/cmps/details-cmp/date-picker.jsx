@@ -3,8 +3,10 @@ import { useDispatch } from 'react-redux'
 import addWeeks from 'date-fns/addWeeks'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { TextField, createTheme, ThemeProvider } from '@mui/material'
+import '../../assets/styles/cmps/_date-picker.scss'
 import { DateRangePicker } from '@mui/x-date-pickers-pro'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
+
 const mode = window.innerWidth < 780 ? 1 : 2
 const theme = createTheme({
     palette: {

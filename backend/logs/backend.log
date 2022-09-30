@@ -1865,3 +1865,206 @@
 29/09/2022, 9:35:23 - DEBUG - Getting Stays
 29/09/2022, 9:35:29 - DEBUG - Getting Stays
 29/09/2022, 9:35:29 - DEBUG - Getting Stays
+29/09/2022, 9:45:44 - INFO - Server is running on port: 3030
+29/09/2022, 9:47:12 - DEBUG - Getting Stays
+29/09/2022, 9:47:38 - INFO - Req was made
+29/09/2022, 9:53:59 - DEBUG - auth.service - login with username: 118676
+29/09/2022, 9:53:59 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+29/09/2022, 9:54:02 - DEBUG - Getting Stays
+29/09/2022, 9:54:06 - DEBUG - Getting Stays
+29/09/2022, 9:54:07 - DEBUG - Getting Stays
+29/09/2022, 9:54:44 - DEBUG - Getting Stays
+29/09/2022, 9:55:12 - DEBUG - Getting Stays
+29/09/2022, 9:55:25 - DEBUG - auth.service - signup with username: sagiv, firsname: sagiv
+29/09/2022, 9:55:25 - DEBUG - auth.route - new account created: {"username":"sagiv","password":"$2b$10$9hDDIANJ/eN79XyKNFCeOOg5NlhwciZ1dh2XXrybfzmOWfgJkiRcO","firstname":"sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png","isHost":false,"_id":"6335415d8e72e3276d533040"}
+29/09/2022, 9:55:25 - DEBUG - auth.service - login with username: sagiv
+29/09/2022, 9:55:25 - INFO - User signup: | {"_id":"6335415d8e72e3276d533040","username":"sagiv","firstname":"sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png","isHost":false}
+29/09/2022, 9:55:27 - DEBUG - Getting Stays
+29/09/2022, 9:55:32 - DEBUG - Getting Stays
+29/09/2022, 9:55:32 - DEBUG - Getting Stays
+29/09/2022, 9:56:33 - DEBUG - Getting Stays
+29/09/2022, 10:13:06 - DEBUG - Getting Stays
+29/09/2022, 10:17:36 - DEBUG - Getting Stays
+29/09/2022, 10:17:47 - DEBUG - Getting Stays
+29/09/2022, 10:18:39 - DEBUG - Getting Stays
+29/09/2022, 16:18:43 - DEBUG - Getting Stays
+29/09/2022, 16:18:54 - INFO - Req was made
+29/09/2022, 16:20:32 - INFO - Req was made
+29/09/2022, 16:21:01 - INFO - Req was made
+29/09/2022, 16:25:49 - DEBUG - Getting Stays
+29/09/2022, 16:26:09 - DEBUG - Getting Stays
+29/09/2022, 16:26:11 - ERROR - while finding stay host | {}
+29/09/2022, 16:26:11 - ERROR - Failed to get stay | {}
+29/09/2022, 16:26:15 - ERROR - while finding stay host | {}
+29/09/2022, 16:26:15 - ERROR - Failed to get stay | {}
+29/09/2022, 16:26:18 - DEBUG - Getting Stays
+29/09/2022, 16:26:24 - DEBUG - auth.service - login with username: sagiv
+29/09/2022, 16:26:24 - INFO - User login:  | {"_id":"6335415d8e72e3276d533040","username":"sagiv","firstname":"sagiv","lastname":"Binyamin","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1663832698/gmbjqd5t128qtdgimx3z.png","isHost":false}
+29/09/2022, 16:26:27 - DEBUG - Getting Stays
+29/09/2022, 16:26:36 - DEBUG - Getting Stays
+29/09/2022, 16:26:49 - DEBUG - Getting Stays
+29/09/2022, 16:27:11 - DEBUG - auth.service - login with username: 118676
+29/09/2022, 16:27:11 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+29/09/2022, 16:27:13 - ERROR - while finding stay host | {}
+29/09/2022, 16:27:13 - ERROR - Failed to get stay | {}
+29/09/2022, 16:27:15 - DEBUG - Getting Stays
+29/09/2022, 16:27:26 - DEBUG - Getting Stays
+29/09/2022, 16:27:26 - DEBUG - Getting Stays
+29/09/2022, 16:27:34 - DEBUG - Getting Stays
+29/09/2022, 16:27:57 - INFO - Req was made
+29/09/2022, 16:28:09 - DEBUG - Getting Stays
+29/09/2022, 16:28:10 - DEBUG - Getting Stays
+29/09/2022, 16:28:39 - DEBUG - Getting Stays
+29/09/2022, 16:28:39 - DEBUG - Getting Stays
+29/09/2022, 16:29:11 - DEBUG - Getting Stays
+29/09/2022, 16:29:11 - DEBUG - Getting Stays
+29/09/2022, 16:29:34 - DEBUG - Getting Stays
+29/09/2022, 16:29:34 - DEBUG - Getting Stays
+29/09/2022, 16:29:59 - DEBUG - Getting Stays
+29/09/2022, 16:30:00 - DEBUG - Getting Stays
+29/09/2022, 16:31:26 - DEBUG - Getting Stays
+29/09/2022, 16:31:26 - DEBUG - Getting Stays
+29/09/2022, 16:32:21 - DEBUG - Getting Stays
+29/09/2022, 16:32:21 - DEBUG - Getting Stays
+29/09/2022, 16:33:14 - DEBUG - Getting Stays
+29/09/2022, 16:33:15 - DEBUG - Getting Stays
+29/09/2022, 16:36:47 - DEBUG - Getting Stays
+29/09/2022, 16:36:47 - DEBUG - Getting Stays
+29/09/2022, 16:36:56 - DEBUG - Getting Stays
+29/09/2022, 16:36:56 - DEBUG - Getting Stays
+29/09/2022, 16:37:26 - DEBUG - Getting Stays
+29/09/2022, 16:37:26 - DEBUG - Getting Stays
+29/09/2022, 16:37:28 - DEBUG - Getting Stays
+29/09/2022, 16:37:28 - DEBUG - Getting Stays
+29/09/2022, 16:37:35 - DEBUG - Getting Stays
+29/09/2022, 16:37:35 - DEBUG - Getting Stays
+29/09/2022, 16:39:18 - DEBUG - Getting Stays
+29/09/2022, 16:39:31 - DEBUG - Getting Stays
+29/09/2022, 16:41:15 - INFO - Req was made
+29/09/2022, 16:41:42 - DEBUG - Getting Stays
+29/09/2022, 16:43:52 - DEBUG - Getting Stays
+29/09/2022, 16:43:57 - INFO - Req was made
+29/09/2022, 16:45:24 - INFO - Req was made
+29/09/2022, 16:47:10 - INFO - Req was made
+29/09/2022, 16:47:54 - INFO - Req was made
+29/09/2022, 16:48:59 - INFO - Req was made
+29/09/2022, 16:51:30 - INFO - Req was made
+29/09/2022, 16:51:55 - INFO - Req was made
+29/09/2022, 16:53:05 - INFO - Req was made
+29/09/2022, 17:48:29 - INFO - Req was made
+29/09/2022, 19:10:17 - DEBUG - Getting Stays
+29/09/2022, 19:10:26 - DEBUG - Getting Stays
+29/09/2022, 19:10:38 - DEBUG - auth.service - login with username: 118676
+29/09/2022, 19:10:39 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+29/09/2022, 19:10:42 - DEBUG - Getting Stays
+29/09/2022, 19:10:56 - INFO - Req was made
+29/09/2022, 19:11:03 - DEBUG - Getting Stays
+29/09/2022, 19:11:03 - DEBUG - Getting Stays
+29/09/2022, 19:11:37 - DEBUG - Getting Stays
+29/09/2022, 19:11:37 - DEBUG - Getting Stays
+29/09/2022, 19:11:44 - DEBUG - Getting Stays
+29/09/2022, 19:11:44 - DEBUG - Getting Stays
+29/09/2022, 19:12:36 - DEBUG - Getting Stays
+29/09/2022, 19:12:36 - DEBUG - Getting Stays
+29/09/2022, 19:12:40 - DEBUG - Getting Stays
+29/09/2022, 19:12:40 - DEBUG - Getting Stays
+29/09/2022, 19:13:03 - DEBUG - Getting Stays
+29/09/2022, 19:13:03 - DEBUG - Getting Stays
+29/09/2022, 19:13:09 - DEBUG - Getting Stays
+29/09/2022, 19:13:10 - DEBUG - Getting Stays
+29/09/2022, 19:13:14 - DEBUG - Getting Stays
+29/09/2022, 19:13:14 - DEBUG - Getting Stays
+29/09/2022, 19:13:23 - DEBUG - Getting Stays
+29/09/2022, 19:13:23 - DEBUG - Getting Stays
+29/09/2022, 19:13:25 - DEBUG - Getting Stays
+29/09/2022, 19:13:25 - DEBUG - Getting Stays
+29/09/2022, 19:13:31 - DEBUG - Getting Stays
+29/09/2022, 19:13:32 - DEBUG - Getting Stays
+29/09/2022, 19:13:34 - DEBUG - Getting Stays
+29/09/2022, 19:13:34 - DEBUG - Getting Stays
+29/09/2022, 19:14:00 - INFO - Req was made
+29/09/2022, 19:14:15 - DEBUG - Getting Stays
+29/09/2022, 19:14:15 - DEBUG - Getting Stays
+29/09/2022, 19:14:45 - DEBUG - Getting Stays
+29/09/2022, 19:14:45 - DEBUG - Getting Stays
+29/09/2022, 19:14:51 - INFO - Req was made
+29/09/2022, 19:15:05 - DEBUG - Getting Stays
+29/09/2022, 19:15:05 - DEBUG - Getting Stays
+29/09/2022, 19:15:34 - INFO - Req was made
+29/09/2022, 19:16:15 - DEBUG - Getting Stays
+29/09/2022, 19:16:16 - DEBUG - Getting Stays
+29/09/2022, 19:16:19 - DEBUG - Getting Stays
+29/09/2022, 19:16:20 - DEBUG - Getting Stays
+29/09/2022, 19:18:11 - DEBUG - Getting Stays
+29/09/2022, 19:18:11 - DEBUG - Getting Stays
+29/09/2022, 19:42:09 - INFO - Req was made
+29/09/2022, 20:18:00 - DEBUG - Getting Stays
+29/09/2022, 20:18:00 - INFO - Req was made
+29/09/2022, 20:18:00 - DEBUG - Getting Stays
+29/09/2022, 20:18:01 - INFO - Req was made
+29/09/2022, 20:19:23 - INFO - Req was made
+29/09/2022, 20:27:03 - INFO - Req was made
+29/09/2022, 20:27:46 - INFO - Req was made
+29/09/2022, 20:28:16 - INFO - Req was made
+29/09/2022, 20:28:28 - INFO - Req was made
+29/09/2022, 20:29:20 - INFO - Req was made
+29/09/2022, 20:29:53 - INFO - Req was made
+29/09/2022, 20:30:18 - DEBUG - Getting Stays
+29/09/2022, 20:30:38 - DEBUG - auth.service - login with username: 118676
+29/09/2022, 20:30:38 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+29/09/2022, 20:30:42 - DEBUG - Getting Stays
+29/09/2022, 20:32:06 - INFO - Req was made
+29/09/2022, 20:34:12 - INFO - Req was made
+29/09/2022, 20:34:28 - INFO - Req was made
+29/09/2022, 20:35:03 - INFO - Req was made
+29/09/2022, 20:35:56 - INFO - Req was made
+29/09/2022, 20:36:36 - INFO - Req was made
+29/09/2022, 20:38:14 - INFO - Req was made
+29/09/2022, 20:38:24 - INFO - Req was made
+29/09/2022, 20:38:42 - INFO - Req was made
+29/09/2022, 20:39:06 - INFO - Req was made
+29/09/2022, 20:39:37 - INFO - Req was made
+29/09/2022, 20:40:13 - INFO - Req was made
+29/09/2022, 20:42:41 - INFO - Req was made
+29/09/2022, 20:54:23 - INFO - Req was made
+29/09/2022, 20:54:56 - INFO - Req was made
+29/09/2022, 20:55:15 - INFO - Req was made
+29/09/2022, 21:05:04 - INFO - Req was made
+29/09/2022, 21:11:34 - INFO - Req was made
+29/09/2022, 21:13:55 - INFO - Req was made
+30/09/2022, 11:10:15 - INFO - New connected socket [id: liLwlgXvaO0UR2xhAAAB]
+30/09/2022, 11:10:15 - DEBUG - Getting Stays
+30/09/2022, 11:10:30 - DEBUG - Getting Stays
+30/09/2022, 11:10:39 - DEBUG - Getting Stays
+30/09/2022, 11:10:48 - DEBUG - Getting Stays
+30/09/2022, 11:10:57 - DEBUG - Getting Stays
+30/09/2022, 11:11:32 - DEBUG - Getting Stays
+30/09/2022, 11:11:41 - DEBUG - Getting Stays
+30/09/2022, 11:22:42 - INFO - Server is running on port: 3030
+30/09/2022, 11:22:45 - INFO - New connected socket [id: b9euYYZv3Q6AmesHAAAB]
+30/09/2022, 11:22:47 - INFO - Req was made
+30/09/2022, 11:23:05 - INFO - Req was made
+30/09/2022, 11:23:41 - DEBUG - Getting Stays
+30/09/2022, 11:30:44 - DEBUG - Getting Stays
+30/09/2022, 11:30:56 - DEBUG - Getting Stays
+30/09/2022, 11:31:33 - DEBUG - Getting Stays
+30/09/2022, 11:32:09 - DEBUG - Getting Stays
+30/09/2022, 11:32:23 - INFO - Req was made
+30/09/2022, 11:42:45 - INFO - Req was made
+30/09/2022, 11:45:08 - INFO - Req was made
+30/09/2022, 11:45:49 - INFO - Req was made
+30/09/2022, 11:46:35 - INFO - Req was made
+30/09/2022, 11:46:50 - INFO - Req was made
+30/09/2022, 11:47:51 - INFO - Req was made
+30/09/2022, 11:49:34 - INFO - Req was made
+30/09/2022, 11:50:57 - INFO - Req was made
+30/09/2022, 11:52:45 - INFO - Req was made
+30/09/2022, 11:54:29 - INFO - Req was made
+30/09/2022, 11:55:10 - INFO - Req was made
+30/09/2022, 11:55:49 - INFO - Req was made
+30/09/2022, 11:57:49 - INFO - Req was made
+30/09/2022, 11:58:58 - INFO - Req was made
+30/09/2022, 11:59:12 - INFO - Req was made
+30/09/2022, 11:59:29 - INFO - Req was made
+30/09/2022, 12:02:50 - INFO - Req was made
+30/09/2022, 12:04:36 - INFO - Req was made
