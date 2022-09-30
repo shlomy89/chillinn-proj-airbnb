@@ -1,29 +1,31 @@
+// import { reviewService } from '../services/review.service'
+// import { ReactComponent as DoorIcon } from '../../src/assets/img/icons/door-icon.svg'
+// import { ReactComponent as KitchenIcon } from '../../src/assets/img/icons/kitchen-icon.svg'
+// import { ReactComponent as TvIcon } from '../../src/assets/img/icons/tv-icon.svg'
+// import { ReactComponent as DryerIcon } from '../../src/assets/img/icons/dryer-icon.svg'
+// import { ReactComponent as HighChairIcon } from '../../src/assets/img/icons/high-chair-icon.svg'
+// import { ReactComponent as CarbonMonoxideAlarmIcon } from '../../src/assets/img/icons/carbon-monoxide-alarm-icon.svg'
+// import { ReactComponent as WifiIcon } from '../../src/assets/img/icons/wifi-icon.svg'
+// import { ReactComponent as WasherIcon } from '../../src/assets/img/icons/washer-icon.svg'
+// import { ReactComponent as AirConditioningIcon } from '../../src/assets/img/icons/air-conditioning-icon.svg'
+// import { ReactComponent as HairDryerIcon } from '../../src/assets/img/icons/hair-dryer-icon.svg'
+// import { ReactComponent as CheckInOutIcon } from '../../src/assets/img/icons/check-in-out-icon.svg'
+// import { ShowMoreButton } from '../cmps/details-cmp/show-more-button'
+// import { useMemo } from 'react'
+// import { sortBy } from 'lodash'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { stayService } from '../services/stay.service'
-import { reviewService } from '../services/review.service'
 import { StarRating } from '../cmps/details-cmp/start-rating'
 import { ActionButton } from '../cmps/details-cmp/action-button'
 import { ReactComponent as HeartIcon } from '../../src/assets/img/icons/heart-icon.svg'
 import { ReactComponent as ShareIcon } from '../../src/assets/img/icons/share-icon.svg'
-import { ReactComponent as DoorIcon } from '../../src/assets/img/icons/door-icon.svg'
 import { IconText } from '../cmps/details-cmp/icon-text'
-import { ReactComponent as KitchenIcon } from '../../src/assets/img/icons/kitchen-icon.svg'
-import { ReactComponent as TvIcon } from '../../src/assets/img/icons/tv-icon.svg'
-import { ReactComponent as DryerIcon } from '../../src/assets/img/icons/dryer-icon.svg'
-import { ReactComponent as HighChairIcon } from '../../src/assets/img/icons/high-chair-icon.svg'
-import { ReactComponent as CarbonMonoxideAlarmIcon } from '../../src/assets/img/icons/carbon-monoxide-alarm-icon.svg'
-import { ReactComponent as WifiIcon } from '../../src/assets/img/icons/wifi-icon.svg'
-import { ReactComponent as WasherIcon } from '../../src/assets/img/icons/washer-icon.svg'
-import { ReactComponent as AirConditioningIcon } from '../../src/assets/img/icons/air-conditioning-icon.svg'
-import { ReactComponent as HairDryerIcon } from '../../src/assets/img/icons/hair-dryer-icon.svg'
 import { Review } from '../cmps/details-cmp/review'
-// import { ReactComponent as CheckInOutIcon } from '../../src/assets/img/icons/check-in-out-icon.svg'
 import { ReactComponent as NoSmokingIcon } from '../../src/assets/img/icons/no-smoking-icon.svg'
 import { ReactComponent as NoPartiesIcon } from '../../src/assets/img/icons/no-parties-icon.svg'
 import { ReactComponent as PetsAllowedIcon } from '../../src/assets/img/icons/pets-allowed-icon.svg'
-// import { ShowMoreButton } from '../cmps/details-cmp/show-more-button'
 import { ReactComponent as HealthCheckIcon } from '../../src/assets/img/icons/health-check-icon.svg'
 import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/smoking-alarm-icon.svg'
 import { ThingToKnow } from '../cmps/details-cmp/thing-to-know'
@@ -32,15 +34,13 @@ import { AirCover } from '../cmps/details-cmp/air-cover'
 import { ReviewStats } from '../cmps/details-cmp/Review-stats'
 import CircularProgress from '@mui/material/CircularProgress'
 import Box from '@mui/material/Box'
-import { addReview, loadReviews } from '../store/actions/review.actions'
+import { loadReviews } from '../store/actions/review.actions'
 import { useDispatch, useSelector } from 'react-redux'
 import { compact, mean, meanBy, transform, values } from 'lodash'
 import { AddReview } from '../cmps/details-cmp/add-review'
 import { Collapse } from 'react-collapse'
 import { Amenity } from '../cmps/details-cmp/amenity'
-import { useMemo } from 'react'
 import { map } from 'lodash'
-import { sortBy } from 'lodash'
 
 export const StayDetails = () => {
     const dispatch = useDispatch()
@@ -73,7 +73,7 @@ export const StayDetails = () => {
     }, [params.id])
 
     const amenities = compact(
-        map(stay?.amenities, (amenity) => <Amenity amenity={amenity} />)
+        map(stay?.amenities, (amenity) => <Amenity key={amenity} amenity={amenity} />)
     )
 
     if (!stay) {
@@ -85,7 +85,7 @@ export const StayDetails = () => {
         </div>
         )
     }
-    console.log(stay.host._id)
+    // console.log(stay.host._id)
     return (
         <div className='stay-details narrow main-layout'>
             <div className='title'>

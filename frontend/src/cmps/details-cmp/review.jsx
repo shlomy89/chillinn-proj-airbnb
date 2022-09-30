@@ -42,7 +42,7 @@ export const Review = ({ review }) => {
                     trimRight
                     basedOn='letters'
                     onReflow={({ clamped }) => {
-                        console.log(clamped)
+                        // console.log(clamped)
                         if (!isShowMoreRendered) {
                             setIsShowMoreRendered(clamped)
                         }

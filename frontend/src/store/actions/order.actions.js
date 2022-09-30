@@ -68,7 +68,6 @@ export function onAddOrder({ stay, startDate, endDate, guestsNum, nights }) {
             // }
             const stayId = stay._id
             const user = getState().userModule.user
-            console.log(user)
             const params = {
                 startDate: startDate.getTime(),
                 endDate: endDate.getTime(),
@@ -76,7 +75,6 @@ export function onAddOrder({ stay, startDate, endDate, guestsNum, nights }) {
                 nights,
                 stayId
             }
-            console.log(params)
             if (!user) {
                 params.userId = null
             } else {

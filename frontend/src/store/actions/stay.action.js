@@ -6,8 +6,8 @@ export function loadStays() {
             const { filterBy } = getState().stayModule
             dispatch({ type: 'SET_LOADING', isLoading: true })
             const stays = await stayService.query(filterBy)
+            console.log("Stays counter", stays.length)
             dispatch({ type: 'SET_STAYS', stays })
-            console.log('stays.length:', stays.length)
         } catch (error) {
             console.log('load stays error in stay action:', error)
         } finally {

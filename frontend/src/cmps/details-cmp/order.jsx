@@ -42,10 +42,10 @@ export const Order = ({ imgUrl, name, order, apartmentLocation, onClick }) => {
                 ) : (
                     <div className='order-actions-button'>
                         {' '}
-                        <div onClick={() => onClick(order, 'approved')}>
+                        <div className='approve' onClick={() => onClick(order, 'approved')}>
                             approve
                         </div>
-                        <div onClick={() => onClick(order, 'rejected')}>
+                        <div className='reject' onClick={() => onClick(order, 'rejected')}>
                             Reject
                         </div>
                     </div>

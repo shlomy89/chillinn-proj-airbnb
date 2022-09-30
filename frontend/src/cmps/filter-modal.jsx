@@ -4,6 +4,8 @@ import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
 import Fade from '@mui/material/Fade'
 import { StayFilter } from './stay-filter.jsx'
+import Badge from '@mui/material/Badge'
+import { grey } from '@mui/material/colors'
 import filterSvg from '../assets/img/icons/filter-icon.svg'
 
 const style = {
@@ -28,11 +30,16 @@ export default function FilterModal(props) {
 
     return (
         <React.Fragment>
-            <button className="open-filter-btn flex align-center"
-                onClick={handleOpen}>
-                <img src={filterSvg} className="filter-icon" />&nbsp;
-                Filters
-            </button>
+            <Badge
+                color="primary"
+                badgeContent={props.counter}
+                className={props.counter ? 'filter-active' : ''}>
+                <button className={`${props.counter ? 'active' : ''} open-filter-btn flex align-center`}
+                    onClick={handleOpen}>
+                    <img src={filterSvg} className="filter-icon" />&nbsp;
+                    Filters
+                </button>
+            </Badge>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -44,8 +51,8 @@ export default function FilterModal(props) {
             >
                 <Fade in={open}>
                     <Box
-                    className="filter-modal"
-                    sx={style}>
+                        className="filter-modal"
+                        sx={style}>
                         <StayFilter {...props} handleClose={handleClose} />
                     </Box>
                 </Fade>

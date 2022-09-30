@@ -43,7 +43,6 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
     const dispatch = useDispatch()
 
     const onClick = () => {
-        console.log('hiiii')
         dispatch(
             onAddOrder({
                 stay,

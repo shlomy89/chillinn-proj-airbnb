@@ -3,7 +3,6 @@ const logger = require('../../services/logger.service')
 const ObjectId = require('mongodb').ObjectId
 
 async function query(filterBy = {}) {
-    console.log("filterBy", filterBy)
     const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('stay')
@@ -70,7 +69,7 @@ function _buildCriteria(filterBy) {
         priceRange = [],
         bedrooms,
         beds,
-        bathsrooms,
+        bathrooms,
         propertyTypes = {},
         placeTypes = {},
         amenities = {},
@@ -80,14 +79,8 @@ function _buildCriteria(filterBy) {
 
     const [minPrice, maxPrice] = priceRange
 
-    const chosePropertyTypes = Object.keys(propertyTypes).filter(
-        (p) => propertyTypes[p]
-    )
-
-    const checkedPlaceTypes = Object.keys(placeTypes).filter(
-        (p) => placeTypes[p]
-    )
-
+    const chosePropertyTypes = Object.keys(propertyTypes).filter((p) => propertyTypes[p])
+    const checkedPlaceTypes = Object.keys(placeTypes).filter((p) => placeTypes[p])
     const checkedAmenities = Object.keys(amenities).filter((a) => amenities[a])
 
     if (labels) {
@@ -123,13 +116,13 @@ function _buildCriteria(filterBy) {
     if (bedrooms) {
         criteria.bedrooms = { $eq: bedrooms }
     }
-    
+
     if (beds) {
         criteria.capacity = { $eq: beds }
     }
 
-    if (bathsrooms) {
-        criteria.bathsrooms = { $eq: bathsrooms }
+    if (bathrooms) {
+        criteria.bathrooms = { $eq: bathrooms }
     }
 
     if (hostId) {
