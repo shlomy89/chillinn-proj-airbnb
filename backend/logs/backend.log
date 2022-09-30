@@ -2652,4 +2652,30 @@
 9/30/2022, 12:36:22 PM - INFO - Req was made
 9/30/2022, 12:36:24 PM - INFO - Req was made
 9/30/2022, 12:37:09 PM - INFO - Server is running on port: 3030
-30.9.2022, 14:45:02 - INFO - Server is running on port: 3030
+30/09/2022, 13:21:11 - INFO - Server is running on port: 3030
+30/09/2022, 13:21:11 - INFO - New connected socket [id: QltnWcrAkf2h4BccAAAB]
+30/09/2022, 13:21:22 - DEBUG - Getting Stays
+30/09/2022, 13:21:35 - INFO - Req was made
+30/09/2022, 13:22:16 - DEBUG - Getting Stays
+30/09/2022, 13:22:39 - INFO - Req was made
+30/09/2022, 13:23:10 - DEBUG - auth.service - login with username: 118676
+30/09/2022, 13:23:10 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+30/09/2022, 13:23:14 - DEBUG - Getting Stays
+30/09/2022, 13:23:14 - DEBUG - Getting Stays
+30/09/2022, 13:23:14 - INFO - Req was made
+30/09/2022, 13:23:15 - INFO - Req was made
+30/09/2022, 13:50:54 - DEBUG - Getting Stays
+30/09/2022, 13:50:54 - DEBUG - Getting Stays
+30/09/2022, 13:50:54 - INFO - Req was made
+30/09/2022, 13:50:55 - INFO - Req was made
+30/09/2022, 13:51:08 - DEBUG - Getting Stays
+30/09/2022, 13:51:08 - DEBUG - Getting Stays
+30/09/2022, 13:51:08 - INFO - Req was made
+30/09/2022, 13:51:09 - INFO - Req was made
+30/09/2022, 14:46:08 - INFO - Req was made
+30/09/2022, 14:48:56 - INFO - Req was made
+30/09/2022, 15:03:12 - DEBUG - Getting Stays
+30/09/2022, 15:03:12 - DEBUG - Getting Stays
+30/09/2022, 15:03:12 - INFO - Req was made
+30/09/2022, 15:03:13 - INFO - Req was made
+30/09/2022, 15:03:57 - DEBUG - Getting Stays
