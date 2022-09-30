@@ -41,29 +41,3 @@ async function connect() {
     throw err;
   }
 }
-
-function randomIntFromInterval(min, max) {
-  // min and max included
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-//
-// const refactorReviews = async () => {
-//   await connect();
-//   // const stay = await getCollection('stay')
-//   const staysCollection = await getCollection("stay");
-//   // const stays = await staysCollection.find({}).toArray();
-//   await staysCollection.insertMany(
-//     map(stays, (stay) => ({
-//       ...stay,
-//       _id: new ObjectId(stay._id),
-//       unavailableDats: [],
-//     }))
-//   );
-//
-//   console.log("done");
-//   // fs.writeFile("stays.json", JSON.stringify(stays), () => {
-//   //   console.log("done");
-//   // });
-// };
-// refactorReviews();
