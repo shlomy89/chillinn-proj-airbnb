@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[198],{30198:function(n,e,s){n.exports=s.p+"static/media/hangers-icon.75611039aa17e5c52f8f.svg"}}]);

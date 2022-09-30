@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[185],{185:function(e,n,s){e.exports=s.p+"static/media/share-icon.86d81864f2678ff2e230.svg"}}]);

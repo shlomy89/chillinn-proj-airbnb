@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[5512],{85512:function(c,n,e){c.exports=e.p+"static/media/clothing-storage-icon.5d7c3f238cfe1b6174c2.svg"}}]);

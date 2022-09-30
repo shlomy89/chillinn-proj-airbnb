@@ -30,6 +30,10 @@ export const Review = ({ review }) => {
                     trimRight
                     basedOn="letters"
                     onReflow={({ clamped }) => {
+<<<<<<< HEAD
+                        // console.log(clamped)
+=======
+>>>>>>> a3421458813168011ed2e58336030d51d283042f
                         if (!isShowMoreRendered) {
                             setIsShowMoreRendered(clamped);
                         }

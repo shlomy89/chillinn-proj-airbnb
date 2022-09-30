@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[9363],{99363:function(n,e,i){n.exports=i.p+"static/media/outdoor-furniture-icon.62f163da1d91528f6d89.svg"}}]);

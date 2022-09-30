@@ -1,13 +1,15 @@
+const { inRange } = require('lodash')
+const { info } = require('../../services/logger.service')
 const logger = require('../../services/logger.service')
 const stayService = require('./stay.service')
 
 // GET LIST
 async function getStays(req, res) {
     let filterBy = {
-        priceRange: [20, 1900],
-        bedrooms: 0,
-        beds: 0,
-        bathrooms: 0,
+        priceRange: [0, Infinity],
+        bedrooms: null,
+        beds: null,
+        bathrooms: null,
         propertyTypes: {},
         placeTypes: {},
         amenities: {},
@@ -32,8 +34,8 @@ async function getStays(req, res) {
                 labels: params.labels,
                 hostId: params.hostId
             }
+            if (!filterBy.priceRange[1]) filterBy.priceRange[1] = Infinity
         }
-
         const stays = await stayService.query(filterBy)
         res.json(stays)
     } catch (err) {

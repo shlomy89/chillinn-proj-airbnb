@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[8742],{8742:function(i,n,c){i.exports=c.p+"static/media/high-chair-icon.f1044c56306fb84a53ad.svg"}}]);

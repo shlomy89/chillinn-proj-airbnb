@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[5413],{35413:function(e,n,s){e.exports=s.p+"static/media/minus-icon.eb2e784d5aeb4e3de325.svg"}}]);

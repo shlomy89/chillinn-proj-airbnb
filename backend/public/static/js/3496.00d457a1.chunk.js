@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[3496],{23496:function(c,e,n){c.exports=n.p+"static/media/dryer-icon.1486c7d2ed84cb7fc754.svg"}}]);

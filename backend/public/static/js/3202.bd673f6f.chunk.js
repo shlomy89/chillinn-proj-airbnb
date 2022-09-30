@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[3202],{33202:function(e,n,s){e.exports=s.p+"static/media/board-games-icon.9a91e141d1b525c879d0.svg"}}]);

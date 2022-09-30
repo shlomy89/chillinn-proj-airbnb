@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[2075],{32075:function(c,n,s){c.exports=s.p+"static/media/kayak-icon.602c714fcd637cc33015.svg"}}]);

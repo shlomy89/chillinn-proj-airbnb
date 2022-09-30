@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[7537],{27537:function(n,e,s){n.exports=s.p+"static/media/no-parties-icon.1b17bc70188fff77dce9.svg"}}]);

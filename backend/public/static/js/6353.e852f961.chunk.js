@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[6353],{86353:function(e,n,s){e.exports=s.p+"static/media/pets-allowed-icon.8951795592536bec14ed.svg"}}]);

@@ -35,11 +35,20 @@ export const Order = ({ imgUrl, name, order, apartmentLocation, onClick }) => {
                 {orderStatus !== 'pending' ? (
                     <span className={clsx('order-status', orderStatus)}>{orderStatus}</span>
                 ) : (
+<<<<<<< HEAD
+                    <div className='order-actions-button'>
+                        {' '}
+                        <div className='approve' onClick={() => onClick(order, 'approved')}>
+                            approve
+                        </div>
+                        <div className='reject' onClick={() => onClick(order, 'rejected')}>
+=======
                     <div className="order-action-button-container">
                         <div className="order-action-button" onClick={() => onClick(order, 'approved')}>
                             Approve
                         </div>
                         <div className="order-action-button rejected" onClick={() => onClick(order, 'rejected')}>
+>>>>>>> a3421458813168011ed2e58336030d51d283042f
                             Reject
                         </div>
                     </div>
