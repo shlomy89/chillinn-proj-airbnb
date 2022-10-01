@@ -26,10 +26,10 @@ export const ReserveButton = ({
             color: 'black',
             padding: '9px',
             html: `<div class='modal-container'>
-            <div class='vacancy-place'> Vacancy place: <div class='text-details'>"${
+            <div class='vacancy-place'><div class='text-details'>"${
                 stay.name
             }"</div></div>
-            <div class='dates'>Vacation dates: <div class='text-details'>from ${moment(
+            <div class='dates'><div class='text-details'>from ${moment(
                 startDate
             ).format('DD MMM')} until ${moment(endDate).format(
                 'DD MMM'
