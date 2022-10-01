@@ -27,9 +27,9 @@ export const ReserveButton = ({
             padding: '9px',
             html: `<div class='modal-container'>
             <div class='vacancy-place'><div class='text-details'>"${stay.name}"</div></div>
-            <div class='dates'><div class='text-details'>from ${moment(startDate).format(
-                'DD MMM'
-            )} until ${moment(endDate).format('DD MMM')}.</div></div>
+            <div class='dates'><div class='text-details'>from ${moment(startDate).format('DD MMM')} until ${moment(
+                endDate
+            ).format('DD MMM')}.</div></div>
             <div class='number-of-guests'>Number of guests: <div class='value'>${guestsNum}</div></div>
                 <div class='price-per-night'> Price per night: <div class='value'>$${pricePerNight}</div></div>
                 <div class='service-fee'> Service fee: <div class='value'>$${serviceFee}</div></div>
@@ -71,7 +71,7 @@ export const ReserveButton = ({
         });
 
         return () => {
-            button?.removeEventListener('mousemove');
+            button?.removeEventListener('--mouse-x', '--mouse-y');
         };
     }, []);
 

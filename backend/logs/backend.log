@@ -3072,3 +3072,77 @@
 01/10/2022, 21:38:48 - INFO - Req was made
 01/10/2022, 21:38:50 - INFO - Req was made
 01/10/2022, 21:39:33 - INFO - Req was made
+01/10/2022, 21:57:00 - INFO - Server is running on port: 3030
+01/10/2022, 21:57:41 - DEBUG - Getting Stays
+01/10/2022, 21:57:56 - INFO - Req was made
+01/10/2022, 21:58:22 - INFO - Req was made
+01/10/2022, 22:04:01 - INFO - Req was made
+01/10/2022, 22:08:44 - DEBUG - Getting Stays
+01/10/2022, 22:09:03 - INFO - Req was made
+01/10/2022, 22:09:46 - DEBUG - Getting Stays
+01/10/2022, 22:12:41 - INFO - Req was made
+01/10/2022, 22:12:57 - INFO - Req was made
+01/10/2022, 22:13:32 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:13:32 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:13:34 - DEBUG - Getting Stays
+01/10/2022, 22:13:34 - DEBUG - Getting Stays
+01/10/2022, 22:13:35 - DEBUG - Getting Stays
+01/10/2022, 22:13:35 - INFO - Req was made
+01/10/2022, 22:13:36 - INFO - Req was made
+01/10/2022, 22:13:48 - DEBUG - Getting Stays
+01/10/2022, 22:14:01 - INFO - Req was made
+01/10/2022, 22:15:24 - DEBUG - Getting Stays
+01/10/2022, 22:15:36 - INFO - Req was made
+01/10/2022, 22:16:06 - DEBUG - Getting Stays
+01/10/2022, 22:18:58 - DEBUG - Getting Stays
+01/10/2022, 22:19:12 - INFO - Req was made
+01/10/2022, 22:35:45 - INFO - Server is running on port: 3030
+01/10/2022, 22:35:50 - DEBUG - Getting Stays
+01/10/2022, 22:36:04 - INFO - Req was made
+01/10/2022, 22:36:54 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:36:55 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:36:57 - DEBUG - Getting Stays
+01/10/2022, 22:36:59 - DEBUG - Getting Stays
+01/10/2022, 22:37:00 - DEBUG - Getting Stays
+01/10/2022, 22:37:00 - INFO - Req was made
+01/10/2022, 22:37:01 - INFO - Req was made
+01/10/2022, 22:45:37 - DEBUG - Getting Stays
+01/10/2022, 22:45:56 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:45:56 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:45:59 - DEBUG - Getting Stays
+01/10/2022, 22:46:11 - INFO - Req was made
+01/10/2022, 22:46:21 - DEBUG - Getting Stays
+01/10/2022, 22:47:02 - DEBUG - Getting Stays
+01/10/2022, 22:47:02 - DEBUG - Getting Stays
+01/10/2022, 22:47:02 - INFO - Req was made
+01/10/2022, 22:47:03 - INFO - Req was made
+01/10/2022, 22:47:19 - DEBUG - Getting Stays
+01/10/2022, 22:47:34 - INFO - Req was made
+01/10/2022, 22:51:40 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:51:40 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:51:42 - DEBUG - Getting Stays
+01/10/2022, 22:51:44 - DEBUG - Getting Stays
+01/10/2022, 22:51:44 - DEBUG - Getting Stays
+01/10/2022, 22:51:44 - INFO - Req was made
+01/10/2022, 22:51:45 - INFO - Req was made
+01/10/2022, 22:51:54 - DEBUG - Getting Stays
+01/10/2022, 22:52:12 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:52:13 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:52:16 - DEBUG - Getting Stays
+01/10/2022, 22:52:22 - DEBUG - Getting Stays
+01/10/2022, 22:52:22 - INFO - Req was made
+01/10/2022, 22:52:22 - DEBUG - Getting Stays
+01/10/2022, 22:52:23 - INFO - Req was made
+01/10/2022, 22:52:24 - INFO - Req was made
+01/10/2022, 22:52:50 - DEBUG - Getting Stays
+01/10/2022, 22:53:59 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:53:59 - ERROR - Failed to Login Invalid username or password
+01/10/2022, 22:54:02 - DEBUG - Getting Stays
+01/10/2022, 22:54:10 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:54:10 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:54:13 - DEBUG - Getting Stays
+01/10/2022, 22:54:15 - DEBUG - Getting Stays
+01/10/2022, 22:54:15 - INFO - Req was made
+01/10/2022, 22:54:15 - DEBUG - Getting Stays
+01/10/2022, 22:54:16 - INFO - Req was made
+01/10/2022, 22:54:17 - INFO - Req was made
