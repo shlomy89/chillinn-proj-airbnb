@@ -1,7 +1,7 @@
-import '../../assets/styles/cmps/_reserve-button.scss'
-import Swal from 'sweetalert2'
-import moment from 'moment'
-import { useEffect } from 'react'
+import '../../assets/styles/cmps/_reserve-button.scss';
+import Swal from 'sweetalert2';
+import moment from 'moment';
+import { useEffect } from 'react';
 
 export const ReserveButton = ({
     onClick,
@@ -11,7 +11,7 @@ export const ReserveButton = ({
     endDate,
     pricePerNight,
     serviceFee,
-    totalPrice
+    totalPrice,
 }) => {
     const openModal = () => {
         Swal.fire({
@@ -26,14 +26,10 @@ export const ReserveButton = ({
             color: 'black',
             padding: '9px',
             html: `<div class='modal-container'>
-            <div class='vacancy-place'><div class='text-details'>"${
-                stay.name
-            }"</div></div>
-            <div class='dates'><div class='text-details'>from ${moment(
-                startDate
-            ).format('DD MMM')} until ${moment(endDate).format(
+            <div class='vacancy-place'><div class='text-details'>"${stay.name}"</div></div>
+            <div class='dates'><div class='text-details'>from ${moment(startDate).format(
                 'DD MMM'
-            )}.</div></div>
+            )} until ${moment(endDate).format('DD MMM')}.</div></div>
             <div class='number-of-guests'>Number of guests: <div class='value'>${guestsNum}</div></div>
                 <div class='price-per-night'> Price per night: <div class='value'>$${pricePerNight}</div></div>
                 <div class='service-fee'> Service fee: <div class='value'>$${serviceFee}</div></div>
@@ -43,52 +39,50 @@ export const ReserveButton = ({
             imageUrl: stay.imgUrls[0],
             imageWidth: 500,
             imageHeight: 250,
-            imageAlt: 'Custom image'
-        }).then((result) => {
+            imageAlt: 'Custom image',
+        }).then(result => {
             if (result.isConfirmed) {
-                onClick = onClick()
+                onClick = onClick();
                 Swal.fire(
                     'Thank you!',
                     // 'Please hold while your reservation has been transferred for host approval.',
                     'your reservation request has been received and is complete for final processing, no further action is required by you.'
-                )
+                );
             } else if (
                 /* Read more about handling dismissals below */
                 result.dismiss === Swal.DismissReason.cancel
             ) {
-                Swal.fire('Cancelled', 'Your order has been canceled', 'error')
+                Swal.fire('Cancelled', 'Your order has been canceled', 'error');
             }
-        })
-    }
+        });
+    };
 
     useEffect(() => {
-        const button = document.querySelector('.reserve-button')
-        // console.log({ button })
+        const button = document.querySelector('.reserve-button');
         if (!button) {
-            return
+            return;
         }
-        button.addEventListener('mousemove', (e) => {
-            const rect = button.getBoundingClientRect()
-            const x = ((e.clientX - rect.left) * 100) / button.clientWidth
-            const y = ((e.clientY - rect.top) * 100) / button.clientHeight
-            button.style.setProperty('--mouse-x', x)
-            button.style.setProperty('--mouse-y', y)
-        })
+        button.addEventListener('mousemove', e => {
+            const rect = button.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) * 100) / button.clientWidth;
+            const y = ((e.clientY - rect.top) * 100) / button.clientHeight;
+            button.style.setProperty('--mouse-x', x);
+            button.style.setProperty('--mouse-y', y);
+        });
 
-        // return () => {
-        //     button.removeEventListener('mousemove')
-        // }
-    }, [])
+        return () => {
+            button?.removeEventListener('mousemove');
+        };
+    }, []);
 
     return (
         <div
-            className='reserve-button'
+            className="reserve-button"
             onClick={() => {
-                // onClick()
-                openModal()
+                openModal();
             }}
         >
             Reserve
         </div>
-    )
-}
+    );
+};
