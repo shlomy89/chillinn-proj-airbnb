@@ -34,8 +34,9 @@ async function getStays(req, res) {
                 labels: params.labels,
                 hostId: params.hostId
             }
-            if (!filterBy.priceRange[1]) filterBy.priceRange[1] = Infinity
         }
+        if (filterBy.priceRange && !filterBy.priceRange[1]) filterBy.priceRange[1] = Infinity
+
         const stays = await stayService.query(filterBy)
         res.json(stays)
     } catch (err) {

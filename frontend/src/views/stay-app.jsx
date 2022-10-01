@@ -10,12 +10,16 @@ import { FilterCarousel } from '../cmps/filter-carousel.jsx'
 import _ from 'lodash'
 
 export const StayApp = () => {
+    
     const { stays, isLoading } = useSelector(state => state.stayModule)
+
     const [searchParams, setSearchParams] = useSearchParams()
     const [filter, setFilter] = useState()
     const [activeFilters, setActiveFilters] = useState()
+    const [isStuck, setIsStuck] = useState(false)
+    
     const dispatch = useDispatch()
-
+    
     const getDefaultFilterState = () => {
         return {
             amenities: {},
@@ -26,7 +30,6 @@ export const StayApp = () => {
             placeTypes: {},
             propertyTypes: {},
             priceRange: [0, Infinity]
-            // priceRange: {min: 0, max: Infinity}
         }
     }
 
@@ -42,8 +45,24 @@ export const StayApp = () => {
         return getDefaultFilterState()
     }
 
+    const onScroll = (e) => {
+        const posY = window.scrollY;
+        if (posY > 20) {
+            if (!isStuck) {
+                setIsStuck(true)
+            }
+        } else {
+            setIsStuck(false)
+        }
+    }
+
     useEffect(() => {
         setFilter(getFiltersState())
+        document.addEventListener('scroll', onScroll, true)
+
+        return function cleanup() {
+            document.removeEventListener('scroll', onScroll, true)
+        }
     }, [])
 
     useEffect(() => {
@@ -68,18 +87,22 @@ export const StayApp = () => {
 
     return (
         <React.Fragment>
-            <section className='filters-container flex justify-center align-center'>
-                <FilterCarousel
-                    setFilter={setFilter} />
-
-                <FilterModal
-                    staysCount={stays.length}
-                    counter={activeFilters}
-                    filter={filter}
-                    setFilter={setFilter}
-                    getDefaultFilterState={getDefaultFilterState} />
-            </section>
             <div className='stay-app main-layout'>
+                <section className={`filters-container flex align-center ${isStuck ? 'stuck' : ''}`}>
+                    <div className='filters-container-background'>
+                        <div className='filters-container-wrapper flex align-center justify-center'>
+                            <FilterCarousel
+                                setFilter={setFilter} />
+
+                            <FilterModal
+                                staysCount={stays.length}
+                                counter={activeFilters}
+                                filter={filter}
+                                setFilter={setFilter}
+                                getDefaultFilterState={getDefaultFilterState} />
+                        </div>
+                    </div>
+                </section>
                 {isLoading ? (
                     <Box sx={{ display: 'flex', margin: '100px auto' }}>
                         <CircularProgress />

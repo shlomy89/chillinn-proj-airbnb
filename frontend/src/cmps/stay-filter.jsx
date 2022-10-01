@@ -122,9 +122,6 @@ export const StayFilter = ({ getDefaultFilterState, filter, setFilter, staysCoun
 
     const handleCheckBox = ({ target }) => {
         const { id, checked, name } = target
-        console.log('id:', id)
-        console.log('checked:', checked)
-        console.log('name:', name)
         setLocalFilter(prevFields => ({
             ...prevFields,
             [name]: {

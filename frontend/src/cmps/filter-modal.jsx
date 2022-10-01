@@ -36,8 +36,10 @@ export default function FilterModal(props) {
                 className={props.counter ? 'filter-active' : ''}>
                 <button className={`${props.counter ? 'active' : ''} open-filter-btn flex align-center`}
                     onClick={handleOpen}>
-                    <img src={filterSvg} className="filter-icon" />&nbsp;
-                    Filters
+                    <div className='flex justify-center align-center'>
+                        <img src={filterSvg} className="filter-icon" />&nbsp;
+                        Filters
+                    </div>
                 </button>
             </Badge>
             <Modal

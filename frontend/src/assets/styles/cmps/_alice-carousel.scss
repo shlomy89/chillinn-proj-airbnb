@@ -16,6 +16,10 @@ $play-btn-size: 32px !default;
     margin: auto;
 
     direction: ltr;
+
+    > div:nth-child(1){
+        display: grid;
+    }
 }
 
 .alice-carousel__wrapper {

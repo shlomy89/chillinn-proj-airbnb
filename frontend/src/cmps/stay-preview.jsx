@@ -1,20 +1,31 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { React, useState } from 'react'
+
+import { React, useState, useEffect, useRef } from 'react'
 import { RatingRates } from './rating-rates'
 import { utilService } from '../services/util.service.js'
 import { ReactComponent as LikeHeartEmptyIcon } from '../assets/img/icons/like-heart-empty.svg'
 import { ReactComponent as LikeHeartRedIcon } from '../assets/img/icons/like-heart-red.svg'
-// import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
 
 export function StayPreview({ stay }) {
 
-    const { numberWithCommas, getRandomIntInclusive, getRandomFloatInclusive, randomBoolean } = utilService
-    const [likeClicked, setLikeClicked] = useState(false)
+    const {
+        numberWithCommas,
+        getRandomIntInclusive,
+        getRandomFloatInclusive,
+        randomBoolean
+    } = utilService
+
     const navigate = useNavigate()
+
+    const [likeClicked, setLikeClicked] = useState(false)
+
     const ilLat = 31.77, ilLng = 35.21
     const distance = (Math.sqrt(Math.pow(stay.loc.lat - ilLat, 2) + Math.pow(stay.loc.lat - ilLng, 2)) * 100).toFixed(0)
 
+    const rating = useRef(getRandomFloatInclusive(4, 5, 1))
+    const reviews = useRef(getRandomIntInclusive(1, 20))
+    const boolean = useRef(randomBoolean())
 
     function onClickItem(stayId) {
         window.scrollTo(0, 0)
@@ -22,7 +33,6 @@ export function StayPreview({ stay }) {
     }
 
     return (
-
         <div className='stay-preview'>
             <div
                 className='like-icon'
@@ -40,14 +50,13 @@ export function StayPreview({ stay }) {
                         <img key={index} src={url} />
                     ))}
                 </Carousel>
-
             </div>
             <Link to={`/stay/${stay._id}`} className='info'>
                 <div className='preview-details'>
                     <div className='text rate'>
                         <RatingRates
-                            rating={getRandomFloatInclusive(4, 5, 1)}
-                            reviews={getRandomIntInclusive(1, 20)}
+                            rating={rating.current}
+                            reviews={reviews.current}
                         />
                     </div>
                     <div className="details">
@@ -55,12 +64,10 @@ export function StayPreview({ stay }) {
                         <div className='text summary'>{stay.summary}</div>
                         <div className='text distance'>{numberWithCommas(distance)} kilometers</div>
                         <div className='text price'>
-                            {randomBoolean() &&
+                            {boolean.current &&
                                 <span className='full-night-price'>
                                     ${numberWithCommas((stay.price * 1.3).toFixed())}&nbsp;
-                                </span>
-                            }
-
+                                </span>}
                             <span className='night-price'>
                                 ${numberWithCommas(stay.price)}&nbsp;
                             </span>

@@ -9,7 +9,7 @@ export function Amenity({ amenity }) {
             `../../assets/img/icons/${amenity
                 .replaceAll(' ', '-')
                 .toLowerCase()}-icon.svg`
-        ).then((_) => setRenderIcon(_.default))
+                ).then((_) => setRenderIcon(_.default))
     }, [])
 
     if (!renderIcon) {

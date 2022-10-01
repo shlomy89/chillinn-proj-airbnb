@@ -53,7 +53,7 @@ export const StayDetails = () => {
         getReviews();
     }, [params.id]);
 
-    const amenities = compact(map(stay?.amenities, amenity => <Amenity amenity={amenity} />));
+    const amenities = compact(map(stay?.amenities, amenity => <Amenity amenity={amenity} key={amenity} />))
 
     if (!stay) {
         return (
@@ -64,7 +64,6 @@ export const StayDetails = () => {
             </div>
         );
     }
-    console.log(stay.host._id);
     return (
         <div className="stay-details narrow main-layout">
             <div className="title">
@@ -145,7 +144,7 @@ export const StayDetails = () => {
             <section className="review">
                 <div className="reviews-container">
                     {reviews?.slice(0, 6).map(review => (
-                        <Review review={review} />
+                        <Review  key={review.text} review={review} />
                     ))}
                 </div>
                 <h3 className="add-review-header">Add Review</h3>

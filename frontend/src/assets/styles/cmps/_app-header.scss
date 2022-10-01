@@ -1,47 +1,44 @@
 .header-container {
-    // position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
     box-shadow: 0px 2px 2px $clr5;
-    margin-bottom: 20px;
     z-index: 100;
+    background-color: #fff;
 
+    .app-header {
+        z-index: 100;
+        background-color: $clr2;
+        height: 80px;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+        transition: background-color 1s;
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-    // .main-layout {
-        .app-header {
-            z-index: 100;
-            background-color: $clr2;
-            height: 80px;
-            padding-inline-start: 10px;
-            padding-inline-end: 10px;
-            transition: background-color 1s;
-            grid-column: 1 / -1;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .user-options {
-                .btn-host {
-                    font-weight: 600;
-                    font-size: 13px;
-                    color: $clr6;
-                    background-color: transparent;
-                    border: none;
-                    height: 42px;
-                    width: 130px;
-                    border-radius: 22px;
-                    margin: 0 15px;
-                    &:hover {
-                        background-color: rgba(235, 235, 235, 0.354);
-                    }
+        .user-options {
+            .btn-host {
+                font-weight: 600;
+                font-size: 13px;
+                color: $clr6;
+                background-color: transparent;
+                border: none;
+                height: 42px;
+                width: 130px;
+                border-radius: 22px;
+                margin: 0 15px;
+                &:hover {
+                    background-color: rgba(235, 235, 235, 0.354);
                 }
             }
         }
-        .logo {
-            height: 50px;
-            width: auto;
-            cursor: pointer;
-        }
     }
-// }
+    .logo {
+        height: 50px;
+        width: auto;
+        cursor: pointer;
+    }
+}

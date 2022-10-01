@@ -27,11 +27,11 @@ export const FilterCarousel = ({ setFilter }) => {
         'Dammusos',
         'Desert',
         'Desidn',
-        // 'Domes',
-        // 'Earth homes',
-        // 'Farms',
-        // 'Golfing',
-        // 'Grand pianos',
+        'Domes',
+        'Earth homes',
+        'Farms',
+        'Golfing',
+        'Grand pianos',
         // 'Historical homes',
         // 'Islands',
         // 'Lake',
@@ -57,23 +57,65 @@ export const FilterCarousel = ({ setFilter }) => {
         // 'Yurts'
     ]
 
-    const [icon, setIcon] = useState([])
+    const [icons, setIcons] = useState({})
+    const [items, setItems] = useState([])
     const [activeType, setActiveType] = useState()
 
     useEffect(() => {
-        getIcon()
+        getIcons().then(icons => {
+            setIcons(icons)
+        })
     }, [])
 
-    const getIcon = () => {
-        let iconUrl = []
-        typeList.forEach((t) => {
-            import(`../assets/img/filter-carousel-icon/${t}.jpg`)
-                .then((imgData) => iconUrl.push(imgData.default))
+    useEffect(() => {
+        const items = typeList.map(t => {
+            const img = icons[t]
+
+            return (
+                <button
+                    id={t}
+                    className={`${activeType === t ? 'active' : ''} icon-btn flex column justify-center align-center`}
+                    onClick={handleClick}>
+                    <img
+                        className='icon-carousel'
+                        src={img}
+                        id={t}
+                        role="presentation" />
+                    <div className='type-container flex column justify-center align-center'>
+                        <span className='type'>{t}</span>
+                        <div className='hover-border' />
+                    </div>
+                </button>
+            )
         })
-        setIcon(iconUrl)
+
+        setItems(items)
+    }, [icons, activeType])
+
+    const getIcons = () => {
+        const promises = []
+        const icons = {}
+
+        typeList.forEach(t => {
+            (function (t) {
+                const prom = import(`../assets/img/filter-carousel-icon/${t}.jpg`).then(img => [t, img.default])
+
+                promises.push(prom)
+            }(t))
+        })
+
+        return Promise.all(promises)
+            .then((results) => {
+                results.forEach(result => {
+                    icons[result[0]] = result[1]
+                })
+
+                return icons
+            })
     }
 
     const toggleActiveType = (type) => {
+        console.log('type:', type);
         if (activeType === type) setActiveType('')
         else setActiveType(type)
     }
@@ -91,25 +133,6 @@ export const FilterCarousel = ({ setFilter }) => {
         toggleActiveType(type)
     }
 
-    const items = icon.map((i, idx) => {
-        return (
-            <button
-                id={typeList[idx]}
-                className={`${activeType === typeList[idx] ? 'active' : ''} icon-btn flex column justify-center align-center`}
-                onClick={handleClick}>
-                <img
-                    className='icon-carousel'
-                    src={i}
-                    id={typeList[idx]}
-                    role="presentation" />
-                <div className='type-container flex column justify-center align-center'>
-                    <span className='type'>{typeList[idx]}</span>
-                    <div className='hover-border' />
-                </div>
-            </button>
-        )
-    })
-
     const responsive = {
         0: { items: 1 },
         568: { items: 2 },
@@ -117,15 +140,13 @@ export const FilterCarousel = ({ setFilter }) => {
     }
 
     return (
-        <section className='filter-carousel-container'>
+        items && <section className='filter-carousel-container'>
             <AliceCarousel
                 responsive={responsive}
                 controlsStrategy='alternate'
                 disableDotsControls={true}
                 items={items}
-                // innerWidth={1}
                 paddingLeft={40}
-                paddingRight={40}
                 renderPrevButton={() => {
                     return <button className="prev-btn">
                         <img src={prevIcon} className="alice-carousel__prev-btn-item" />

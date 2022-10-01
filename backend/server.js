@@ -2,12 +2,14 @@ const express = require('express')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const path = require('path')
+const compression = require('compression')
 
 const app = express()
 const http = require('http').createServer(app)
-
+ 
 app.use(cookieParser())
 app.use(express.json())
+app.use(compression())
 
 if (process.env.NODE_ENV === 'production') {
     // Express serve static files on production environment
