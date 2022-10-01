@@ -1,4 +1,3 @@
-import React from 'react';
 import addWeeks from 'date-fns/addWeeks';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { createTheme, TextField, ThemeProvider } from '@mui/material';
@@ -36,29 +35,23 @@ export function DatePicker({ checkIn, setCheckIn, checkOut, setCheckOut, unavail
                         setCheckIn(newValue[0]);
                         setCheckOut(newValue[1]);
                     }}
-                    startText="Check-in"
-                    endText="Check-out"
+                    // startText="Check-in"
+                    // endText="Check-out"
                     renderInput={(startProps, endProps) => {
-                        if (endProps?.ref?.current?.children?.[1]?.children?.[1]) {
-                            endProps.ref.current.children[1].children[1].style.border = '1px solid black';
-                            endProps.ref.current.children[1].children[0].style.color = 'black';
+                        console.log(endProps?.ref?.current?.children?.[0].children?.[1]);
+                        if (endProps?.ref?.current?.children?.[0].children?.[1]) {
+                            endProps.ref.current.children[0].children[1].style.border = '1px solid black';
+                            endProps.ref.current.children[0].children[1].style.color = 'black';
                         }
 
-                        if (startProps?.ref?.current?.children?.[1]?.children?.[1]) {
-                            startProps.ref.current.children[1].children[1].style.border = '1px solid black';
-                            startProps.ref.current.children[1].children[1].style['border-right'] = '0';
+                        if (startProps?.ref?.current?.children?.[0].children?.[1]) {
+                            startProps.ref.current.children[0].children[1].style.border = '1px solid black';
+                            startProps.ref.current.children[0].children[1].style['border-right'] = '0';
                         }
                         return (
                             <>
-                                <TextField className="stay-details-start-date-picker" {...startProps} />
-                                <TextField
-                                    InputProps={{
-                                        inputVariant: 'black',
-                                        disableUnderline: true,
-                                    }}
-                                    className="stay-details-end-date-picker"
-                                    {...endProps}
-                                />
+                                <TextField className="stay-details-start-date-picker" {...startProps} label={''} />
+                                <TextField className="stay-details-end-date-picker" {...endProps} label={''} />
                             </>
                         );
                     }}
