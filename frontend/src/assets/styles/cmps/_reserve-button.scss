@@ -62,7 +62,11 @@
     border-radius: 10px;
 }
 
+.modal-header {
+    margin-left: 45px;
+}
 .modal-container {
+    font-size: 14px;
     max-width: 500px;
     margin-left: 86px;
     row-gap: 12px;
@@ -70,13 +74,14 @@
     flex-direction: column;
     justify-content: space-between;
     .text-details {
-        margin-left: 75px;
+        // margin-left: 70px;
     }
 
     .vacancy-place {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-right: 160px;
     }
     .number-of-guests {
         display: flex;
@@ -87,6 +92,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
+        margin-right: 100px;
     }
     .price-per-night {
         display: flex;
@@ -99,6 +106,12 @@
         justify-content: space-between;
     }
     .total-price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .value {
+        // margin-right: 140px;
         display: flex;
         align-items: center;
         justify-content: space-between;
