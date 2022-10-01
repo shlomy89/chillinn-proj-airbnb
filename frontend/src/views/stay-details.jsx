@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { stayService } from '../services/stay.service';
-import { StarRating } from '../cmps/details-cmp/start-rating';
+import { StarRating } from '../cmps/details-cmp/star-rating';
 import { ActionButton } from '../cmps/details-cmp/action-button';
 import { ReactComponent as HeartIcon } from '../../src/assets/img/icons/heart-icon.svg';
 import { ReactComponent as ShareIcon } from '../../src/assets/img/icons/share-icon.svg';

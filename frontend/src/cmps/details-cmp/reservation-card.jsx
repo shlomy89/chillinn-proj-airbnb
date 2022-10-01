@@ -3,7 +3,7 @@ import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
 import '../../assets/styles/cmps/_reservation-card.scss';
-import { StarRating } from './start-rating';
+import { StarRating } from './star-rating';
 import moment from 'moment/moment';
 import { Dropdown } from './guests-dropdown';
 import { ReserveButton } from './reserve-button';
@@ -58,7 +58,7 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
         <div className="reservation-card-container">
             <div className="reservation-card-header">
                 <div className="price-per-night">
-                    <span className="price">${stay.price.toFixed(2)}</span> <span className="per-night">night</span>
+                    <span className="price">${stay.price}</span> <span className="per-night">night</span>
                 </div>
                 <StarRating rating={rating} reviews={reviews?.length} />
             </div>
@@ -71,17 +71,19 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
             />
             <Dropdown agesData={agesData} setAgesData={setAgesData} capacity={stay.capacity} />
 
-            <ReserveButton onClick={onClick} stay={stay} startDate={startDate} endDate={endDate}guestsNum={sumBy(values(agesData), 'value')}
+            <ReserveButton
+                onClick={onClick}
+                stay={stay}
+                startDate={startDate}
+                endDate={endDate}
+                guestsNum={sumBy(values(agesData), 'value')}
                 pricePerNight={Math.round(stay.price * nights)}
                 serviceFee={Math.round(stay.price * nights * 0.14)}
                 totalPrice={Math.round(stay.price * nights * 1.14)}
             />
             <p className="no-charge">you won't be charged yet</p>
             <section className="summary-price-container">
-                <SummaryPrice
-                    text={`${stay.price} * ${nights} nights`}
-                    total={Math.round(stay.price * nights)}
-                />
+                <SummaryPrice text={`${stay.price} * ${nights} nights`} total={Math.round(stay.price * nights)} />
 
                 <SummaryPrice text={'Service fee'} total={Math.round(stay.price * nights * 0.14)} />
             </section>

@@ -11,13 +11,14 @@ export const Review = ({ review }) => {
     return (
         <div className="review-details">
             <div className="user-details">
-                <div className="image-container">
-                    <img src={review.user.imgUrl ?? require('../../assets/img/face1.png')} alt="user-img" />
-                </div>
+                {/* <div className="image-container"> */}
+                <img src={review.user.imgUrl ?? require('../../assets/img/face1.png')} alt="user-img" />
+                {/* </div> */}
 
                 <div className="user-name-details">
                     <span className="user-name">
-                        {`${review.user.firstname} ${review.user.lastname === '' ? '- Review' : review.user.lastname}`}
+                        {/* {`${review.user.firstname} ${review.user.lastname === '' ? '- Review' : review.user.lastname}`} */}
+                        {`${review.user.firstname} ${review.user.lastname}`}
                     </span>
                     <span className="user-date">{moment(review.date).format('MMM ,YYYY')}</span>
                 </div>
@@ -30,10 +31,7 @@ export const Review = ({ review }) => {
                     trimRight
                     basedOn="letters"
                     onReflow={({ clamped }) => {
-<<<<<<< HEAD
                         // console.log(clamped)
-=======
->>>>>>> a3421458813168011ed2e58336030d51d283042f
                         if (!isShowMoreRendered) {
                             setIsShowMoreRendered(clamped);
                         }

@@ -2679,3 +2679,257 @@
 30/09/2022, 15:03:12 - INFO - Req was made
 30/09/2022, 15:03:13 - INFO - Req was made
 30/09/2022, 15:03:57 - DEBUG - Getting Stays
+30/09/2022, 15:16:52 - INFO - Server is running on port: 3030
+30/09/2022, 15:16:52 - INFO - New connected socket [id: 6jKFP7HzQofd2KiQAAAB]
+30/09/2022, 15:17:03 - DEBUG - Getting Stays
+30/09/2022, 15:17:15 - INFO - Req was made
+30/09/2022, 15:18:25 - INFO - Req was made
+30/09/2022, 15:23:08 - DEBUG - Getting Stays
+30/09/2022, 15:23:50 - DEBUG - Getting Stays
+30/09/2022, 15:25:01 - DEBUG - Getting Stays
+30/09/2022, 15:29:55 - DEBUG - Getting Stays
+30/09/2022, 15:34:14 - INFO - Req was made
+30/09/2022, 15:43:55 - INFO - Req was made
+30/09/2022, 15:52:36 - INFO - Req was made
+30/09/2022, 15:58:01 - DEBUG - Getting Stays
+30/09/2022, 16:07:50 - DEBUG - Getting Stays
+30/09/2022, 16:08:14 - INFO - Req was made
+30/09/2022, 16:14:20 - DEBUG - auth.service - login with username: 118676
+30/09/2022, 16:14:20 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+30/09/2022, 16:14:23 - DEBUG - Getting Stays
+30/09/2022, 16:14:36 - INFO - Req was made
+30/09/2022, 16:14:56 - INFO - Req was made
+30/09/2022, 16:14:56 - INFO - Req was made
+30/09/2022, 16:20:06 - INFO - Req was made
+30/09/2022, 16:20:06 - INFO - Req was made
+30/09/2022, 16:20:11 - INFO - Req was made
+30/09/2022, 16:20:12 - INFO - Req was made
+30/09/2022, 16:20:17 - INFO - Req was made
+30/09/2022, 16:20:17 - INFO - Req was made
+30/09/2022, 16:20:22 - INFO - Req was made
+30/09/2022, 16:20:23 - INFO - Req was made
+30/09/2022, 16:20:27 - INFO - Req was made
+30/09/2022, 16:20:28 - INFO - Req was made
+30/09/2022, 16:20:33 - INFO - Req was made
+30/09/2022, 16:20:33 - INFO - Req was made
+30/09/2022, 16:22:39 - INFO - Req was made
+30/09/2022, 16:22:57 - INFO - Socket disconnected [id: undefined]
+30/09/2022, 16:40:29 - DEBUG - Getting Stays
+30/09/2022, 16:40:45 - INFO - Req was made
+30/09/2022, 16:41:10 - DEBUG - Getting Stays
+30/09/2022, 16:41:27 - INFO - Req was made
+30/09/2022, 16:44:13 - DEBUG - Getting Stays
+30/09/2022, 16:44:29 - INFO - Req was made
+30/09/2022, 17:27:50 - INFO - Req was made
+30/09/2022, 17:29:51 - INFO - Req was made
+30/09/2022, 17:29:52 - INFO - Req was made
+30/09/2022, 17:31:43 - INFO - Req was made
+30/09/2022, 17:43:22 - INFO - Req was made
+01/10/2022, 12:01:34 - INFO - Server is running on port: 3030
+01/10/2022, 12:02:03 - DEBUG - Getting Stays
+01/10/2022, 12:02:30 - INFO - Req was made
+01/10/2022, 12:06:22 - INFO - Req was made
+01/10/2022, 12:22:33 - DEBUG - Getting Stays
+01/10/2022, 12:22:45 - INFO - Req was made
+01/10/2022, 12:24:23 - INFO - Req was made
+01/10/2022, 12:29:46 - INFO - Req was made
+01/10/2022, 12:32:50 - INFO - Req was made
+01/10/2022, 12:38:51 - INFO - Req was made
+01/10/2022, 12:38:55 - INFO - Req was made
+01/10/2022, 12:44:50 - INFO - Req was made
+01/10/2022, 12:44:51 - INFO - Req was made
+01/10/2022, 12:48:13 - INFO - Req was made
+01/10/2022, 12:48:14 - INFO - Req was made
+01/10/2022, 12:49:16 - INFO - Req was made
+01/10/2022, 12:50:44 - INFO - Req was made
+01/10/2022, 12:53:41 - INFO - Req was made
+01/10/2022, 12:58:45 - INFO - Req was made
+01/10/2022, 13:00:28 - INFO - Req was made
+01/10/2022, 13:07:01 - INFO - Req was made
+01/10/2022, 13:27:06 - INFO - Req was made
+01/10/2022, 13:27:16 - INFO - Req was made
+01/10/2022, 13:27:36 - INFO - Req was made
+01/10/2022, 13:34:43 - INFO - Req was made
+01/10/2022, 13:40:30 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 13:40:30 - ERROR - Failed to Login Invalid username or password
+01/10/2022, 13:40:32 - DEBUG - Getting Stays
+01/10/2022, 13:40:42 - INFO - Req was made
+01/10/2022, 13:40:52 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 13:40:53 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 13:40:56 - DEBUG - Getting Stays
+01/10/2022, 13:41:05 - DEBUG - Getting Stays
+01/10/2022, 13:41:05 - ERROR - Failed to get stays | {}
+01/10/2022, 13:41:05 - DEBUG - Getting Stays
+01/10/2022, 13:41:05 - ERROR - Failed to get stays | {}
+01/10/2022, 13:41:19 - DEBUG - Getting Stays
+01/10/2022, 13:41:19 - ERROR - Failed to get stays | {}
+01/10/2022, 13:41:19 - DEBUG - Getting Stays
+01/10/2022, 13:41:19 - ERROR - Failed to get stays | {}
+01/10/2022, 13:41:34 - DEBUG - Getting Stays
+01/10/2022, 13:41:34 - ERROR - Failed to get stays | {}
+01/10/2022, 13:41:34 - DEBUG - Getting Stays
+01/10/2022, 13:41:34 - ERROR - Failed to get stays | {}
+01/10/2022, 13:41:46 - DEBUG - Getting Stays
+01/10/2022, 13:42:13 - INFO - Req was made
+01/10/2022, 13:42:57 - DEBUG - Getting Stays
+01/10/2022, 13:42:57 - ERROR - Failed to get stays | {}
+01/10/2022, 13:42:57 - DEBUG - Getting Stays
+01/10/2022, 13:42:57 - ERROR - Failed to get stays | {}
+01/10/2022, 13:43:10 - DEBUG - Getting Stays
+01/10/2022, 13:43:10 - ERROR - Failed to get stays | {}
+01/10/2022, 13:43:10 - DEBUG - Getting Stays
+01/10/2022, 13:43:10 - ERROR - Failed to get stays | {}
+01/10/2022, 13:44:03 - DEBUG - Getting Stays
+01/10/2022, 13:44:23 - INFO - Req was made
+01/10/2022, 13:49:56 - INFO - Req was made
+01/10/2022, 14:40:54 - DEBUG - Getting Stays
+01/10/2022, 14:40:54 - ERROR - Failed to get stays | {}
+01/10/2022, 14:40:54 - DEBUG - Getting Stays
+01/10/2022, 14:40:54 - ERROR - Failed to get stays | {}
+01/10/2022, 14:41:18 - INFO - Server is running on port: 3030
+01/10/2022, 14:41:29 - DEBUG - Getting Stays
+01/10/2022, 14:41:29 - ERROR - Failed to get stays | {}
+01/10/2022, 14:41:29 - DEBUG - Getting Stays
+01/10/2022, 14:41:29 - ERROR - Failed to get stays | {}
+01/10/2022, 14:48:56 - DEBUG - Getting Stays
+01/10/2022, 14:49:09 - INFO - Req was made
+01/10/2022, 14:49:12 - DEBUG - Getting Stays
+01/10/2022, 14:49:24 - INFO - Req was made
+01/10/2022, 14:52:29 - INFO - Req was made
+01/10/2022, 14:58:54 - ERROR - while finding stay host | {}
+01/10/2022, 14:58:54 - ERROR - Failed to get stay | {}
+01/10/2022, 14:58:56 - DEBUG - Getting Stays
+01/10/2022, 14:58:56 - ERROR - Failed to get stays | {}
+01/10/2022, 14:58:56 - DEBUG - Getting Stays
+01/10/2022, 14:58:56 - ERROR - Failed to get stays | {}
+01/10/2022, 14:59:08 - DEBUG - Getting Stays
+01/10/2022, 14:59:08 - ERROR - Failed to get stays | {}
+01/10/2022, 14:59:08 - DEBUG - Getting Stays
+01/10/2022, 14:59:08 - ERROR - Failed to get stays | {}
+01/10/2022, 14:59:33 - DEBUG - Getting Stays
+01/10/2022, 14:59:33 - ERROR - Failed to get stays | {}
+01/10/2022, 14:59:33 - DEBUG - Getting Stays
+01/10/2022, 14:59:33 - ERROR - Failed to get stays | {}
+01/10/2022, 15:08:49 - DEBUG - Getting Stays
+01/10/2022, 15:08:49 - ERROR - Failed to get stays | {}
+01/10/2022, 15:08:49 - DEBUG - Getting Stays
+01/10/2022, 15:08:49 - ERROR - Failed to get stays | {}
+01/10/2022, 15:10:11 - DEBUG - Getting Stays
+01/10/2022, 15:10:11 - ERROR - Failed to get stays | {}
+01/10/2022, 15:10:11 - DEBUG - Getting Stays
+01/10/2022, 15:10:11 - ERROR - Failed to get stays | {}
+01/10/2022, 15:10:23 - INFO - Server is running on port: 3030
+01/10/2022, 15:10:39 - DEBUG - Getting Stays
+01/10/2022, 15:10:57 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 15:10:57 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 15:11:00 - DEBUG - Getting Stays
+01/10/2022, 15:11:00 - ERROR - Failed to get stays | {}
+01/10/2022, 15:11:00 - DEBUG - Getting Stays
+01/10/2022, 15:11:00 - ERROR - Failed to get stays | {}
+01/10/2022, 15:12:08 - DEBUG - Getting Stays
+01/10/2022, 15:12:08 - ERROR - Failed to get stays | {}
+01/10/2022, 15:12:08 - DEBUG - Getting Stays
+01/10/2022, 15:12:08 - ERROR - Failed to get stays | {}
+01/10/2022, 15:14:48 - DEBUG - Getting Stays
+01/10/2022, 15:15:00 - INFO - Req was made
+01/10/2022, 15:18:17 - INFO - Server is running on port: 3030
+01/10/2022, 15:18:23 - DEBUG - Getting Stays
+01/10/2022, 15:18:25 - DEBUG - Getting Stays
+01/10/2022, 15:18:25 - INFO - Req was made
+01/10/2022, 15:18:26 - INFO - Req was made
+01/10/2022, 15:20:05 - DEBUG - Getting Stays
+01/10/2022, 15:20:17 - DEBUG - Getting Stays
+01/10/2022, 15:20:25 - DEBUG - Getting Stays
+01/10/2022, 15:20:56 - DEBUG - Getting Stays
+01/10/2022, 15:21:02 - DEBUG - Getting Stays
+01/10/2022, 15:21:08 - DEBUG - Getting Stays
+01/10/2022, 15:21:46 - INFO - Server is running on port: 3030
+01/10/2022, 15:22:01 - DEBUG - Getting Stays
+01/10/2022, 15:22:16 - INFO - Req was made
+01/10/2022, 15:22:29 - INFO - Server is running on port: 3030
+01/10/2022, 15:22:35 - INFO - Req was made
+01/10/2022, 15:22:37 - DEBUG - Getting Stays
+01/10/2022, 15:22:41 - DEBUG - Getting Stays
+01/10/2022, 15:22:44 - DEBUG - Getting Stays
+01/10/2022, 15:22:45 - DEBUG - Getting Stays
+01/10/2022, 15:23:16 - INFO - Server is running on port: 3030
+01/10/2022, 15:23:19 - DEBUG - Getting Stays
+01/10/2022, 15:23:19 - ERROR - Failed to get stays | {}
+01/10/2022, 15:23:24 - DEBUG - Getting Stays
+01/10/2022, 15:23:24 - ERROR - Failed to get stays | {}
+01/10/2022, 15:23:33 - INFO - Server is running on port: 3030
+01/10/2022, 15:23:35 - DEBUG - Getting Stays
+01/10/2022, 15:23:48 - INFO - Server is running on port: 3030
+01/10/2022, 15:23:50 - DEBUG - Getting Stays
+01/10/2022, 15:24:01 - ERROR - while finding stay host | {}
+01/10/2022, 15:24:01 - ERROR - Failed to get stay | {}
+01/10/2022, 15:24:07 - DEBUG - Getting Stays
+01/10/2022, 15:24:07 - ERROR - Failed to get stays | {}
+01/10/2022, 15:24:07 - DEBUG - Getting Stays
+01/10/2022, 15:24:07 - ERROR - Failed to get stays | {}
+01/10/2022, 15:24:40 - DEBUG - Getting Stays
+01/10/2022, 15:24:40 - ERROR - Failed to get stays | {}
+01/10/2022, 15:24:40 - DEBUG - Getting Stays
+01/10/2022, 15:24:40 - ERROR - Failed to get stays | {}
+01/10/2022, 15:25:01 - INFO - Server is running on port: 3030
+01/10/2022, 15:25:17 - DEBUG - Getting Stays
+01/10/2022, 15:25:17 - ERROR - Failed to get stays | {}
+01/10/2022, 15:25:17 - DEBUG - Getting Stays
+01/10/2022, 15:25:17 - ERROR - Failed to get stays | {}
+01/10/2022, 15:25:19 - DEBUG - Getting Stays
+01/10/2022, 15:25:45 - INFO - Server is running on port: 3030
+01/10/2022, 15:25:48 - DEBUG - Getting Stays
+01/10/2022, 15:25:48 - ERROR - Failed to get stays | {}
+01/10/2022, 15:26:21 - INFO - Server is running on port: 3030
+01/10/2022, 15:26:23 - DEBUG - Getting Stays
+01/10/2022, 15:26:23 - ERROR - Failed to get stays | {}
+01/10/2022, 15:26:27 - DEBUG - Getting Stays
+01/10/2022, 15:26:27 - ERROR - Failed to get stays | {}
+01/10/2022, 15:26:34 - INFO - Server is running on port: 3030
+01/10/2022, 15:26:38 - DEBUG - Getting Stays
+01/10/2022, 15:26:51 - INFO - Server is running on port: 3030
+01/10/2022, 15:26:54 - DEBUG - Getting Stays
+01/10/2022, 15:27:03 - INFO - Server is running on port: 3030
+01/10/2022, 15:27:04 - DEBUG - Getting Stays
+01/10/2022, 15:27:06 - DEBUG - Getting Stays
+01/10/2022, 15:27:20 - INFO - Server is running on port: 3030
+01/10/2022, 15:27:23 - DEBUG - Getting Stays
+01/10/2022, 15:27:29 - INFO - Server is running on port: 3030
+01/10/2022, 15:27:30 - DEBUG - Getting Stays
+01/10/2022, 15:27:53 - INFO - Req was made
+01/10/2022, 15:27:58 - DEBUG - Getting Stays
+01/10/2022, 15:28:10 - INFO - Req was made
+01/10/2022, 15:28:14 - DEBUG - Getting Stays
+01/10/2022, 15:28:27 - INFO - Req was made
+01/10/2022, 15:28:51 - INFO - Req was made
+01/10/2022, 15:29:03 - INFO - Req was made
+01/10/2022, 15:29:51 - INFO - Req was made
+01/10/2022, 15:30:42 - DEBUG - Getting Stays
+01/10/2022, 15:30:59 - INFO - Req was made
+01/10/2022, 15:31:32 - DEBUG - Getting Stays
+01/10/2022, 15:31:46 - INFO - Req was made
+01/10/2022, 15:33:59 - INFO - Server is running on port: 3030
+01/10/2022, 15:34:25 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 15:34:26 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 15:34:29 - DEBUG - Getting Stays
+01/10/2022, 15:34:29 - DEBUG - Getting Stays
+01/10/2022, 15:34:29 - INFO - Req was made
+01/10/2022, 15:34:31 - INFO - Req was made
+01/10/2022, 15:34:50 - DEBUG - Getting Stays
+01/10/2022, 15:35:02 - INFO - Req was made
+01/10/2022, 15:40:53 - INFO - Req was made
+01/10/2022, 15:46:58 - INFO - Req was made
+01/10/2022, 15:48:16 - ERROR - while finding stay host | {}
+01/10/2022, 15:48:16 - ERROR - Failed to get stay | {}
+01/10/2022, 15:49:30 - ERROR - while finding stay host | {}
+01/10/2022, 15:49:30 - ERROR - Failed to get stay | {}
+01/10/2022, 15:49:56 - DEBUG - Getting Stays
+01/10/2022, 15:50:10 - INFO - Req was made
+01/10/2022, 15:50:39 - INFO - Req was made
+01/10/2022, 15:51:01 - DEBUG - Getting Stays
+01/10/2022, 15:51:01 - DEBUG - Getting Stays
+01/10/2022, 15:51:02 - INFO - Req was made
+01/10/2022, 15:51:03 - INFO - Req was made
+01/10/2022, 16:01:54 - DEBUG - Getting Stays
+01/10/2022, 16:01:54 - INFO - Req was made
+01/10/2022, 16:01:55 - INFO - Req was made
