@@ -1,11 +1,19 @@
+.stats-rating {
+    margin-top: 47px;
+    font-size: 22px;
+    font-weight: 600;
+    .rating-container {
+        text-decoration: none important;
+    }
+}
 .review-stats {
+    margin-left: 5px;
     margin-top: 46px;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    column-gap: 80px;
-    margin-bottom: 30px;
+    column-gap: 180px;
 
     .rating-container {
         line-height: 1;

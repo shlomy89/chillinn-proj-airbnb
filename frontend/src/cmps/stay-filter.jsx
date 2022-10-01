@@ -1,9 +1,7 @@
 import * as React from 'react'
 import Slider, { SliderThumb } from '@mui/material/Slider'
-import Checkbox from '@mui/material/Checkbox'
-import FormControlLabel from '@mui/material/FormControlLabel'
 import { styled } from '@mui/material/styles'
-import { useMemo, useState, useEffect } from "react"
+import { useMemo, useState } from "react"
 import PropTypes from 'prop-types'
 import debounce from 'lodash.debounce'
 import Link from '@mui/material/Link'
@@ -16,17 +14,74 @@ import Guesthouse from '../assets/img/icons/guesthouse-icon.jpg'
 import Hotel from '../assets/img/icons/hotel-icon.jpg'
 import House from '../assets/img/icons/house-icon.jpg'
 
-export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, handleClose }) => {
+export const StayFilter = ({ getDefaultFilterState, filter, setFilter, staysCount, handleClose }) => {
 
     const [localFilter, setLocalFilter] = useState(filter)
 
-    useEffect(() => {
-        console.log('localFilter:', localFilter)
-    }, [localFilter])
+    const propertyIcon = {
+        House,
+        Hotel,
+        Apartment,
+        Guesthouse
+    }
+    const placeTypes = [
+        'Entire home/apt',
+        'Private room',
+        'Shared room'
+    ]
+    const amenities = [
+        'Wifi',
+        'Iron',
+        'Kitchen',
+        'Air conditioning',
+        'Beachfront',
+        'Bed linens',
+        'Building staff',
+        'Carbon monoxide detector',
+        'TV',
+        'Cooking basics',
+        '24-hour check-in',
+        'Disabled parking spot',
+        'Essentials',
+        'Ethernet connection',
+        'Extra pillows and blankets',
+        'Family/kid friendly',
+        'Fire extinguisher',
+        'First aid kit',
+        'Flat path to front door',
+        'Ground floor access',
+        'Hair dryer',
+        'Hangers',
+        'Hot tub',
+        'Hot water',
+        'Laptop friendly workspace',
+        'Long term stays allowed',
+        'Luggage dropoff allowed',
+        'Pets allowed',
+        'Private entrance',
+        'Room-darkening shades',
+        'Safety card',
+        'Self check-in',
+        'Shampoo',
+        'Smoke detector',
+        'Smoking allowed',
+        'Suitable for events',
+        'Water front',
+        'Well-lit path to entrance',
+        'Wide clearance to bed',
+        'Wide entryway',
+        'Wide hallway clearance'
+    ]
+    const propertyTypes = [
+        'Apartment',
+        'Guesthouse',
+        'Hotel',
+        'House',
+    ]
 
     const resetFilters = (ev) => {
         ev.preventDefault()
-        setLocalFilter(getDefaultFilters())
+        setLocalFilter(getDefaultFilterState())
     }
 
     const submit = (ev) => {
@@ -67,6 +122,9 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
 
     const handleCheckBox = ({ target }) => {
         const { id, checked, name } = target
+        console.log('id:', id)
+        console.log('checked:', checked)
+        console.log('name:', name)
         setLocalFilter(prevFields => ({
             ...prevFields,
             [name]: {
@@ -76,9 +134,9 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
         }))
     }
 
-    const getFieldProps = (field, type, useDefaultValue, debounce) => {
-        const valueField = useDefaultValue ? 'defaultValue' : 'value'
-        const onChange = debounce ? debouncedChangeHandler : handleFilters
+    const getFieldProps = (field, type) => {
+        const valueField = 'defaultValue'
+        const onChange = debouncedChangeHandler
         return {
             onChange,
             name: field,
@@ -87,6 +145,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
             type
         }
     }
+
 
     function AirbnbThumbComponent(props) {
         const { children, ...other } = props
@@ -143,13 +202,6 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
         },
     }))
 
-    const propertyIcon = {
-        House,
-        Hotel,
-        Apartment,
-        Guesthouse
-    }
-
     return (
         localFilter &&
         <React.Fragment>
@@ -175,7 +227,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                             min={0}
                             max={2000}
                             step={10}
-                            {...getFieldProps('priceRange', 'range', true, true)}
+                            {...getFieldProps('priceRange', 'number')}
                             valueLabelDisplay="auto" />
                         {/* <input
                             value={min}
@@ -186,16 +238,23 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                         <h2 className="place-type-titel sub-titel">
                             Type of place
                         </h2>
-                        {Object.keys(localFilter.placeTypes).map(placeT =>
-                            <FormControlLabel
-                                className='placeT-checkBox'
-                                key={placeT}
-                                label={placeT}
-                                name='placeTypes'
-                                onChange={handleCheckBox}
-                                control={<Checkbox key={placeT} id={placeT} checked={localFilter.placeTypes[placeT]} />}
-                            />
-                        )}
+                        <div className="place-type-container">
+                            {placeTypes.map(placeT =>
+                                <label
+                                    key={placeT}
+                                    className="checkbox-container" >
+                                    <input
+                                        id={placeT}
+                                        key={placeT}
+                                        type="checkbox"
+                                        name="placeTypes"
+                                        checked={localFilter.placeTypes[placeT] || false}
+                                        onChange={handleCheckBox} />
+                                    <span className="checkmark"></span>
+                                    {placeT}
+                                </label>
+                            )}
+                        </div>
                     </section>
 
                     <section className="rooms-btn inner-filter-container">
@@ -212,7 +271,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                                 name="bedrooms"
                                 key={`room_${n}`}
                                 onClick={handleBedsButton}>
-                                {n === 0 ? 'Any' : n}
+                                {!n ? 'Any' : n}
                             </RoomButton>
                         ))}
                     </section>
@@ -230,7 +289,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                                 name="bathrooms"
                                 key={`bathroom_${n}`}
                                 onClick={handleBedsButton}>
-                                {n === 0 ? 'Any' : n}
+                                {!n ? 'Any' : n}
                             </RoomButton>
                         ))}
                     </section>
@@ -248,7 +307,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                                 name="beds"
                                 key={`beds_${n}`}
                                 onClick={handleBedsButton}>
-                                {n === 0 ? 'Any' : n}
+                                {!n ? 'Any' : n}
                             </RoomButton>
                         ))}
                     </section>
@@ -258,7 +317,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                             Property type
                         </h2>
                         <div className="property-buttons">
-                            {Object.keys(localFilter.propertyTypes).map(propertyT => (
+                            {propertyTypes.map(propertyT => (
                                 <button
                                     className={localFilter.propertyTypes[propertyT] ? 'active' : ''}
                                     onClick={(ev) => {
@@ -279,13 +338,28 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                     </section>
 
                     <section className="amenities flex column inner-filter-container">
-                        <div>
-                            <h2 className="amenities-titel sub-titel">
-                                Amenities
-                            </h2>
-                        </div>
+                        <h2 className="amenities-titel sub-titel">
+                            Amenities
+                        </h2>
                         <div className="amenities-list">
-                            {Object.keys(localFilter.amenities).map(a =>
+                            {amenities.map(a =>
+                                <label
+                                    key={a}
+                                    className="checkbox-container" >
+                                    <input
+                                        id={a}
+                                        key={a}
+                                        type="checkbox"
+                                        name="amenities"
+                                        checked={localFilter.amenities[a] || false}
+                                        onChange={handleCheckBox} />
+                                    <span className="checkmark"></span>
+                                    {a}
+                                </label>
+                            )}
+                        </div>
+                        {/* <div className="amenities-list">
+                            {amenities.map(a =>
                                 <FormControlLabel
                                     className='amenitie-checkBox'
                                     key={a}
@@ -298,7 +372,7 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                                         checked={localFilter.amenities[a]} />}
                                 />
                             )}
-                        </div>
+                        </div> */}
                     </section>
                 </form >
             </section >
@@ -311,12 +385,12 @@ export const StayFilter = ({ getDefaultFilters, filter, setFilter, staysCount, h
                     onClick={resetFilters}>
                     Clear all
                 </Link>
-                <Button
+                <button
                     className="filter-btn"
                     onClick={submit}
                 >
                     Show {staysCount} homes
-                </Button>
+                </button>
             </footer>
         </React.Fragment>
     )

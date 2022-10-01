@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[7846],{7846:function(n,e,i){n.exports=i.p+"static/media/iron-icon.ae9573a9656a20078712.svg"}}]);

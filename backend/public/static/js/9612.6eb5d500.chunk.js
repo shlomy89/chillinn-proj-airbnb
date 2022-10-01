@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[9612],{59612:function(e,n,s){e.exports=s.p+"static/media/kitchen-essentials-icon.816d7587ea62830ccc8e.svg"}}]);

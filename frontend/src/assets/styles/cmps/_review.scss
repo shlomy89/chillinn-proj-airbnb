@@ -1,5 +1,5 @@
 .review-details {
-    margin-top: 40px;
+    margin-top: 25px;
     width: 40%;
     flex-wrap: wrap;
 
@@ -7,19 +7,14 @@
         display: flex;
         column-gap: 12px;
         img {
-            overflow: hidden;
-            width: 40px;
-            height: 40px;
+            width: 55px;
+            height: 55px;
             object-fit: cover;
-            border-radius: 50px;
-            transform: none;
-            transition: all 0s ease 0s;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.007);
+            border-radius: 50%;
         }
         .image-container {
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(0, 0, 0, 0.007);
-            border-radius: 50px;
         }
         .user-name-details {
             display: flex;

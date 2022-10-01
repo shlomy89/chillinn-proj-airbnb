@@ -69,7 +69,7 @@ function _buildCriteria(filterBy) {
         priceRange = [],
         bedrooms,
         beds,
-        bathsrooms,
+        bathrooms,
         propertyTypes = {},
         placeTypes = {},
         amenities = {},
@@ -79,14 +79,8 @@ function _buildCriteria(filterBy) {
 
     const [minPrice, maxPrice] = priceRange
 
-    const chosePropertyTypes = Object.keys(propertyTypes).filter(
-        (p) => propertyTypes[p]
-    )
-
-    const checkedPlaceTypes = Object.keys(placeTypes).filter(
-        (p) => placeTypes[p]
-    )
-
+    const chosePropertyTypes = Object.keys(propertyTypes).filter((p) => propertyTypes[p])
+    const checkedPlaceTypes = Object.keys(placeTypes).filter((p) => placeTypes[p])
     const checkedAmenities = Object.keys(amenities).filter((a) => amenities[a])
 
     if (labels) {
@@ -127,8 +121,8 @@ function _buildCriteria(filterBy) {
         criteria.capacity = { $eq: beds }
     }
 
-    if (bathsrooms) {
-        criteria.bathsrooms = { $eq: bathsrooms }
+    if (bathrooms) {
+        criteria.bathrooms = { $eq: bathrooms }
     }
 
     if (hostId) {

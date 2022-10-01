@@ -32,7 +32,6 @@ function remove(orderId) {
 }
 
 function save(order) {
-    console.log('hiiiiiiiiiiii')
     const saveOrder = httpService.post('order', order)
     return saveOrder
 }

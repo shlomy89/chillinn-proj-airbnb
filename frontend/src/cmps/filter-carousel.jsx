@@ -27,34 +27,34 @@ export const FilterCarousel = ({ setFilter }) => {
         'Dammusos',
         'Desert',
         'Desidn',
-        'Domes',
-        'Earth homes',
-        'Farms',
-        'Golfing',
-        'Grand pianos',
-        'Historical homes',
-        'Islands',
-        'Lake',
-        'Lakefront',
-        'Luxe',
-        'Mansions',
-        'Minsus',
-        'National parks',
-        'OMG',
-        'Riads',
-        'Ryokans',
-        'Shared homes',
-        'Skiing',
-        'Ski-in-out',
-        'Surfing',
-        'Tiny homes',
-        'Towers',
-        'Tree houses',
-        'Trolli',
-        'Tropical',
-        'Vineyards',
-        'Windmills',
-        'Yurts'
+        // 'Domes',
+        // 'Earth homes',
+        // 'Farms',
+        // 'Golfing',
+        // 'Grand pianos',
+        // 'Historical homes',
+        // 'Islands',
+        // 'Lake',
+        // 'Lakefront',
+        // 'Luxe',
+        // 'Mansions',
+        // 'Minsus',
+        // 'National parks',
+        // 'OMG',
+        // 'Riads',
+        // 'Ryokans',
+        // 'Shared homes',
+        // 'Skiing',
+        // 'Ski-in-out',
+        // 'Surfing',
+        // 'Tiny homes',
+        // 'Towers',
+        // 'Tree houses',
+        // 'Trolli',
+        // 'Tropical',
+        // 'Vineyards',
+        // 'Windmills',
+        // 'Yurts'
     ]
 
     const [icon, setIcon] = useState([])
@@ -64,12 +64,11 @@ export const FilterCarousel = ({ setFilter }) => {
         getIcon()
     }, [])
 
-    const getIcon = async () => {
+    const getIcon = () => {
         let iconUrl = []
-        typeList.map((t) => {
-            import(`../assets/img/filter-carousel-icon/${t}.jpg`).then(
-                (imgData) => iconUrl.push(imgData.default)
-            )
+        typeList.forEach((t) => {
+            import(`../assets/img/filter-carousel-icon/${t}.jpg`)
+                .then((imgData) => iconUrl.push(imgData.default))
         })
         setIcon(iconUrl)
     }
@@ -94,22 +93,20 @@ export const FilterCarousel = ({ setFilter }) => {
 
     const items = icon.map((i, idx) => {
         return (
-            <section className='icon-carousel-wrapper flex column justify-center align-center'>
-                <button
+            <button
+                id={typeList[idx]}
+                className={`${activeType === typeList[idx] ? 'active' : ''} icon-btn flex column justify-center align-center`}
+                onClick={handleClick}>
+                <img
+                    className='icon-carousel'
+                    src={i}
                     id={typeList[idx]}
-                    className={`${activeType === typeList[idx] ? 'active' : ''} icon-btn flex column justify-center align-center`}
-                    onClick={handleClick}>
-                    <img
-                        className='icon-carousel'
-                        src={i}
-                        id={typeList[idx]}
-                        role="presentation" />
-                    <div className='type-container flex column justify-center align-center'>
-                        <span className='type'>{typeList[idx]}</span>
-                        <div className='hover-border' />
-                    </div>
-                </button>
-            </section>
+                    role="presentation" />
+                <div className='type-container flex column justify-center align-center'>
+                    <span className='type'>{typeList[idx]}</span>
+                    <div className='hover-border' />
+                </div>
+            </button>
         )
     })
 
@@ -125,21 +122,21 @@ export const FilterCarousel = ({ setFilter }) => {
                 responsive={responsive}
                 controlsStrategy='alternate'
                 disableDotsControls={true}
-                items={items} 
-                innerWidth={1}
+                items={items}
+                // innerWidth={1}
                 paddingLeft={40}
                 paddingRight={40}
                 renderPrevButton={() => {
                     return <button className="prev-btn">
                         <img src={prevIcon} className="alice-carousel__prev-btn-item" />
-                        </button>
-                  }}
-                  renderNextButton={() => {
-                    return <button  className="next-btn">
+                    </button>
+                }}
+                renderNextButton={() => {
+                    return <button className="next-btn">
                         <img src={nextIcon} className="alice-carousel__next-btn-item" />
-                        </button>
-                  }}
-                />
+                    </button>
+                }}
+            />
         </section>
     )
 }

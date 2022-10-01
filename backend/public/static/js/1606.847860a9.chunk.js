@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[1606],{21606:function(n,c,e){n.exports=e.p+"static/media/cleaning-products-icon.6ff228d8c5563a99eb2c.svg"}}]);

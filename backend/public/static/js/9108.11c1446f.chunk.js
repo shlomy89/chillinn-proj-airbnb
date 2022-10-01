@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[9108],{59108:function(e,i,n){e.exports=n.p+"static/media/wifi-icon.4eee9afa9348acfe8a21.svg"}}]);

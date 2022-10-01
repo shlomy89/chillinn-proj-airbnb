@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[7793],{97793:function(n,e,s){n.exports=s.p+"static/media/bed-linens-icon.1a4515c20ff94aaf6a28.svg"}}]);

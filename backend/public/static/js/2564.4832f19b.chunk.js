@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[2564],{92564:function(n,s,a){n.exports=a.p+"static/media/gym-icon.b1fa84b3964fa8959d2a.svg"}}]);

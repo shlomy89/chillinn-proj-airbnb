@@ -64,6 +64,7 @@ button[name='bedrooms'].active {
     background-color: #000;
     color: #ffffff;
 }
+
 button[name='bathrooms'] {
     background-color: #ffffff;
     color: #222222;
@@ -73,10 +74,12 @@ button[name='bathrooms'] {
 button[name='bathrooms']:hover {
     border-color: #222222;
 }
+
 button[name='bathrooms'].active {
     background-color: #000;
     color: #ffffff;
 }
+
 button[name='beds'] {
     background-color: #ffffff;
     color: #222222;
@@ -93,11 +96,18 @@ button[name='beds'].active {
 }
 
 button.filter-btn {
+    font-family: Circular;
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px;
+    height: 50px;
+    border-radius: 8px;
     background-color: #222222;
     color: #ffffff;
 }
 
 button.filter-btn:hover {
+
     background-color: #000;
     color: #ffffff;
 }
@@ -138,12 +148,17 @@ button[name='propertyType'].active {
     padding: 16px 24px !important;
 }
 
+.css-106c1u2-MuiBadge-badge {
+    background-color: #222222 !important;
+}
+
 .open-filter-btn {
+
     display: block;
     position: relative;
     float: right;
     justify-content: space-evenly;
-    margin-inline-start:  25px;
+    margin-inline-start: 25px;
     width: 88px;
     height: 48px !important;
     padding: 7px;
@@ -153,6 +168,11 @@ button[name='propertyType'].active {
     border-color: #efefef !important;
     border-radius: 10px !important;
     border: 1px solid lightgray;
+
+    &.open-filter-btn.active {
+        border-color: #222222 !important;
+        border: 2px solid #222222;
+    }
 
     .filter-icon {
         width: 16px;
@@ -205,19 +225,10 @@ button[name='propertyType'].active {
 .filter-carousel-container {
     width: 90%;
     padding: 0 5px;
-    .alice-carousel__stage-item{
-        width: max-content !important;
-        margin-inline-end: 40px;
-
-        section.icon-carousel-wrapper {
-            width: max-content;
-        }
-    }
 
     .icon-btn {
         gap: 6px;
-        // padding: 4px 0 14px;
-        // margin: 12px 0 0;
+        padding-top: 15px;
         border: none;
         font-family: Circular;
         font-size: 12px;
@@ -236,7 +247,7 @@ button[name='propertyType'].active {
         &:hover {
             cursor: pointer;
             color: #000000;
-            transition:  0.2s;
+            transition: 0.2s;
             opacity: 1;
 
             .hover-border {
@@ -274,3 +285,77 @@ button[name='propertyType'].active {
     width: 90%;
     margin: auto;
 }
+
+.checkbox-container {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+    font-family: Circular;
+    color: #222222;
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #ffffff;
+    // border-width: 1px !important;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input ~ .checkmark {
+    border: 1px solid #222222;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #222222;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  .place-type-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    width: 100%;
+  }

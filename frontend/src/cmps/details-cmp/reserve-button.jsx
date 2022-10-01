@@ -63,7 +63,7 @@ export const ReserveButton = ({
 
     useEffect(() => {
         const button = document.querySelector('.reserve-button')
-        console.log({ button })
+        // console.log({ button })
         if (!button) {
             return
         }
