@@ -1,6 +1,7 @@
 .rating-bars-container {
     margin-top: 33px;
     display: grid;
+    justify-content: space-between;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -11,8 +12,12 @@
     }
 
     .bar-container {
+        height: 55%;
         display: flex;
         align-items: center;
+        // column-gap: 40px;
+        justify-content: space-between;
+        margin-right: 105px;
     }
 
     .rating-bar-header {
@@ -26,6 +31,23 @@
 }
 
 .add-review-btn {
-    margin: 10px auto;
+    // margin-left: 460px;
+    width: 157px;
+    height: 47px;
+    font-size: 16px;
+    line-height: 20px;
     text-align: center;
+    border-radius: 8px;
+    color: #222222;
+    margin-top: 31px;
+    border: 1px solid;
+    font-weight: 550;
+    background-color: $clr2;
+    text-decoration: none solid rgb(34, 34, 34);
+    margin-bottom: 16px;
+}
+.border-bottom {
+    margin-top: 48px;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 48px;
 }

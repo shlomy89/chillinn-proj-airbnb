@@ -1,11 +1,14 @@
 .pie-chart-container {
+    margin-right: 140px;
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
     flex: 1;
+    column-gap: 16px;
     .chart-pie-index-container {
         display: flex;
-        column-gap: 8px;
+        flex-direction: column;
+        row-gap: 8px;
         .index-container {
             display: flex;
             align-items: center;

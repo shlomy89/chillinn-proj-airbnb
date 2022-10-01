@@ -1,21 +1,16 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import addWeeks from 'date-fns/addWeeks';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { TextField, createTheme, ThemeProvider } from '@mui/material';
-import '../../assets/styles/cmps/_date-picker.scss'
+import { createTheme, TextField, ThemeProvider } from '@mui/material';
+import '../../assets/styles/cmps/_date-picker.scss';
 import { DateRangePicker } from '@mui/x-date-pickers-pro';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
-;
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { find } from 'lodash';
+
 const mode = window.innerWidth < 780 ? 1 : 2;
 const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#2e53ab',
-        },
-        secondary: {
-            main: '#2e53ab',
+    root: {
+        '& .MuiFormLabel-root': {
+            color: 'red',
         },
     },
 });
@@ -40,37 +35,28 @@ export function DatePicker({ checkIn, setCheckIn, checkOut, setCheckOut, unavail
                         setCheckIn(newValue[0]);
                         setCheckOut(newValue[1]);
                     }}
-                    startText="Check-in"
-                    endText="Check-out"
-                    renderInput={(startProps, endProps) => (
-                        <React.Fragment>
-                            <TextField className={'start-date'} {...startProps} />
-                            <TextField className={'end-date'} {...endProps} />
-                            {/* <span>{removeUrl}</span> */}
-                        </React.Fragment>
-                    )}
+                    // startText="Check-in"
+                    // endText="Check-out"
+                    renderInput={(startProps, endProps) => {
+                        console.log(endProps?.ref?.current?.children?.[0].children?.[1]);
+                        if (endProps?.ref?.current?.children?.[0].children?.[1]) {
+                            endProps.ref.current.children[0].children[1].style.border = '1px solid black';
+                            endProps.ref.current.children[0].children[1].style.color = 'black';
+                        }
+
+                        if (startProps?.ref?.current?.children?.[0].children?.[1]) {
+                            startProps.ref.current.children[0].children[1].style.border = '1px solid black';
+                            startProps.ref.current.children[0].children[1].style['border-right'] = '0';
+                        }
+                        return (
+                            <>
+                                <TextField className="stay-details-start-date-picker" {...startProps} label={''} />
+                                <TextField className="stay-details-end-date-picker" {...endProps} label={''} />
+                            </>
+                        );
+                    }}
                 />
             </LocalizationProvider>
         </ThemeProvider>
     );
 }
-
-// const removeUrl = (
-//     <img
-//         onClick={() =>
-//             dispatch(
-//                 setOrder({
-//                     ...order,
-//                     checkIn: null,
-//                     checkOut: null,
-//                     guestsCount: 1,
-//                     adults: 1,
-//                     children: 0,
-//                     infants: 0
-//                 })
-//             )
-//         }
-//         className='clear-dates'
-//         src={remove}
-//     />
-// )

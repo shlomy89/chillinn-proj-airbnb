@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { stayService } from '../services/stay.service';
-import { StarRating } from '../cmps/details-cmp/start-rating';
+import { StarRating } from '../cmps/details-cmp/star-rating';
 import { ActionButton } from '../cmps/details-cmp/action-button';
 import { ReactComponent as HeartIcon } from '../../src/assets/img/icons/heart-icon.svg';
 import { ReactComponent as ShareIcon } from '../../src/assets/img/icons/share-icon.svg';
 import { IconText } from '../cmps/details-cmp/icon-text';
 import { Review } from '../cmps/details-cmp/review';
-// import { ReactComponent as CheckInOutIcon } from '../../src/assets/img/icons/check-in-out-icon.svg'
 import { ReactComponent as NoSmokingIcon } from '../../src/assets/img/icons/no-smoking-icon.svg';
 import { ReactComponent as NoPartiesIcon } from '../../src/assets/img/icons/no-parties-icon.svg';
 import { ReactComponent as PetsAllowedIcon } from '../../src/assets/img/icons/pets-allowed-icon.svg';
-// import { ShowMoreButton } from '../cmps/details-cmp/show-more-button'
 import { ReactComponent as HealthCheckIcon } from '../../src/assets/img/icons/health-check-icon.svg';
 import { ReactComponent as SmokingAlarmIcon } from '../../src/assets/img/icons/smoking-alarm-icon.svg';
 import { ThingToKnow } from '../cmps/details-cmp/thing-to-know';
@@ -30,7 +28,6 @@ import { Amenity } from '../cmps/details-cmp/amenity';
 export const StayDetails = () => {
     const dispatch = useDispatch();
     const [stay, setStay] = useState(null);
-    // const [reviews, setReviews] = useState([])
     const [isOpen, setIsOpen] = useState(null);
     const reviews = useSelector(state =>
         state.reviewModule.reviews.sort((revA, revB) =>
@@ -89,8 +86,8 @@ export const StayDetails = () => {
                     <img src={stay.imgUrls[2]} />
                 </div>
                 <div className="apartment-secondary-images">
-                    <img className="border-top" src={stay.imgUrls[3]} />
-                    <img className="border-bottom" src={stay.imgUrls[4]} />
+                    <img className="apartment-border-top" src={stay.imgUrls[3]} />
+                    <img className="apartment-border-bottom" src={stay.imgUrls[4]} />
                 </div>
             </div>
             <div className="stay-details-content-container">
@@ -153,7 +150,6 @@ export const StayDetails = () => {
             <div className="border-bottom"></div>
             <h1 className="to-know-header">Things to know</h1>
             <section className="things-to-know-container">
-                {/* <div className='to-know-header'></div> */}
                 <ThingToKnow header="House rules">
                     <IconText text={'No smoking'} Icon={NoSmokingIcon} />
                     <IconText text={'No parties or events'} Icon={NoPartiesIcon} />

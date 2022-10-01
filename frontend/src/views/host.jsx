@@ -9,22 +9,18 @@ import 'ag-grid-community/styles/ag-theme-alpine.css';
 import 'ag-grid-community/styles/ag-theme-balham.css';
 import 'ag-grid-community/styles/ag-theme-material.css';
 import { OrdersTable } from '../cmps/host/orders-table';
-import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart } from 'recharts';
-import { keys, map, meanBy, sumBy } from 'lodash';
 import { loadReviews } from '../store/actions/review.actions';
-import { HostPieDetails } from '../cmps/host/host-pie-details';
+import { ReviewsSummary } from '../cmps/host/reviews-summary';
+import { OrdersSummary } from '../cmps/host/orders-summary';
 
 export const Host = () => {
     const dispatch = useDispatch();
 
     const { id: hostId } = useParams();
 
-    const orders = useSelector(state => state.orderModule.orders);
-    const users = useSelector(state => state.orderModule.users);
     const stays = useSelector(state => state.stayModule.hostStays);
     const user = useSelector(state => state.userModule.user);
     const filterBy = useSelector(state => state.stayModule.filterBy);
-    const reviews = useSelector(state => state.reviewModule.reviews);
 
     useEffect(() => {
         dispatch({ type: 'SET_FILTER_BY', filterBy: { hostId } });
@@ -45,38 +41,15 @@ export const Host = () => {
     return (
         <div className="host-page-wrapper">
             <div className="host-page-container">
-                <span className="host-header">Hi {user.firstname}! </span>
+                <span className="host-header">Hi {user?.firstname}! </span>
                 <div className="host-container">
                     <section className="orders-wrapper ag-theme-material">
                         <OrdersTable />
                     </section>
 
                     <div className="summary-container">
-                        <div className="summary">
-                            <span className="summary-header">Reviews Summary</span>
-                            <span className="summary-header">Total Reviews: {reviews.length}</span>
-                            <RadarChart
-                                outerRadius={90}
-                                width={520}
-                                height={250}
-                                tick={false}
-                                data={map(keys(reviews[0]?.rating), ratingKey => ({
-                                    subject: ratingKey.charAt(0).toUpperCase() + ratingKey.slice(1),
-                                    total: meanBy(reviews, review => review.rating[ratingKey]),
-                                }))}
-                            >
-                                <PolarGrid />
-                                <PolarAngleAxis dataKey={({ subject, total }) => `${subject} (${total})`} />
-                                <PolarRadiusAxis angle={30} domain={[0, 5]} />
-                                <Radar dataKey="total" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                            </RadarChart>
-                        </div>
-
-                        <div className="summary">
-                            <span className="summary-header">Orders Summary</span>
-                            <span className="summary-header">Total Orders: {orders.length}</span>
-                            <HostPieDetails />
-                        </div>
+                        <ReviewsSummary />
+                        <OrdersSummary />
                     </div>
                 </div>
             </div>

@@ -23,6 +23,7 @@ async function getCollection(collectionName) {
     return collection;
     
   } catch (err) {
+    console.log("errorrrrr");
     logger.error("Failed to get Mongo collection", err);
     throw err;
   }

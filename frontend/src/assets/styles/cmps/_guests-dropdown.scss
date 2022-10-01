@@ -1,0 +1,18 @@
+.guests-dropdown-picker {
+  .MuiInputBase-root {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border: 1px solid black;
+    border-top: 0;
+
+    &active {
+      border: 1px solid black;
+      border: 0;
+    }
+  }
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+  border-width: 1px !important;
+}
