@@ -72,9 +72,7 @@ $play-btn-size: 32px !default;
     }
 }
 
-.prev-btn.disabled {
-    display: none;
-}
+.prev-btn.disabled,
 .next-btn.disabled {
     display: none;
 }
@@ -119,10 +117,18 @@ $play-btn-size: 32px !default;
 }
 
 .alice-carousel__next-btn {
+    display: flex;
+    height: 75%;
+    width: 5%;
+    justify-content: flex-end;
     right: 0
 }
 
 .alice-carousel__prev-btn {
+    display: flex;
+    height: 75%;
+    width: 5%;
+    justify-content: flex-start;
     text-align: right;
 }
 

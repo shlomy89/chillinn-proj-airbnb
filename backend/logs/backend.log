@@ -3161,16 +3161,80 @@
 2.10.2022, 13:59:59 - DEBUG - Getting Stays
 2.10.2022, 14:03:17 - DEBUG - Getting Stays
 2.10.2022, 14:03:28 - DEBUG - Getting Stays
-02/10/2022, 14:22:04 - DEBUG - Getting Stays
-02/10/2022, 14:22:22 - INFO - Req was made
-02/10/2022, 14:22:46 - DEBUG - Getting Stays
-02/10/2022, 14:23:07 - INFO - Req was made
-02/10/2022, 14:33:47 - INFO - Req was made
-02/10/2022, 15:08:46 - DEBUG - Getting Stays
-02/10/2022, 15:09:04 - INFO - Req was made
-02/10/2022, 15:13:01 - INFO - Req was made
-02/10/2022, 15:18:05 - INFO - Req was made
-02/10/2022, 15:19:18 - DEBUG - Getting Stays
-02/10/2022, 15:19:19 - DEBUG - Getting Stays
-02/10/2022, 15:19:19 - INFO - Req was made
-02/10/2022, 15:19:20 - INFO - Req was made
+2.10.2022, 14:25:05 - INFO - Server is running on port: 3030
+2.10.2022, 14:25:30 - DEBUG - Getting Stays
+2.10.2022, 14:27:46 - DEBUG - Getting Stays
+2.10.2022, 14:28:57 - DEBUG - Getting Stays
+2.10.2022, 14:29:05 - DEBUG - Getting Stays
+2.10.2022, 14:29:11 - DEBUG - Getting Stays
+2.10.2022, 14:31:17 - DEBUG - Getting Stays
+2.10.2022, 14:33:07 - DEBUG - Getting Stays
+2.10.2022, 14:33:08 - DEBUG - Getting Stays
+2.10.2022, 14:33:27 - DEBUG - Getting Stays
+2.10.2022, 14:33:51 - DEBUG - Getting Stays
+2.10.2022, 14:33:52 - DEBUG - Getting Stays
+2.10.2022, 14:34:06 - DEBUG - Getting Stays
+2.10.2022, 14:34:07 - DEBUG - Getting Stays
+2.10.2022, 14:34:26 - DEBUG - Getting Stays
+2.10.2022, 14:34:27 - DEBUG - Getting Stays
+2.10.2022, 14:36:15 - DEBUG - Getting Stays
+2.10.2022, 14:36:16 - DEBUG - Getting Stays
+2.10.2022, 14:36:56 - DEBUG - Getting Stays
+2.10.2022, 14:36:57 - DEBUG - Getting Stays
+2.10.2022, 14:37:25 - DEBUG - Getting Stays
+2.10.2022, 14:38:09 - DEBUG - Getting Stays
+2.10.2022, 14:39:44 - DEBUG - Getting Stays
+2.10.2022, 14:40:19 - DEBUG - Getting Stays
+2.10.2022, 14:40:28 - DEBUG - Getting Stays
+2.10.2022, 14:45:02 - DEBUG - Getting Stays
+2.10.2022, 14:47:32 - DEBUG - Getting Stays
+2.10.2022, 14:48:17 - DEBUG - Getting Stays
+2.10.2022, 14:50:05 - DEBUG - Getting Stays
+2.10.2022, 14:50:36 - DEBUG - Getting Stays
+2.10.2022, 14:50:50 - DEBUG - Getting Stays
+2.10.2022, 14:51:20 - DEBUG - Getting Stays
+2.10.2022, 14:52:06 - DEBUG - Getting Stays
+2.10.2022, 14:52:26 - DEBUG - Getting Stays
+2.10.2022, 14:52:40 - DEBUG - Getting Stays
+2.10.2022, 14:52:53 - DEBUG - Getting Stays
+2.10.2022, 14:53:15 - DEBUG - Getting Stays
+2.10.2022, 14:53:16 - DEBUG - Getting Stays
+2.10.2022, 14:53:52 - DEBUG - Getting Stays
+2.10.2022, 14:54:08 - DEBUG - Getting Stays
+2.10.2022, 14:54:20 - DEBUG - Getting Stays
+2.10.2022, 14:54:22 - DEBUG - Getting Stays
+2.10.2022, 14:54:50 - DEBUG - Getting Stays
+2.10.2022, 14:55:11 - DEBUG - Getting Stays
+2.10.2022, 14:55:47 - DEBUG - Getting Stays
+2.10.2022, 14:56:23 - DEBUG - Getting Stays
+2.10.2022, 14:57:02 - DEBUG - Getting Stays
+2.10.2022, 14:57:10 - DEBUG - Getting Stays
+2.10.2022, 14:59:18 - DEBUG - Getting Stays
+2.10.2022, 14:59:44 - DEBUG - Getting Stays
+2.10.2022, 15:00:11 - DEBUG - Getting Stays
+2.10.2022, 15:05:16 - DEBUG - Getting Stays
+2.10.2022, 15:05:26 - DEBUG - Getting Stays
+2.10.2022, 15:05:43 - DEBUG - Getting Stays
+2.10.2022, 15:07:02 - DEBUG - Getting Stays
+2.10.2022, 15:07:27 - DEBUG - Getting Stays
+2.10.2022, 15:07:53 - DEBUG - Getting Stays
+2.10.2022, 15:08:26 - DEBUG - Getting Stays
+2.10.2022, 15:10:06 - DEBUG - Getting Stays
+2.10.2022, 15:10:15 - DEBUG - Getting Stays
+2.10.2022, 15:14:20 - DEBUG - Getting Stays
+2.10.2022, 15:15:53 - DEBUG - Getting Stays
+2.10.2022, 15:18:24 - DEBUG - Getting Stays
+2.10.2022, 15:20:56 - DEBUG - Getting Stays
+2.10.2022, 15:20:57 - DEBUG - Getting Stays
+2.10.2022, 15:21:00 - DEBUG - Getting Stays
+2.10.2022, 15:21:06 - DEBUG - Getting Stays
+2.10.2022, 15:21:08 - DEBUG - Getting Stays
+2.10.2022, 15:21:15 - DEBUG - Getting Stays
+2.10.2022, 15:25:05 - DEBUG - Getting Stays
+2.10.2022, 15:29:53 - DEBUG - Getting Stays
+2.10.2022, 15:37:12 - DEBUG - Getting Stays
+2.10.2022, 15:37:18 - DEBUG - Getting Stays
+2.10.2022, 15:38:42 - DEBUG - Getting Stays
+2.10.2022, 15:39:22 - DEBUG - Getting Stays
+2.10.2022, 15:40:00 - DEBUG - Getting Stays
+2.10.2022, 15:40:17 - INFO - Req was made

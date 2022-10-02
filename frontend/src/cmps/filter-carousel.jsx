@@ -20,14 +20,14 @@ export const FilterCarousel = ({ setFilter }) => {
         'Camping',
         'Castles',
         'Caves',
-        // "Chef's kitchens",
-        // 'Containers',
-        // 'Countryside',
-        // 'Creative spaces',
-        // 'Dammusos',
-        // 'Desert',
-        // 'Desidn',
-        // 'Domes',
+        "Chef's kitchens",
+        'Containers',
+        'Countryside',
+        'Creative spaces',
+        'Dammusos',
+        'Desert',
+        'Desidn',
+        'Domes',
         // 'Earth homes',
         // 'Farms',
         // 'Golfing',
@@ -62,9 +62,10 @@ export const FilterCarousel = ({ setFilter }) => {
     const [activeType, setActiveType] = useState()
 
     useEffect(() => {
-        getIcons().then(icons => {
-            setIcons(icons)
-        })
+        getIcons()
+            .then(icons => {
+                setIcons(icons)
+            })
     }, [])
 
     useEffect(() => {
@@ -93,19 +94,18 @@ export const FilterCarousel = ({ setFilter }) => {
     }, [icons, activeType])
 
     const renderNextButton = ({ isDisabled }) => {
-        console.log("isDisabled", isDisabled)
         return (
-            <button
-                className={`${isDisabled ? 'disabled' : ''} next-btn`}>
-                <img src={nextIcon} className="alice-carousel__next-btn-item" />
-            </button>
+                <button
+                    className={`next-btn ${isDisabled ? 'disabled' : ''}`}>
+                    <img src={nextIcon} className="alice-carousel__next-btn-item" />
+                </button >
         )
     }
 
     const renderPrevButton = ({ isDisabled }) => {
         return (
             <button
-                className={`${isDisabled ? 'disabled' : ''} prev-btn`}>
+                className={`prev-btn ${isDisabled ? 'disabled' : ''}`}>
                 <img src={prevIcon} className="alice-carousel__prev-btn-item" />
             </button>
         )
@@ -125,10 +125,9 @@ export const FilterCarousel = ({ setFilter }) => {
 
         return Promise.all(promises)
             .then((results) => {
-                results.forEach(result => {
-                    icons[result[0]] = result[1]
+                results.forEach(res => {
+                    icons[res[0]] = res[1]
                 })
-
                 return icons
             })
     }
@@ -163,9 +162,7 @@ export const FilterCarousel = ({ setFilter }) => {
                 responsive={responsive}
                 controlsStrategy='responsive'
                 disableDotsControls
-                // innerWidth={1}
                 items={items}
-                paddingLeft={40}
                 renderPrevButton={renderPrevButton}
                 renderNextButton={renderNextButton}
             />
