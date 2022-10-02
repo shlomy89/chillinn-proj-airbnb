@@ -325,7 +325,7 @@ export const StayFilter = ({ getDefaultFilterState, filter, setFilter, staysCoun
                                     key={`property_${propertyT}`}
                                 >
                                     <div className="inner-property-button flex column justify-space-between">
-                                        <img className="property-img" src={propertyIcon[propertyT]} />
+                                        <img alt='' className="property-img" src={propertyIcon[propertyT]} />
                                         <div className="inner-property-button-txt">{propertyT}</div>
                                     </div>
                                 </button>
@@ -355,21 +355,6 @@ export const StayFilter = ({ getDefaultFilterState, filter, setFilter, staysCoun
                                 </label>
                             )}
                         </div>
-                        {/* <div className="amenities-list">
-                            {amenities.map(a =>
-                                <FormControlLabel
-                                    className='amenitie-checkBox'
-                                    key={a}
-                                    label={a}
-                                    name='amenities'
-                                    onChange={handleCheckBox}
-                                    control={<Checkbox
-                                        key={a}
-                                        id={a}
-                                        checked={localFilter.amenities[a]} />}
-                                />
-                            )}
-                        </div> */}
                     </section>
                 </form >
             </section >

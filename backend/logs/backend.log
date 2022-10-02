@@ -3418,3 +3418,178 @@
 3.10.2022, 0:25:24 - DEBUG - Getting Stays
 3.10.2022, 0:25:24 - INFO - Req was made
 3.10.2022, 0:25:26 - INFO - Req was made
+3.10.2022, 0:49:28 - INFO - Server is running on port: 3030
+3.10.2022, 0:50:09 - DEBUG - Getting Stays
+3.10.2022, 0:51:03 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 0:51:04 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 0:51:08 - DEBUG - Getting Stays
+3.10.2022, 0:51:09 - DEBUG - Getting Stays
+3.10.2022, 0:51:10 - DEBUG - Getting Stays
+3.10.2022, 0:51:10 - INFO - Req was made
+3.10.2022, 0:51:12 - INFO - Req was made
+3.10.2022, 0:55:42 - DEBUG - Getting Stays
+3.10.2022, 0:55:42 - DEBUG - Getting Stays
+3.10.2022, 0:55:42 - INFO - Req was made
+3.10.2022, 0:55:43 - INFO - Req was made
+3.10.2022, 1:00:23 - DEBUG - Getting Stays
+3.10.2022, 1:00:23 - DEBUG - Getting Stays
+3.10.2022, 1:00:24 - INFO - Req was made
+3.10.2022, 1:00:25 - INFO - Req was made
+3.10.2022, 1:00:42 - DEBUG - Getting Stays
+3.10.2022, 1:00:43 - DEBUG - Getting Stays
+3.10.2022, 1:00:43 - INFO - Req was made
+3.10.2022, 1:00:44 - INFO - Req was made
+3.10.2022, 1:04:18 - DEBUG - Getting Stays
+3.10.2022, 1:04:18 - DEBUG - Getting Stays
+3.10.2022, 1:04:19 - INFO - Req was made
+3.10.2022, 1:04:20 - INFO - Req was made
+3.10.2022, 1:07:09 - DEBUG - Getting Stays
+3.10.2022, 1:07:10 - DEBUG - Getting Stays
+3.10.2022, 1:07:24 - DEBUG - Getting Stays
+3.10.2022, 1:07:25 - DEBUG - Getting Stays
+3.10.2022, 1:07:25 - INFO - Req was made
+3.10.2022, 1:07:26 - INFO - Req was made
+3.10.2022, 1:17:17 - DEBUG - Getting Stays
+3.10.2022, 1:17:17 - INFO - Req was made
+3.10.2022, 1:17:17 - DEBUG - Getting Stays
+3.10.2022, 1:17:18 - INFO - Req was made
+3.10.2022, 1:17:19 - INFO - Req was made
+3.10.2022, 1:17:21 - DEBUG - Getting Stays
+3.10.2022, 1:17:39 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 1:17:39 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 1:17:43 - DEBUG - Getting Stays
+3.10.2022, 1:18:33 - INFO - Server is running on port: 3030
+3.10.2022, 1:18:44 - INFO - Server is running on port: 3030
+3.10.2022, 1:18:48 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 1:18:50 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 1:18:54 - DEBUG - Getting Stays
+3.10.2022, 1:20:26 - INFO - Server is running on port: 3030
+3.10.2022, 1:20:47 - INFO - Server is running on port: 3030
+3.10.2022, 1:21:02 - INFO - Server is running on port: 3030
+3.10.2022, 1:22:37 - INFO - Server is running on port: 3030
+3.10.2022, 1:22:46 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 1:22:51 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 1:22:55 - DEBUG - Getting Stays
+3.10.2022, 1:23:40 - INFO - Server is running on port: 3030
+3.10.2022, 1:24:10 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 1:24:11 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 1:24:15 - DEBUG - Getting Stays
+3.10.2022, 1:24:47 - INFO - Server is running on port: 3030
+3.10.2022, 1:24:58 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 1:25:03 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 1:25:07 - DEBUG - Getting Stays
+3.10.2022, 1:26:39 - INFO - Server is running on port: 3030
+3.10.2022, 1:27:12 - INFO - Server is running on port: 3030
+3.10.2022, 1:27:33 - INFO - Server is running on port: 3030
+3.10.2022, 1:27:35 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 1:27:37 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 1:27:41 - DEBUG - Getting Stays
+3.10.2022, 1:28:23 - DEBUG - Getting Stays
+3.10.2022, 1:28:23 - INFO - Req was made
+3.10.2022, 1:28:23 - DEBUG - Getting Stays
+3.10.2022, 1:28:25 - INFO - Req was made
+3.10.2022, 1:28:26 - INFO - Req was made
+3.10.2022, 1:51:37 - INFO - Server is running on port: 3030
+3.10.2022, 1:51:50 - DEBUG - Getting Stays
+3.10.2022, 1:52:45 - DEBUG - Getting Stays
+3.10.2022, 1:53:57 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 1:53:57 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 1:54:02 - DEBUG - Getting Stays
+3.10.2022, 1:55:23 - DEBUG - Getting Stays
+3.10.2022, 1:56:10 - DEBUG - Getting Stays
+3.10.2022, 1:57:27 - DEBUG - Getting Stays
+3.10.2022, 1:57:45 - DEBUG - Getting Stays
+3.10.2022, 1:58:04 - DEBUG - Getting Stays
+3.10.2022, 1:58:41 - DEBUG - Getting Stays
+3.10.2022, 1:58:45 - DEBUG - Getting Stays
+3.10.2022, 1:59:28 - DEBUG - Getting Stays
+3.10.2022, 1:59:29 - DEBUG - Getting Stays
+3.10.2022, 1:59:45 - DEBUG - Getting Stays
+3.10.2022, 1:59:46 - DEBUG - Getting Stays
+3.10.2022, 1:59:52 - DEBUG - Getting Stays
+3.10.2022, 2:00:05 - DEBUG - Getting Stays
+3.10.2022, 2:00:16 - DEBUG - Getting Stays
+3.10.2022, 2:01:30 - DEBUG - Getting Stays
+3.10.2022, 2:02:19 - DEBUG - Getting Stays
+3.10.2022, 2:02:20 - DEBUG - Getting Stays
+3.10.2022, 2:04:43 - DEBUG - Getting Stays
+3.10.2022, 2:04:44 - DEBUG - Getting Stays
+3.10.2022, 2:05:09 - DEBUG - Getting Stays
+3.10.2022, 2:05:10 - DEBUG - Getting Stays
+3.10.2022, 2:05:45 - DEBUG - Getting Stays
+3.10.2022, 2:06:07 - DEBUG - Getting Stays
+3.10.2022, 2:06:13 - DEBUG - Getting Stays
+3.10.2022, 2:06:33 - DEBUG - Getting Stays
+3.10.2022, 2:06:57 - DEBUG - Getting Stays
+3.10.2022, 2:07:44 - DEBUG - Getting Stays
+3.10.2022, 2:08:05 - DEBUG - Getting Stays
+3.10.2022, 2:09:21 - DEBUG - Getting Stays
+3.10.2022, 2:09:21 - DEBUG - Getting Stays
+3.10.2022, 2:10:23 - DEBUG - Getting Stays
+3.10.2022, 2:10:48 - DEBUG - Getting Stays
+3.10.2022, 2:10:51 - DEBUG - Getting Stays
+3.10.2022, 2:11:04 - DEBUG - Getting Stays
+3.10.2022, 2:11:05 - DEBUG - Getting Stays
+3.10.2022, 2:11:11 - DEBUG - Getting Stays
+3.10.2022, 2:12:23 - DEBUG - Getting Stays
+3.10.2022, 2:13:15 - DEBUG - Getting Stays
+3.10.2022, 2:13:16 - DEBUG - Getting Stays
+3.10.2022, 2:13:17 - DEBUG - Getting Stays
+3.10.2022, 2:13:18 - DEBUG - Getting Stays
+3.10.2022, 2:13:19 - DEBUG - Getting Stays
+3.10.2022, 2:13:21 - DEBUG - Getting Stays
+3.10.2022, 2:13:22 - DEBUG - Getting Stays
+3.10.2022, 2:13:24 - DEBUG - Getting Stays
+3.10.2022, 2:13:25 - DEBUG - Getting Stays
+3.10.2022, 2:13:25 - DEBUG - Getting Stays
+3.10.2022, 2:13:27 - DEBUG - Getting Stays
+3.10.2022, 2:13:28 - DEBUG - Getting Stays
+3.10.2022, 2:13:30 - DEBUG - Getting Stays
+3.10.2022, 2:13:31 - DEBUG - Getting Stays
+3.10.2022, 2:13:33 - DEBUG - Getting Stays
+3.10.2022, 2:13:34 - DEBUG - Getting Stays
+3.10.2022, 2:13:35 - DEBUG - Getting Stays
+3.10.2022, 2:13:36 - DEBUG - Getting Stays
+3.10.2022, 2:13:36 - DEBUG - Getting Stays
+3.10.2022, 2:13:36 - DEBUG - Getting Stays
+3.10.2022, 2:13:36 - DEBUG - Getting Stays
+3.10.2022, 2:13:36 - DEBUG - Getting Stays
+3.10.2022, 2:13:40 - DEBUG - Getting Stays
+3.10.2022, 2:13:40 - DEBUG - Getting Stays
+3.10.2022, 2:13:40 - DEBUG - Getting Stays
+3.10.2022, 2:13:40 - DEBUG - Getting Stays
+3.10.2022, 2:13:40 - DEBUG - Getting Stays
+3.10.2022, 2:13:42 - DEBUG - Getting Stays
+3.10.2022, 2:17:23 - DEBUG - Getting Stays
+3.10.2022, 2:17:45 - DEBUG - Getting Stays
+3.10.2022, 2:17:50 - DEBUG - Getting Stays
+3.10.2022, 2:17:56 - DEBUG - Getting Stays
+3.10.2022, 2:19:42 - DEBUG - Getting Stays
+3.10.2022, 2:19:42 - DEBUG - Getting Stays
+3.10.2022, 2:19:49 - DEBUG - Getting Stays
+3.10.2022, 2:19:51 - DEBUG - Getting Stays
+3.10.2022, 2:19:57 - DEBUG - Getting Stays
+3.10.2022, 2:20:17 - DEBUG - Getting Stays
+3.10.2022, 2:20:33 - DEBUG - Getting Stays
+3.10.2022, 2:20:36 - DEBUG - Getting Stays
+3.10.2022, 2:20:43 - DEBUG - Getting Stays
+3.10.2022, 2:20:44 - DEBUG - Getting Stays
+3.10.2022, 2:20:47 - DEBUG - Getting Stays
+3.10.2022, 2:20:48 - DEBUG - Getting Stays
+3.10.2022, 2:20:51 - DEBUG - Getting Stays
+3.10.2022, 2:21:42 - DEBUG - Getting Stays
+3.10.2022, 2:21:53 - DEBUG - Getting Stays
+3.10.2022, 2:21:58 - DEBUG - Getting Stays
+3.10.2022, 2:22:00 - DEBUG - Getting Stays
+3.10.2022, 2:22:01 - DEBUG - Getting Stays
+3.10.2022, 2:22:03 - DEBUG - Getting Stays
+3.10.2022, 2:22:07 - DEBUG - Getting Stays
+3.10.2022, 2:22:10 - DEBUG - Getting Stays
+3.10.2022, 2:22:17 - DEBUG - Getting Stays
+3.10.2022, 2:24:22 - DEBUG - Getting Stays
+3.10.2022, 2:27:19 - DEBUG - Getting Stays
+3.10.2022, 2:27:38 - DEBUG - Getting Stays
+3.10.2022, 2:27:38 - DEBUG - Getting Stays
+3.10.2022, 2:27:41 - DEBUG - Getting Stays
+3.10.2022, 2:31:26 - DEBUG - Getting Stays
+3.10.2022, 2:33:14 - DEBUG - Getting Stays

@@ -38,6 +38,7 @@ export const OrdersTable = () => {
                     cellRenderer: (props) => {
                         return (
                             <img
+                                alt=''
                                 className='order-user-image'
                                 src={props.data.userImage}
                             />

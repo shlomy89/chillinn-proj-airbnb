@@ -27,7 +27,7 @@ export function UserModal({ handleUserModal, user }) {
                                 className='user-modal-about-link'
                             >
                                 <span className='user-modal-span'>
-                                    <div>Hello {user.firstname} {user.lastname}</div>
+                                    <div>Hello {user.firstname}</div>
                                     Manage Orders
                                 </span>
                             </Link>
@@ -36,7 +36,7 @@ export function UserModal({ handleUserModal, user }) {
                     ) : (
                         <li>
                             <span className='user-modal-span'>
-                                Hello {user.firstname} {user.lastname}
+                                Hello {user.firstname}
                             </span>
                             <Divider />
                         </li>

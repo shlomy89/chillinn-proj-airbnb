@@ -91,6 +91,7 @@ export const StayApp = () => {
                     <div className="main-layout">
                         <div className='filters-container-wrapper flex align-center'>
                             <FilterCarousel
+                                filter={filter}
                                 setFilter={setFilter} />
                             <FilterModal
                                 staysCount={stays.length}
