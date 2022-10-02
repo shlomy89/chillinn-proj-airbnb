@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { StayApp } from './views/stay-app.jsx'
 import { AppHeader } from './cmps/app-header'
 import { About } from './views/about.jsx'
@@ -12,9 +12,17 @@ import { AppFooter } from './cmps/details-cmp/app-footer.jsx'
 import './assets/styles/views/_root-cmp.scss'
 
 function App() {
+    const { pathname } = useLocation()
     return (
         <div className='main-app'>
-            <header className='header-container main-layout full'>
+            <header
+                // className='header-container main-layout'
+                className={
+                    pathname.includes('/stay/') || pathname.includes('/host/')
+                        ? 'header-container narrow main-layout'
+                        : 'header-container main-layout'
+                }
+            >
                 <AppHeader />
             </header>
             <main className='main-container'>
