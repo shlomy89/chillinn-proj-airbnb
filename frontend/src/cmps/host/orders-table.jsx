@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import moment from 'moment'
 import { utilService } from '../../services/util.service.js'
 
+
 export const OrdersTable = () => {
     const orders = useSelector((state) => state.orderModule.orders)
     const users = useSelector((state) => state.orderModule.users)
@@ -15,6 +16,7 @@ export const OrdersTable = () => {
     }
 
     return (
+
         <AgGridReact
             className='orders-table'
             defaultColDef={{
