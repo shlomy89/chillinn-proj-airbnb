@@ -32,7 +32,7 @@
 
 .add-review-btn {
     // margin-left: 460px;
-    width: 157px;
+    width: 107px;
     height: 47px;
     font-size: 16px;
     line-height: 20px;
@@ -45,6 +45,9 @@
     background-color: $clr2;
     text-decoration: none solid rgb(34, 34, 34);
     margin-bottom: 16px;
+    &:hover {
+        background-color: #f7f7f7;
+    }
 }
 .border-bottom {
     margin-top: 48px;

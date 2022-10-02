@@ -186,6 +186,9 @@
             background-color: $clr2;
             text-decoration: none solid rgb(34, 34, 34);
             margin-bottom: 16px;
+            &:hover {
+                background-color: #f7f7f7;
+            }
         }
     }
 
