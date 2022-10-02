@@ -296,6 +296,7 @@ button[name='propertyType'].active {
 
     .filters-container-wrapper {
         display: flex;
+        width: 100%;
         justify-content: space-between;
         max-width: var(--main-layout-width);
         margin-inline: auto;
