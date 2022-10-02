@@ -295,9 +295,10 @@ button[name='propertyType'].active {
     width: 100%;
 
     .filters-container-wrapper {
-        // display: flex;
-        // max-width: var(--main-layout-width);
-        // margin-inline: auto;
+        display: flex;
+        justify-content: space-between;
+        max-width: var(--main-layout-width);
+        margin-inline: auto;
     }
 
     .filters-container-background {
