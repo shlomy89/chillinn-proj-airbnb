@@ -12,7 +12,6 @@ import _ from 'lodash'
 export const StayApp = () => {
 
     const { stays, isLoading } = useSelector(state => state.stayModule)
-
     const [searchParams, setSearchParams] = useSearchParams()
     const [filter, setFilter] = useState()
     const [activeFilters, setActiveFilters] = useState()
