@@ -87,10 +87,9 @@ export const StayApp = () => {
 
     return (
         <React.Fragment>
-            <div className='stay-app main-layout'>
                 <section className={`filters-container flex align-center ${isStuck ? 'stuck' : ''}`}>
                     <div className='filters-container-background'>
-                        <div className='filters-container-wrapper flex align-center justify-center'>
+                        <div className='filters-container-wrapper flex align-center'>
                             <FilterCarousel
                                 setFilter={setFilter} />
 
@@ -103,6 +102,7 @@ export const StayApp = () => {
                         </div>
                     </div>
                 </section>
+            <div className='stay-app main-layout'>
                 {isLoading ? (
                     <Box sx={{ display: 'flex', margin: '100px auto' }}>
                         <CircularProgress />
