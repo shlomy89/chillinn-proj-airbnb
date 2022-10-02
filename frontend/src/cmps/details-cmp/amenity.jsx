@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 
 export function Amenity({ amenity }) {
     const [renderIcon, setRenderIcon] = useState(null)
-
     useEffect(() => {
         import(
             `../../assets/img/icons/${amenity

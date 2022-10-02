@@ -20,18 +20,18 @@ export const FilterCarousel = ({ setFilter }) => {
         'Camping',
         'Castles',
         'Caves',
-        "Chef's kitchens",
-        'Containers',
-        'Countryside',
-        'Creative spaces',
-        'Dammusos',
-        'Desert',
-        'Desidn',
-        'Domes',
-        'Earth homes',
-        'Farms',
-        'Golfing',
-        'Grand pianos',
+        // "Chef's kitchens",
+        // 'Containers',
+        // 'Countryside',
+        // 'Creative spaces',
+        // 'Dammusos',
+        // 'Desert',
+        // 'Desidn',
+        // 'Domes',
+        // 'Earth homes',
+        // 'Farms',
+        // 'Golfing',
+        // 'Grand pianos',
         // 'Historical homes',
         // 'Islands',
         // 'Lake',
@@ -92,14 +92,33 @@ export const FilterCarousel = ({ setFilter }) => {
         setItems(items)
     }, [icons, activeType])
 
+    const renderNextButton = ({ isDisabled }) => {
+        console.log("isDisabled", isDisabled)
+        return (
+            <button
+                className={`${isDisabled ? 'disabled' : ''} next-btn`}>
+                <img src={nextIcon} className="alice-carousel__next-btn-item" />
+            </button>
+        )
+    }
+
+    const renderPrevButton = ({ isDisabled }) => {
+        return (
+            <button
+                className={`${isDisabled ? 'disabled' : ''} prev-btn`}>
+                <img src={prevIcon} className="alice-carousel__prev-btn-item" />
+            </button>
+        )
+    }
+
     const getIcons = () => {
         const promises = []
         const icons = {}
 
         typeList.forEach(t => {
             (function (t) {
-                const prom = import(`../assets/img/filter-carousel-icon/${t}.jpg`).then(img => [t, img.default])
-
+                const prom = import(`../assets/img/filter-carousel-icon/${t}.jpg`)
+                    .then(img => [t, img.default])
                 promises.push(prom)
             }(t))
         })
@@ -115,7 +134,6 @@ export const FilterCarousel = ({ setFilter }) => {
     }
 
     const toggleActiveType = (type) => {
-        console.log('type:', type);
         if (activeType === type) setActiveType('')
         else setActiveType(type)
     }
@@ -143,20 +161,13 @@ export const FilterCarousel = ({ setFilter }) => {
         items && <section className='filter-carousel-container'>
             <AliceCarousel
                 responsive={responsive}
-                controlsStrategy='alternate'
-                disableDotsControls={true}
+                controlsStrategy='responsive'
+                disableDotsControls
+                // innerWidth={1}
                 items={items}
                 paddingLeft={40}
-                renderPrevButton={() => {
-                    return <button className="prev-btn">
-                        <img src={prevIcon} className="alice-carousel__prev-btn-item" />
-                    </button>
-                }}
-                renderNextButton={() => {
-                    return <button className="next-btn">
-                        <img src={nextIcon} className="alice-carousel__next-btn-item" />
-                    </button>
-                }}
+                renderPrevButton={renderPrevButton}
+                renderNextButton={renderNextButton}
             />
         </section>
     )

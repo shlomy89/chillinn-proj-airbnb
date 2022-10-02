@@ -17,7 +17,7 @@ $play-btn-size: 32px !default;
 
     direction: ltr;
 
-    > div:nth-child(1){
+    >div:nth-child(1) {
         display: grid;
     }
 }
@@ -72,25 +72,34 @@ $play-btn-size: 32px !default;
     }
 }
 
+.prev-btn.disabled {
+    display: none;
+}
+.next-btn.disabled {
+    display: none;
+}
+
 .alice-carousel__prev-btn,
 .alice-carousel__next-btn {
     position: absolute;
     top: 20px;
-    
+
     button {
-        box-shadow: 0px 0px 20px 20px #ffffff;
+        box-shadow: 0px 0px 15px 15px #ffffff;
         background-color: #ffffff;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 28px;
         width: 28px;
-        border: #717171 1px solid;
+        border: 0.5px solid #0000004d;
         border-radius: 50%;
 
         &:hover {
+            box-shadow: 0 6px 16px #0000001f;
             transform: scale(1.07);
-            transition:  200ms;
+            border: 0.5px solid #0000004d;
+            transition: 200ms;
         }
 
         img {

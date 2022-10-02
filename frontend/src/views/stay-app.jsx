@@ -46,7 +46,7 @@ export const StayApp = () => {
     }
 
     const onScroll = (e) => {
-        const posY = window.scrollY;
+        const posY = window.scrollY
         if (posY > 20) {
             if (!isStuck) {
                 setIsStuck(true)

@@ -141,7 +141,7 @@ export const StayDetails = () => {
             <section className="review">
                 <div className="reviews-container">
                     {reviews?.slice(0, 6).map(review => (
-                        <Review  key={review.text} review={review} />
+                        <Review  key={review._id} review={review} />
                     ))}
                 </div>
                 <h3 className="add-review-header">Add Review</h3>
