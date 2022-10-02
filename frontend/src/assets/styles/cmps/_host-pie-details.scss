@@ -12,7 +12,8 @@
         .index-container {
             display: flex;
             align-items: center;
-            column-gap: 4px;
+            column-gap: 8px;
+            justify-content: space-between;
             .index-color {
                 height: 10px;
                 width: 50px;

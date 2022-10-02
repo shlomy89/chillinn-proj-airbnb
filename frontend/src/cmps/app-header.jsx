@@ -5,9 +5,9 @@ import { SearchBar } from './header-cmp/search-bar.jsx'
 import { SearchBarDetails } from './header-cmp/search-bar-details.jsx'
 import { SearchInput } from './header-cmp/search-bar-input.jsx'
 import { UserMenu } from './header-cmp/user-menu.jsx'
+import clsx from 'clsx'
 
 export function AppHeader() {
-
     const [isSearchInputOpen, setIsSearchInputOpen] = useState(false)
     const { pathname} = useLocation()
 
@@ -26,8 +26,23 @@ export function AppHeader() {
     }
 
     return (
-        <header className='main-layout'>
-            <div className='app-header'>
+        <header
+            className='narrow main-layout'
+            // className={
+            //     pathname === '/stay/632f76c3257e1258782530c9'
+            //         ? 'narrow main-layout'
+            //         : 'main-layout'
+            // }
+        >
+            <div
+                className='narrow main-layout app-header'
+                // className={
+                //     pathname === '/stay/632f76c3257e1258782530c9'
+                //         ? 'app-header  narrow main-layout'
+                //         : 'app-header main-layout'
+                // }
+            >
+                {/* <div className={clsx('xyz main-layout', className)}> */}
                 <img src={logo} className='logo' onClick={onBack} />
                 {pathname.includes('/stay/') ? 
                 <SearchBarDetails />
@@ -45,6 +60,8 @@ export function AppHeader() {
                     <UserMenu />
                 </div>
             </div>
+            {/* </div> */}
         </header>
+        //{' '}
     )
 }

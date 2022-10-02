@@ -10,16 +10,16 @@ import { FilterCarousel } from '../cmps/filter-carousel.jsx'
 import _ from 'lodash'
 
 export const StayApp = () => {
-    
+
     const { stays, isLoading } = useSelector(state => state.stayModule)
 
     const [searchParams, setSearchParams] = useSearchParams()
     const [filter, setFilter] = useState()
     const [activeFilters, setActiveFilters] = useState()
     const [isStuck, setIsStuck] = useState(false)
-    
+
     const dispatch = useDispatch()
-    
+
     const getDefaultFilterState = () => {
         return {
             amenities: {},
@@ -45,7 +45,7 @@ export const StayApp = () => {
         return getDefaultFilterState()
     }
 
-    const onScroll = (e) => {
+    const onScroll = () => {
         const posY = window.scrollY
         if (posY > 20) {
             if (!isStuck) {
@@ -87,13 +87,12 @@ export const StayApp = () => {
 
     return (
         <React.Fragment>
-            <div className='stay-app main-layout'>
-                <section className={`filters-container flex align-center ${isStuck ? 'stuck' : ''}`}>
-                    <div className='filters-container-background'>
-                        <div className='filters-container-wrapper flex align-center justify-center'>
+            <section className={`filters-container flex align-center ${isStuck ? 'stuck' : ''}`}>
+                <div className='filters-container-background'>
+                    <div className="main-layout">
+                        <div className='filters-container-wrapper flex align-center'>
                             <FilterCarousel
                                 setFilter={setFilter} />
-
                             <FilterModal
                                 staysCount={stays.length}
                                 counter={activeFilters}
@@ -102,12 +101,16 @@ export const StayApp = () => {
                                 getDefaultFilterState={getDefaultFilterState} />
                         </div>
                     </div>
-                </section>
+                </div>
+            </section>
+            <div className='stay-app main-layout'>
                 {isLoading ? (
                     <Box sx={{ display: 'flex', margin: '100px auto' }}>
                         <CircularProgress />
                     </Box>
-                ) : (<StayList stays={stays} />)
+                ) : (
+                    <StayList stays={stays} />
+                )
                 }
             </div>
         </React.Fragment>
