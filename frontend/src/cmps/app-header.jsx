@@ -44,7 +44,7 @@ export function AppHeader() {
             >
                 {/* <div className={clsx('xyz main-layout', className)}> */}
                 <img src={logo} className='logo' onClick={onBack} />
-                {pathname.includes('/stay/') ? 
+                {pathname.includes('/stay/') || pathname.includes('/host/') ? 
                 <SearchBarDetails />
                 : <SearchBar handelClick={handelSearchClick} />}
 
