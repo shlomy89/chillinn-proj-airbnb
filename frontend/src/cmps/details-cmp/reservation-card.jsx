@@ -18,12 +18,12 @@ const agesInfo = {
     Adults: {
         type: 'Adults',
         info: 'Age 13+',
-        value: 1,
+        value: 1
     },
     Children: {
         type: 'Children',
         info: 'Ages 2-12',
-        value: 0,
+        value: 0
     },
     Infants: {
         type: 'Infants',
@@ -50,7 +50,7 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
                 startDate,
                 endDate,
                 guestsNum: sumBy(values(agesData), 'value'),
-                nights,
+                nights
             })
         )
     }
@@ -58,10 +58,13 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
     const nights = (endDate - startDate) / (1000 * 60 * 60 * 24)
 
     return (
-        <div className="reservation-card-container">
-            <div className="reservation-card-header">
-                <div className="price-per-night">
-                    <span className="price">${stay.price}</span> <span className="per-night">night</span>
+        <div className='reservation-card-container'>
+            <div className='reservation-card-header'>
+                <div className='price-per-night'>
+                    <span className='price'>
+                        ${numberWithCommas(stay.price)}
+                    </span>{' '}
+                    <span className='per-night'>night</span>
                 </div>
                 <StarRating rating={rating} reviews={reviews?.length} />
             </div>
@@ -72,7 +75,11 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
                 setCheckIn={setStartDate}
                 setCheckOut={setEndDate}
             />
-            <Dropdown agesData={agesData} setAgesData={setAgesData} capacity={stay.capacity} />
+            <Dropdown
+                agesData={agesData}
+                setAgesData={setAgesData}
+                capacity={stay.capacity}
+            />
 
             <ReserveButton
                 onClick={onClick}
@@ -84,14 +91,23 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
                 serviceFee={Math.round(stay.price * nights * 0.14)}
                 totalPrice={Math.round(stay.price * nights * 1.14)}
             />
-            <p className="no-charge">you won't be charged yet</p>
-            <section className="summary-price-container">
-                <SummaryPrice text={`${stay.price} * ${nights} nights`} total={Math.round(stay.price * nights)} />
+            <p className='no-charge'>you won't be charged yet</p>
+            <section className='summary-price-container'>
+                <SummaryPrice
+                    text={`${stay.price} * ${nights.toFixed()} nights`}
+                    total={Math.round(stay.price * nights)}
+                />
 
-                <SummaryPrice text={'Service fee'} total={Math.round(stay.price * nights * 0.14)} />
+                <SummaryPrice
+                    text={'Service fee'}
+                    total={Math.round(stay.price * nights * 0.14)}
+                />
             </section>
-            <div className="total-price"></div>
-            <SummaryPrice text={'Total'} total={Math.round(stay.price * nights * 1.14)} />
+            <div className='total-price'></div>
+            <SummaryPrice
+                text={'Total'}
+                total={Math.round(stay.price * nights * 1.14)}
+            />
         </div>
     )
 }
