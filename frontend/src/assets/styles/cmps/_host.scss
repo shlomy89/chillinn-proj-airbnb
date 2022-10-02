@@ -48,8 +48,10 @@
         }
 
         .summary-container {
+            margin-top: 20px;
             display: flex;
             justify-content: space-between;
+            margin-right: 140px;
             .summary {
                 display: flex;
                 flex-direction: column;

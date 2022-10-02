@@ -3072,186 +3072,77 @@
 01/10/2022, 21:38:48 - INFO - Req was made
 01/10/2022, 21:38:50 - INFO - Req was made
 01/10/2022, 21:39:33 - INFO - Req was made
-1.10.2022, 22:34:21 - INFO - Server is running on port: 3030
-1.10.2022, 22:36:39 - DEBUG - Getting Stays
-1.10.2022, 22:37:31 - INFO - Req was made
-1.10.2022, 22:40:17 - DEBUG - Getting Stays
-1.10.2022, 22:40:30 - DEBUG - auth.service - login with username: 118676
-1.10.2022, 22:40:30 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
-1.10.2022, 22:40:34 - DEBUG - Getting Stays
-1.10.2022, 22:40:39 - DEBUG - Getting Stays
-1.10.2022, 22:40:57 - DEBUG - Getting Stays
-1.10.2022, 22:41:21 - DEBUG - Getting Stays
-1.10.2022, 22:41:27 - DEBUG - auth.service - login with username: 118676
-1.10.2022, 22:41:27 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
-1.10.2022, 22:41:30 - DEBUG - Getting Stays
-1.10.2022, 22:56:22 - INFO - Req was made
-1.10.2022, 22:57:21 - DEBUG - Getting Stays
-1.10.2022, 22:57:30 - DEBUG - auth.service - login with username: 118676
-1.10.2022, 22:57:30 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
-1.10.2022, 22:57:34 - DEBUG - Getting Stays
-1.10.2022, 22:57:48 - DEBUG - Getting Stays
-1.10.2022, 22:57:49 - DEBUG - Getting Stays
-1.10.2022, 22:57:49 - INFO - Req was made
-1.10.2022, 22:57:50 - INFO - Req was made
-2.10.2022, 1:34:26 - DEBUG - Getting Stays
-2.10.2022, 1:51:26 - INFO - Req was made
-2.10.2022, 2:04:19 - DEBUG - Getting Stays
-2.10.2022, 2:05:11 - DEBUG - Getting Stays
-2.10.2022, 2:07:11 - DEBUG - Getting Stays
-2.10.2022, 2:08:38 - DEBUG - Getting Stays
-2.10.2022, 2:08:44 - DEBUG - Getting Stays
-2.10.2022, 2:12:40 - DEBUG - Getting Stays
-2.10.2022, 2:12:59 - DEBUG - Getting Stays
-2.10.2022, 2:13:27 - DEBUG - Getting Stays
-2.10.2022, 2:13:34 - DEBUG - Getting Stays
-2.10.2022, 2:13:50 - DEBUG - Getting Stays
-2.10.2022, 2:13:58 - DEBUG - Getting Stays
-2.10.2022, 2:14:15 - DEBUG - Getting Stays
-2.10.2022, 2:14:24 - DEBUG - Getting Stays
-2.10.2022, 2:14:39 - DEBUG - Getting Stays
-2.10.2022, 2:14:43 - DEBUG - Getting Stays
-2.10.2022, 2:15:04 - DEBUG - Getting Stays
-2.10.2022, 2:15:11 - DEBUG - Getting Stays
-2.10.2022, 2:15:24 - DEBUG - Getting Stays
-2.10.2022, 2:15:36 - DEBUG - Getting Stays
-2.10.2022, 2:15:43 - DEBUG - Getting Stays
-2.10.2022, 2:16:05 - DEBUG - Getting Stays
-2.10.2022, 2:17:13 - INFO - Req was made
-2.10.2022, 2:17:50 - DEBUG - Getting Stays
-2.10.2022, 2:17:55 - DEBUG - Getting Stays
-2.10.2022, 2:17:58 - INFO - Req was made
-2.10.2022, 2:18:04 - DEBUG - Getting Stays
-2.10.2022, 2:19:22 - DEBUG - Getting Stays
-2.10.2022, 2:19:41 - INFO - Req was made
-2.10.2022, 2:19:57 - DEBUG - Getting Stays
-2.10.2022, 2:21:18 - INFO - Req was made
-2.10.2022, 2:21:48 - DEBUG - Getting Stays
-2.10.2022, 2:22:01 - DEBUG - Getting Stays
-2.10.2022, 2:22:05 - DEBUG - Getting Stays
-2.10.2022, 2:23:04 - INFO - Req was made
-2.10.2022, 2:23:14 - DEBUG - Getting Stays
-2.10.2022, 2:27:04 - INFO - Req was made
-2.10.2022, 2:27:09 - DEBUG - Getting Stays
-2.10.2022, 2:27:12 - DEBUG - Getting Stays
-2.10.2022, 2:27:14 - INFO - Req was made
-2.10.2022, 2:27:23 - DEBUG - Getting Stays
-2.10.2022, 2:27:27 - DEBUG - Getting Stays
-2.10.2022, 2:27:29 - DEBUG - Getting Stays
-2.10.2022, 2:27:35 - INFO - Req was made
-2.10.2022, 2:27:40 - DEBUG - Getting Stays
-2.10.2022, 2:27:42 - DEBUG - Getting Stays
-2.10.2022, 2:27:45 - INFO - Req was made
-2.10.2022, 2:27:51 - DEBUG - Getting Stays
-2.10.2022, 2:29:53 - DEBUG - Getting Stays
-2.10.2022, 2:29:57 - DEBUG - Getting Stays
-2.10.2022, 2:29:59 - INFO - Req was made
-2.10.2022, 2:30:11 - DEBUG - Getting Stays
-2.10.2022, 2:30:24 - INFO - Req was made
-2.10.2022, 2:48:01 - DEBUG - Getting Stays
-2.10.2022, 2:48:05 - DEBUG - Getting Stays
-2.10.2022, 2:48:08 - INFO - Req was made
-2.10.2022, 3:22:29 - INFO - Req was made
-2.10.2022, 3:24:24 - DEBUG - Getting Stays
-2.10.2022, 3:24:34 - INFO - Server is running on port: 3030
-2.10.2022, 3:24:45 - INFO - Server is running on port: 3030
-2.10.2022, 3:24:50 - DEBUG - Getting Stays
-2.10.2022, 3:25:06 - INFO - Req was made
-2.10.2022, 3:28:17 - DEBUG - Getting Stays
-2.10.2022, 3:32:37 - DEBUG - Getting Stays
-2.10.2022, 3:32:48 - DEBUG - Getting Stays
-2.10.2022, 3:33:08 - INFO - Req was made
-2.10.2022, 3:33:27 - DEBUG - Getting Stays
-2.10.2022, 3:33:29 - DEBUG - Getting Stays
-2.10.2022, 3:33:33 - INFO - Req was made
-2.10.2022, 3:35:30 - DEBUG - Getting Stays
-2.10.2022, 3:35:33 - DEBUG - Getting Stays
-2.10.2022, 3:35:34 - DEBUG - Getting Stays
-2.10.2022, 3:35:37 - INFO - Req was made
-2.10.2022, 3:35:42 - DEBUG - Getting Stays
-2.10.2022, 3:35:54 - INFO - Req was made
-2.10.2022, 3:36:09 - DEBUG - Getting Stays
-2.10.2022, 3:36:25 - INFO - Req was made
-2.10.2022, 3:38:03 - INFO - Req was made
-2.10.2022, 3:38:11 - DEBUG - Getting Stays
-2.10.2022, 3:38:27 - INFO - Req was made
-2.10.2022, 3:40:25 - INFO - Req was made
-2.10.2022, 3:40:33 - INFO - Req was made
-2.10.2022, 3:42:18 - INFO - Req was made
-2.10.2022, 3:43:20 - DEBUG - Getting Stays
-2.10.2022, 3:44:43 - DEBUG - Getting Stays
-2.10.2022, 3:50:50 - DEBUG - Getting Stays
-2.10.2022, 4:02:09 - DEBUG - Getting Stays
-2.10.2022, 4:04:54 - DEBUG - Getting Stays
-2.10.2022, 4:10:46 - DEBUG - Getting Stays
-2.10.2022, 4:11:20 - DEBUG - Getting Stays
-2.10.2022, 4:13:14 - DEBUG - Getting Stays
-2.10.2022, 4:26:31 - DEBUG - Getting Stays
-2.10.2022, 4:26:35 - DEBUG - Getting Stays
-2.10.2022, 4:26:39 - DEBUG - Getting Stays
-2.10.2022, 4:26:46 - DEBUG - Getting Stays
-2.10.2022, 4:26:49 - DEBUG - Getting Stays
-2.10.2022, 4:27:26 - DEBUG - Getting Stays
-2.10.2022, 4:27:32 - DEBUG - Getting Stays
-2.10.2022, 4:27:34 - DEBUG - Getting Stays
-2.10.2022, 4:28:28 - DEBUG - Getting Stays
-2.10.2022, 4:30:48 - DEBUG - Getting Stays
-2.10.2022, 4:31:28 - DEBUG - Getting Stays
-2.10.2022, 4:32:24 - DEBUG - Getting Stays
-2.10.2022, 4:32:43 - DEBUG - Getting Stays
-2.10.2022, 4:32:54 - DEBUG - Getting Stays
-2.10.2022, 4:33:31 - DEBUG - Getting Stays
-2.10.2022, 4:37:28 - DEBUG - Getting Stays
-2.10.2022, 4:37:38 - DEBUG - Getting Stays
-2.10.2022, 4:37:48 - DEBUG - Getting Stays
-2.10.2022, 4:37:58 - DEBUG - Getting Stays
-2.10.2022, 4:38:21 - DEBUG - Getting Stays
-2.10.2022, 4:40:03 - DEBUG - Getting Stays
-2.10.2022, 4:42:59 - DEBUG - Getting Stays
-2.10.2022, 4:46:11 - DEBUG - Getting Stays
-2.10.2022, 4:48:10 - DEBUG - Getting Stays
-2.10.2022, 4:48:42 - DEBUG - Getting Stays
-2.10.2022, 4:49:22 - DEBUG - Getting Stays
-2.10.2022, 4:50:52 - INFO - Req was made
-2.10.2022, 4:51:02 - DEBUG - Getting Stays
-2.10.2022, 4:51:12 - DEBUG - Getting Stays
-2.10.2022, 4:51:15 - DEBUG - Getting Stays
-2.10.2022, 4:59:30 - DEBUG - Getting Stays
-2.10.2022, 5:02:31 - DEBUG - Getting Stays
-2.10.2022, 5:08:27 - DEBUG - Getting Stays
-2.10.2022, 5:26:50 - DEBUG - Getting Stays
-2.10.2022, 5:26:53 - DEBUG - Getting Stays
-2.10.2022, 5:27:11 - DEBUG - Getting Stays
-2.10.2022, 5:27:15 - DEBUG - Getting Stays
-2.10.2022, 5:27:25 - DEBUG - Getting Stays
-2.10.2022, 5:27:27 - DEBUG - Getting Stays
-2.10.2022, 5:27:35 - DEBUG - Getting Stays
-2.10.2022, 5:27:39 - DEBUG - Getting Stays
-2.10.2022, 5:28:14 - DEBUG - Getting Stays
-2.10.2022, 5:29:37 - DEBUG - Getting Stays
-2.10.2022, 5:32:46 - DEBUG - Getting Stays
-2.10.2022, 5:33:23 - DEBUG - Getting Stays
-2.10.2022, 5:34:12 - DEBUG - Getting Stays
-2.10.2022, 5:34:43 - DEBUG - Getting Stays
-2.10.2022, 5:35:00 - DEBUG - Getting Stays
-2.10.2022, 5:35:18 - DEBUG - Getting Stays
-2.10.2022, 5:35:36 - DEBUG - Getting Stays
-2.10.2022, 5:35:36 - DEBUG - Getting Stays
-2.10.2022, 5:35:39 - DEBUG - Getting Stays
-2.10.2022, 5:36:05 - DEBUG - Getting Stays
-2.10.2022, 5:36:46 - DEBUG - Getting Stays
-2.10.2022, 5:37:33 - DEBUG - Getting Stays
-2.10.2022, 5:37:56 - DEBUG - Getting Stays
-2.10.2022, 5:38:02 - DEBUG - Getting Stays
-2.10.2022, 5:41:04 - DEBUG - Getting Stays
-2.10.2022, 5:41:17 - DEBUG - Getting Stays
-2.10.2022, 5:42:33 - DEBUG - Getting Stays
-2.10.2022, 5:43:10 - DEBUG - Getting Stays
-2.10.2022, 5:47:16 - DEBUG - Getting Stays
-2.10.2022, 5:49:52 - DEBUG - Getting Stays
-2.10.2022, 5:50:32 - DEBUG - Getting Stays
-2.10.2022, 5:52:08 - DEBUG - Getting Stays
-2.10.2022, 5:52:18 - DEBUG - Getting Stays
-2.10.2022, 5:52:31 - DEBUG - Getting Stays
-2.10.2022, 5:52:41 - DEBUG - Getting Stays
-2.10.2022, 5:58:26 - DEBUG - Getting Stays
+01/10/2022, 21:57:00 - INFO - Server is running on port: 3030
+01/10/2022, 21:57:41 - DEBUG - Getting Stays
+01/10/2022, 21:57:56 - INFO - Req was made
+01/10/2022, 21:58:22 - INFO - Req was made
+01/10/2022, 22:04:01 - INFO - Req was made
+01/10/2022, 22:08:44 - DEBUG - Getting Stays
+01/10/2022, 22:09:03 - INFO - Req was made
+01/10/2022, 22:09:46 - DEBUG - Getting Stays
+01/10/2022, 22:12:41 - INFO - Req was made
+01/10/2022, 22:12:57 - INFO - Req was made
+01/10/2022, 22:13:32 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:13:32 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:13:34 - DEBUG - Getting Stays
+01/10/2022, 22:13:34 - DEBUG - Getting Stays
+01/10/2022, 22:13:35 - DEBUG - Getting Stays
+01/10/2022, 22:13:35 - INFO - Req was made
+01/10/2022, 22:13:36 - INFO - Req was made
+01/10/2022, 22:13:48 - DEBUG - Getting Stays
+01/10/2022, 22:14:01 - INFO - Req was made
+01/10/2022, 22:15:24 - DEBUG - Getting Stays
+01/10/2022, 22:15:36 - INFO - Req was made
+01/10/2022, 22:16:06 - DEBUG - Getting Stays
+01/10/2022, 22:18:58 - DEBUG - Getting Stays
+01/10/2022, 22:19:12 - INFO - Req was made
+01/10/2022, 22:35:45 - INFO - Server is running on port: 3030
+01/10/2022, 22:35:50 - DEBUG - Getting Stays
+01/10/2022, 22:36:04 - INFO - Req was made
+01/10/2022, 22:36:54 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:36:55 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:36:57 - DEBUG - Getting Stays
+01/10/2022, 22:36:59 - DEBUG - Getting Stays
+01/10/2022, 22:37:00 - DEBUG - Getting Stays
+01/10/2022, 22:37:00 - INFO - Req was made
+01/10/2022, 22:37:01 - INFO - Req was made
+01/10/2022, 22:45:37 - DEBUG - Getting Stays
+01/10/2022, 22:45:56 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:45:56 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:45:59 - DEBUG - Getting Stays
+01/10/2022, 22:46:11 - INFO - Req was made
+01/10/2022, 22:46:21 - DEBUG - Getting Stays
+01/10/2022, 22:47:02 - DEBUG - Getting Stays
+01/10/2022, 22:47:02 - DEBUG - Getting Stays
+01/10/2022, 22:47:02 - INFO - Req was made
+01/10/2022, 22:47:03 - INFO - Req was made
+01/10/2022, 22:47:19 - DEBUG - Getting Stays
+01/10/2022, 22:47:34 - INFO - Req was made
+01/10/2022, 22:51:40 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:51:40 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:51:42 - DEBUG - Getting Stays
+01/10/2022, 22:51:44 - DEBUG - Getting Stays
+01/10/2022, 22:51:44 - DEBUG - Getting Stays
+01/10/2022, 22:51:44 - INFO - Req was made
+01/10/2022, 22:51:45 - INFO - Req was made
+01/10/2022, 22:51:54 - DEBUG - Getting Stays
+01/10/2022, 22:52:12 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:52:13 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:52:16 - DEBUG - Getting Stays
+01/10/2022, 22:52:22 - DEBUG - Getting Stays
+01/10/2022, 22:52:22 - INFO - Req was made
+01/10/2022, 22:52:22 - DEBUG - Getting Stays
+01/10/2022, 22:52:23 - INFO - Req was made
+01/10/2022, 22:52:24 - INFO - Req was made
+01/10/2022, 22:52:50 - DEBUG - Getting Stays
+01/10/2022, 22:53:59 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:53:59 - ERROR - Failed to Login Invalid username or password
+01/10/2022, 22:54:02 - DEBUG - Getting Stays
+01/10/2022, 22:54:10 - DEBUG - auth.service - login with username: 118676
+01/10/2022, 22:54:10 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+01/10/2022, 22:54:13 - DEBUG - Getting Stays
+01/10/2022, 22:54:15 - DEBUG - Getting Stays
+01/10/2022, 22:54:15 - INFO - Req was made
+01/10/2022, 22:54:15 - DEBUG - Getting Stays
+01/10/2022, 22:54:16 - INFO - Req was made
+01/10/2022, 22:54:17 - INFO - Req was made
