@@ -1,38 +1,33 @@
-import { React, useState } from 'react'
+import { React } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import Divider from '@mui/material/Divider'
-import { userService } from '../../services/user.service'
+import { onLogout } from '../../store/actions/user.action.js'
 
-export function UserModal({ handleUserModal }) {
-    const [loggedInUser, setLoggedInUser] = useState(
-        userService.getLoggedinUser()
-    )
-    // const isActive = useSelector((state) => state.headerModule.headerMode.isActive)
-    const user = useSelector((state) => state.userModule.user)
+
+export function UserModal({ handleUserModal, user }) {
+
+    const dispatch = useDispatch()
     const navigate = useNavigate()
-    // const notificationsAmount = user.notifications?.length
-    // const dispatch = useDispatch()
-    // const navigate = useNavigate()
 
 
-	function onLogOut() {
-		userService.logout()
-		setLoggedInUser(null)
-		navigate('/')
-	}
+    const onLogOut = async () => {
+        await dispatch(onLogout())
+        navigate('/')
+    }
 
     return (
-        <nav className={`user-modal-container `} onClick={handleUserModal}>
+        <nav className={`user-modal-container`} onClick={handleUserModal}>
             <ul>
-                {loggedInUser ? (
-                    loggedInUser.isHost ? (
+                {user ? (
+                    user.isHost ? (
                         <li>
                             <Link
-                                to={`host/${loggedInUser._id}`}
+                                to={`host/${user._id}`}
                                 className='user-modal-about-link'
                             >
                                 <span className='user-modal-span'>
+                                    <div>Hello {user.firstname} {user.lastname}</div>
                                     Manage Orders
                                 </span>
                             </Link>
@@ -76,7 +71,7 @@ export function UserModal({ handleUserModal }) {
                     </Link>
                 </li>
                 <li onClick={onLogOut}>
-                    {loggedInUser ? (
+                    {user ? (
                         <span className='user-modal-span'>Log out</span>
                     ) : (
                         <a href='/' className='user-modal-about-link'>

@@ -13,7 +13,7 @@ import { onLogin } from '../store/actions/user.action.js'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import SuccessAlert from '../cmps/user-msg.jsx'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export function Login() {
 
@@ -21,10 +21,6 @@ export function Login() {
     const navigate = useNavigate()
 
     const [success, setSuccess] = useState()
-
-    // useEffect(() => {
-    //     console.log('loggedInUser:', loggedInUser)
-    // }, [loggedInUser])
 
     const handleSubmit = async (ev) => {
         ev.preventDefault()
@@ -38,12 +34,10 @@ export function Login() {
 
         await dispatch(onLogin(user))
 
-        // if (res) {
         setSuccess(true)
         setTimeout(() => {
             navigate('/')
         }, 2000)
-        // }
     }
 
     const theme = createTheme()

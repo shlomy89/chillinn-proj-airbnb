@@ -1,16 +1,16 @@
-import { AgGridReact } from 'ag-grid-react';
-import { ActionsCell } from './actions-cell';
-import { find, map } from 'lodash';
-import { useSelector } from 'react-redux';
-import moment from 'moment';
+import { AgGridReact } from 'ag-grid-react'
+import { ActionsCell } from './actions-cell'
+import { find, map } from 'lodash'
+import { useSelector } from 'react-redux'
+import moment from 'moment'
 
 export const OrdersTable = () => {
-    const orders = useSelector(state => state.orderModule.orders);
-    const users = useSelector(state => state.orderModule.users);
-    const stays = useSelector(state => state.stayModule.hostStays);
+    const orders = useSelector(state => state.orderModule.orders)
+    const users = useSelector(state => state.orderModule.users)
+    const stays = useSelector(state => state.stayModule.hostStays)
 
     if (!users.length) {
-        return null;
+        return null
     }
 
     return (
@@ -85,6 +85,7 @@ export const OrdersTable = () => {
                 },
             ]}
             rowData={map(orders, order => {
+                console.log("order", order)
                 const stay = find(stays, { _id: order.stayId });
                 if (!stay) {
                     return null;
