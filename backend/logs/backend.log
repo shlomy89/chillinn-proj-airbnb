@@ -3238,3 +3238,14 @@
 2.10.2022, 15:39:22 - DEBUG - Getting Stays
 2.10.2022, 15:40:00 - DEBUG - Getting Stays
 2.10.2022, 15:40:17 - INFO - Req was made
+2.10.2022, 18:49:03 - DEBUG - Getting Stays
+2.10.2022, 18:49:24 - INFO - Req was made
+2.10.2022, 18:49:49 - DEBUG - Getting Stays
+2.10.2022, 18:50:24 - DEBUG - auth.service - login with username: 118676
+2.10.2022, 18:50:25 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+2.10.2022, 18:50:34 - DEBUG - Getting Stays
+2.10.2022, 18:50:37 - DEBUG - Getting Stays
+2.10.2022, 18:50:38 - DEBUG - Getting Stays
+2.10.2022, 18:50:38 - INFO - Req was made
+2.10.2022, 18:50:40 - INFO - Req was made
+2.10.2022, 18:51:05 - DEBUG - Getting Stays
