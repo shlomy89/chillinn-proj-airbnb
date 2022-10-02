@@ -11,8 +11,7 @@ import { useDispatch } from 'react-redux'
 import { onAddOrder } from '../../store/actions/order.actions'
 import { sumBy, values } from 'lodash'
 import { DatePicker } from './date-picker'
-
-
+import { utilService } from '../../services/util.service.js'
 
 const agesInfo = {
     Adults: {
@@ -62,7 +61,7 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
             <div className='reservation-card-header'>
                 <div className='price-per-night'>
                     <span className='price'>
-                        ${numberWithCommas(stay.price)}
+                        ${utilService.numberWithCommas(stay.price)}
                     </span>{' '}
                     <span className='per-night'>night</span>
                 </div>

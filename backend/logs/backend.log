@@ -3402,3 +3402,19 @@
 02/10/2022, 22:03:50 - DEBUG - Getting Stays
 02/10/2022, 22:03:50 - INFO - Req was made
 02/10/2022, 22:03:51 - INFO - Req was made
+3.10.2022, 0:14:44 - INFO - Server is running on port: 3030
+3.10.2022, 0:16:41 - DEBUG - Getting Stays
+3.10.2022, 0:20:20 - DEBUG - Getting Stays
+3.10.2022, 0:20:39 - INFO - Req was made
+3.10.2022, 0:20:51 - DEBUG - Getting Stays
+3.10.2022, 0:24:28 - INFO - Req was made
+3.10.2022, 0:24:44 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 0:24:44 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 0:24:50 - DEBUG - Getting Stays
+3.10.2022, 0:25:16 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 0:25:16 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 0:25:22 - DEBUG - Getting Stays
+3.10.2022, 0:25:23 - DEBUG - Getting Stays
+3.10.2022, 0:25:24 - DEBUG - Getting Stays
+3.10.2022, 0:25:24 - INFO - Req was made
+3.10.2022, 0:25:26 - INFO - Req was made
