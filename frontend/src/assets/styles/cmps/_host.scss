@@ -11,7 +11,7 @@
     flex-direction: column;
     // align-items: center;
 
-    width: 1200px;
+    width: 1120px;
 
     .host-header {
         margin-top: 20px;
@@ -49,17 +49,28 @@
         }
 
         .summary-container {
-            margin-top: 36px;
+            margin-top: 70px;
             display: flex;
-            justify-content: space-between;
-            margin-right: 140px;
+            justify-content: space-around;
+            margin-bottom: 100px;
+
+
             .summary {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                .summary-header {
+                
+
+                .summary-main-header {
                     font-size: 22px;
+                    margin-bottom: 7px;
                 }
+
+                .summary-secondary-header {
+                    font-size: 18px;
+                    margin-bottom: 40px;
+                }
+
                 .orders-header {
                     font-size: 32px;
                     margin-right: 280px;
@@ -76,7 +87,7 @@
 
     .order-user-image {
         border-radius: 50%;
-        width: 50px;
+        width: 40px;
         display: flex;
         align-items: center;
     }

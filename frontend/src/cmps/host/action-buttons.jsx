@@ -1,10 +1,10 @@
 export const ActionButtons = ({ onApproveClick, onRejectClick }) => (
     <div className="action-buttons-container">
-        <div className="action-button" onClick={onApproveClick}>
+        <button className="action-button btn-approve" onClick={onApproveClick}>
             Approve
-        </div>
-        <div className="action-button rejected" onClick={onRejectClick}>
+        </button>
+        <button className="action-button btn-reject" onClick={onRejectClick}>
             Reject
-        </div>
+        </button>
     </div>
 );

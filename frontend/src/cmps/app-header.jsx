@@ -18,9 +18,9 @@ export function AppHeader() {
                 <Link to={'/'}>
                     <img alt='logo' src={logo} className='logo' />
                 </Link>
-                {pathname.includes('/stay/') ?
-                    <SearchBarDetails />
-                    : <SearchBar handelClick={handelSearchClick} />}
+                {pathname.includes('/stay/') || pathname.includes('/host/') ? 
+                <SearchBarDetails />
+                : <SearchBar handelClick={handelSearchClick} />}
 
                 {/* {isSearchInputOpen ? (
                     <SearchInput handelClick={handelSearchClick} />

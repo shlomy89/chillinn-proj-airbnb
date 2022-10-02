@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[3894],{23894:function(e,n,c){e.exports=c.p+"static/media/carbon-monoxide-detector-icon.86aed8b09a12c9160e28.svg"}}]);
