@@ -12,7 +12,6 @@ import _ from 'lodash'
 export const StayApp = () => {
 
     const { stays, isLoading } = useSelector(state => state.stayModule)
-
     const [searchParams, setSearchParams] = useSearchParams()
     const [filter, setFilter] = useState()
     const [activeFilters, setActiveFilters] = useState()
@@ -92,6 +91,7 @@ export const StayApp = () => {
                     <div className="main-layout">
                         <div className='filters-container-wrapper flex align-center'>
                             <FilterCarousel
+                                filter={filter}
                                 setFilter={setFilter} />
                             <FilterModal
                                 staysCount={stays.length}

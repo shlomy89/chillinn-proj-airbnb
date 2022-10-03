@@ -3249,6 +3249,84 @@
 2.10.2022, 18:50:38 - INFO - Req was made
 2.10.2022, 18:50:40 - INFO - Req was made
 2.10.2022, 18:51:05 - DEBUG - Getting Stays
+<<<<<<< HEAD
+2.10.2022, 18:55:19 - DEBUG - Getting Stays
+2.10.2022, 21:13:43 - INFO - Server is running on port: 3030
+2.10.2022, 21:14:24 - DEBUG - Getting Stays
+2.10.2022, 21:14:57 - DEBUG - auth.service - login with username: 118676
+2.10.2022, 21:14:57 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+2.10.2022, 21:15:05 - DEBUG - Getting Stays
+2.10.2022, 21:15:06 - DEBUG - Getting Stays
+2.10.2022, 21:15:06 - INFO - Req was made
+2.10.2022, 21:15:09 - INFO - Req was made
+2.10.2022, 21:34:20 - DEBUG - Getting Stays
+2.10.2022, 21:34:20 - INFO - Req was made
+2.10.2022, 21:34:22 - INFO - Req was made
+2.10.2022, 21:50:38 - DEBUG - Getting Stays
+2.10.2022, 21:50:39 - INFO - Req was made
+2.10.2022, 21:50:41 - INFO - Req was made
+2.10.2022, 21:52:48 - DEBUG - Getting Stays
+2.10.2022, 21:52:49 - INFO - Req was made
+2.10.2022, 21:52:50 - INFO - Req was made
+2.10.2022, 22:02:12 - DEBUG - Getting Stays
+2.10.2022, 22:02:13 - DEBUG - Getting Stays
+2.10.2022, 22:02:17 - INFO - Req was made
+2.10.2022, 22:02:19 - INFO - Req was made
+2.10.2022, 22:02:49 - DEBUG - Getting Stays
+2.10.2022, 22:02:52 - DEBUG - Getting Stays
+2.10.2022, 22:02:53 - INFO - Req was made
+2.10.2022, 22:02:54 - DEBUG - Getting Stays
+2.10.2022, 22:02:55 - INFO - Req was made
+2.10.2022, 22:02:57 - INFO - Req was made
+2.10.2022, 22:03:30 - DEBUG - Getting Stays
+2.10.2022, 22:03:31 - DEBUG - Getting Stays
+2.10.2022, 22:03:32 - INFO - Req was made
+2.10.2022, 22:03:34 - INFO - Req was made
+2.10.2022, 22:04:13 - DEBUG - Getting Stays
+2.10.2022, 22:04:14 - DEBUG - Getting Stays
+2.10.2022, 22:04:15 - INFO - Req was made
+2.10.2022, 22:04:17 - INFO - Req was made
+2.10.2022, 22:15:56 - DEBUG - Getting Stays
+2.10.2022, 22:15:57 - INFO - Req was made
+2.10.2022, 22:15:58 - INFO - Req was made
+2.10.2022, 22:16:26 - DEBUG - Getting Stays
+2.10.2022, 22:16:26 - INFO - Req was made
+2.10.2022, 22:16:27 - INFO - Req was made
+2.10.2022, 22:16:48 - DEBUG - Getting Stays
+2.10.2022, 22:16:48 - INFO - Req was made
+2.10.2022, 22:16:50 - INFO - Req was made
+2.10.2022, 22:29:41 - DEBUG - Getting Stays
+2.10.2022, 22:29:49 - DEBUG - auth.service - login with username: 118676
+2.10.2022, 22:29:49 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+2.10.2022, 22:29:52 - DEBUG - Getting Stays
+2.10.2022, 22:29:52 - DEBUG - Getting Stays
+2.10.2022, 22:29:53 - DEBUG - Getting Stays
+2.10.2022, 22:30:02 - DEBUG - Getting Stays
+2.10.2022, 22:30:03 - INFO - Req was made
+2.10.2022, 22:30:03 - DEBUG - Getting Stays
+2.10.2022, 22:30:04 - INFO - Req was made
+2.10.2022, 22:30:05 - INFO - Req was made
+2.10.2022, 22:53:41 - DEBUG - Getting Stays
+2.10.2022, 22:54:10 - DEBUG - Getting Stays
+2.10.2022, 22:54:19 - INFO - Req was made
+2.10.2022, 22:57:01 - DEBUG - auth.service - login with username: 59985
+2.10.2022, 22:57:02 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab4e","username":"59985","firstname":"Leo","lastname":"","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1664668950/face7_prbvua.png","isHost":true}
+2.10.2022, 22:57:07 - DEBUG - Getting Stays
+2.10.2022, 22:57:52 - INFO - Req was made
+2.10.2022, 22:59:37 - DEBUG - Getting Stays
+2.10.2022, 23:00:04 - DEBUG - auth.service - login with username: 1205536
+2.10.2022, 23:00:05 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab51","username":"1205536","firstname":"Winnie","lastname":"","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1664668950/face7_prbvua.png","isHost":true}
+2.10.2022, 23:00:19 - DEBUG - Getting Stays
+2.10.2022, 23:00:25 - DEBUG - Getting Stays
+2.10.2022, 23:01:10 - INFO - Req was made
+2.10.2022, 23:01:47 - DEBUG - Getting Stays
+2.10.2022, 23:02:53 - DEBUG - auth.service - login with username: 39214712
+2.10.2022, 23:02:55 - INFO - User login:  | {"_id":"622f3401e36c59e6164fab55","username":"39214712","firstname":"Stephanie","lastname":"","imgUrl":"https://res.cloudinary.com/cajul22/image/upload/v1664668950/face7_prbvua.png","isHost":true}
+2.10.2022, 23:03:06 - DEBUG - Getting Stays
+2.10.2022, 23:03:43 - DEBUG - Getting Stays
+2.10.2022, 23:04:08 - INFO - Req was made
+2.10.2022, 23:06:18 - DEBUG - Getting Stays
+=======
 02/10/2022, 18:58:19 - DEBUG - Getting Stays
 02/10/2022, 18:58:31 - INFO - Req was made
 02/10/2022, 19:22:37 - ERROR - while finding stay host | {}
@@ -3402,14 +3480,36 @@
 02/10/2022, 22:03:50 - DEBUG - Getting Stays
 02/10/2022, 22:03:50 - INFO - Req was made
 02/10/2022, 22:03:51 - INFO - Req was made
-02/10/2022, 22:07:23 - DEBUG - Getting Stays
-02/10/2022, 22:07:36 - INFO - Req was made
-02/10/2022, 22:07:58 - DEBUG - auth.service - login with username: 118676
-02/10/2022, 22:07:58 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"118676","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
-02/10/2022, 22:08:02 - DEBUG - Getting Stays
-02/10/2022, 22:08:16 - DEBUG - Getting Stays
-02/10/2022, 22:08:16 - DEBUG - Getting Stays
-02/10/2022, 22:08:17 - INFO - Req was made
-02/10/2022, 22:08:18 - INFO - Req was made
-03/10/2022, 10:13:46 - DEBUG - Getting Stays
-03/10/2022, 10:13:58 - INFO - Req was made
+3.10.2022, 0:14:44 - INFO - Server is running on port: 3030
+3.10.2022, 0:16:41 - DEBUG - Getting Stays
+3.10.2022, 0:20:20 - DEBUG - Getting Stays
+3.10.2022, 0:20:39 - INFO - Req was made
+3.10.2022, 0:20:51 - DEBUG - Getting Stays
+3.10.2022, 0:24:28 - INFO - Req was made
+3.10.2022, 0:24:44 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 0:24:44 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 0:24:50 - DEBUG - Getting Stays
+3.10.2022, 0:25:16 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 0:25:16 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 0:25:22 - DEBUG - Getting Stays
+3.10.2022, 0:25:23 - DEBUG - Getting Stays
+3.10.2022, 0:25:24 - DEBUG - Getting Stays
+3.10.2022, 0:25:24 - INFO - Req was made
+3.10.2022, 0:25:26 - INFO - Req was made
+>>>>>>> 8f1361126dda946d92bfb63ab80e248aeb068faf
+3.10.2022, 0:28:14 - INFO - Server is running on port: 3030
+3.10.2022, 0:31:02 - DEBUG - Getting Stays
+3.10.2022, 0:32:16 - INFO - Req was made
+3.10.2022, 0:32:48 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 0:32:50 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 0:32:51 - DEBUG - auth.service - login with username: Lizzy
+3.10.2022, 0:32:52 - INFO - User login:  | {"_id":"622f3402e36c59e6164fabfe","username":"Lizzy","firstname":"Lizzy","lastname":"","imgUrl":"https://a0.muscache.com/im/users/118676/profile_pic/1417000371/original.jpg?aki_policy=profile_small","isHost":true}
+3.10.2022, 0:33:13 - INFO - Req was made
+3.10.2022, 0:33:15 - DEBUG - Getting Stays
+3.10.2022, 0:33:15 - DEBUG - Getting Stays
+3.10.2022, 0:33:16 - DEBUG - Getting Stays
+3.10.2022, 0:33:16 - INFO - Req was made
+3.10.2022, 0:33:19 - INFO - Req was made
+3.10.2022, 0:48:43 - DEBUG - Getting Stays
+3.10.2022, 0:48:44 - INFO - Req was made
+3.10.2022, 0:48:46 - INFO - Req was made

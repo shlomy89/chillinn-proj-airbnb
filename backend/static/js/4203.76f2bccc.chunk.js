@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[4203],{64203:function(e,n,s){e.exports=s.p+"static/media/extra-pillows-and-blankets-icon.d8183babee5d5e130ee9.svg"}}]);

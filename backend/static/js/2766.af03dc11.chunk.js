@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[2766],{2766:function(e,c,n){e.exports=n.p+"static/media/health-check-icon.3bde5638f4606c26a417.svg"}}]);

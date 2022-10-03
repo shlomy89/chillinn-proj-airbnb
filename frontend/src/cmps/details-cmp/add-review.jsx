@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import Rating from '@mui/material/Rating'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import StarIcon from '@mui/icons-material/Star'
 import TextField from '@mui/material/TextField'
-import Button from '@mui/material/Button'
-import SendIcon from '@mui/icons-material/Send'
-import IosShareIcon from '@mui/icons-material/IosShare'
+// import Button from '@mui/material/Button'
+// import SendIcon from '@mui/icons-material/Send'
+// import IosShareIcon from '@mui/icons-material/IosShare'
 
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { addReview } from '../../store/actions/review.actions'
-import { Key } from '@mui/icons-material'
+// import { Key } from '@mui/icons-material'
 
 export function AddReview({ stay, set }) {
     const dispatch = useDispatch()
@@ -59,16 +59,16 @@ export function AddReview({ stay, set }) {
         }
     })
 
-    const btnTheme = createTheme({
-        palette: {
-            primary: {
-                main: '#222222'
-            },
-            secondary: {
-                main: '#222222'
-            }
-        }
-    })
+    // const btnTheme = createTheme({
+    //     palette: {
+    //         primary: {
+    //             main: '#222222'
+    //         },
+    //         secondary: {
+    //             main: '#222222'
+    //         }
+    //     }
+    // })
 
     return (
         <div>

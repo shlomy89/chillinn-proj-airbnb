@@ -1,22 +1,17 @@
 import { useState } from 'react'
 import 'react-date-range/dist/styles.css' // main style file
 import 'react-date-range/dist/theme/default.css' // theme css file
-import { DateRangePicker } from 'react-date-range'
 import '../../assets/styles/cmps/_reservation-card.scss'
 import { StarRating } from './star-rating'
-import moment from 'moment/moment'
 import { Dropdown } from './guests-dropdown'
 import { ReserveButton } from './reserve-button'
 import { SummaryPrice } from './summary-price'
 import * as React from 'react'
-import Swal from 'sweetalert2'
 import { useDispatch } from 'react-redux'
 import { onAddOrder } from '../../store/actions/order.actions'
-import { find, sum, sumBy, values } from 'lodash'
+import { sumBy, values } from 'lodash'
 import { DatePicker } from './date-picker'
-import { utilService } from '../../services/util.service'
-
-const { numberWithCommas } = utilService
+import { utilService } from '../../services/util.service.js'
 
 const agesInfo = {
     Adults: {
@@ -32,14 +27,18 @@ const agesInfo = {
     Infants: {
         type: 'Infants',
         info: 'Under 2',
-        value: 0
-    }
+        value: 0,
+    },
 }
 
 export const ReservationCard = ({ stay, rating, reviews }) => {
-    const [startDate, setStartDate] = useState(null)
-    const [endDate, setEndDate] = useState(null)
+
+    const defultEndDate = new Date(new Date().setDate(new Date().getDate() + 2))
+
+    const [startDate, setStartDate] = useState(new Date())
+    const [endDate, setEndDate] = useState(defultEndDate)
     const [agesData, setAgesData] = useState(agesInfo)
+
 
     const dispatch = useDispatch()
 
@@ -62,7 +61,7 @@ export const ReservationCard = ({ stay, rating, reviews }) => {
             <div className='reservation-card-header'>
                 <div className='price-per-night'>
                     <span className='price'>
-                        ${numberWithCommas(stay.price)}
+                        ${utilService.numberWithCommas(stay.price)}
                     </span>{' '}
                     <span className='per-night'>night</span>
                 </div>

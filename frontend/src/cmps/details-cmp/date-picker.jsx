@@ -32,13 +32,10 @@ export function DatePicker({ checkIn, setCheckIn, checkOut, setCheckOut, unavail
                     value={[checkIn, checkOut]}
                     maxDate={getWeeksAfter(checkIn, 8)}
                     onChange={newValue => {
-                        setCheckIn(newValue[0]);
-                        setCheckOut(newValue[1]);
+                        setCheckIn(newValue[0])
+                        setCheckOut(newValue[1])
                     }}
-                    // startText="Check-in"
-                    // endText="Check-out"
                     renderInput={(startProps, endProps) => {
-                        console.log(endProps?.ref?.current?.children?.[0].children?.[1]);
                         if (endProps?.ref?.current?.children?.[0].children?.[1]) {
                             endProps.ref.current.children[0].children[1].style.border = '1px solid black';
                             endProps.ref.current.children[0].children[1].style.color = 'black';

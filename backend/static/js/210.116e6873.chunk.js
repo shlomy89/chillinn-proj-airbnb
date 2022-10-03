@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[210],{50210:function(n,e,i){n.exports=i.p+"static/media/hair-dryer-icon.756907a546a7754f99f6.svg"}}]);

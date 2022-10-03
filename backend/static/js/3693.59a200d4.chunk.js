@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[3693],{43693:function(n,i,e){n.exports=e.p+"static/media/marina-view-icon.08441647038759fd44b2.svg"}}]);

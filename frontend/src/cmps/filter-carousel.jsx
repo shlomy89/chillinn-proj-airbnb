@@ -4,7 +4,7 @@ import AliceCarousel from 'react-alice-carousel'
 import nextIcon from '../assets/img/icons/right-arrow.svg'
 import prevIcon from '../assets/img/icons/left-arrow.svg'
 
-export const FilterCarousel = ({ setFilter }) => {
+export const FilterCarousel = ({ setFilter, filter }) => {
     const typeList = [
         'A-frames',
         'Amazing pools',
@@ -62,9 +62,17 @@ export const FilterCarousel = ({ setFilter }) => {
     const [activeType, setActiveType] = useState()
 
     useEffect(() => {
+        if (filter) {
+            if (filter.labels) {
+                setActiveType(filter.labels)
+            }
+        }
+    }, [filter])
+
+    useEffect(() => {
         getIcons()
             .then(icons => {
-                setIcons(icons)
+                return setIcons(icons)
             })
     }, [])
 
@@ -78,6 +86,7 @@ export const FilterCarousel = ({ setFilter }) => {
                     className={`${activeType === t ? 'active' : ''} icon-btn flex column justify-center align-center`}
                     onClick={handleClick}>
                     <img
+                        alt='icon'
                         className='icon-carousel'
                         src={img}
                         id={t}
@@ -95,10 +104,10 @@ export const FilterCarousel = ({ setFilter }) => {
 
     const renderNextButton = ({ isDisabled }) => {
         return (
-                <button
-                    className={`next-btn ${isDisabled ? 'disabled' : ''}`}>
-                    <img src={nextIcon} className="alice-carousel__next-btn-item" />
-                </button >
+            <button
+                className={`next-btn ${isDisabled ? 'disabled' : ''}`}>
+                <img alt='' src={nextIcon} className="alice-carousel__next-btn-item" />
+            </button >
         )
     }
 
@@ -106,7 +115,7 @@ export const FilterCarousel = ({ setFilter }) => {
         return (
             <button
                 className={`prev-btn ${isDisabled ? 'disabled' : ''}`}>
-                <img src={prevIcon} className="alice-carousel__prev-btn-item" />
+                <img alt='' src={prevIcon} className="alice-carousel__prev-btn-item" />
             </button>
         )
     }

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[1312],{71312:function(e,s,n){e.exports=n.p+"static/media/wine-glasses-icon.a8f6ec02dea2a28da2c8.svg"}}]);

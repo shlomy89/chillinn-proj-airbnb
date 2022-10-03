@@ -1,6 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-
-import { React, useState, useEffect, useRef } from 'react'
+import { React, useState, useRef } from 'react'
 import { RatingRates } from './rating-rates'
 import { utilService } from '../services/util.service.js'
 import { ReactComponent as LikeHeartEmptyIcon } from '../assets/img/icons/like-heart-empty.svg'

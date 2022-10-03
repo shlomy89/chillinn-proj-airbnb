@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[3284],{43284:function(a,c,i){a.exports=i.p+"static/media/pocket-wifi-icon.a2cf6a3a5aa62c865305.svg"}}]);
