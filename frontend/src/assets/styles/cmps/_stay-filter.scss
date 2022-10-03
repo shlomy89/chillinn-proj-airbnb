@@ -148,11 +148,14 @@ button[name='propertyType'].active {
     padding: 16px 24px !important;
 }
 
+.css-13xqbvb,
 .css-106c1u2-MuiBadge-badge {
+    top: 4px !important;
+    right: 4px !important;
     background-color: #222222 !important;
 }
 
-.css-1c32n2y-MuiBadge-root{
+.css-1c32n2y-MuiBadge-root {
     padding-bottom: 7px;
 }
 
@@ -230,7 +233,7 @@ button[name='propertyType'].active {
     padding: 0;
     width: 90%;
     display: inline-block;
-    
+
     .icon-btn {
         gap: 6px;
         padding-top: 15px;
@@ -303,7 +306,7 @@ button[name='propertyType'].active {
     }
 
     .filters-container-background {
-        background:#fff;    
+        background: #fff;
     }
 
     &.stuck {
@@ -321,19 +324,19 @@ button[name='propertyType'].active {
     color: #222222;
     font-size: 16px !important;
     line-height: 20px !important;
-  }
-  
-  /* Hide the browser's default checkbox */
-  .checkbox-container input {
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
+}
+
+/* Create a custom checkbox */
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -343,32 +346,32 @@ button[name='propertyType'].active {
     // border-width: 1px !important;
     border: 1px solid #b0b0b0;
     border-radius: 4px;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .checkbox-container:hover input ~ .checkmark {
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input~.checkmark {
     border: 1px solid #222222;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .checkbox-container input:checked ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked~.checkmark {
     background-color: #222222;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .checkbox-container input:checked ~ .checkmark:after {
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked~.checkmark:after {
     display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .checkbox-container .checkmark:after {
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
     left: 8px;
     top: 3px;
     width: 5px;
@@ -376,16 +379,17 @@ button[name='propertyType'].active {
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-  }
+}
 
-  .place-type-container {
+.place-type-container {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr, 1fr, 1fr;
     width: 100%;
-  }
+}
 
-  .css-106c1u2-MuiBadge-badge {
-    top: 4px !important;
-    right: 4px !important;
-  }
+
+
+.css-13xqbvb {
+    background-color: #222222 !important;
+}

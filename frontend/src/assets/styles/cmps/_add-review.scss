@@ -8,14 +8,21 @@
     margin-bottom: 20px;
 
     .css-dqr9h-MuiRating-label {
-        color: $clr1;
+        color: #2e53ab !important;
+    }
+
+    .css-1ipqyij {
+        color: #2e53ab !important;
+    }
+
+    .css-iljtu2-MuiRating-root {
+        color: #2e53ab;
     }
 
     .bar-container {
         height: 55%;
         display: flex;
         align-items: center;
-        // column-gap: 40px;
         justify-content: space-between;
         margin-right: 105px;
     }
