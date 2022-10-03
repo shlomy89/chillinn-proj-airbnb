@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[350],{80350:function(e,n,s){e.exports=s.p+"static/media/blender-icon.a72efab200983bfb21f4.svg"}}]);

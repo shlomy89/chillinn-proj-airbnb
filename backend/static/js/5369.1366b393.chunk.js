@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[5369],{15369:function(e,n,c){e.exports=c.p+"static/media/tv-icon.f9cf76a75ec152921fae.svg"}}]);

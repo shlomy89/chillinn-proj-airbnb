@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[1230],{11230:function(e,n,i){e.exports=i.p+"static/media/air-cover-icon.40a8ad7dd3eb76216df2.svg"}}]);

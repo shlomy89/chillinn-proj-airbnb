@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[2297],{12297:function(e,n,s){e.exports=s.p+"static/media/close-icon.12d4be064b02b85528aa.svg"}}]);
