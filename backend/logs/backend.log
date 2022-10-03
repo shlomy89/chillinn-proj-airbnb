@@ -3513,6 +3513,21 @@
 3.10.2022, 0:48:43 - DEBUG - Getting Stays
 3.10.2022, 0:48:44 - INFO - Req was made
 3.10.2022, 0:48:46 - INFO - Req was made
+<<<<<<< HEAD
 3.10.2022, 9:44:12 - INFO - Server is running on port: 3030
 3.10.2022, 9:45:03 - DEBUG - Getting Stays
 3.10.2022, 9:46:15 - INFO - Req was made
+=======
+3.10.2022, 2:39:03 - INFO - Server is running on port: 3030
+3.10.2022, 2:40:24 - DEBUG - Getting Stays
+3.10.2022, 2:40:33 - DEBUG - Getting Stays
+3.10.2022, 2:40:39 - DEBUG - Getting Stays
+3.10.2022, 2:40:40 - DEBUG - Getting Stays
+3.10.2022, 2:40:49 - INFO - Req was made
+3.10.2022, 10:25:46 - INFO - Server is running on port: 3030
+3.10.2022, 10:26:52 - DEBUG - Getting Stays
+3.10.2022, 10:27:19 - DEBUG - Getting Stays
+3.10.2022, 10:28:09 - DEBUG - Getting Stays
+3.10.2022, 10:28:41 - DEBUG - Getting Stays
+3.10.2022, 10:32:25 - DEBUG - Getting Stays
+>>>>>>> eaa32ad441aeb5b75531e3b7607b254c491552e2
