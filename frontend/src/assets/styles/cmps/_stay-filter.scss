@@ -148,9 +148,13 @@ button[name='propertyType'].active {
     padding: 16px 24px !important;
 }
 
+.css-13xqbvb,
 .css-106c1u2-MuiBadge-badge {
+    top: 4px !important;
+    right: 4px !important;
     background-color: #222222 !important;
 }
+
 
 .css-1c32n2y-MuiBadge-root{
     padding-bottom: 7px;
@@ -385,7 +389,3 @@ button[name='propertyType'].active {
     width: 100%;
   }
 
-  .css-106c1u2-MuiBadge-badge {
-    top: 4px !important;
-    right: 4px !important;
-  }
