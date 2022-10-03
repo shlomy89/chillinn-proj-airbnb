@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[4545],{24545:function(e,n,s){e.exports=s.p+"static/media/washer-icon.85993685dab8e4ad4f5f.svg"}}]);

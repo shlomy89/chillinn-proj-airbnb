@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[3271],{63271:function(e,n,s){e.exports=s.p+"static/media/dedicated-workspace-icon.b819b4ba088ea79f977d.svg"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[2087],{22087:function(c,e,n){c.exports=n.p+"static/media/body-soap-icon.c2744e8b97ca8684ce26.svg"}}]);

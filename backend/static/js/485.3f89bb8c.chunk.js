@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChill_Inn=self.webpackChunkChill_Inn||[]).push([[485],{50485:function(n,e,s){n.exports=s.p+"static/media/smoking-alarm-icon.1155e6e72246c79805bc.svg"}}]);
